@@ -75,11 +75,11 @@
       <div class="rcp-author rcp-main rcp-summary-data">
         <a href="/user/uid----../user/recipe-box.html">{{author}}</a>
       </div>
-      <div class="stars star-{{content.field_comment_stars['0']['#default_value']}} user-cmmt"></div>
+      <div class="stars star-{{content.field_comment_rating['0']['#default_value']}} user-cmmt"></div>
       <div class="body-small date user-cmmt">{{created}}</div>
     </div><a href="../recipes/recipe.html" class="w--current">{{title}}</a>
     <p class="user-cmmt-txt">
-      {{elements.field_comment_}}
+      {{elements.comment_body}}
     </p><a class="show-review-link" data-ix="show-modal" href="#">Read more…</a>
   </div>
 </div>
