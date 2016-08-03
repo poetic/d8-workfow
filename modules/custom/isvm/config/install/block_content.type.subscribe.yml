@@ -1,7 +1,0 @@
-langcode: en
-status: true
-dependencies: {  }
-id: subscribe
-label: Subscribe
-revision: 1
-description: 'Subscribe'

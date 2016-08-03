@@ -1,9 +1,0 @@
-langcode: en
-status: true
-dependencies:
-  module:
-    - node
-id: node.large_slider
-label: Large Slider
-targetEntityType: node
-cache: true

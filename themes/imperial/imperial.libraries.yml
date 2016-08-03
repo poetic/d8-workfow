@@ -1,0 +1,13 @@
+global-css:
+  css:
+    theme:
+      css/normalize.css: {}
+      css/webflow.css: {}
+      css/custom.css: {}
+      css/imperial.webflow.css: {}
+global-js:
+  js:
+    js/webflow.js: {}
+    js/custom.js: {}
+  dependencies:
+    - core/jquery

@@ -1,0 +1,12 @@
+
+{#
+  We call a macro which calls itself to render the full tree.
+  @see http://twig.sensiolabs.org/doc/tags/macro.html
+#}
+
+    {% for item in items %}
+    {% set name = item.title|replace({'%site%': 'Imperial'})%}
+      <li{{ item.attributes }}>
+        {{ link(name, item.url) }}
+      </li>
+    {% endfor %}

@@ -1,0 +1,39 @@
+<div {{ attributes }}> {{ title_suffix }}
+
+<div class="top-nav" data-block="header">
+    <div class="logged-out nav-account-wrapper w-clearfix w-hidden-small w-hidden-tiny">
+      <a class="logged-out user-pic-small user-pic-wrapper w-hidden-medium w-hidden-small w-hidden-tiny w-inline-block" href="#"></a>
+      <a class="nav-account-signup-spacing tertiary" data-ix="modal-login-show" href="#">Join FREE</a>
+      <a class="nav-account-signup-spacing tertiary" data-ix="modal-login-show" href="#">Sign In</a>
+    </div>
+    <div class="nav-account-wrapper w-hidden-small w-hidden-tiny">
+      <div class="nav-account-arrow w-dropdown" data-delay="0" data-hover="1">
+        <div class="dropdown-toggle w-dropdown-toggle">
+          <div class="user-pic-nav-account user-pic-small user-pic-wrapper">
+            <img height="100%" src="/themes/imperial/images/user-pic-example.jpg" width="100%"></div>
+          <div class="nav-account-text">Account</div>
+        </div>
+        {{ usernav }}</div>
+    </div>
+    <a class="logo-wrapper w-inline-block" href="index.html">
+      {{ content.header_imperial_logo }}{{ content.header_dixie_logo }}</a>
+    <div class="search-bar-position" data-ix="search-bar-hide">
+      <form class="search-form-wrapper w-clearfix" data-name="Email Form" id="email-form" name="email-form">
+        <input autofocus="autofocus" class="search-field-global w-input" data-ix="search-bar-show" data-name="Search" id="Search" maxlength="256" name="Search" placeholder="Search recipes, ideas, anything&hellip;" type="text"><input class="search-btn-global w-button" data-wait="Please wait..." type="submit" value="Search" wait="Please wait..."><a class="cancel search-btn-global w-button w-hidden-main w-hidden-medium" data-ix="search-bar-hide" href="#">Cancel</a>
+      </form>
+      <div class="w-form-done">
+        <div>Thank you! Your submission has been received!</div>
+      </div>
+      <div class="w-form-fail w-hidden-main w-hidden-medium w-hidden-small w-hidden-tiny">
+        <div>Oops! Something went wrong while submitting the form</div>
+      </div>
+    </div>
+    <div class="nav-links-wrapper w-clearfix">
+      {{ mainnav }}
+    </div>
+    <div class="nav-bg-image-overlay"></div>
+    <div class="object-fit top-nav">
+      {{ content.header_background_img }}</div>
+  </div>
+
+</div>

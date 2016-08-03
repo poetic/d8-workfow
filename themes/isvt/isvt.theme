@@ -1,0 +1,164 @@
+<?php
+
+use Drupal\field\Entity\FieldConfig;
+use Drupal\block_content\Entity\BlockContent;
+use Drupal\node\Entity\Node;
+use Drupal\Core\StringTranslation\TranslatableMarkup;
+use \Drupal\views\ViewExecutable;
+
+/**
+ * Implements hook_preprocess_HOOK() for node document templates.
+ */
+function isvt_preprocess_node(array &$variables) {
+  if(!empty($variables['elements']['#node'])) {
+    $entity = $variables['elements']['#node'];
+    $variables['main_menu'] = isvt_get_menu('main_menu');
+    $variables['date'] = format_date($entity->created->value, "custom", "F d, Y");
+    if($entity->bundle() == 'home' || $entity->bundle() == 'community' || $entity->bundle() == 'plan') {
+      $message = \Drupal::entityTypeManager()
+        ->getStorage('contact_message')
+        ->create(array(
+          'contact_form' => 'schedule_appointment',
+        ));
+      $schedule_appointment_form = \Drupal::service('entity.form_builder')->getForm($message);
+      $variables['schedule_appointment_form'] = drupal_render($schedule_appointment_form);
+    }
+    if($entity->bundle() == 'community') {
+      $variables['available_homes'] = drupal_render(views_embed_view('available_homes', 'available_homes'));
+      $variables['available_plans'] = drupal_render(views_embed_view('available_plans', 'available_plans'));
+    }
+  }
+}
+
+/**
+ * Implements hook_preprocess_HOOK() for block document templates.
+ */
+function isvt_preprocess_block(array &$variables) {
+  if(!empty($variables['content']['#block_content'])) {
+    // dump($variables);
+    $entity = $variables['content']['#block_content'];
+    $bundle = $entity->bundle();
+
+    $fields_definition = $entity->getFieldDefinitions();
+    foreach($fields_definition as $field_definition) {
+     if(!empty($field_definition->getTargetBundle()) && $field_definition->get('field_type') == 'entity_reference') { 
+        $entity_reference_field = collectFieldValues($entity, $field_definition);
+        if($entity_reference_field) {
+          $key = key($entity_reference_field);
+          $variables['content'][$key] = ($entity_reference_field[$key]);
+        }
+      }
+    }
+    $variables['main_menu'] = isvt_get_menu('main_menu');
+  }
+}
+
+function collectFieldValues($entity, $field_definition) {
+  $bundle = $entity->bundle();
+  $entity_type = $entity->getEntityTypeId();
+  $field_name = $field_definition->getName();
+  $field_value = $entity->get($field_name)->getValue();
+  $field_instance = FieldConfig::loadByName($entity_type, $bundle , $field_name);
+  $settings = $field_instance->getSettings();
+
+  switch($settings['handler']) {
+    case 'default:view':
+      $view_render_array = views_embed_view($field_value[0]['target_id']);
+      return array($field_name => $view_render_array);
+      break;
+    case 'default:node':
+      return;
+      break;
+  }
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter() for block templates.
+ */
+function isvt_theme_suggestions_block_alter(array &$suggestions, array $variables) {
+  if(!empty($variables['elements']['content']['#block_content'])) {
+    $block = $variables['elements']['content']['#block_content'];
+    $view_mode = $variables['elements']['content']['#view_mode'];
+    $bundle = $block->bundle();
+    array_unshift($suggestions, 'block__block_content__' . $bundle);
+    if($view_mode){
+      array_unshift($suggestions, 'block__block_content__'.$bundle.'_'.$view_mode);
+    }
+
+  }
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter() for form templates.
+ */
+function isvt_theme_suggestions_form_alter(array &$suggestions, array $variables) {
+  $suggestions[] = 'form__' . $variables['element']['#form_id'];
+}
+
+function isvt_preprocess_image(&$variables) {
+  unset($variables['attributes']['width']);
+  unset($variables['attributes']['height']);
+}
+
+function isvt_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+  switch($form_id) {
+    case 'contact_message_contact_form':
+      $form['#attributes']['class'][] = 'w-clearfix contact-form';
+      $form['contact_name']['#attributes']['class'][] = 'contact-field-left';
+      $form['contact_email']['#attributes']['class'][] = 'contact-field-right';
+      $form['contact_comments']['#attributes']['class'][] = 'contact-comments';
+      $form['actions']['submit']['#attributes']['class'][] = 'w-button primary send-message';
+      break;
+    case 'contact_message_corporate_requests_form':
+      $form['#attributes']['class'][] = 'w-clearfix contact-form';
+      $form['corporate_requests_name']['#attributes']['class'][] = 'contact-field-left';
+      $form['corporate_requests_email']['#attributes']['class'][] = 'contact-field-right';
+      $form['corporate_requests_comments']['#attributes']['class'][] = 'contact-comments';
+      $form['actions']['submit']['#attributes']['class'][] = 'w-button primary send-message';
+      break;
+    case 'contact_message_realtor_update_form':
+      $form['#attributes']['class'][] = 'w-clearfix realtor-form';
+      $form['realtor_update_name']['#attributes']['class'][] = 'realtor-form-block';
+      $form['realtor_update_company']['#attributes']['class'][] = 'realtor-form-block';
+      $form['realtor_update_email']['#attributes']['class'][] = 'realtor-form-block';
+      $form['realtor_update_interest']['#attributes']['class'][] = 'realtor-form-block';
+      $form['realtor_update_receive_update']['#attributes']['class'][] = 'w-checkbox w-clearfix checkbox-div';
+      $form['actions']['submit']['#attributes']['class'][] = 'w-button primary realtors-submit';
+      break;
+    case 'contact_message_warranty_form':
+      $form['#attributes']['class'][] = 'warranty-form';
+      $form['warranty_name']['#attributes']['class'][] = 'form-field-centered';
+      $form['warranty_email']['#attributes']['class'][] = 'form-field-centered';
+      $form['warranty_phone']['#attributes']['class'][] = 'form-field-centered';
+      $form['warranty_subdivision']['#attributes']['class'][] = 'form-field-centered';
+      $form['warranty_address']['#attributes']['class'][] = 'form-field-centered';
+      $form['warranty_city']['#attributes']['class'][] = 'form-field-centered';
+      $form['warranty_closing_date']['#attributes']['class'][] = 'form-field-centered';
+      $form['warranty_detail']['#attributes']['class'][] = 'form-field-centered';
+      $form['actions']['submit']['#attributes']['class'][] = 'w-button primary submit-request';
+      break;
+    case 'contact_message_schedule_appointment_form':
+      $form['#attributes']['class'][] = 'modal-form';
+      $form['schedule_appointment_full_name']['#attributes']['class'][] = 'form-field-centered';
+      $form['schedule_appointment_email']['#attributes']['class'][] = 'form-field-centered';
+      $form['schedule_appointment_phone']['#attributes']['class'][] = 'form-field-centered';
+      $form['schedule_appointment_comments']['#attributes']['class'][] = 'form-field-centered';
+      $form['actions']['submit']['#attributes']['class'][] = 'w-button primary modal-submit';
+      break;
+  }
+  if($form['#id'] == "views-exposed-form-communities-communities") {
+    $form['area']['#options']['All'] = new TranslatableMarkup('All Areas');
+  }
+  if($form['#id'] == "views-exposed-form-available-homes-available-homes") {
+    $form['bedrooms']['#options']['All'] = new TranslatableMarkup('All Homes');
+  }
+  if($form['#id'] == "views-exposed-form-available-plans-available-plans") {
+    $form['bedrooms']['#options']['All'] = new TranslatableMarkup('All Plans');
+  }
+}
+function isvt_get_menu($menu_name) {
+  $block_manager = \Drupal::service('plugin.manager.block');
+  $plugin_block = $block_manager->createInstance("system_menu_block:$menu_name");
+  $render = $plugin_block->build();
+  return $render;
+}

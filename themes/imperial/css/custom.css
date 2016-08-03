@@ -1,0 +1,239 @@
+
+    /* Custom responsive table */
+       table { 
+      width: 100%; 
+      border-collapse: collapse; 
+      margin:20px auto 40px auto;
+        border-top: 1px solid #e7e7e7;
+        border-bottom: 1px solid #e7e7e7;
+      }
+    /* Zebra striping */
+    /* tr:nth-of-type(odd) { 
+      background: #eee; 
+      } */
+    th { 
+      background: #faf5f0;
+        font-family: Raleway, sans-serif;
+        font-weight: 600;
+      }
+    td, th { 
+      padding: 10px 20px 10px 10px; 
+      border-bottom: 1px dashed #ccc; 
+      text-align: left;
+        vertical-align: top;
+      font-size: 16px;
+      }
+    /* 
+    Max width before this PARTICULAR table gets nasty
+    This query will take effect for any screen smaller than 760px
+    and also iPads specifically.
+    */
+    @media 
+    only screen and (max-width: 760px),
+    (min-device-width: 768px) and (max-device-width: 1024px)  {
+      table { 
+          width: 100%; 
+      }
+      /* Force table to not be like tables anymore */
+      table, thead, tbody, th, td, tr { 
+        display: block; 
+      }
+      /* Hide table headers (but not display: none;, for accessibility) */
+      thead tr { 
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+      }
+      td { 
+        /* Behave  like a "row" */
+        border-bottom: 1px dashed #ccc; 
+        position: relative;
+        /* padding-left: 50%; */
+      }
+      td:before { 
+        /* Now like a table header */
+        position: absolute;
+        /* Top left values mimic padding */
+        top: 6px;
+        left: 6px;
+        width: 45%; 
+        padding-right: 10px;
+        white-space: nowrap;
+        /* Label the data */
+        content: attr(data-column);
+        color: #000;
+        font-weight: bold;
+      }
+    td:first-child { 
+      background: #faf5f0;
+        font-weight: 600;
+        border-bottom: 1px solid #e7e7e7;
+      }
+      }
+      /* "Current" tab width override */
+      .tab-wrapper.w--current {
+      max-width: 100%;
+      }
+      .main.rcp-img .w-inline-block.w-lightbox {
+      display: block;
+      }
+      .ck-editor img {
+      margin: 20px 0px;
+      }
+      .blur {
+        -webkit-filter: blur(10px); /* Chrome, Safari, Opera */
+        filter: blur(10px);
+    }
+      /* Checkbox + radio button override */
+      input[type="checkbox"]:checked + label.clickable-tag {
+        background-color: #ff6169;
+        color: #fff;
+    }
+      input[type="radio"]:checked + label.clickable-tag {
+        background-color: #ff6169;
+        color: #fff;
+    }
+      /* Hide an element so screen readers can still read it */
+    .hidden {
+      position:absolute;
+      left:-10000px;
+      top:auto;
+      width:1px;
+      height:1px;
+      overflow:hidden;
+    }
+     /* Add "save" to Coupon Bottom 
+      .cpn-bottom:before {
+      content: "Save";
+      color: white;
+      font-family: Raleway, sans-serif;
+      font-size: 18px;
+      line-height: 20px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      display: inline-block;
+      position: absolute;
+      left: 15px;
+      top: 15px;
+      } */
+      /* Add little white arrows to top of drop downs */
+      .mega-menu-wrapper:before {
+      content: " ";
+      display: inline-block;
+      position: absolute;
+      height: 8px;
+      width: 16px; 
+      left:25px;
+      top:-8px;
+      background: url(https://daks2k3a4ib2z.cloudfront.net/576b0d2904282bce5daf594f/576b0d2904282bce5daf5957_mega-menu-top-arrow.svg) no-repeat;
+      }
+      .mega-menu-wrapper.nav-account:before {
+      left:auto;
+      right: 67px;
+      }
+       /* Vertical align top on %-based columns */
+     ._100-pc, ._80&ndash;pc, ._75-pc._66-pc, ._50-pc, ._33-pc, ._25-pc, ._16-pc {
+      vertical-align: top;
+      }
+      .valign-t {
+      vertical-align: top;
+      }
+       .valign-m {
+      vertical-align: middle;
+      }
+    .absolute-valign {
+       margin: auto;
+       position: absolute;
+       top: 0px; left: 0px; bottom: 0px; right: 0px;
+       }
+      /* Webflow override for search input */ 
+        .w-input.search-field-global {
+        border-style: none;
+        border-radius: 3px 0px 0px 3px;
+      }
+      .w-input.subscribe-field {
+        border-style: none;
+        border-radius: 3px 3px 0px 0px;
+      }
+       /* Webflow input override */ 
+      .w-input {
+        border-radius: 3px;
+        padding-left: 20px;
+      }
+    /* Webflow dropdown overrides */
+      .w-dropdown-toggle {
+      color: #4a4a4a;
+      }
+      .w-dropdown-toggle:hover {
+      color: #000;
+      }
+      .w-dropdown-link {
+      white-space: normal;
+      }
+      /* Selection highlight */
+    ::selection {
+      background: #ff6169; /* WebKit Blink Browsers */
+      color: white;
+      }
+    ::-moz-selection {
+      background: #ff6169; /* Gecko Browsers */
+        color: white;
+      }
+    /* Object Fit Cover */
+    .object-fit img {
+      object-fit: cover;
+      width: 100%;
+    /*  height: 800px; might have to px value, not % or vh :( */
+    }
+    /* center element vertically within parent */
+    .valign-parent {  /* parent element */
+      display: table;
+       }
+    .valign {  /* target element */
+     display: table-cell;
+     vertical-align: middle;
+     }  
+    /* Override Webflow slider dots */
+    .w-slider-dot {
+      background: black;
+      opacity: 0.5;
+      font-size:10px;
+    }
+    /* .w-slider-dot.w-active {
+      background: aqua; } */
+    /* Overide slider arrows clickable area */
+      .w-slider-arrow-left, .w-slider-arrow-right {
+        top: 37%;
+        bottom: 37%;
+        }
+    /* Add custom slider arrows */
+      .w-icon-slider-right {
+      width: 50px;
+        height: 50px;
+        padding-left: 2px;
+        border: 3px solid #e7e7e7;
+        border-radius: 60px;
+        background-color: #fff;
+        color: #000;
+        font-size: 25px;
+        line-height: 45px;
+        font-weight: 800; 
+      }
+      .w-icon-slider-left {
+      width: 50px;
+        height: 50px;
+        padding-right: 2px;
+        border: 3px solid #e7e7e7;
+        border-radius: 60px;
+        background-color: #fff;
+        color: #000;
+        font-size: 25px;
+        line-height: 45px;
+        font-weight: 800; 
+      }
+      .smooth-scroll, .side-nav {
+       overflow-y: scroll; /* has to be scroll, not auto */
+       overflow-x: hidden; /* stop sideways scrollbars */
+      -webkit-overflow-scrolling: touch;
+      }
+  

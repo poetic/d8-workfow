@@ -1,7 +1,0 @@
-langcode: en
-status: true
-dependencies: {  }
-id: ftr-corporate-menu
-label: 'Ftr Corporate Menu'
-description: null
-locked: false

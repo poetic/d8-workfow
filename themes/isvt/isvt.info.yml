@@ -1,0 +1,14 @@
+name: isvt
+type: theme
+description: These is a webflow theme
+package: Other
+core: 8.x
+
+libraries:
+  - isvt/global-css
+  - isvt/global-js
+  
+region:
+  header:   Header
+  content:  Content
+  footer:   Footer

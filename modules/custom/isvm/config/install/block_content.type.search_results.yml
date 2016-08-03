@@ -1,7 +1,0 @@
-langcode: en
-status: true
-dependencies: {  }
-id: search_results
-label: Search Results
-revision: 1
-description: 'Search Results'

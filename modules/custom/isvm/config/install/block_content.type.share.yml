@@ -1,7 +1,0 @@
-langcode: en
-status: true
-dependencies: {  }
-id: share
-label: Share
-revision: 1
-description: 'Share'

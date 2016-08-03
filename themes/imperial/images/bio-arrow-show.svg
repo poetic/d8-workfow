@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="9px" height="5px" viewBox="0 0 9 5" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 3.8.3 (29802) - http://www.bohemiancoding.com/sketch -->
+    <title>show-bio-arrow</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Account---User-Header-Closed" transform="translate(-330.000000, -198.000000)" fill="#FF6169">
+            <g id="Group" transform="translate(270.000000, 191.000000)">
+                <path d="M65.5564189,5.24533558 C65.2490705,5.56157637 62.2458788,8.88877701 62.2458788,8.88877701 C62.0822047,9.05744911 62,9.27856938 62,9.5 C62,9.72143062 62.0822047,9.94255089 62.2458788,10.111223 C62.2458788,10.111223 65.2490705,13.4384236 65.5564189,13.7546644 C65.8634733,14.0709052 66.4164065,14.0924741 66.7443429,13.7546644 C67.0721322,13.4173202 67.0981613,12.9462177 66.7440488,12.5322184 L63.9890888,9.5 L66.7440488,6.46793673 C67.0981613,6.05378234 67.0721322,5.58283495 66.7443429,5.24533558 C66.4164065,4.90752587 65.8634733,4.9290948 65.5564189,5.24533558" id="show-bio-arrow" transform="translate(64.500000, 9.500000) rotate(-90.000000) translate(-64.500000, -9.500000) "></path>
+            </g>
+        </g>
+    </g>
+</svg>

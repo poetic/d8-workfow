@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="16px" height="9px" viewBox="0 0 16 9" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 3.8.3 (29802) - http://www.bohemiancoding.com/sketch -->
+    <title>mega-menu-top-arrow</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Header" transform="translate(-304.000000, -143.000000)" fill="#FFFFFF">
+            <g id="Dropdown-Menus" transform="translate(122.000000, 143.000000)">
+                <g id="Recipes">
+                    <polygon id="mega-menu-top-arrow" points="190 0 198 8.52747253 182 8.52747253"></polygon>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

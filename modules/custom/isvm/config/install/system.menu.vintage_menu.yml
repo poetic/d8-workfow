@@ -1,7 +1,0 @@
-langcode: en
-status: true
-dependencies: {  }
-id: vintage-menu
-label: 'Vintage Menu'
-description: null
-locked: false

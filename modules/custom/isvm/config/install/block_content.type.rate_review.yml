@@ -1,7 +1,0 @@
-langcode: en
-status: true
-dependencies: {  }
-id: rate_review
-label: Rate Review
-revision: 1
-description: 'Rate Review'

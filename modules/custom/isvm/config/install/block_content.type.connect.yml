@@ -1,7 +1,0 @@
-langcode: en
-status: true
-dependencies: {  }
-id: connect
-label: Connect
-revision: 1
-description: 'Connect'
