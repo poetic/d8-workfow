@@ -1,0 +1,26 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - comment.type.recipe_comment
+    - field.storage.comment.field_comment_rating
+  module:
+    - fivestar
+id: comment.recipe_comment.field_comment_rating
+field_name: field_comment_rating
+entity_type: comment
+bundle: recipe_comment
+label: comment_rating
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  stars: 5
+  allow_clear: false
+  allow_revote: true
+  allow_ownvote: true
+  rated_while: viewing
+  target: ''
+field_type: fivestar

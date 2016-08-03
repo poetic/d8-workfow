@@ -22,3 +22,7 @@ function custom_config_help($route_name, RouteMatchInterface $route_match) {
     default:
   }
 }
+
+function custom_config_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+	$form['comment_body']['widget']['0']['value']['#attributes']['class'][] = "form-multi-line-text-heigh w-input";
+}

@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+id: recipe_comment
+label: recipe_comment
+target_entity_type_id: node
+description: 'A comment that can be added to a recipe. Includes the comment body (text) and a recipe rating.'
