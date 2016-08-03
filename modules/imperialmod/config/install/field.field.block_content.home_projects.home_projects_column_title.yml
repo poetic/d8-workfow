@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.home_projects
+    - field.storage.block_content.home_projects_column_title
+id: block_content.home_projects.home_projects_column_title
+field_name: home_projects_column_title
+entity_type: block_content
+bundle: home_projects
+label: 'Home Projects Column Title'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.recipe
+    - field.storage.node.recipe_cmmt_txt
+id: node.recipe.recipe_cmmt_txt
+field_name: recipe_cmmt_txt
+entity_type: node
+bundle: recipe
+label: 'Recipe Cmmt Txt'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

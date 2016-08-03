@@ -1,0 +1,39 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.block_content.home_projects.home_projects_column_title
+    - field.field.block_content.home_projects.home_projects_column_title
+    - field.field.block_content.home_projects.home_projects_column_title
+    - field.field.block_content.home_projects.home_projects_sweetalk_news
+    - block_content.type.home_projects
+id: block_content.home_projects.default
+targetEntityType: block_content
+bundle: home_projects
+mode: default
+content:
+  home_projects_column_title:
+    label: hidden
+    type: string
+    weight: 1
+    settings: { }
+    third_party_settings: { }
+  home_projects_column_title:
+    label: hidden
+    type: string
+    weight: 2
+    settings: { }
+    third_party_settings: { }
+  home_projects_column_title:
+    label: hidden
+    type: string
+    weight: 3
+    settings: { }
+    third_party_settings: { }
+  home_projects_sweetalk_news:
+    label: hidden
+    type: entity_reference_entity_id
+    weight: 4
+    settings: { }
+    third_party_settings: { }
+hidden: {  }

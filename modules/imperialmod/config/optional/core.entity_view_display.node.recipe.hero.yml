@@ -1,0 +1,12 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.hero
+    - node.type.recipe
+id: node.recipe.hero
+targetEntityType: node
+bundle: recipe
+mode: hero
+content: {  }
+hidden: {  }

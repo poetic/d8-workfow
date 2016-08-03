@@ -1,0 +1,13 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.block_content.home_popular.home_popular_popa_view
+    - field.field.block_content.home_popular.home_popular_trending
+    - block_content.type.home_popular
+id: block_content.home_popular.default
+targetEntityType: block_content
+bundle: home_popular
+mode: default
+content: {  }
+hidden: {  }

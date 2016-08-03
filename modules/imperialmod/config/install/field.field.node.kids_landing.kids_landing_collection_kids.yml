@@ -1,0 +1,25 @@
+langcode: en
+status: true
+dependencies:
+  config:
+  - node.type.kids_landing
+  - field.storage.node.kids_landing_collection_kids
+  - views.view.collection_kids
+id: node.kids_landing.kids_landing_collection_kids
+field_name: kids_landing_collection_kids
+entity_type: node
+bundle: kids_landing
+label: 'Kids Landing Collection Kids'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    target_uuid: fd5570e8-1792-4bdd-8371-9f4433491c72
+default_value_callback: ''
+settings:
+  handler: 'default:view'
+  handler_settings:
+    target_bundles: null
+    auto_create: false
+field_type: entity_reference

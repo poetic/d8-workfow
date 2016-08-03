@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.article
+    - field.storage.node.article_date
+id: node.article.article_date
+field_name: article_date
+entity_type: node
+bundle: article
+label: 'Article Date'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

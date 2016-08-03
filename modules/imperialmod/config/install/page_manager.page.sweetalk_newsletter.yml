@@ -1,0 +1,10 @@
+langcode: en
+status: true
+dependencies: {  }
+id: sweetalk_newsletter
+label: Sweetalk Newsletter
+use_admin_theme: null
+path: /sweetalk-newsletter
+access_logic: and
+access_conditions: {  }
+parameters: {  }

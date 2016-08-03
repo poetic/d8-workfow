@@ -1,0 +1,10 @@
+langcode: en
+status: true
+dependencies: {  }
+id: coupons
+label: Coupons
+use_admin_theme: null
+path: /coupons
+access_logic: and
+access_conditions: {  }
+parameters: {  }

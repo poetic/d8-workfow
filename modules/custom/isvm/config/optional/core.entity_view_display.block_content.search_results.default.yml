@@ -1,0 +1,11 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.search_results
+id: block_content.search_results.default
+targetEntityType: block_content
+bundle: search_results
+mode: default
+content: {  }
+hidden: {  }

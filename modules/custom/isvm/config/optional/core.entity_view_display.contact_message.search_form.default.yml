@@ -1,0 +1,19 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - contact.form.search_form
+    - field.field.contact_message.search_form.search_form_input
+    - contact_message.type.search_form
+id: contact_message.search_form.default
+targetEntityType: contact_message
+bundle: search_form
+mode: default
+content:
+  search_form_input:
+    label: hidden
+    type: string
+    weight: 1
+    settings: { }
+    third_party_settings: { }
+hidden: {  }

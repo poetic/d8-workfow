@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Contains preptime.module..
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function preptime_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the preptime module.
+    case 'help.page.preptime':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('My Awesome Module') . '</p>';
+      return $output;
+
+    default:
+  }
+}

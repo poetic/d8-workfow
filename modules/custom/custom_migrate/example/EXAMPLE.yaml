@@ -1,0 +1,81 @@
+uuid: dfee908d-b07f-4fa7-b410-4ad64f4d81b4
+langcode: en
+status: true
+
+id: pib0
+migration_tags: null
+migration_group: null
+label: 'Import PIB'
+source:
+  plugin: xml_plugin
+  path: 'http://service.piblogin.com/pib_data_xml.ashx'
+  base_query: //node
+  #Make sure to put the migration ID here as well
+  migration_name: pib0
+  #This is REQUIRED if the migration needs to access the value through the attribute tags.  
+  #The important required pieces are the three items separated with the bar AFTER the :
+  #Example: images elevation: images|ImageType="Elevation"|imageElevation
+  #First is the original element name from the source material (EX: images)
+  #Second is the attribute as it is exactly from the source material (EX: ImageType="Elevation")
+  #Third is the new element name you want it to be replaced with.  It must be unique(EX: imageElevation)
+  attributes:
+    images elevation: Image|ImageType="Elevation"|imageElevation
+    images floorplan: Image|ImageType="FloorPlan"|imageFloorplan
+  #Migration will use this to create the new array XML.  It will allow migration to see the source element, the new elemenet for the migration array 
+  #and the xpath to get the target value (element from xml(red) as the key: new element name replacement|xpath) EX:     power: attribute.power|attribute/power
+  xpath:
+    title: title|title
+    author: author|author
+    power: attribute.power|attribute/power
+    gender: attribute.gender|attribute/gender
+    sidekick: attribute.other.sidekick|attribute/other/sidekick
+    imageElevation: attribute.imageElevation|attribute/imageElevation
+    imageFloorplan: attribute.imageFloorplan|attribute/imageFloorplan
+    realname: realname|realname
+    pets: pets|pets
+  #Only TWO KEYS MAX are allowed!!
+  #You cannot change the key after initial migration
+  keys:
+    - title
+
+#insert the destination drupal machine name as the key and the final new element name from the source XML (unless it requires a plugin)
+process:
+  type:
+    plugin: default_value
+    default_value: superhero
+  title: title
+  field_author: author
+  field_power: attribute.power
+  field_gender: attribute.gender
+  field_sidekick: attribute.other.sidekick
+  field_images: 
+    plugin: image_plugin
+    #Insert the new element name 
+    source_element: attribute.imageElevation
+  field_floorplan: 
+    plugin: image_plugin
+    #Insert the new element name 
+    source_element: attribute.imageFloorplan
+  field_real_name: 
+    plugin: entity_reference_plugin
+    #Put the destination content type or taxonomy machine name
+    content_type: profile
+    #Insert the new element name 
+    source_element: realname
+  field_pets:
+    plugin: taxonomy_plugin
+    #Put the destination content type or taxonomy machine name
+    content_type: pets
+    #Insert the new element name 
+    source_element: pets
+
+destination:
+  plugin: entity:node
+dependencies:
+  module:
+migration_dependencies: {  }
+
+
+###Use image_plugin PLUGIN for image fields
+###Use taxonomy_plugin PLUGIN for taxonomy fields
+###Use entity_reference_plugin PLUGIN for entity reference fields

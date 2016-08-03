@@ -1,0 +1,46 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.recipe.recipe_recipe_image
+    - field.field.node.recipe.recipe_description
+    - field.field.node.recipe.recipe_yield
+    - field.field.node.recipe.recipe_directions
+    - field.field.node.recipe.recipe_handy_tips
+    - node.type.recipe
+id: node.recipe.default
+targetEntityType: node
+bundle: recipe
+mode: default
+content:
+  recipe_recipe_image:
+    label: hidden
+    type: image
+    weight: 1
+    settings: { }
+    third_party_settings: { }
+  recipe_description:
+    label: hidden
+    type: text_default
+    weight: 2
+    settings: { }
+    third_party_settings: { }
+  recipe_yield:
+    label: hidden
+    type: string
+    weight: 3
+    settings: { }
+    third_party_settings: { }
+  recipe_directions:
+    label: hidden
+    type: text_default
+    weight: 4
+    settings: { }
+    third_party_settings: { }
+  recipe_handy_tips:
+    label: hidden
+    type: text_default
+    weight: 5
+    settings: { }
+    third_party_settings: { }
+hidden: {  }

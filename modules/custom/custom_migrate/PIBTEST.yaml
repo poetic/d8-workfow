@@ -1,0 +1,55 @@
+id: superheros
+migration_tags: null
+migration_group: null
+label: 'Import Superhero Content'
+source: 
+  plugin: xml_plugin
+  path: 'https://raw.githubusercontent.com/poetic/migrate-xml-plugin/development/custom_migrate/example/super.xml?token=AL2ATA9KQOF0YzDFgMj5jsJz7k0Zxkrvks5XRIs1wA%3D%3D'
+  base_query: //node
+  migration_name: superheros
+  attributes:
+    images hero: images|ImageType="Hero"|imageHero
+    images human: images|ImageType="Human"|imageHuman
+  xpath: 
+    title: title
+    author: author
+    power: attribute.power
+    gender: attribute.gender
+    sidekick: attribute.other.sidekick
+    realname: realname
+    pets: pets
+    imageHero: attribute.imageHero
+    imageHuman: attribute.imageHuman
+  keys:
+  - title
+  - author
+
+process:
+  type:
+    plugin: default_value
+    default_value: superhero
+  title: title
+  field_author: author
+  field_power: attribute.power
+  field_gender: attribute.gender
+  field_sidekick: attribute.other.sidekick
+  field_real_name: 
+    plugin: entity_reference_plugin
+    content_type: profile
+    source_element: realname
+  field_pets:
+    plugin: taxonomy_plugin
+    content_type: pets
+    source_element: pets
+  field_images: 
+    plugin: image_plugin
+    source_element: attribute.imageHero
+  field_floorplan: 
+    plugin: image_plugin
+    #Insert the new element name 
+    source_element: attribute.imageHuman
+destination:
+  plugin: entity:node
+dependencies:
+  module:
+migration_dependencies: {  }

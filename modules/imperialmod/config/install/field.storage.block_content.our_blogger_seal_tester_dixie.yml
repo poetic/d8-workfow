@@ -1,0 +1,28 @@
+langcode: en
+status: true
+dependencies:
+  - block_content
+  - file
+  - image
+id: block_content.our_blogger_seal_tester_dixie
+field_name: our_blogger_seal_tester_dixie
+entity_type: block_content
+type: image
+settings:
+  default_image:
+    uuid: null
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  target_type: file
+  display_field: false
+  display_default: false
+  uri_scheme: public
+module: image
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

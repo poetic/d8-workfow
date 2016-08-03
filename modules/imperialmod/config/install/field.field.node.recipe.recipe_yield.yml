@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.recipe
+    - field.storage.node.recipe_yield
+id: node.recipe.recipe_yield
+field_name: recipe_yield
+entity_type: node
+bundle: recipe
+label: 'Recipe Yield'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

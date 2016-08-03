@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.block_content.top_nav.top_nav_main_menu
+    - block_content.type.top_nav
+id: block_content.top_nav.default
+targetEntityType: block_content
+bundle: top_nav
+mode: default
+content:
+  top_nav_main_menu:
+    label: hidden
+    type: entity_reference_entity_id
+    weight: 1
+    settings: { }
+    third_party_settings: { }
+hidden: {  }

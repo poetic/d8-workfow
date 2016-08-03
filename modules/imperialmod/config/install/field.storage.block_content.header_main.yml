@@ -1,0 +1,17 @@
+langcode: en
+status: true
+dependencies:
+  - block_content
+id: block_content.header_main
+field_name: header_main
+entity_type: block_content
+type: entity_reference
+settings:
+  target_type: menu
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

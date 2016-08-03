@@ -1,0 +1,28 @@
+<?php
+
+/**
+ * @file
+ * Contains custom_drush_command.module..
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function custom_drush_command_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the custom_drush_command module.
+    case 'help.page.custom_drush_command':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Custom Drush Command for the Feed Module') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+function custom_drush_command_test(){
+  drush_print('WORKING');
+}

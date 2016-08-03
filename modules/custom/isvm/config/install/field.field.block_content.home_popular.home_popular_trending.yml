@@ -1,0 +1,25 @@
+langcode: en
+status: true
+dependencies:
+  config:
+  - block_content.type.home_popular
+  - field.storage.block_content.home_popular_trending
+  - views.view.trending
+id: block_content.home_popular.home_popular_trending
+field_name: home_popular_trending
+entity_type: block_content
+bundle: home_popular
+label: 'Home Popular Trending'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    target_uuid: 3b966f43-dbc8-4b96-ab59-2423509740a7
+default_value_callback: ''
+settings:
+  handler: 'default:view'
+  handler_settings:
+    target_bundles: null
+    auto_create: false
+field_type: entity_reference

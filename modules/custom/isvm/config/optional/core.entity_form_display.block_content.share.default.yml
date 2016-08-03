@@ -1,0 +1,35 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.block_content.share.share_icon
+    - field.field.block_content.share.share_title
+    - field.field.block_content.share.share_share_text
+    - field.field.block_content.share.share_share_link
+    - block_content.type.share
+id: block_content.share.default
+targetEntityType: block_content
+bundle: share
+mode: default
+content:
+  share_icon:
+    type: image_image
+    weight: 1
+    settings: { }
+    third_party_settings: { }
+  share_title:
+    type: string_textfield
+    weight: 2
+    settings: { }
+    third_party_settings: { }
+  share_share_text:
+    type: string_textfield
+    weight: 3
+    settings: { }
+    third_party_settings: { }
+  share_share_link:
+    type: link_default
+    weight: 4
+    settings: { }
+    third_party_settings: { }
+hidden: {  }

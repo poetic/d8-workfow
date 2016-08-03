@@ -1,0 +1,10 @@
+langcode: en
+status: true
+dependencies: {  }
+id: recipe
+label: Recipe
+use_admin_theme: null
+path: /recipe
+access_logic: and
+access_conditions: {  }
+parameters: {  }

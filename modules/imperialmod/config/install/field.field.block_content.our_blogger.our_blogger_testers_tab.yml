@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.our_blogger
+    - field.storage.block_content.our_blogger_testers_tab
+id: block_content.our_blogger.our_blogger_testers_tab
+field_name: our_blogger_testers_tab
+entity_type: block_content
+bundle: our_blogger
+label: 'Our Blogger Testers Tab'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+id: social_gmo
+label: Social Gmo
+revision: 1
+description: 'Social Gmo'

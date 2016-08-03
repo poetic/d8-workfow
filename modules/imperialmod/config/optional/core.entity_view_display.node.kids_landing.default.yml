@@ -1,0 +1,67 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.kids_landing.kids_landing_background
+    - field.field.node.kids_landing.kids_landing_overlay
+    - field.field.node.kids_landing.kids_landing_title
+    - field.field.node.kids_landing.kids_landing_description
+    - field.field.node.kids_landing.kids_landing_popular_recipe
+    - field.field.node.kids_landing.kids_landing_trending_recipe
+    - field.field.node.kids_landing.kids_landing_collection_title
+    - field.field.node.kids_landing.kids_landing_collection_kids
+    - node.type.kids_landing
+id: node.kids_landing.default
+targetEntityType: node
+bundle: kids_landing
+mode: default
+content:
+  kids_landing_background:
+    label: hidden
+    type: image
+    weight: 1
+    settings: { }
+    third_party_settings: { }
+  kids_landing_overlay:
+    label: hidden
+    type: image
+    weight: 2
+    settings: { }
+    third_party_settings: { }
+  kids_landing_title:
+    label: hidden
+    type: string
+    weight: 3
+    settings: { }
+    third_party_settings: { }
+  kids_landing_description:
+    label: hidden
+    type: text_default
+    weight: 4
+    settings: { }
+    third_party_settings: { }
+  kids_landing_popular_recipe:
+    label: hidden
+    type: entity_reference_entity_id
+    weight: 5
+    settings: { }
+    third_party_settings: { }
+  kids_landing_trending_recipe:
+    label: hidden
+    type: entity_reference_entity_id
+    weight: 6
+    settings: { }
+    third_party_settings: { }
+  kids_landing_collection_title:
+    label: hidden
+    type: string
+    weight: 7
+    settings: { }
+    third_party_settings: { }
+  kids_landing_collection_kids:
+    label: hidden
+    type: entity_reference_entity_id
+    weight: 8
+    settings: { }
+    third_party_settings: { }
+hidden: {  }

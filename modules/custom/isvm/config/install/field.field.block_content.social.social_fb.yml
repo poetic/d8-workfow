@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.social
+    - field.storage.block_content.social_fb
+  module:
+    - link
+id: block_content.social.social_fb
+field_name: social_fb
+entity_type: block_content
+bundle: social
+label: 'Social Fb'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 1
+  link_type: 17
+field_type: link

@@ -1,0 +1,26 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.card
+    - field.field.node.team.team_image
+    - field.field.node.team.team_blog
+    - node.type.team
+id: node.team.card
+targetEntityType: node
+bundle: team
+mode: card
+content:
+  team_image:
+    label: hidden
+    type: image
+    weight: 1
+    settings: { }
+    third_party_settings: { }
+  team_blog:
+    label: hidden
+    type: link
+    weight: 2
+    settings: { }
+    third_party_settings: { }
+hidden: {  }

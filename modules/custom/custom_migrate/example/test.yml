@@ -1,0 +1,66 @@
+uuid: 971bc8c0-95c0-45c4-b6f4-cde110c22f05
+langcode: en
+status: true
+
+id: superhero12
+migration_tags: null
+migration_group: null
+label: 'Import Superheros'
+source:
+  plugin: news_node
+  path: 'http://pib-clone.prod.poeticcloud.com/files/super.xml'
+  base_query: //node
+  #Make sure to put the migration ID here as well
+  migration_name: superhero12
+  #Follow this to create the list of fields.  It will allow migration to see the source element, the new elemenet for the migration array 
+  #and the xpath to get the target value (element from xml:element replacement for the new migration array|xpath) EX: power: attribute.power|attribute/power
+  xpath:
+    title: title|title
+    author: author|author
+    power: attribute.power|attribute/power
+    gender: attribute.gender|attribute/gender
+    sidekick: attribute.other.sidekick|attribute/other/sidekick
+    images: imageElevation|attribute/images[@ImageType="Elevation"]
+    realname: realname|realname
+    pets: pets|pets
+  #Only TWO KEYS MAX are allowed!!  
+  #You cannot change the key after initial migration
+  keys:
+    - title
+
+process:
+  type:
+    plugin: default_value
+    default_value: superhero
+  title: title
+  field_author: author
+  field_power: attribute.power
+  field_gender: attribute.gender
+  field_sidekick: attribute.other.sidekick
+  field_images: 
+    plugin: image_plugin
+    #Insert new element name from above migration array
+    source_element: imageElevation
+  field_real_name: 
+    plugin: entity_reference_plugin
+    #Put the destination content type or taxonomy machine name
+    content_type: profile
+    #Insert new element name from above migration array
+    source_element: realname
+  field_pets:
+    plugin: taxonomy_plugin
+    #Put the destination content type or taxonomy machine name
+    content_type: pets
+    #Insert new element name from above migration array
+    source_element: pets
+
+destination:
+  plugin: entity:node
+dependencies:
+  module:
+migration_dependencies: {  }
+
+
+###Use image_plugin PLUGIN for image fields
+###Use taxonomy_plugin PLUGIN for taxonomy fields
+###Use entity_reference_plugin PLUGIN for entity reference fields

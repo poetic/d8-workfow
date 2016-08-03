@@ -1,0 +1,10 @@
+langcode: en
+status: true
+dependencies: {  }
+id: my_first_cookbook
+label: My First Cookbook
+use_admin_theme: null
+path: /my-first-cookbook
+access_logic: and
+access_conditions: {  }
+parameters: {  }

@@ -1,0 +1,14 @@
+{
+  "name": "drupal/view_page_domain_filter",
+  "type": "drupal-module",
+  "description": "Dynamically change the domain filter value according to the current domain",
+  "keywords": ["Drupal"],
+  "license": "GPL-2.0+",
+  "homepage": "https://www.drupal.org/project/view_page_domain_filter",
+  "minimum-stability": "dev",
+  "support": {
+    "issues": "http://drupal.org/project/issues/view_page_domain_filter",
+    "source": "http://cgit.drupalcode.org/view_page_domain_filter"
+  },
+  "require": { }
+}

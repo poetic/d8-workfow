@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.share
+    - field.storage.block_content.share_share_link
+  module:
+    - link
+id: block_content.share.share_share_link
+field_name: share_share_link
+entity_type: block_content
+bundle: share
+label: 'Share Share Link'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 1
+  link_type: 17
+field_type: link

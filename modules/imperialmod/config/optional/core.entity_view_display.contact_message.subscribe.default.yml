@@ -1,0 +1,19 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - contact.form.subscribe
+    - field.field.contact_message.subscribe.subscribe_email
+    - contact_message.type.subscribe
+id: contact_message.subscribe.default
+targetEntityType: contact_message
+bundle: subscribe
+mode: default
+content:
+  subscribe_email:
+    label: hidden
+    type: basic_string
+    weight: 1
+    settings: { }
+    third_party_settings: { }
+hidden: {  }

@@ -1,0 +1,25 @@
+langcode: en
+status: true
+dependencies:
+  config:
+  - node.type.kids_landing
+  - field.storage.node.kids_landing_popular_recipe
+  - views.view.kids_popular_recipe
+id: node.kids_landing.kids_landing_popular_recipe
+field_name: kids_landing_popular_recipe
+entity_type: node
+bundle: kids_landing
+label: 'Kids Landing Popular Recipe'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    target_uuid: 6eeda95e-135f-4ca1-98b1-46ff99e131c3
+default_value_callback: ''
+settings:
+  handler: 'default:view'
+  handler_settings:
+    target_bundles: null
+    auto_create: false
+field_type: entity_reference

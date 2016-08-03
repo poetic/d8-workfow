@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.block_content.side_nav.side_nav_sidenav
+    - block_content.type.side_nav
+id: block_content.side_nav.default
+targetEntityType: block_content
+bundle: side_nav
+mode: default
+content:
+  side_nav_sidenav:
+    label: hidden
+    type: entity_reference_entity_id
+    weight: 1
+    settings: { }
+    third_party_settings: { }
+hidden: {  }

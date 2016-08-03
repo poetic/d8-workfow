@@ -1,0 +1,32 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.comment.comment_usr_img
+    - field.field.node.comment.comment_rating
+    - field.field.node.comment.comment_cmmt_txt
+    - node.type.comment
+id: node.comment.default
+targetEntityType: node
+bundle: comment
+mode: default
+content:
+  comment_usr_img:
+    label: hidden
+    type: image
+    weight: 1
+    settings: { }
+    third_party_settings: { }
+  comment_rating:
+    label: hidden
+    type: string
+    weight: 2
+    settings: { }
+    third_party_settings: { }
+  comment_cmmt_txt:
+    label: hidden
+    type: basic_string
+    weight: 3
+    settings: { }
+    third_party_settings: { }
+hidden: {  }

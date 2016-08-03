@@ -1,0 +1,10 @@
+langcode: en
+status: true
+dependencies: {  }
+id: xx_base_page
+label: Xx Base Page
+use_admin_theme: null
+path: /xx-base-page
+access_logic: and
+access_conditions: {  }
+parameters: {  }

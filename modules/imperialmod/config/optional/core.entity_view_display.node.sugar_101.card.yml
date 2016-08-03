@@ -1,0 +1,12 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.card
+    - node.type.sugar_101
+id: node.sugar_101.card
+targetEntityType: node
+bundle: sugar_101
+mode: card
+content: {  }
+hidden: {  }

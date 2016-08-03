@@ -1,0 +1,153 @@
+news:
+    news_main:
+        type: image
+        name: news_main
+        form_display: image_image
+        formatter: image
+        cardinality: 1
+    news_description:
+        type: text_long
+        name: news_description
+        form_display: text_textarea
+        formatter: text_default
+        cardinality: 1
+sugar_101:
+    sugar_101_image:
+        type: image
+        name: sugar_101_image
+        form_display: image_image
+        formatter: image
+        cardinality: 1
+    sugar_101_description:
+        type: string_long
+        name: sugar_101_description
+        form_display: string_textarea
+        formatter: basic_string
+        cardinality: 1
+team:
+    team_image:
+        type: image
+        name: team_image
+        form_display: image_image
+        formatter: image
+        cardinality: 1
+    team_blog:
+        type: link
+        name: team_blog
+        form_display: link_default
+        formatter: link
+        cardinality: 1
+kids_landing:
+    kids_landing_background:
+        type: image
+        name: kids_landing_background
+        form_display: image_image
+        formatter: image
+        cardinality: 1
+    kids_landing_overlay:
+        type: image
+        name: kids_landing_overlay
+        form_display: image_image
+        formatter: image
+        cardinality: 1
+    kids_landing_title:
+        type: string
+        name: kids_landing_title
+        form_display: string_textfield
+        formatter: string
+        cardinality: 1
+    kids_landing_description:
+        type: text_long
+        name: kids_landing_description
+        form_display: text_textarea
+        formatter: text_default
+        cardinality: 1
+    kids_landing_popular_recipe:
+        type: entity_reference
+        name: kids_landing_popular_recipe
+        form_display: hidden
+        formatter: entity_reference_entity_id
+        cardinality: null
+        target_type: view
+        target_bundle: kids_popular_recipe
+        target_uuid: 6eeda95e-135f-4ca1-98b1-46ff99e131c3
+    kids_landing_trending_recipe:
+        type: entity_reference
+        name: kids_landing_trending_recipe
+        form_display: hidden
+        formatter: entity_reference_entity_id
+        cardinality: null
+        target_type: view
+        target_bundle: kids_trending_recipe
+        target_uuid: fc7fa9b6-ef50-4fb7-8f2a-4ee39d2cb6ae
+    kids_landing_collection_title:
+        type: string
+        name: kids_landing_collection_title
+        form_display: string_textfield
+        formatter: string
+        cardinality: 1
+    kids_landing_collection_kids:
+        type: entity_reference
+        name: kids_landing_collection_kids
+        form_display: hidden
+        formatter: entity_reference_entity_id
+        cardinality: null
+        target_type: view
+        target_bundle: collection_kids
+        target_uuid: fd5570e8-1792-4bdd-8371-9f4433491c72
+recipe_collection:
+    recipe_collection_image:
+        type: image
+        name: recipe_collection_image
+        form_display: image_image
+        formatter: image
+        cardinality: 1
+    recipe_collection_popular:
+        type: entity_reference
+        name: recipe_collection_popular
+        form_display: hidden
+        formatter: entity_reference_entity_id
+        cardinality: null
+        target_type: view
+        target_bundle: recipe_collection
+        target_uuid: 760d8426-9e43-4503-aa84-e038f1316fe4
+    recipe_collection_trending:
+        type: entity_reference
+        name: recipe_collection_trending
+        form_display: hidden
+        formatter: entity_reference_entity_id
+        cardinality: null
+        target_type: view
+        target_bundle: trending_collection
+        target_uuid: 0a14f47f-84e6-43ad-9167-f108ac188594
+recipe:
+    recipe_recipe_image:
+        type: image
+        name: recipe_recipe_image
+        form_display: image_image
+        formatter: image
+        cardinality: 1
+    recipe_description:
+        type: text_long
+        name: recipe_description
+        form_display: text_textarea
+        formatter: text_default
+        cardinality: 1
+    recipe_yield:
+        type: string
+        name: recipe_yield
+        form_display: string_textfield
+        formatter: string
+        cardinality: 1
+    recipe_directions:
+        type: text_long
+        name: recipe_directions
+        form_display: text_textarea
+        formatter: text_default
+        cardinality: 1
+    recipe_handy_tips:
+        type: text_long
+        name: recipe_handy_tips
+        form_display: text_textarea
+        formatter: text_default
+        cardinality: 1

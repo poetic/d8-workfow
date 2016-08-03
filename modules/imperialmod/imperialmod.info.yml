@@ -1,0 +1,9 @@
+name: imperialmod
+type: module
+description: Custom module for imperialmod
+core: 8.x
+package: Custom
+dependencies:
+  - panels
+  - layout_plugin
+  - page_manager

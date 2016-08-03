@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+id: share_band_imperial
+label: Share Band Imperial
+revision: 1
+description: 'Share Band Imperial'

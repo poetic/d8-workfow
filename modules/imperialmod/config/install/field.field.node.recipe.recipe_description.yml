@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.recipe_description
+    - node.type.recipe
+  module:
+    - text
+id: node.recipe.recipe_description
+field_name: recipe_description
+entity_type: node
+bundle: recipe
+label: 'Recipe Description'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

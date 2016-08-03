@@ -1,0 +1,10 @@
+langcode: en
+status: true
+dependencies: {  }
+id: recipe_collection_overview
+label: Recipe Collection Overview
+use_admin_theme: null
+path: /recipe-collection-overview
+access_logic: and
+access_conditions: {  }
+parameters: {  }

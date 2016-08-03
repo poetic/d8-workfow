@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+id: home_hero
+label: Home Hero
+revision: 1
+description: 'Home Hero'

@@ -1,0 +1,10 @@
+langcode: en
+status: true
+dependencies: {  }
+id: kids_in_the_kitchen_2
+label: Kids In The Kitchen 2
+use_admin_theme: null
+path: /kids-in-the-kitchen-2
+access_logic: and
+access_conditions: {  }
+parameters: {  }

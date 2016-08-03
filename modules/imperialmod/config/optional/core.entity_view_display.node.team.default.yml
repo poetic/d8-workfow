@@ -1,0 +1,25 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.team.team_image
+    - field.field.node.team.team_blog
+    - node.type.team
+id: node.team.default
+targetEntityType: node
+bundle: team
+mode: default
+content:
+  team_image:
+    label: hidden
+    type: image
+    weight: 1
+    settings: { }
+    third_party_settings: { }
+  team_blog:
+    label: hidden
+    type: link
+    weight: 2
+    settings: { }
+    third_party_settings: { }
+hidden: {  }

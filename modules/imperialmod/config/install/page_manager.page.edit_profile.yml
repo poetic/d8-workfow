@@ -1,0 +1,10 @@
+langcode: en
+status: true
+dependencies: {  }
+id: edit_profile
+label: Edit Profile
+use_admin_theme: null
+path: /edit-profile
+access_logic: and
+access_conditions: {  }
+parameters: {  }

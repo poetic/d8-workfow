@@ -1,0 +1,10 @@
+langcode: en
+status: true
+dependencies: {  }
+id: digital_cookbooks
+label: Digital Cookbooks
+use_admin_theme: null
+path: /digital-cookbooks
+access_logic: and
+access_conditions: {  }
+parameters: {  }

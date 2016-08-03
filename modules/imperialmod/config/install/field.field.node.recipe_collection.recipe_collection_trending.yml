@@ -1,0 +1,25 @@
+langcode: en
+status: true
+dependencies:
+  config:
+  - node.type.recipe_collection
+  - field.storage.node.recipe_collection_trending
+  - views.view.trending_collection
+id: node.recipe_collection.recipe_collection_trending
+field_name: recipe_collection_trending
+entity_type: node
+bundle: recipe_collection
+label: 'Recipe Collection Trending'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    target_uuid: 0a14f47f-84e6-43ad-9167-f108ac188594
+default_value_callback: ''
+settings:
+  handler: 'default:view'
+  handler_settings:
+    target_bundles: null
+    auto_create: false
+field_type: entity_reference

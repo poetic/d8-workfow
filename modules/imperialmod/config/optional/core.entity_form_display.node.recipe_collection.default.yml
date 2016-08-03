@@ -1,0 +1,19 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.recipe_collection.recipe_collection_image
+    - field.field.node.recipe_collection.recipe_collection_popular
+    - field.field.node.recipe_collection.recipe_collection_trending
+    - node.type.recipe_collection
+id: node.recipe_collection.default
+targetEntityType: node
+bundle: recipe_collection
+mode: default
+content:
+  recipe_collection_image:
+    type: image_image
+    weight: 1
+    settings: { }
+    third_party_settings: { }
+hidden: {  }

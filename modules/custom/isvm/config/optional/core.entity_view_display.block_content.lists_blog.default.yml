@@ -1,0 +1,25 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.block_content.lists_blog.lists_blog_kids_view
+    - field.field.block_content.lists_blog.lists_blog_30under_view
+    - block_content.type.lists_blog
+id: block_content.lists_blog.default
+targetEntityType: block_content
+bundle: lists_blog
+mode: default
+content:
+  lists_blog_kids_view:
+    label: hidden
+    type: entity_reference_entity_id
+    weight: 1
+    settings: { }
+    third_party_settings: { }
+  lists_blog_30under_view:
+    label: hidden
+    type: entity_reference_entity_id
+    weight: 2
+    settings: { }
+    third_party_settings: { }
+hidden: {  }

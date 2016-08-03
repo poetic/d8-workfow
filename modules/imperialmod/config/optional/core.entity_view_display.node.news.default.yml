@@ -1,0 +1,25 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.news.news_main
+    - field.field.node.news.news_description
+    - node.type.news
+id: node.news.default
+targetEntityType: node
+bundle: news
+mode: default
+content:
+  news_main:
+    label: hidden
+    type: image
+    weight: 1
+    settings: { }
+    third_party_settings: { }
+  news_description:
+    label: hidden
+    type: text_default
+    weight: 2
+    settings: { }
+    third_party_settings: { }
+hidden: {  }

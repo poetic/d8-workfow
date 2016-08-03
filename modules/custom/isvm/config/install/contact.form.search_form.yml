@@ -1,0 +1,14 @@
+uuid: 78bdd19f-9d1d-42ef-9d56-a3220622be85
+langcode: en
+status: true
+dependencies: {  }
+third_party_settings:
+  contact_storage:
+    redirect_uri: ''
+    submit_text: 'Submit'
+    show_preview: false
+id: search_form
+label: 'Search Form'
+recipients: {  }
+reply: ''
+weight: 0

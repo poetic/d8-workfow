@@ -1,0 +1,11 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.side_nav
+id: block_content.side_nav.default
+targetEntityType: block_content
+bundle: side_nav
+mode: default
+content: {  }
+hidden: {  }

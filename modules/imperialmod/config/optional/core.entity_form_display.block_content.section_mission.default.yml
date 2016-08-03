@@ -1,0 +1,11 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.section_mission
+id: block_content.section_mission.default
+targetEntityType: block_content
+bundle: section_mission
+mode: default
+content: {  }
+hidden: {  }

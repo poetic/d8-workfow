@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.block_content.learn_more_dixie_description
+    - block_content.type.learn_more
+  module:
+    - text
+id: block_content.learn_more.learn_more_dixie_description
+field_name: learn_more_dixie_description
+entity_type: block_content
+bundle: learn_more
+label: 'Learn More Dixie Description'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

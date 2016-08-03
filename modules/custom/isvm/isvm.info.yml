@@ -1,0 +1,9 @@
+name: isvm
+type: module
+description: Custom module for isvm
+core: 8.x
+package: Custom
+dependencies:
+  - panels
+  - layout_plugin
+  - page_manager

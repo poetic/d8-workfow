@@ -1,0 +1,7 @@
+subscribe:
+    subscribe_email:
+        type: email
+        name: subscribe_email
+        form_display: email_default
+        formatter: basic_string
+        cardinality: 1

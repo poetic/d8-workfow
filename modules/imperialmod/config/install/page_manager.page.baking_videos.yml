@@ -1,0 +1,10 @@
+langcode: en
+status: true
+dependencies: {  }
+id: baking_videos
+label: Baking Videos
+use_admin_theme: null
+path: /baking-videos
+access_logic: and
+access_conditions: {  }
+parameters: {  }

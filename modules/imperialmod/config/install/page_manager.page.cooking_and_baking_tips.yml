@@ -1,0 +1,10 @@
+langcode: en
+status: true
+dependencies: {  }
+id: cooking_and_baking_tips
+label: Cooking And Baking Tips
+use_admin_theme: null
+path: /cooking-and-baking-tips
+access_logic: and
+access_conditions: {  }
+parameters: {  }

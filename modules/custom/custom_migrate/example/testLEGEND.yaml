@@ -1,0 +1,49 @@
+
+
+id: legend
+migration_tags: null
+migration_group: null
+label: 'Legend Homes Test'
+source:
+  plugin: xml_plugin
+  path: 'http://legendhomeshouston.com/sites/legendhomecorp.com/files/feeds/c9230c1b-1eec-4f22-abe1-60eeec2c7bdb.xml'
+  base_query: //Division[Code="05"]//Spec
+  #Make sure to put the migration ID here as well
+  migration_name: legend
+  #This is REQUIRED if the migration needs to access the value through the attribute tags.  
+  #The important required pieces are the three items separated with the bar AFTER the :
+  #Example: images elevation: images|ImageType="Elevation"|imageElevation
+  #First is the original element name from the source material (EX: images)
+  #Second is the attribute as it is exactly from the source material (EX: ImageType="Elevation")
+  #Third is the new element name you want it to be replaced with.  It must be unique(EX: imageElevation)
+  attributes:
+
+  #Follow this to create the list of fields.  It will allow migration to see the source element, the new elemenet for the migration array 
+  #and the xpath to get the target value (element from xml(red) as the key:element replacement for the new migration array|xpath) EX: power: attribute.power|attribute/power
+  xpath:
+    JobUnitNum: JobUnitNum|JobUnitNum
+    LotPrice: LotPrice|LotPrice
+
+  #Only TWO KEYS MAX are allowed!!  
+  #You cannot change the key after initial migration
+  keys:
+    - JobUnitNum
+
+#insert the destination drupal machine name as the key and the final new element name from the source XML (unless it requires a plugin)
+process:
+  type:
+    plugin: default_valued
+    default_value: legend_homes
+  title: JobUnitNum
+  field_price: LotPrice
+
+destination:
+  plugin: entity:node
+dependencies:
+  module:
+migration_dependencies: {  }
+
+
+###Use image_plugin PLUGIN for image fields
+###Use taxonomy_plugin PLUGIN for taxonomy fields
+###Use entity_reference_plugin PLUGIN for entity reference fields

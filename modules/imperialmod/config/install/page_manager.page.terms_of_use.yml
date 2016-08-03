@@ -1,0 +1,10 @@
+langcode: en
+status: true
+dependencies: {  }
+id: terms_of_use
+label: Terms Of Use
+use_admin_theme: null
+path: /terms-of-use
+access_logic: and
+access_conditions: {  }
+parameters: {  }

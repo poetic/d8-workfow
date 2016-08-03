@@ -1,0 +1,12 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.list
+    - node.type.recipe
+id: node.recipe.list
+targetEntityType: node
+bundle: recipe
+mode: list
+content: {  }
+hidden: {  }

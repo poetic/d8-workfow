@@ -1,0 +1,10 @@
+langcode: en
+status: true
+dependencies: {  }
+id: products_3
+label: Products 3
+use_admin_theme: null
+path: /products-3
+access_logic: and
+access_conditions: {  }
+parameters: {  }

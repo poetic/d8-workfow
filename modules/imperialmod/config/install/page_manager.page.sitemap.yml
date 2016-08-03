@@ -1,0 +1,10 @@
+langcode: en
+status: true
+dependencies: {  }
+id: sitemap
+label: Sitemap
+use_admin_theme: null
+path: /sitemap
+access_logic: and
+access_conditions: {  }
+parameters: {  }

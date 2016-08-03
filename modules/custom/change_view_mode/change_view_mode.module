@@ -1,0 +1,39 @@
+<?php
+
+/**
+ * @file
+ * Contains change_view_mode.module..
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\domain\DomainInterface;
+use Drupal\Core\Entity\ContentEntityBase;
+
+/**
+ * Implements hook_help().
+ */
+function change_view_mode_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the change_view_mode module.
+    case 'help.page.change_view_mode':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('My Awesome Module') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+
+/**
+ * Implements hook_entity_view_mode_alter().
+ */
+function change_view_mode_entity_view_mode_alter(&$view_mode, $entity, $context) {
+    $domain = \Drupal::service('domain.negotiator')->getActiveDomain()->isDefault();
+    if($domain){
+      $view_mode = 'imperial';
+    }else {
+      $view_mode = 'dixie';
+    }
+}

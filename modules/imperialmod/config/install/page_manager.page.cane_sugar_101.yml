@@ -1,0 +1,10 @@
+langcode: en
+status: true
+dependencies: {  }
+id: cane_sugar_101
+label: Cane Sugar 101
+use_admin_theme: null
+path: /cane-sugar-101
+access_logic: and
+access_conditions: {  }
+parameters: {  }

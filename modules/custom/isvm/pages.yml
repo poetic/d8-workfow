@@ -1,0 +1,46 @@
+index:
+    - side_nav
+    - top_nav
+    - home_popular
+    - social_gmo
+    - home_special
+    - share
+    - lists_blog
+    - corporate
+    - subscribe
+    - ftr
+recipe:
+    - top_nav
+    - social
+    - connect
+    - subscribe_2
+    - social
+    - social
+    - rate_review
+    - subscribe
+    - side_nav
+    - ftr
+search_results_tabs:
+    - top_nav
+    - search_results
+    - subscribe
+    - ftr
+    - side_nav
+search_results:
+    - top_nav
+    - subscribe
+    - corporate
+    - side_nav
+    - recipe_result
+share_a_recipe:
+    - top_nav
+    - side_nav
+    - share
+    - subscribe
+    - ftr
+styles: {  }
+xx_base_page:
+    - top_nav
+    - subscribe
+    - ftr
+    - side_nav

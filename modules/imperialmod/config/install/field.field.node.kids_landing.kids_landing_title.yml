@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.kids_landing
+    - field.storage.node.kids_landing_title
+id: node.kids_landing.kids_landing_title
+field_name: kids_landing_title
+entity_type: node
+bundle: kids_landing
+label: 'Kids Landing Title'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

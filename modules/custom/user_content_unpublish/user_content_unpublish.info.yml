@@ -1,0 +1,5 @@
+name: User Content Unpublish
+type: module
+description: This module will unpublish all recipes submitted by the authenticated user role
+core: 8.x
+package: Custom

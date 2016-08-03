@@ -1,0 +1,41 @@
+<?php
+
+/**
+ * @file
+ * Contains user_content_unpublish.module..
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\Core\Entity\EntityInterface;
+
+/**
+ * Implements hook_help().
+ */
+function user_content_unpublish_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the user_content_unpublish module.
+    case 'help.page.user_content_unpublish':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('This module will unpublish all recipes submitted by the authenticated user role') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_node_insert().
+ */
+function user_content_unpublish_node_insert(Drupal\Core\Entity\EntityInterface $node) {
+  $node_type = $node->getType();
+  $userCurrent = \Drupal::currentUser();
+  $user = Drupal\user\Entity\User::load($userCurrent->id());
+  $roles = $user->getRoles();
+  if(!in_array("administrator", $roles) && $node_type == "recipe"){
+    $nid = $node->id();
+    $update_node = \Drupal\node\Entity\Node::load($nid);
+    $update_node->set('status', 0);          
+    $update_node->save();
+  }
+}

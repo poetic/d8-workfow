@@ -1,0 +1,10 @@
+langcode: en
+status: true
+dependencies: {  }
+id: recipe_box
+label: Recipe Box
+use_admin_theme: null
+path: /recipe-box
+access_logic: and
+access_conditions: {  }
+parameters: {  }

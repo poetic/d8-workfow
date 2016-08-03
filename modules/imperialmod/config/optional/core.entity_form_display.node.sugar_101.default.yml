@@ -1,0 +1,23 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.sugar_101.sugar_101_image
+    - field.field.node.sugar_101.sugar_101_description
+    - node.type.sugar_101
+id: node.sugar_101.default
+targetEntityType: node
+bundle: sugar_101
+mode: default
+content:
+  sugar_101_image:
+    type: image_image
+    weight: 1
+    settings: { }
+    third_party_settings: { }
+  sugar_101_description:
+    type: string_textarea
+    weight: 2
+    settings: { }
+    third_party_settings: { }
+hidden: {  }

@@ -1,0 +1,67 @@
+﻿<?xml version='1.0' encoding='UTF-8'?>
+<top>
+<nodes>
+	<node>
+		<title>Batman</title>
+		<author>DC</author>
+		<attribute>
+			<power>brains</power>
+			<gender>male</gender>
+			<Other>
+				<sideKick>robin</sideKick>
+				<power>money</power>
+			</Other>
+			<images ImageType="Hero">https://raw.githubusercontent.com/poetic/migrate-xml-plugin/development/custom_migrate/example/batman.jpg?token=AL2ATHWO95KSKnHmqOAezB2OtAqlzJrhks5XQ21MwA%3D%3D</images>
+			<images ImageType="Human">https://raw.githubusercontent.com/poetic/migrate-xml-plugin/development/custom_migrate/example/bruce.jpg?token=AL2ATGjnwQ0lWO8xrfQxuflba4FGmaK0ks5XQ20TwA%3D%3D</images>
+		</attribute>
+		<pets>horse</pets>
+		<pets>cats</pets>
+		<realname>Bruce Wayne</realname>
+		<realname>Logan</realname>
+	</node>
+	<node>
+		<title>Superman</title>
+		<author>DC</author>
+		<attribute>
+			<power>super strength</power>
+			<gender>male</gender>
+			<other>
+				<sidekick>supergirl</sidekick>
+			</other>
+<images ImageType="Hero">https://raw.githubusercontent.com/poetic/migrate-xml-plugin/development/custom_migrate/example/superman.png?token=AL2ATFImOsFzl6UU4FydYZkqcMvJ5hOOks5XQ21XwA%3D%3D</images>
+		</attribute>
+		<pets>dogs</pets>
+		<pets>cats</pets>
+		<realname>Clark Kent</realname>
+	</node>
+	<node>
+		<title>Wolverine</title>
+		<author>Marvel</author>
+		<attribute>
+			<power>healing</power>
+			<gender>male</gender>
+			<other>
+				<sidekick>Deadpool</sidekick>
+			</other>
+		</attribute>
+		<pets>dogs</pets>
+		<Pets>cats</Pets>
+		<Pets>horse</Pets>
+		<pets>pigs</pets>
+		<realname>Logan</realname>
+	</node>
+	<node>
+		<title>Captain America</title>
+		<author>Marvel</author>
+		<attribute>
+			<power>super strength</power>
+			<gender>male</gender>
+			<other>
+				<sidekick>bucky</sidekick>
+			</other>
+		</attribute>
+		<pets>pigs</pets>
+		<realname>Steven Rogers</realname>
+	</node>
+</nodes>
+</top>

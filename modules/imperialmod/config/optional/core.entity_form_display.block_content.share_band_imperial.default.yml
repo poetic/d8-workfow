@@ -1,0 +1,35 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.block_content.share_band_imperial.share_band_imperial_cupcake_icon
+    - field.field.block_content.share_band_imperial.share_band_imperial_title
+    - field.field.block_content.share_band_imperial.share_band_imperial_description
+    - field.field.block_content.share_band_imperial.share_band_imperial_share
+    - block_content.type.share_band_imperial
+id: block_content.share_band_imperial.default
+targetEntityType: block_content
+bundle: share_band_imperial
+mode: default
+content:
+  share_band_imperial_cupcake_icon:
+    type: image_image
+    weight: 1
+    settings: { }
+    third_party_settings: { }
+  share_band_imperial_title:
+    type: string_textfield
+    weight: 2
+    settings: { }
+    third_party_settings: { }
+  share_band_imperial_description:
+    type: text_textarea
+    weight: 3
+    settings: { }
+    third_party_settings: { }
+  share_band_imperial_share:
+    type: link_default
+    weight: 4
+    settings: { }
+    third_party_settings: { }
+hidden: {  }

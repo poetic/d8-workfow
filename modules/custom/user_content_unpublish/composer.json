@@ -1,0 +1,14 @@
+{
+  "name": "drupal/user_content_unpublish",
+  "type": "drupal-module",
+  "description": "This module will unpublish all recipes submitted by the authenticated user role",
+  "keywords": ["Drupal"],
+  "license": "GPL-2.0+",
+  "homepage": "https://www.drupal.org/project/user_content_unpublish",
+  "minimum-stability": "dev",
+  "support": {
+    "issues": "http://drupal.org/project/issues/user_content_unpublish",
+    "source": "http://cgit.drupalcode.org/user_content_unpublish"
+  },
+  "require": { }
+}

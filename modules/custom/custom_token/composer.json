@@ -1,0 +1,14 @@
+{
+  "name": "drupal/custom_token",
+  "type": "drupal-module",
+  "description": "Create Custom Tokens",
+  "keywords": ["Drupal"],
+  "license": "GPL-2.0+",
+  "homepage": "https://www.drupal.org/project/custom_token",
+  "minimum-stability": "dev",
+  "support": {
+    "issues": "http://drupal.org/project/issues/custom_token",
+    "source": "http://cgit.drupalcode.org/custom_token"
+  },
+  "require": { }
+}

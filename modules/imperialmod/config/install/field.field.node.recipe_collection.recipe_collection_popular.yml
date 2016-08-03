@@ -1,0 +1,25 @@
+langcode: en
+status: true
+dependencies:
+  config:
+  - node.type.recipe_collection
+  - field.storage.node.recipe_collection_popular
+  - views.view.recipe_collection
+id: node.recipe_collection.recipe_collection_popular
+field_name: recipe_collection_popular
+entity_type: node
+bundle: recipe_collection
+label: 'Recipe Collection Popular'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    target_uuid: 760d8426-9e43-4503-aa84-e038f1316fe4
+default_value_callback: ''
+settings:
+  handler: 'default:view'
+  handler_settings:
+    target_bundles: null
+    auto_create: false
+field_type: entity_reference

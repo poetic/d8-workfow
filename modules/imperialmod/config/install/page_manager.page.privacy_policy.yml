@@ -1,0 +1,10 @@
+langcode: en
+status: true
+dependencies: {  }
+id: privacy_policy
+label: Privacy Policy
+use_admin_theme: null
+path: /privacy-policy
+access_logic: and
+access_conditions: {  }
+parameters: {  }

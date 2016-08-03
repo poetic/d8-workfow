@@ -1,0 +1,17 @@
+langcode: en
+status: true
+dependencies:
+  - block_content
+id: block_content.ftr_ftr_corporate_menu
+field_name: ftr_ftr_corporate_menu
+entity_type: block_content
+type: entity_reference
+settings:
+  target_type: menu
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

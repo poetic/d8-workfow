@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - contact.form.subscribe
+    - field.storage.contact_message.subscribe_email
+id: contact_message.subscribe.subscribe_email
+field_name: subscribe_email
+entity_type: contact_message
+bundle: subscribe
+label: Subscribe Email
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: email

@@ -1,0 +1,38 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.block_content.footer.footer_imperial_logo
+    - field.field.block_content.footer.footer_dixie_logo
+    - field.field.block_content.footer.footer_coporatemenu
+    - field.field.block_content.footer.footer_footermenu
+    - field.field.block_content.footer.footer_imperial_products
+    - field.field.block_content.footer.footer_dixie_products
+    - image.style.thumbnail
+    - block_content.type.footer
+id: block_content.footer.default
+targetEntityType: block_content
+bundle: footer
+mode: default
+content:
+  footer_imperial_logo:
+    type: image_image
+    weight: 1
+    settings: { }
+    third_party_settings: { }
+  footer_dixie_logo:
+    type: image_image
+    weight: 2
+    settings: { }
+    third_party_settings: { }
+  footer_imperial_products:
+    type: image_image
+    weight: 3
+    settings: { }
+    third_party_settings: { }
+  footer_dixie_products:
+    type: image_image
+    weight: 4
+    settings: { }
+    third_party_settings: { }
+hidden: {  }

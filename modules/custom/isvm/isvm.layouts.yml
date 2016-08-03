@@ -1,0 +1,18 @@
+one_column:
+  label: One Column
+  category: Clutch Layouts
+  path: plugins/layouts/one_column
+  template: isvm.one_column
+  regions:
+    contentmain:
+      label: Content
+two_column:
+  label: Two Column
+  category: Clutch Layouts
+  path: plugins/layouts/two_column
+  template: isvm.two_column
+  regions:
+    column1:
+      label: First Column
+    column2:
+      label: Second Column

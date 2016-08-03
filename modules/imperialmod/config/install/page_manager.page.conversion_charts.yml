@@ -1,0 +1,10 @@
+langcode: en
+status: true
+dependencies: {  }
+id: conversion_charts
+label: Conversion Charts
+use_admin_theme: null
+path: /conversion-charts
+access_logic: and
+access_conditions: {  }
+parameters: {  }

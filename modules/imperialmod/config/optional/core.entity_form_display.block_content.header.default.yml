@@ -1,0 +1,32 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.block_content.header.header_usernav
+    - field.field.block_content.header.header_imperial_logo
+    - field.field.block_content.header.header_dixie_logo
+    - field.field.block_content.header.header_main
+    - field.field.block_content.header.header_background_img
+    - image.style.thumbnail
+    - block_content.type.header
+id: block_content.header.default
+targetEntityType: block_content
+bundle: header
+mode: default
+content:
+  header_imperial_logo:
+    type: image_image
+    weight: 1
+    settings: { }
+    third_party_settings: { }
+  header_dixie_logo:
+    type: image_image
+    weight: 2
+    settings: { }
+    third_party_settings: { }
+  header_background_img:
+    type: image_image
+    weight: 3
+    settings: { }
+    third_party_settings: { }
+hidden: {  }

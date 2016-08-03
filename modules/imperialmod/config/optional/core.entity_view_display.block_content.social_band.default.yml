@@ -1,0 +1,88 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.block_content.social_band.social_band_facebook
+    - field.field.block_content.social_band.social_band_pinterest
+    - field.field.block_content.social_band.social_band_twitter
+    - field.field.block_content.social_band.social_band_google
+    - field.field.block_content.social_band.social_band_instagram
+    - field.field.block_content.social_band.social_band_youtube
+    - field.field.block_content.social_band.social_band_title
+    - field.field.block_content.social_band.social_band_certified
+    - field.field.block_content.social_band.social_band_cert
+    - field.field.block_content.social_band.social_band_gmo
+    - field.field.block_content.social_band.social_band_learn_about
+    - block_content.type.social_band
+id: block_content.social_band.default
+targetEntityType: block_content
+bundle: social_band
+mode: default
+content:
+  social_band_facebook:
+    label: hidden
+    type: link
+    weight: 1
+    settings: { }
+    third_party_settings: { }
+  social_band_pinterest:
+    label: hidden
+    type: link
+    weight: 2
+    settings: { }
+    third_party_settings: { }
+  social_band_twitter:
+    label: hidden
+    type: link
+    weight: 3
+    settings: { }
+    third_party_settings: { }
+  social_band_google:
+    label: hidden
+    type: link
+    weight: 4
+    settings: { }
+    third_party_settings: { }
+  social_band_instagram:
+    label: hidden
+    type: link
+    weight: 5
+    settings: { }
+    third_party_settings: { }
+  social_band_youtube:
+    label: hidden
+    type: link
+    weight: 6
+    settings: { }
+    third_party_settings: { }
+  social_band_title:
+    label: hidden
+    type: string
+    weight: 7
+    settings: { }
+    third_party_settings: { }
+  social_band_certified:
+    label: hidden
+    type: string
+    weight: 8
+    settings: { }
+    third_party_settings: { }
+  social_band_cert:
+    label: hidden
+    type: image
+    weight: 9
+    settings: { }
+    third_party_settings: { }
+  social_band_gmo:
+    label: hidden
+    type: image
+    weight: 10
+    settings: { }
+    third_party_settings: { }
+  social_band_learn_about:
+    label: hidden
+    type: link
+    weight: 11
+    settings: { }
+    third_party_settings: { }
+hidden: {  }

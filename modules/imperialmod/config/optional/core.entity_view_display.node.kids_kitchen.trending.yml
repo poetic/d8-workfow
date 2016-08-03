@@ -1,0 +1,12 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.trending
+    - node.type.kids_kitchen
+id: node.kids_kitchen.trending
+targetEntityType: node
+bundle: kids_kitchen
+mode: trending
+content: {  }
+hidden: {  }

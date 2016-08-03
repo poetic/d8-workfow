@@ -1,0 +1,40 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.trending
+    - field.field.node.recipe.recipe_image
+    - field.field.node.recipe.recipe_rating
+    - field.field.node.recipe.recipe_title
+    - field.field.node.recipe.recipe_chef
+    - node.type.recipe
+id: node.recipe.trending
+targetEntityType: node
+bundle: recipe
+mode: trending
+content:
+  recipe_image:
+    label: hidden
+    type: image
+    weight: 1
+    settings: { }
+    third_party_settings: { }
+  recipe_rating:
+    label: hidden
+    type: string
+    weight: 2
+    settings: { }
+    third_party_settings: { }
+  recipe_title:
+    label: hidden
+    type: string
+    weight: 3
+    settings: { }
+    third_party_settings: { }
+  recipe_chef:
+    label: hidden
+    type: link
+    weight: 4
+    settings: { }
+    third_party_settings: { }
+hidden: {  }

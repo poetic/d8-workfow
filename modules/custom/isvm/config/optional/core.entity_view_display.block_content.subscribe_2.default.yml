@@ -1,0 +1,11 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.subscribe_2
+id: block_content.subscribe_2.default
+targetEntityType: block_content
+bundle: subscribe_2
+mode: default
+content: {  }
+hidden: {  }

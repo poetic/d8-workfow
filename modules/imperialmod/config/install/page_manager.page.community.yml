@@ -1,0 +1,10 @@
+langcode: en
+status: true
+dependencies: {  }
+id: community
+label: Community
+use_admin_theme: null
+path: /community
+access_logic: and
+access_conditions: {  }
+parameters: {  }

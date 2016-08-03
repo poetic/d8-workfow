@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+id: home_special
+label: Home Special
+revision: 1
+description: 'Home Special'

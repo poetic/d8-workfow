@@ -1,0 +1,10 @@
+langcode: en
+status: true
+dependencies: {  }
+id: vintage_imperial
+label: Vintage Imperial
+use_admin_theme: null
+path: /vintage-imperial
+access_logic: and
+access_conditions: {  }
+parameters: {  }

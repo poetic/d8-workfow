@@ -1,0 +1,29 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.block_content.social.social_pin
+    - field.field.block_content.social.social_fb
+    - field.field.block_content.social.social_tweet
+    - block_content.type.social
+id: block_content.social.default
+targetEntityType: block_content
+bundle: social
+mode: default
+content:
+  social_pin:
+    type: link_default
+    weight: 1
+    settings: { }
+    third_party_settings: { }
+  social_fb:
+    type: link_default
+    weight: 2
+    settings: { }
+    third_party_settings: { }
+  social_tweet:
+    type: link_default
+    weight: 3
+    settings: { }
+    third_party_settings: { }
+hidden: {  }

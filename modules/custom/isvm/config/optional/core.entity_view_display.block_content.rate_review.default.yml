@@ -1,0 +1,11 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.rate_review
+id: block_content.rate_review.default
+targetEntityType: block_content
+bundle: rate_review
+mode: default
+content: {  }
+hidden: {  }

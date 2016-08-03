@@ -1,0 +1,25 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.block_content.main_block.main_block_hero
+    - field.field.block_content.main_block.main_block_trending
+    - block_content.type.main_block
+id: block_content.main_block.default
+targetEntityType: block_content
+bundle: main_block
+mode: default
+content:
+  main_block_hero:
+    label: hidden
+    type: entity_reference_entity_id
+    weight: 1
+    settings: { }
+    third_party_settings: { }
+  main_block_trending:
+    label: hidden
+    type: entity_reference_entity_id
+    weight: 2
+    settings: { }
+    third_party_settings: { }
+hidden: {  }

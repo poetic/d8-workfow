@@ -1,0 +1,14 @@
+{
+  "name": "drupal/change_view_mode",
+  "type": "drupal-module",
+  "description": "My Awesome Module",
+  "keywords": ["Drupal"],
+  "license": "GPL-2.0+",
+  "homepage": "https://www.drupal.org/project/change_view_mode",
+  "minimum-stability": "dev",
+  "support": {
+    "issues": "http://drupal.org/project/issues/change_view_mode",
+    "source": "http://cgit.drupalcode.org/change_view_mode"
+  },
+  "require": { }
+}

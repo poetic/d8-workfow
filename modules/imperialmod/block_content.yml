@@ -1,0 +1,389 @@
+our_blogger:
+    our_blogger_logo_imperial:
+        type: image
+        name: our_blogger_logo_imperial
+        form_display: image_image
+        formatter: image
+        cardinality: 1
+    our_blogger_description:
+        type: text_long
+        name: our_blogger_description
+        form_display: text_textarea
+        formatter: text_default
+        cardinality: 1
+    our_blogger_developers_tab:
+        type: string
+        name: our_blogger_developers_tab
+        form_display: string_textfield
+        formatter: string
+        cardinality: 1
+    our_blogger_testers_tab:
+        type: string
+        name: our_blogger_testers_tab
+        form_display: string_textfield
+        formatter: string
+        cardinality: 1
+    our_blogger_seal_dev:
+        type: image
+        name: our_blogger_seal_dev
+        form_display: image_image
+        formatter: image
+        cardinality: 1
+    our_blogger_seal_dev_dixie:
+        type: image
+        name: our_blogger_seal_dev_dixie
+        form_display: image_image
+        formatter: image
+        cardinality: 1
+    our_blogger_intro_developer:
+        type: text_long
+        name: our_blogger_intro_developer
+        form_display: text_textarea
+        formatter: text_default
+        cardinality: 1
+    our_blogger_seal_tester:
+        type: image
+        name: our_blogger_seal_tester
+        form_display: image_image
+        formatter: image
+        cardinality: 1
+    our_blogger_seal_tester_dixie:
+        type: image
+        name: our_blogger_seal_tester_dixie
+        form_display: image_image
+        formatter: image
+        cardinality: 1
+    our_blogger_intro_tester:
+        type: text_long
+        name: our_blogger_intro_tester
+        form_display: text_textarea
+        formatter: text_default
+        cardinality: 1
+    our_blogger_teams_view:
+        type: entity_reference
+        name: our_blogger_teams_view
+        form_display: hidden
+        formatter: entity_reference_entity_id
+        cardinality: null
+        target_type: view
+        target_bundle: tester_team
+        target_uuid: e469ad66-c6ec-4708-b35b-128fdfeec778
+header:
+    header_usernav:
+        type: entity_reference
+        name: header_usernav
+        form_display: hidden
+        formatter: entity_reference_entity_id
+        cardinality: null
+        target_type: menu
+        target_bundle: usernav
+        target_uuid: null
+    header_imperial_logo:
+        type: image
+        name: header_imperial_logo
+        form_display: image_image
+        formatter: image
+        cardinality: 1
+    header_dixie_logo:
+        type: image
+        name: header_dixie_logo
+        form_display: image_image
+        formatter: image
+        cardinality: 1
+    header_main:
+        type: entity_reference
+        name: header_main
+        form_display: hidden
+        formatter: entity_reference_entity_id
+        cardinality: null
+        target_type: menu
+        target_bundle: mainnav
+        target_uuid: null
+    header_background_img:
+        type: image
+        name: header_background_img
+        form_display: image_image
+        formatter: image
+        cardinality: 1
+side_nav:
+    side_nav_sidenav:
+        type: entity_reference
+        name: side_nav_sidenav
+        form_display: hidden
+        formatter: entity_reference_entity_id
+        cardinality: null
+        target_type: menu
+        target_bundle: sidenav
+        target_uuid: null
+main_block:
+    main_block_hero:
+        type: entity_reference
+        name: main_block_hero
+        form_display: hidden
+        formatter: entity_reference_entity_id
+        cardinality: null
+        target_type: view
+        target_bundle: hero
+        target_uuid: a943a6d3-ea1b-4282-8f9b-a49dee97dad0
+    main_block_trending:
+        type: entity_reference
+        name: main_block_trending
+        form_display: hidden
+        formatter: entity_reference_entity_id
+        cardinality: null
+        target_type: view
+        target_bundle: trending
+        target_uuid: a2e1aa18-6f05-411b-a721-dfbfd54dda84
+social_band:
+    social_band_facebook:
+        type: link
+        name: social_band_facebook
+        form_display: link_default
+        formatter: link
+        cardinality: 1
+    social_band_pinterest:
+        type: link
+        name: social_band_pinterest
+        form_display: link_default
+        formatter: link
+        cardinality: 1
+    social_band_twitter:
+        type: link
+        name: social_band_twitter
+        form_display: link_default
+        formatter: link
+        cardinality: 1
+    social_band_google:
+        type: link
+        name: social_band_google
+        form_display: link_default
+        formatter: link
+        cardinality: 1
+    social_band_instagram:
+        type: link
+        name: social_band_instagram
+        form_display: link_default
+        formatter: link
+        cardinality: 1
+    social_band_youtube:
+        type: link
+        name: social_band_youtube
+        form_display: link_default
+        formatter: link
+        cardinality: 1
+    social_band_title:
+        type: string
+        name: social_band_title
+        form_display: string_textfield
+        formatter: string
+        cardinality: 1
+    social_band_certified:
+        type: string
+        name: social_band_certified
+        form_display: string_textfield
+        formatter: string
+        cardinality: 1
+    social_band_cert:
+        type: image
+        name: social_band_cert
+        form_display: image_image
+        formatter: image
+        cardinality: 1
+    social_band_gmo:
+        type: image
+        name: social_band_gmo
+        form_display: image_image
+        formatter: image
+        cardinality: 1
+    social_band_learn_about:
+        type: link
+        name: social_band_learn_about
+        form_display: link_default
+        formatter: link
+        cardinality: 1
+home_hero:
+    home_hero_special:
+        type: string
+        name: home_hero_special
+        form_display: string_textfield
+        formatter: string
+        cardinality: 1
+    home_hero_slider_view:
+        type: entity_reference
+        name: home_hero_slider_view
+        form_display: hidden
+        formatter: entity_reference_entity_id
+        cardinality: null
+        target_type: view
+        target_bundle: slider_view
+        target_uuid: 4785e02a-5644-472b-875a-7529de53b165
+    home_hero_under_30:
+        type: string
+        name: home_hero_under_30
+        form_display: string_textfield
+        formatter: string
+        cardinality: 1
+    home_hero_under_30_view:
+        type: entity_reference
+        name: home_hero_under_30_view
+        form_display: hidden
+        formatter: entity_reference_entity_id
+        cardinality: null
+        target_type: view
+        target_bundle: under_30_view
+        target_uuid: 8a6671c0-196a-420e-bda4-6e58e9925288
+share_band_imperial:
+    share_band_imperial_cupcake_icon:
+        type: image
+        name: share_band_imperial_cupcake_icon
+        form_display: image_image
+        formatter: image
+        cardinality: 1
+    share_band_imperial_title:
+        type: string
+        name: share_band_imperial_title
+        form_display: string_textfield
+        formatter: string
+        cardinality: 1
+    share_band_imperial_description:
+        type: text_long
+        name: share_band_imperial_description
+        form_display: text_textarea
+        formatter: text_default
+        cardinality: 1
+    share_band_imperial_share:
+        type: link
+        name: share_band_imperial_share
+        form_display: link_default
+        formatter: link
+        cardinality: 1
+home_projects:
+    home_projects_column_title:
+        type: string
+        name: home_projects_column_title
+        form_display: string_textfield
+        formatter: string
+        cardinality: 1
+    home_projects_sweetalk_news:
+        type: entity_reference
+        name: home_projects_sweetalk_news
+        form_display: hidden
+        formatter: entity_reference_entity_id
+        cardinality: null
+        target_type: view
+        target_bundle: sweetalk_news
+        target_uuid: 43c7a4a8-4315-408c-ac60-327a58e41788
+learn_more:
+    learn_more_imperial:
+        type: image
+        name: learn_more_imperial
+        form_display: image_image
+        formatter: image
+        cardinality: 1
+    learn_more_dixie:
+        type: image
+        name: learn_more_dixie
+        form_display: image_image
+        formatter: image
+        cardinality: 1
+    learn_more_imperial_title:
+        type: string
+        name: learn_more_imperial_title
+        form_display: string_textfield
+        formatter: string
+        cardinality: 1
+    learn_more_dixie_title:
+        type: string
+        name: learn_more_dixie_title
+        form_display: string_textfield
+        formatter: string
+        cardinality: 1
+    learn_more_imperial_description:
+        type: text_long
+        name: learn_more_imperial_description
+        form_display: text_textarea
+        formatter: text_default
+        cardinality: 1
+    learn_more_dixie_description:
+        type: text_long
+        name: learn_more_dixie_description
+        form_display: text_textarea
+        formatter: text_default
+        cardinality: 1
+    learn_more_vintage:
+        type: string
+        name: learn_more_vintage
+        form_display: string_textfield
+        formatter: string
+        cardinality: 1
+    learn_more_cane:
+        type: string
+        name: learn_more_cane
+        form_display: string_textfield
+        formatter: string
+        cardinality: 1
+    learn_more_our:
+        type: string
+        name: learn_more_our
+        form_display: string_textfield
+        formatter: string
+        cardinality: 1
+footer_subscribe:
+    footer_subscribe_description:
+        type: text_long
+        name: footer_subscribe_description
+        form_display: text_textarea
+        formatter: text_default
+        cardinality: 1
+    footer_subscribe_subscribe:
+        type: entity_reference
+        name: footer_subscribe_subscribe
+        form_display: hidden
+        formatter: entity_reference_entity_view
+        cardinality: null
+        target_type: contact_form
+        target_bundle: subscribe
+        target_uuid: 2dd75632-978e-4802-b81e-0811bfa0d02d
+footer:
+    footer_imperial_logo:
+        type: image
+        name: footer_imperial_logo
+        form_display: image_image
+        formatter: image
+        cardinality: 1
+    footer_dixie_logo:
+        type: image
+        name: footer_dixie_logo
+        form_display: image_image
+        formatter: image
+        cardinality: 1
+    footer_coporatemenu:
+        type: entity_reference
+        name: footer_coporatemenu
+        form_display: hidden
+        formatter: entity_reference_entity_id
+        cardinality: null
+        target_type: menu
+        target_bundle: coporatemenu
+        target_uuid: null
+    footer_footermenu:
+        type: entity_reference
+        name: footer_footermenu
+        form_display: hidden
+        formatter: entity_reference_entity_id
+        cardinality: null
+        target_type: menu
+        target_bundle: footermenu
+        target_uuid: null
+    footer_imperial_products:
+        type: image
+        name: footer_imperial_products
+        form_display: image_image
+        formatter: image
+        cardinality: 1
+    footer_dixie_products:
+        type: image
+        name: footer_dixie_products
+        form_display: image_image
+        formatter: image
+        cardinality: 1

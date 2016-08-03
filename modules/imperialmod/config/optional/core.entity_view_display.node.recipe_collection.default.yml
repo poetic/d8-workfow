@@ -1,0 +1,32 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.recipe_collection.recipe_collection_image
+    - field.field.node.recipe_collection.recipe_collection_popular
+    - field.field.node.recipe_collection.recipe_collection_trending
+    - node.type.recipe_collection
+id: node.recipe_collection.default
+targetEntityType: node
+bundle: recipe_collection
+mode: default
+content:
+  recipe_collection_image:
+    label: hidden
+    type: image
+    weight: 1
+    settings: { }
+    third_party_settings: { }
+  recipe_collection_popular:
+    label: hidden
+    type: entity_reference_entity_id
+    weight: 2
+    settings: { }
+    third_party_settings: { }
+  recipe_collection_trending:
+    label: hidden
+    type: entity_reference_entity_id
+    weight: 3
+    settings: { }
+    third_party_settings: { }
+hidden: {  }

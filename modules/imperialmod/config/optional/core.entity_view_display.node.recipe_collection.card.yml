@@ -1,0 +1,12 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.card
+    - node.type.recipe_collection
+id: node.recipe_collection.card
+targetEntityType: node
+bundle: recipe_collection
+mode: card
+content: {  }
+hidden: {  }

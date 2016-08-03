@@ -1,0 +1,10 @@
+langcode: en
+status: true
+dependencies: {  }
+id: contest
+label: Contest
+use_admin_theme: null
+path: /contest
+access_logic: and
+access_conditions: {  }
+parameters: {  }

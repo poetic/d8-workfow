@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.block_content.our_blogger_intro_developer
+    - block_content.type.our_blogger
+  module:
+    - text
+id: block_content.our_blogger.our_blogger_intro_developer
+field_name: our_blogger_intro_developer
+entity_type: block_content
+bundle: our_blogger
+label: 'Our Blogger Intro Developer'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.recipe
+    - field.storage.node.recipe_chef
+  module:
+    - link
+id: node.recipe.recipe_chef
+field_name: recipe_chef
+entity_type: node
+bundle: recipe
+label: 'Recipe Chef'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 1
+  link_type: 17
+field_type: link

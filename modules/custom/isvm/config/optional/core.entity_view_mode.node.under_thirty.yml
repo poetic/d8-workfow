@@ -1,0 +1,9 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.under_thirty
+label: Under Thirty
+targetEntityType: node
+cache: true

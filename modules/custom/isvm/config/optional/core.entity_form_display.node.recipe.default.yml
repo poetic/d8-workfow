@@ -1,0 +1,143 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.recipe.recipe_image
+    - field.field.node.recipe.recipe_rating
+    - field.field.node.recipe.recipe_title
+    - field.field.node.recipe.recipe_chef
+    - field.field.node.recipe.recipe_chef_follow
+    - field.field.node.recipe.recipe_description
+    - field.field.node.recipe.recipe_stamp1
+    - field.field.node.recipe.recipe_stamp2
+    - field.field.node.recipe.recipe_stamp3
+    - field.field.node.recipe.recipe_stamp4
+    - field.field.node.recipe.recipe_stamp5
+    - field.field.node.recipe.recipe_stamp6
+    - field.field.node.recipe.recipe_ingr_label
+    - field.field.node.recipe.recipe_pastry_ingr_list
+    - field.field.node.recipe.recipe_filling_ingr_list
+    - field.field.node.recipe.recipe_dir_label
+    - field.field.node.recipe.recipe_dir_list
+    - field.field.node.recipe.recipe_tips_label
+    - field.field.node.recipe.recipe_tips
+    - field.field.node.recipe.recipe_usr_img
+    - field.field.node.recipe.recipe_rating
+    - field.field.node.recipe.recipe_cmmt_txt
+    - node.type.recipe
+id: node.recipe.default
+targetEntityType: node
+bundle: recipe
+mode: default
+content:
+  recipe_image:
+    type: image_image
+    weight: 1
+    settings: { }
+    third_party_settings: { }
+  recipe_rating:
+    type: string_textfield
+    weight: 2
+    settings: { }
+    third_party_settings: { }
+  recipe_title:
+    type: string_textfield
+    weight: 3
+    settings: { }
+    third_party_settings: { }
+  recipe_chef:
+    type: link_default
+    weight: 4
+    settings: { }
+    third_party_settings: { }
+  recipe_chef_follow:
+    type: link_default
+    weight: 5
+    settings: { }
+    third_party_settings: { }
+  recipe_description:
+    type: string_textarea
+    weight: 6
+    settings: { }
+    third_party_settings: { }
+  recipe_stamp1:
+    type: image_image
+    weight: 7
+    settings: { }
+    third_party_settings: { }
+  recipe_stamp2:
+    type: image_image
+    weight: 8
+    settings: { }
+    third_party_settings: { }
+  recipe_stamp3:
+    type: image_image
+    weight: 9
+    settings: { }
+    third_party_settings: { }
+  recipe_stamp4:
+    type: image_image
+    weight: 10
+    settings: { }
+    third_party_settings: { }
+  recipe_stamp5:
+    type: image_image
+    weight: 11
+    settings: { }
+    third_party_settings: { }
+  recipe_stamp6:
+    type: image_image
+    weight: 12
+    settings: { }
+    third_party_settings: { }
+  recipe_ingr_label:
+    type: string_textfield
+    weight: 13
+    settings: { }
+    third_party_settings: { }
+  recipe_pastry_ingr_list:
+    type: string_textarea
+    weight: 14
+    settings: { }
+    third_party_settings: { }
+  recipe_filling_ingr_list:
+    type: string_textarea
+    weight: 15
+    settings: { }
+    third_party_settings: { }
+  recipe_dir_label:
+    type: string_textfield
+    weight: 16
+    settings: { }
+    third_party_settings: { }
+  recipe_dir_list:
+    type: string_textarea
+    weight: 17
+    settings: { }
+    third_party_settings: { }
+  recipe_tips_label:
+    type: string_textfield
+    weight: 18
+    settings: { }
+    third_party_settings: { }
+  recipe_tips:
+    type: string_textarea
+    weight: 19
+    settings: { }
+    third_party_settings: { }
+  recipe_usr_img:
+    type: image_image
+    weight: 20
+    settings: { }
+    third_party_settings: { }
+  recipe_rating:
+    type: string_textfield
+    weight: 21
+    settings: { }
+    third_party_settings: { }
+  recipe_cmmt_txt:
+    type: string_textarea
+    weight: 22
+    settings: { }
+    third_party_settings: { }
+hidden: {  }

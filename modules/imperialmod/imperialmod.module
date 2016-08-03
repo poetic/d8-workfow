@@ -1,0 +1,347 @@
+<?php
+
+/**
+ * @file
+ * Contains imperialmod.module..
+ */
+
+use Symfony\Component\Yaml\Yaml;
+use Drupal\block_content\Entity\BlockContent;
+use Drupal\block_content\Entity\BlockContentType;
+use Drupal\node\Entity\Node;
+use Drupal\node\Entity\NodeType;
+use Drupal\field\Entity\FieldStorageConfig;
+use Drupal\field\Entity\FieldConfig;
+use Drupal\page_manager\Entity\Page;
+use Drupal\page_manager\Entity\PageVariant;
+use Drupal\file\Entity\File;
+
+/**
+ * Implements hook_modules_installed().
+ * Trigger content creation after module is enabled.
+ */
+function imperialmod_modules_installed($modules) {
+	if(in_array('imperialmod', $modules)) {
+		$path = drupal_get_path('module', 'imperialmod');
+		_setupContent($path);
+		_setupEntityFormDisplayForForm($path);
+	}
+	drupal_flush_all_caches();
+}
+
+/**
+ * Handle building default site content
+ *
+ * @param $path
+ *   module path
+ *
+ * @return 
+ *
+ */
+function _setupContent($path) {
+	$contents = Yaml::parse(file_get_contents($path.'/contents.yml'));
+	$pages = Yaml::parse(file_get_contents($path.'/pages.yml'));
+	$page_machine_names = array_keys($pages);
+	$block_uuids = imperialmod_create_contents($contents);
+	$page_variants = imperialmod_create_page_variants($page_machine_names);
+
+	foreach($pages as $page => $blocks) {
+		imperialmod_add_blocks_to_page_variant($blocks, $page_variants[$page], $block_uuids);
+	}
+}
+
+/**
+ * Handle show correct fields for contact form entity.
+ * Drupal configuration seems to skip these
+ *
+ * @param $path
+ *   module path
+ *
+ * @return 
+ *
+ */
+function _setupEntityFormDisplayForForm($path) {
+	$optional_configs = $path.'/config/optional';
+	$optional_config_files = scandir($optional_configs);
+	$form_configs = array();
+	foreach($optional_config_files as $file) {
+		if(strpos($file, 'entity_form_display.contact_message') !== false) {
+			$config_name = str_replace('.yml', '', $file);
+			$data = Yaml::parse($optional_configs.'/'.$file);
+			\Drupal::configFactory()->getEditable($config_name)->setData($data)->save();
+		}
+	}
+}
+
+/**
+ * Handle creating contents for blocks
+ *
+ * @param $contents
+ *   array of serialized contents key by UUID
+ *
+ * @return $block_uuids
+ *   array of block_content UUIDs
+ */
+function imperialmod_create_contents($contents) {
+	$block_uuids = array();
+	foreach($contents as $uuid => $content) {
+		$block_uuids += imperialmod_create_content($content);
+	}
+	return $block_uuids;
+}
+
+/**
+ * Handle creating content for block
+ *
+ * @param $data
+ *   serialized value for block
+ *
+ * @return array of block type and uuid keyed by block type
+ *
+ */
+function imperialmod_create_content($content) {
+	$data = unserialize($content);
+	$fields = array();
+	$file_directory = 'block_contents/' . str_replace('_', ' ', $data['type']);
+
+	foreach($data['fields'] as $field) {
+		if($field['type'] == 'image' || $field['type'] == 'file') {
+			$settings['file_directory'] = $file_directory . '/[date:custom:Y]-[date:custom:m]';
+			$uri = drupal_get_path('module', 'imperialmod') .'/'. $field['default_value'];
+			if (file_exists($uri) && !is_dir($uri)) {
+			  $image = File::create();
+			  $image->setFileUri($uri);
+			  $image->setOwnerId(\Drupal::currentUser()->id());
+			  $image->setMimeType('image/' . pathinfo($field['default_value'], PATHINFO_EXTENSION));
+			  $image->setFileName(drupal_basename($field['default_value']));
+			  $destination_dir = 'public://' . $file_directory;
+			  file_prepare_directory($destination_dir, FILE_CREATE_DIRECTORY);
+			  $destination = $destination_dir . '/' . basename($field['default_value']);
+			  $file = file_copy($image, $destination);
+			  $values = array(
+			    'target_id' => $file->id(),
+			  );
+			  $fields[$field['name']] = $values;
+			}
+		}elseif($field['type'] == 'entity_reference') {
+			continue;
+		}elseif($field['type'] == 'text_long' || $field['type'] == 'text_with_summary') {
+			$fields[$field['name']]['value'] = $field['default_value'];
+			$fields[$field['name']]['format'] = 'full_html';
+		}else {
+			$fields[$field['name']] = $field['default_value'];
+		}
+	}
+	unset($data['fields']);
+
+	$data += $fields;
+
+	$entity = BlockContent::create($data);
+	$entity->save();
+	return [$data['type'] => $data['uuid']];
+}
+
+/**
+ * Handle creating page variants
+ *
+ * @param $pages
+ *   array of page machine names
+ *
+ * @return $page_variants
+ *   array of page variant objects
+ */
+function imperialmod_create_page_variants($pages) {
+	$page_variants = array();
+	foreach($pages as $page) {
+		$page_variants[$page] = imperialmod_create_page_variant($page);
+	}
+	return $page_variants;
+}
+
+/**
+ * Handle creating page variant
+ *
+ * @param $page
+ *   page machine name
+ *
+ * @return $variant
+ *   page variant object
+ */
+function imperialmod_create_page_variant($page) {
+	$variant = PageVariant::create(array(
+	  'id' => $page,
+	  'label' => ucwords(str_replace('_', ' ', $page)),
+	  'variant' => 'panels_variant',
+	  'page' => $page,
+	  'variant_settings' => array(
+	    'layout' => ($layout == NULL) ? 'one_column' : $layout,
+	    'storage_type' => "page_manager",
+	    'storage_id' => $page,
+	    'builder' => "standard",
+	  ),
+	));
+	$variant->save();
+	return $variant;
+}
+
+/**
+ * Implements hook_uninstall().
+ * This is for development only. 
+ * Use this to easily enable and disable module for testing.
+ * Need to be remove on production.
+ * Remove all configurations created by this module on install
+ * Delete in order:
+ *	- Page Variant
+ *	- Contents
+ *	- Field Configs
+ *	- Field Storage Configs
+ *	- Block and Node Type
+ *	- Clear configurations
+ */
+function imperialmod_uninstall() {
+	imperialmod_delete_page_variants();
+	imperialmod_delete_contents();
+	imperialmod_delete_structures();
+	imperialmod_delete_configurations();
+}
+
+function imperialmod_delete_page_variants() {
+	$controller = \Drupal::entityManager()->getStorage('page_variant');
+	$ids = \Drupal::entityQuery('page_variant')->execute();
+	$entities = $controller->loadMultiple($ids);
+	if(!empty($entities)) {
+		$controller->delete($entities);
+	}
+}
+
+function imperialmod_delete_contents() {
+	_delete_block_contents();
+	_delete_node_contents();
+}
+
+function imperialmod_delete_structures() {
+	_delete_fields();
+	_delete_block_types();
+	_delete_node_types();
+}
+
+function _delete_fields() {
+	$field_config_ids = \Drupal::entityQuery('field_config')->execute();
+	$field_configs = FieldConfig::loadMultiple($field_config_ids);
+	if(!empty($field_configs)) {
+		foreach($field_configs as $field_config) {
+			$field_config->delete();
+		}
+	}
+	$field_storage_config_ids = \Drupal::entityQuery('field_storage_config')->execute();
+	$field_storage_configs = FieldStorageConfig::loadMultiple($field_storage_config_ids);
+	if(!empty($field_storage_configs)) {
+		foreach($field_storage_configs as $field_storage_config) {
+			$field_storage_config->delete();
+		}
+	}
+}
+
+function _delete_block_contents() {
+	$ids = \Drupal::entityQuery('block_content')->execute();
+	$entities = BlockContent::loadMultiple($ids);
+	if(!empty($entities)) {
+		foreach($entities as $entity) {
+			$entity->delete();
+		}
+	}
+}
+
+function _delete_block_types() {
+	$ids = \Drupal::entityQuery('block_content_type')->execute();
+	$entities = BlockContentType::loadMultiple($ids);
+	if(!empty($entities)) {
+		foreach($entities as $entity) {
+			$entity->delete();
+		}
+	}
+}
+
+function _delete_node_contents() {
+	$ids = \Drupal::entityQuery('node')->execute();
+	$entities = BlockContent::loadMultiple($ids);
+	if(!empty($entities)) {
+		foreach($entities as $entity) {
+			$entity->delete();
+		}
+	}
+}
+
+function _delete_node_types() {
+	$ids = \Drupal::entityQuery('node_type')->execute();
+	$entities = NodeType::loadMultiple($ids);
+	if(!empty($entities)) {
+		foreach($entities as $entity) {
+			$entity->delete();
+		}
+	}
+}
+
+function imperialmod_delete_configurations() {
+	// delete configurations
+	$path = drupal_get_path('module', 'imperialmod');
+	$install_configs = $path.'/config/install';
+	$optional_configs = $path.'/config/optional';
+	$install_config_files = scandir($install_configs);
+	$optional_config_files = scandir($optional_configs);
+	array_shift($install_config_files);
+	array_shift($optional_config_files);
+	$field_configs = array();
+	$field_storage = array();
+	$rest = array();
+	
+	foreach($install_config_files as $file) {
+		if(strpos($file, 'field.field') !== false) {
+			$field_configs[] = str_replace('.yml', '', $file);
+		}elseif(strpos($file, 'field.storage') !== false) {
+			$field_storage[] = str_replace('.yml', '', $file);
+		}else {
+			$rest[] = str_replace('.yml', '', $file);
+		}
+	}
+
+	foreach($optional_config_files as $file) {
+		$rest[] = str_replace('.yml', '', $file);
+	}
+	$sorted_config_files = array_merge($field_configs, $field_storage, $rest);
+	
+	foreach($sorted_config_files as $sorted_config_file) {
+		\Drupal::configFactory()->getEditable($sorted_config_file)->delete();
+	}
+}
+
+/**
+ * Handle adding block instances to page variants 
+ *
+ * @param $block_infos, $page_variant, $block_uuids
+ *   array of block_content type
+ *	 page variant object that contains blocks
+ *	 array of block_content UUIDs
+ *
+ * @return
+ *
+ */
+function imperialmod_add_blocks_to_page_variant($block_infos, $page_variant, $block_uuids) {
+	$blockManager = \Drupal::service('plugin.manager.block');
+	foreach($block_infos as $index => $block) {
+	  $block_uuid = $block_uuids[$block];
+	  if($block_uuid != NULL) {
+	  	$block_plugin_id = "block_content:$block_uuid";
+	  }else {
+	  	$block_plugin_id = "views_block:$block-$block";
+	  }
+	  
+	  $block_instance = $blockManager->createInstance($block_plugin_id);
+	  $block_instance_configuration = $block_instance->getConfiguration();
+	  $block_instance_configuration['region'] = 'content';
+	  $block_instance_configuration['weight'] = $index;
+	  $variant_plugin = $page_variant->getVariantPlugin();
+	  $variant_plugin->addBlock($block_instance_configuration);
+	}
+	$page_variant->save();
+}

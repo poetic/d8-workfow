@@ -1,0 +1,10 @@
+langcode: en
+status: true
+dependencies: {  }
+id: contact
+label: Contact
+use_admin_theme: null
+path: /contact
+access_logic: and
+access_conditions: {  }
+parameters: {  }

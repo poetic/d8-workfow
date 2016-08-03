@@ -1,0 +1,12 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.card
+    - node.type.news
+id: node.news.card
+targetEntityType: node
+bundle: news
+mode: card
+content: {  }
+hidden: {  }

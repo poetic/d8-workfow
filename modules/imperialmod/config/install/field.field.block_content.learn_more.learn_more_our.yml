@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.learn_more
+    - field.storage.block_content.learn_more_our
+id: block_content.learn_more.learn_more_our
+field_name: learn_more_our
+entity_type: block_content
+bundle: learn_more
+label: 'Learn More Our'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,25 @@
+langcode: en
+status: true
+dependencies:
+  config:
+  - block_content.type.lists_blog
+  - field.storage.block_content.lists_blog_kids_view
+  - views.view.kids
+id: block_content.lists_blog.lists_blog_kids_view
+field_name: lists_blog_kids_view
+entity_type: block_content
+bundle: lists_blog
+label: 'Lists Blog Kids View'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    target_uuid: 06a79ee6-4eec-4f7c-9170-a08338d85ef0
+default_value_callback: ''
+settings:
+  handler: 'default:view'
+  handler_settings:
+    target_bundles: null
+    auto_create: false
+field_type: entity_reference

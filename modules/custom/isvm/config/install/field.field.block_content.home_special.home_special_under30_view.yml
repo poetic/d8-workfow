@@ -1,0 +1,25 @@
+langcode: en
+status: true
+dependencies:
+  config:
+  - block_content.type.home_special
+  - field.storage.block_content.home_special_under30_view
+  - views.view.under30
+id: block_content.home_special.home_special_under30_view
+field_name: home_special_under30_view
+entity_type: block_content
+bundle: home_special
+label: 'Home Special Under30 View'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    target_uuid: 73956839-1273-4a10-8969-0885f2e57d98
+default_value_callback: ''
+settings:
+  handler: 'default:view'
+  handler_settings:
+    target_bundles: null
+    auto_create: false
+field_type: entity_reference

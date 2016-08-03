@@ -1,0 +1,10 @@
+langcode: en
+status: true
+dependencies: {  }
+id: sugar_spa
+label: Sugar Spa
+use_admin_theme: null
+path: /sugar-spa
+access_logic: and
+access_conditions: {  }
+parameters: {  }

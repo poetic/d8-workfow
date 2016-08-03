@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+id: our_blogger
+label: Our Blogger
+revision: 1
+description: 'Our Blogger'

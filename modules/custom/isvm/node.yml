@@ -1,0 +1,177 @@
+recipe:
+    recipe_rating:
+        type: string
+        name: recipe_rating
+        form_display: string_textfield
+        formatter: string
+        cardinality: 1
+    recipe_title:
+        type: string
+        name: recipe_title
+        form_display: string_textfield
+        formatter: string
+        cardinality: 1
+    recipe_chef:
+        type: link
+        name: recipe_chef
+        form_display: link_default
+        formatter: link
+        cardinality: 1
+    recipe_image:
+        type: image
+        name: recipe_image
+        form_display: image_image
+        formatter: image
+        cardinality: 1
+    recipe_vid_icon:
+        type: image
+        name: recipe_vid_icon
+        form_display: image_image
+        formatter: image
+        cardinality: 1
+    recipe_chef_follow:
+        type: link
+        name: recipe_chef_follow
+        form_display: link_default
+        formatter: link
+        cardinality: 1
+    recipe_description:
+        type: string_long
+        name: recipe_description
+        form_display: string_textarea
+        formatter: basic_string
+        cardinality: 1
+    recipe_stamp1:
+        type: image
+        name: recipe_stamp1
+        form_display: image_image
+        formatter: image
+        cardinality: 1
+    recipe_stamp2:
+        type: image
+        name: recipe_stamp2
+        form_display: image_image
+        formatter: image
+        cardinality: 1
+    recipe_stamp3:
+        type: image
+        name: recipe_stamp3
+        form_display: image_image
+        formatter: image
+        cardinality: 1
+    recipe_stamp4:
+        type: image
+        name: recipe_stamp4
+        form_display: image_image
+        formatter: image
+        cardinality: 1
+    recipe_stamp5:
+        type: image
+        name: recipe_stamp5
+        form_display: image_image
+        formatter: image
+        cardinality: 1
+    recipe_stamp6:
+        type: image
+        name: recipe_stamp6
+        form_display: image_image
+        formatter: image
+        cardinality: 1
+    recipe_ingr_label:
+        type: string
+        name: recipe_ingr_label
+        form_display: string_textfield
+        formatter: string
+        cardinality: 1
+    recipe_pastry_ingr_list:
+        type: string_long
+        name: recipe_pastry_ingr_list
+        form_display: string_textarea
+        formatter: basic_string
+        cardinality: 1
+    recipe_filling_ingr_list:
+        type: string_long
+        name: recipe_filling_ingr_list
+        form_display: string_textarea
+        formatter: basic_string
+        cardinality: 1
+    recipe_dir_label:
+        type: string
+        name: recipe_dir_label
+        form_display: string_textfield
+        formatter: string
+        cardinality: 1
+    recipe_dir_list:
+        type: string_long
+        name: recipe_dir_list
+        form_display: string_textarea
+        formatter: basic_string
+        cardinality: 1
+    recipe_tips_label:
+        type: string
+        name: recipe_tips_label
+        form_display: string_textfield
+        formatter: string
+        cardinality: 1
+    recipe_tips:
+        type: string_long
+        name: recipe_tips
+        form_display: string_textarea
+        formatter: basic_string
+        cardinality: 1
+    recipe_usr_img:
+        type: image
+        name: recipe_usr_img
+        form_display: image_image
+        formatter: image
+        cardinality: 1
+    recipe_cmmt_txt:
+        type: string_long
+        name: recipe_cmmt_txt
+        form_display: string_textarea
+        formatter: basic_string
+        cardinality: 1
+article:
+    article_image:
+        type: image
+        name: article_image
+        form_display: image_image
+        formatter: image
+        cardinality: 1
+    article_date:
+        type: string
+        name: article_date
+        form_display: string_textfield
+        formatter: string
+        cardinality: 1
+    article_title:
+        type: string
+        name: article_title
+        form_display: string_textfield
+        formatter: string
+        cardinality: 1
+    article_summary:
+        type: string_long
+        name: article_summary
+        form_display: string_textarea
+        formatter: basic_string
+        cardinality: 1
+comment:
+    comment_usr_img:
+        type: image
+        name: comment_usr_img
+        form_display: image_image
+        formatter: image
+        cardinality: 1
+    comment_rating:
+        type: string
+        name: comment_rating
+        form_display: string_textfield
+        formatter: string
+        cardinality: 1
+    comment_cmmt_txt:
+        type: string_long
+        name: comment_cmmt_txt
+        form_display: string_textarea
+        formatter: basic_string
+        cardinality: 1

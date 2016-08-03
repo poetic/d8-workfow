@@ -1,0 +1,45 @@
+<?php
+
+/**
+ * @file
+ * Contains view_page_domain_filter.module..
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\views\ViewExecutable;
+use Drupal\views\ViewsData;
+use Drupal\search_api\Plugin\views\query\SearchApiQuery;
+use Drupal\views\Plugin\views\filter\FilterPluginBase;
+
+/**
+ * Implements hook_help().
+ */
+function view_page_domain_filter_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the view_page_domain_filter module.
+    case 'help.page.view_page_domain_filter':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Dynamically change the domain filter value according to the current domain') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_views_pre_view().
+ * Adds dynamic contextual filter to the search view page according to the current domain
+ */
+function view_page_domain_filter_views_pre_view(ViewExecutable $view, $display_id, array &$args) {
+  $search_index = array_keys($view->getBaseTables())[0];
+  $entity_type = $view->storage->getEntityTypeId();
+  //$index is the search index machine name the search pages are using
+  $index = "search_api_index_imperial_sugar";
+  if($entity_type == 'view' && $search_index == $index){
+    $domain = \Drupal::service('domain.negotiator')->getActiveDomain()->id();
+    $context = array($domain);
+    $args = $context;
+  }
+}
+

@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+id: social_band
+label: Social Band
+revision: 1
+description: 'Social Band'

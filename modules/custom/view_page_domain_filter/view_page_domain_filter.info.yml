@@ -1,0 +1,5 @@
+name: View Page Domain Filter
+type: module
+description: Dynamically change the domain filter value according to the current domain
+core: 8.x
+package: Custom

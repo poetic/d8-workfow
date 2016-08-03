@@ -1,0 +1,10 @@
+langcode: en
+status: true
+dependencies: {  }
+id: blog_article
+label: Blog Article
+use_admin_theme: null
+path: /blog-article
+access_logic: and
+access_conditions: {  }
+parameters: {  }

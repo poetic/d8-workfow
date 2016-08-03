@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.home_hero
+    - field.storage.block_content.home_hero_special
+id: block_content.home_hero.home_hero_special
+field_name: home_hero_special
+entity_type: block_content
+bundle: home_hero
+label: 'Home Hero Special'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

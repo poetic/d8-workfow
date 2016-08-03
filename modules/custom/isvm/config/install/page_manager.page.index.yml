@@ -1,0 +1,10 @@
+langcode: en
+status: true
+dependencies: {  }
+id: index
+label: Index
+use_admin_theme: null
+path: /index
+access_logic: and
+access_conditions: {  }
+parameters: {  }

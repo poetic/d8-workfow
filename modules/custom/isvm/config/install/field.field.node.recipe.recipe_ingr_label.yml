@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.recipe
+    - field.storage.node.recipe_ingr_label
+id: node.recipe.recipe_ingr_label
+field_name: recipe_ingr_label
+entity_type: node
+bundle: recipe
+label: 'Recipe Ingr Label'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

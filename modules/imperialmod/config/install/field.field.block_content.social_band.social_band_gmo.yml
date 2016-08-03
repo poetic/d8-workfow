@@ -1,0 +1,37 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.social_band
+    - field.storage.block_content.social_band_gmo
+  module:
+    - image
+id: block_content.social_band.social_band_gmo
+field_name: social_band_gmo
+entity_type: block_content
+bundle: social_band
+label: 'Social Band Gmo'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_extensions: 'png gif jpg jpeg'
+  alt_field: true
+  alt_field_required: true
+  title_field: false
+  title_field_required: false
+  max_resolution: ''
+  min_resolution: ''
+  default_image:
+    uuid: null
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  file_directory: 'social_band'
+  max_filesize: '2 MB'
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: image

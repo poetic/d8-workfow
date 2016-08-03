@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.block_content.share_band_imperial_description
+    - block_content.type.share_band_imperial
+  module:
+    - text
+id: block_content.share_band_imperial.share_band_imperial_description
+field_name: share_band_imperial_description
+entity_type: block_content
+bundle: share_band_imperial
+label: 'Share Band Imperial Description'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

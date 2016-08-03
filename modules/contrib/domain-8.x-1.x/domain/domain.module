@@ -1,0 +1,78 @@
+<?php
+
+/**
+ * @file
+ * Defines a Domain concept for use with Drupal.
+ */
+
+use Drupal\Core\Url;
+use Drupal\domain\DomainInterface;
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Defines record matching types when dealing with request alteration.
+ *
+ * @see hook_domain_request_alter().
+ */
+define('DOMAIN_MATCH_NONE', 0);
+define('DOMAIN_MATCH_EXACT', 1);
+define('DOMAIN_MATCH_ALIAS', 2);
+
+/**
+ * Implements hook_entity_bundle_info().
+ */
+function domain_entity_bundle_info() {
+  $bundles['domain']['domain'] = array(
+    'label' => t('Domain record'),
+    'admin' => array(
+      'real path' => 'admin/config/domain',
+    ),
+  );
+  return $bundles;
+}
+
+/**
+ * Entity URI callback.
+ *
+ * @param \Drupal\domain\DomainInterface $domain
+ *   The Domain object.
+ *
+ * @return \Drupal\Core\Url
+ *   The Domain URL.
+ */
+function domain_uri(DomainInterface $domain) {
+  dpm($domain);
+  return Url::fromUri($domain->getPath(), ['absolute' => TRUE]);
+}
+
+/**
+ * Implements hook_entity_load().
+ *
+ * The $domain->path and $domain->uri properties are derived from data in the
+ * {domain} table. We use the hook system to load that data to indicate that
+ * the data is not native to the object.
+ *
+ * This action is performed in hook_entity_load(), which precedes the running
+ * of hook_domain_load() and ensures that our data is present for other modules.
+ */
+function domain_entity_load(array $entities, $entity_type) {
+  if ($entity_type == 'domain') {
+    foreach ($entities as $domain) {
+      $domain->setPath();
+      $domain->setUrl();
+    }
+  }
+}
+
+/**
+ * Implements hook_help().
+ */
+function domain_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    case 'domain.admin':
+      $output = t('<p>The following domains have been created for your site.  The currently active domain
+                     <strong>is shown in boldface</strong>. You may click on a domain to change the currently active domain.
+                     </p>');
+      return $output;
+  }
+}

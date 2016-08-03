@@ -1,0 +1,25 @@
+langcode: en
+status: true
+dependencies:
+  config:
+  - block_content.type.home_popular
+  - field.storage.block_content.home_popular_popa_view
+  - views.view.popa
+id: block_content.home_popular.home_popular_popa_view
+field_name: home_popular_popa_view
+entity_type: block_content
+bundle: home_popular
+label: 'Home Popular Popa View'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    target_uuid: bee6f88d-a2d2-490b-aa5e-c133c3d5078d
+default_value_callback: ''
+settings:
+  handler: 'default:view'
+  handler_settings:
+    target_bundles: null
+    auto_create: false
+field_type: entity_reference

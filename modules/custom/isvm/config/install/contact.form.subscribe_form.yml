@@ -1,0 +1,14 @@
+uuid: 6eec942b-f695-4fe0-b674-b6f47f5e793c
+langcode: en
+status: true
+dependencies: {  }
+third_party_settings:
+  contact_storage:
+    redirect_uri: ''
+    submit_text: 'Submit'
+    show_preview: false
+id: subscribe_form
+label: 'Subscribe Form'
+recipients: {  }
+reply: ''
+weight: 0

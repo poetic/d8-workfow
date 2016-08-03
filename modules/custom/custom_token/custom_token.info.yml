@@ -1,0 +1,5 @@
+name: Custom Token
+type: module
+description: Create Custom Tokens
+core: 8.x
+package: Custom

@@ -1,0 +1,25 @@
+langcode: en
+status: true
+dependencies:
+  config:
+  - block_content.type.home_special
+  - field.storage.block_content.home_special_special_view
+  - views.view.special
+id: block_content.home_special.home_special_special_view
+field_name: home_special_special_view
+entity_type: block_content
+bundle: home_special
+label: 'Home Special Special View'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    target_uuid: 10bfa830-7290-4c16-bb3c-1d77b62b81d1
+default_value_callback: ''
+settings:
+  handler: 'default:view'
+  handler_settings:
+    target_bundles: null
+    auto_create: false
+field_type: entity_reference

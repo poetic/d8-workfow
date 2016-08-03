@@ -1,0 +1,25 @@
+langcode: en
+status: true
+dependencies:
+  config:
+  - block_content.type.main_block
+  - field.storage.block_content.main_block_hero
+  - views.view.hero
+id: block_content.main_block.main_block_hero
+field_name: main_block_hero
+entity_type: block_content
+bundle: main_block
+label: 'Main Block Hero'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    target_uuid: a943a6d3-ea1b-4282-8f9b-a49dee97dad0
+default_value_callback: ''
+settings:
+  handler: 'default:view'
+  handler_settings:
+    target_bundles: null
+    auto_create: false
+field_type: entity_reference
