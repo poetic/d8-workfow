@@ -1,0 +1,5 @@
+name: custom_config
+type: module
+description: custom configuration
+core: 8.x
+package: Custom

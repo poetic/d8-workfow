@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Contains custom_config.module..
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function custom_config_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the custom_config module.
+    case 'help.page.custom_config':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('custom configuration') . '</p>';
+      return $output;
+
+    default:
+  }
+}

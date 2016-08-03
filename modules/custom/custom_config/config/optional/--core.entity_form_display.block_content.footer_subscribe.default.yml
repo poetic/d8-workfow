@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.block_content.footer_subscribe.footer_subscribe_description
+    - field.field.block_content.footer_subscribe.footer_subscribe_subscribe
+    - block_content.type.footer_subscribe
+id: block_content.footer_subscribe.default
+targetEntityType: block_content
+bundle: footer_subscribe
+mode: default
+content:
+  footer_subscribe_description:
+    type: text_textarea
+    weight: 1
+    settings: { }
+    third_party_settings: { }
+hidden: {  }

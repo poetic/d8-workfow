@@ -1,0 +1,14 @@
+{
+  "name": "drupal/custom_config",
+  "type": "drupal-module",
+  "description": "custom configuration",
+  "keywords": ["Drupal"],
+  "license": "GPL-2.0+",
+  "homepage": "https://www.drupal.org/project/custom_config",
+  "minimum-stability": "dev",
+  "support": {
+    "issues": "https://www.drupal.org/project/issues/custom_config",
+    "source": "http://cgit.drupalcode.org/custom_config"
+  },
+  "require": { }
+}
