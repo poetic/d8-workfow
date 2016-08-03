@@ -12,3 +12,4 @@ robots.txt
 update.php
 web.config
 .eslintignore
+.DS_Store

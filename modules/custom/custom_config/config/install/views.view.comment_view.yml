@@ -1,3 +1,4 @@
+uuid: c37ff7a6-dc03-4797-a49d-4df41a71cf9d
 langcode: en
 status: true
 dependencies:
@@ -10,8 +11,11 @@ dependencies:
   module:
     - comment
     - fivestar
+    - text
     - user
     - views_load_more
+_core:
+  default_config_hash: FyOPylv50v4rdQSJFcG6kgJG6TLlSVSEbfLNMVBxQiI
 id: comment_view
 label: comment_view
 module: views

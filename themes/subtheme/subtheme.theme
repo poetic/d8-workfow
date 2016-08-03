@@ -1,1 +1,193 @@
 <?php
+
+use Drupal\field\Entity\FieldConfig;
+use Drupal\block_content\Entity\BlockContent;
+use Drupal\node\Entity\Node;
+use Drupal\Core\StringTranslation\TranslatableMarkup;
+use \Drupal\views\ViewExecutable;
+
+/**
+ * Implements hook_preprocess_HOOK() for node document templates.
+ */
+
+function subtheme_preprocess_node(array &$variables) {
+  // if(!empty($variables['elements']['#node'])) {
+  //   $entity = $variables['elements']['#node'];
+  //   $variables['main_menu'] = subtheme_get_menu('main_menu');
+  //   $variables['date'] = format_date($entity->created->value, "custom", "F d, Y");
+  // }
+  // $related_rcp = views_embed_view('related_rcp');
+  // $variables['related_rcp'] = $related_rcp;
+  $comment_view = views_embed_view('comment_view');
+  $variables['comment_view'] = $comment_view;
+  // $flag_service = \Drupal::service('flag');
+  // $flag = $flag_service->getFlagById("favorite");
+  // $variables['fav_count'] = \Drupal::service('flag.count')->getFlagFlaggingCount($flag);
+}
+
+// function subtheme_preprocess_user(array &$variables) {
+//   $following = views_embed_view('following');
+//   $variables['following'] = $following;
+//   $easter_slider = views_embed_view('easter_slider');
+//   $variables['easter_slider'] = $easter_slider;
+  
+//   $user = user_load($variables['user']->id());
+//   $variables['user_img'] = $user->field_acct_img->getValue();
+// }
+
+/**
+ * Implements hook_preprocess_HOOK() for block document templates.
+ */
+/*
+function subtheme_preprocess_block(array &$variables) {
+  if(!empty($variables['content']['#block_content'])) {
+    $entity = $variables['content']['#block_content'];
+    $bundle = $entity->bundle();
+
+    $fields_definition = $entity->getFieldDefinitions();
+    foreach($fields_definition as $field_definition) {
+     if(!empty($field_definition->getTargetBundle()) && $field_definition->get('field_type') == 'entity_reference') { 
+        $entity_reference_field = collectFieldValues($entity, $field_definition);
+        if($entity_reference_field) {
+          $key = key($entity_reference_field);
+          $variables['content'][$key] = ($entity_reference_field[$key]);
+        }
+      }
+    }
+    $variables['main_menu'] = subtheme_get_menu('main_menu');
+    $variables['top_menu'] = subtheme_get_menu('top-menu');
+  }
+}
+
+function collectFieldValues($entity, $field_definition) {
+  $bundle = $entity->bundle();
+  $entity_type = $entity->getEntityTypeId();
+  $field_name = $field_definition->getName();
+  $field_value = $entity->get($field_name)->getValue();
+  $field_instance = FieldConfig::loadByName($entity_type, $bundle , $field_name);
+  $settings = $field_instance->getSettings();
+
+  switch($settings['handler']) {
+    case 'default:view':
+      $view_render_array = views_embed_view($field_value[0]['target_id']);
+      return array($field_name => $view_render_array);
+      break;
+    case 'default:node':
+      return;
+      break;
+  }
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter() for block templates.
+ */
+/*
+function subtheme_theme_suggestions_block_alter(array &$suggestions, array $variables) {
+  if(!empty($variables['elements']['content']['#block_content'])) {
+    $block = $variables['elements']['content']['#block_content'];
+    $bundle = $block->bundle();
+    array_unshift($suggestions, 'block__block_content__' . $bundle);
+  }
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter() for user templates.
+ */
+/*
+function subtheme_theme_suggestions_user_alter(array &$suggestions, array $variables) {
+  if(!empty($variables['elements']['#view_mode'])) {
+    $userviewmode = $variables['elements']['#view_mode'];
+    array_unshift($suggestions, 'user__' . $userviewmode);
+  }
+}
+/**
+ * Implements hook_theme_suggestions_HOOK_alter() for node templates.
+ */
+/*
+function subtheme_theme_suggestions_node_alter(array &$suggestions, array $variables) {
+  // if(!empty($variables['elements']['#view_mode'])) {
+  //   $userviewmode = $variables['elements']['#view_mode'];
+  //   array_unshift($suggestions, 'user__' . $userviewmode);
+  // }
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter() for form templates.
+ */
+
+function subtheme_theme_suggestions_form_alter(array &$suggestions, array $variables) {
+  $suggestions[] = 'form__' . $variables['element']['#form_id'];
+  $suggestions[] = 'form_element__' . $variables['element']['field_category_course']['widget']['#title'];
+  // dpm($variables['element']['field_category_course']['widget']['#title']);
+  // dpm($suggestions);
+}
+
+function subtheme_preprocess_image(&$variables) {
+  unset($variables['attributes']['width']);
+  unset($variables['attributes']['height']);
+}
+
+// function subtheme_field_widget_checkbox_form_alter(&$element, \Drupal\Core\Form\FormStateInterface $form_state, $context) {
+
+// }
+/*
+function hook_field_widget_form_alter(&$element, \Drupal\Core\Form\FormStateInterface $form_state, $context) {
+  // Add a css class to widget form elements for all fields of type mytype.
+  $field_definition = $context['items']->getFieldDefinition();
+  // dpm($element);
+  if ($field_definition->getType() == 'container') {
+    // Be sure not to overwrite existing attributes.
+    // dpm($element);
+    $element['#attributes']['class'][] = 'myclass';
+  }
+}
+*/
+
+
+function subtheme_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+  if($form['#id'] == "comment-form") {
+    unset($form['actions']['preview']);
+    $form['actions']['submit']['#value'] = new TranslatableMarkup('Post Review');
+    $form['actions']['submit']['#attributes']['class'][] = "btn btn-submit-form w-button";
+    $form['comment_body']['#attributes']['class'][] = "form-multi-line-text-heigh w-input";
+  }
+}
+
+function subtheme_preprocess_textarea(&$variable) {
+  if($variable['element']['#title'] == "comment_body") {
+    $variable['element']['#attributes']['class'][] = "form-multi-line-text-heigh w-input";
+  }
+  
+}
+
+// function subtheme_theme() {
+//   $themes['impsu_user_edit_form'] = [
+//     'render element' => 'form'
+//   ];
+//   return $themes;
+// }
+/*
+function subtheme_get_menu($menu_name) {
+  $block_manager = \Drupal::service('plugin.manager.block');
+  $plugin_block = $block_manager->createInstance("system_menu_block:$menu_name");
+  $render = $plugin_block->build();
+  return $render;
+}
+
+function subtheme_preprocess_form_element(&$variable){
+  if($variable['type']!="checkbox") {
+    $variable['label_display'] = "none";
+  } else if ($variable['type']=="checkbox"){
+    // dpm($variable);
+    $variable['element']['#attributes']['class'][] = "display-none w-checkbox-input";
+  }
+}
+
+function subtheme_preprocess_form_element_label(&$variable){
+  // unset($variable['element']['#title']);
+}
+
+function subtheme_preprocess_form(&$variable){
+  // dpm($variable['element']['field_category_course']['#attributes']);
+}
+*/
