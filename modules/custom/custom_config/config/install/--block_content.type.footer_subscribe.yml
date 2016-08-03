@@ -1,7 +1,0 @@
-langcode: en
-status: true
-dependencies: {  }
-id: footer_subscribe
-label: Footer Subscribe
-revision: 1
-description: 'Footer Subscribe'
