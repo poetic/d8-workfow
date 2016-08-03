@@ -1,0 +1,16 @@
+name: subtheme
+type: theme
+description: These is a subtheme
+package: Other
+core: 8.x
+
+base theme: imperial
+
+libraries:
+  - subtheme/global-css
+  - subtheme/global-js
+  
+region:
+  header:   Header
+  content:  content
+  footer:   Footer
