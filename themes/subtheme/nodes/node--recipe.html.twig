@@ -454,20 +454,26 @@
         <div class="main rcp-img">
           <a class="w-inline-block w-lightbox" href="#">
             <div class="video-btn-wrapper">
-              <img src="/themes/isonetheme/../images/icon-video-play-white.svg"></div>
+            {% if vid_id %}
+              <img src="/themes/imperial/images/icon-video-play-white.svg">
+              {% endif %}
+            </div>
             <div>
               {{ content.recipe_recipe_image }}
             </div>
+            {% if vid_id %}
             <script class="w-json" type="application/json">
               { "items": [{
                 "type": "video",
-                "html": "<iframe class=\"embedly-embed\" src=\"https://cdn.embedly.com/widgets/media.html?src=https%3A%2F%2Fwww.youtube.com%2Fembed%2FGZX7C0L3PvQ%3Fautoplay%3D1%26feature%3Doembed&url=http%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DGZX7C0L3PvQ&image=https%3A%2F%2Fi.ytimg.com%2Fvi%2FGZX7C0L3PvQ%2Fhqdefault.jpg&key=c4e54deccf4d4ec997a64902e9a30300&autoplay=1&type=text%2Fhtml&schema=youtube\" width=\"940\" height=\"528\" scrolling=\"no\" frameborder=\"0\" allowfullscreen>",
-                "thumbnailUrl": "https://i.embed.ly/1/image?url=https%3A%2F%2Fi.ytimg.com%2Fvi%2FGZX7C0L3PvQ%2Fhqdefault.jpg&key=866738f8f18b4394a18e371517a66ae0",
+                "html": "<iframe class=\"embedly-embed\" src=\"https://www.youtube.com/embed/{{vid_id}}\" width=\"940\" height=\"528\" scrolling=\"no\" frameborder=\"0\" allowfullscreen>",
+                "thumbnailUrl": "",
                 "width": 940,
                 "height": 528,
-                "url": "http://www.youtube.com/watch?v=GZX7C0L3PvQ"
+                "url": "https://www.youtube.com/watch?v={{vid_id}}" 
               }] }
-            </script></a>
+            </script>
+            {% endif %}
+            </a>
         </div>
         <div class="rcp-main rcp-wrapper">
           <div class="activity rcp-main separator-line w-clearfix">
