@@ -185,6 +185,10 @@ function subtheme_preprocess_textarea(&$variable) {
 function subtheme_preprocess_comment(&$variables) {
   $date_formatted = DateTime::createFromFormat('D, m/d/Y - H:i', $variables['created'])->format('M d, Y');
   $variables['created'] = $date_formatted;
+  $recipe_nid = $variables['commented_entity']->get('nid')[0]->value;
+  $recipe_node = \Drupal\node\Entity\Node::load($recipe_nid);
+  $recipe_title = $recipe_node->get('title')[0]->value;
+  $variables['title'] = $recipe_title;
 }
 
 // function subtheme_theme() {
