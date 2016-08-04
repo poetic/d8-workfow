@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_ingredient_section_body
+    - paragraphs.paragraphs_type.recipe_ingredients
+  module:
+    - text
+id: paragraph.recipe_ingredients.field_ingredient_section_body
+field_name: field_ingredient_section_body
+entity_type: paragraph
+bundle: recipe_ingredients
+label: ingredient_section_body
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text
