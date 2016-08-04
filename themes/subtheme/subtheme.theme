@@ -11,11 +11,15 @@ use \Drupal\views\ViewExecutable;
  */
 
 function subtheme_preprocess_node(array &$variables) {
-  // if(!empty($variables['elements']['#node'])) {
-  //   $entity = $variables['elements']['#node'];
-  //   $variables['main_menu'] = subtheme_get_menu('main_menu');
-  //   $variables['date'] = format_date($entity->created->value, "custom", "F d, Y");
-  // }
+  
+  if($variables['elements']['field_recipe_comments']) {
+    $variables['node_label'] = $variables['label']['0']['#context']['value'];
+  }
+  if(!empty($variables['elements']['#node'])) {
+    // $entity = $variables['elements']['#node'];
+    // $variables['main_menu'] = subtheme_get_menu('main_menu');
+    // $variables['date'] = format_date($entity->created->value, "custom", "F d, Y");
+  }
   // $related_rcp = views_embed_view('related_rcp');
   // $variables['related_rcp'] = $related_rcp;
   $comment_view = views_embed_view('comment_view');
@@ -25,38 +29,41 @@ function subtheme_preprocess_node(array &$variables) {
   // $variables['fav_count'] = \Drupal::service('flag.count')->getFlagFlaggingCount($flag);
 }
 
-// function subtheme_preprocess_user(array &$variables) {
-//   $following = views_embed_view('following');
-//   $variables['following'] = $following;
-//   $easter_slider = views_embed_view('easter_slider');
-//   $variables['easter_slider'] = $easter_slider;
+function subtheme_preprocess_user(array &$variables) {
+  // $following = views_embed_view('following');
+  // $variables['following'] = $following;
+  // $easter_slider = views_embed_view('easter_slider');
+  // $variables['easter_slider'] = $easter_slider;
   
-//   $user = user_load($variables['user']->id());
-//   $variables['user_img'] = $user->field_acct_img->getValue();
-// }
+  // $user = user_load($variables['user']->id());
+  // $variables['user_img'] = $user->field_acct_img->getValue();
+  $variables['elements']['field_account_image']['#title'] = "U";
+  // dpm($variables);
+}
 
 /**
  * Implements hook_preprocess_HOOK() for block document templates.
  */
-/*
-function subtheme_preprocess_block(array &$variables) {
-  if(!empty($variables['content']['#block_content'])) {
-    $entity = $variables['content']['#block_content'];
-    $bundle = $entity->bundle();
 
-    $fields_definition = $entity->getFieldDefinitions();
-    foreach($fields_definition as $field_definition) {
-     if(!empty($field_definition->getTargetBundle()) && $field_definition->get('field_type') == 'entity_reference') { 
-        $entity_reference_field = collectFieldValues($entity, $field_definition);
-        if($entity_reference_field) {
-          $key = key($entity_reference_field);
-          $variables['content'][$key] = ($entity_reference_field[$key]);
-        }
-      }
-    }
-    $variables['main_menu'] = subtheme_get_menu('main_menu');
-    $variables['top_menu'] = subtheme_get_menu('top-menu');
-  }
+function subtheme_preprocess_block(array &$variables) {
+  // dump($variables['elements']['content']['header_background_image']);
+  // if(!empty($variables['content']['#block_content'])) {
+  //   $entity = $variables['content']['#block_content'];
+  //   $bundle = $entity->bundle();
+
+  //   $fields_definition = $entity->getFieldDefinitions();
+  //   foreach($fields_definition as $field_definition) {
+  //    if(!empty($field_definition->getTargetBundle()) && $field_definition->get('field_type') == 'entity_reference') { 
+  //       $entity_reference_field = collectFieldValues($entity, $field_definition);
+  //       if($entity_reference_field) {
+  //         $key = key($entity_reference_field);
+  //         $variables['content'][$key] = ($entity_reference_field[$key]);
+  //       }
+  //     }
+  //   }
+  //   $variables['main_menu'] = subtheme_get_menu('main_menu');
+  //   $variables['top_menu'] = subtheme_get_menu('top-menu');
+  // }
 }
 
 function collectFieldValues($entity, $field_definition) {
@@ -80,7 +87,7 @@ function collectFieldValues($entity, $field_definition) {
 
 /**
  * Implements hook_theme_suggestions_HOOK_alter() for block templates.
- */
+ 
 /*
 function subtheme_theme_suggestions_block_alter(array &$suggestions, array $variables) {
   if(!empty($variables['elements']['content']['#block_content'])) {
@@ -93,7 +100,7 @@ function subtheme_theme_suggestions_block_alter(array &$suggestions, array $vari
 /**
  * Implements hook_theme_suggestions_HOOK_alter() for user templates.
  */
-/*
+
 function subtheme_theme_suggestions_user_alter(array &$suggestions, array $variables) {
   if(!empty($variables['elements']['#view_mode'])) {
     $userviewmode = $variables['elements']['#view_mode'];
@@ -125,6 +132,7 @@ function subtheme_theme_suggestions_form_alter(array &$suggestions, array $varia
 function subtheme_preprocess_image(&$variables) {
   unset($variables['attributes']['width']);
   unset($variables['attributes']['height']);
+  // $variables['attributes']['height'] = "150";
 }
 
 // function subtheme_field_widget_checkbox_form_alter(&$element, \Drupal\Core\Form\FormStateInterface $form_state, $context) {
@@ -149,15 +157,34 @@ function subtheme_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_
     unset($form['actions']['preview']);
     $form['actions']['submit']['#value'] = new TranslatableMarkup('Post Review');
     $form['actions']['submit']['#attributes']['class'][] = "btn btn-submit-form w-button";
-    $form['comment_body']['#attributes']['class'][] = "form-multi-line-text-heigh w-input";
+    $form['comment_body']['widget']['0']['#attributes']['class'][] = "form-multi-line-text-height w-input";
+    $form['comment_body']['widget']['0']['#attributes']['placeholder'][] = "What did you think of this recipe? Would you make it again? Your review and tips help others get the best out of their baking.";
+    // $form['field_comment_rating']['#attributes']['required'][] = "required";
+    $form['field_comment_rating']['widget']['0']['#attributes']['required'][] = "required";
+
+    //['rating']['#widget']['#attributes']['placeholder'][] = "What did you think of this recipe? Would you make it again? Your review and tips help others get the best out of their baking.";required="required"
+    $form['comment_body']['widget']['0']['#title_display'] = "none";
+    $form['subject']['widget']['0']['value']['#default_value'][] = "Set Recipe label here (Ask Juan)";
   }
 }
 
-function subtheme_preprocess_textarea(&$variable) {
-  if($variable['element']['#title'] == "comment_body") {
-    $variable['element']['#attributes']['class'][] = "form-multi-line-text-heigh w-input";
+
+function subtheme_preprocess_input(&$variable) {
+  if($variable['element']['#title'] == "Subject") {
   }
   
+}
+
+function subtheme_preprocess_textarea(&$variable) {
+  if($variable['element']['#title'] == "Comment") {
+    // $variable['#attributes']['class'][] = "form-multi-line-text-heigh w-input";
+  }
+  
+}
+
+function subtheme_preprocess_comment(&$variables) {
+  $date_formatted = DateTime::createFromFormat('D, m/d/Y - H:i', $variables['created'])->format('M d, Y');
+  $variables['created'] = $date_formatted;
 }
 
 // function subtheme_theme() {
@@ -182,6 +209,7 @@ function subtheme_preprocess_form_element(&$variable){
     $variable['element']['#attributes']['class'][] = "display-none w-checkbox-input";
   }
 }
+*/
 
 function subtheme_preprocess_form_element_label(&$variable){
   // unset($variable['element']['#title']);
@@ -190,4 +218,4 @@ function subtheme_preprocess_form_element_label(&$variable){
 function subtheme_preprocess_form(&$variable){
   // dpm($variable['element']['field_category_course']['#attributes']);
 }
-*/
+
