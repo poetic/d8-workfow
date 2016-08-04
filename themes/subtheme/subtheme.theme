@@ -37,7 +37,7 @@ function subtheme_preprocess_user(array &$variables) {
   
   // $user = user_load($variables['user']->id());
   // $variables['user_img'] = $user->field_acct_img->getValue();
-  $variables['elements']['field_account_image']['#title'] = "U";
+  // $variables['elements']['field_account_image']['#title'] = "U";
   // dpm($variables);
 }
 
@@ -65,6 +65,18 @@ function subtheme_preprocess_block(array &$variables) {
   //   $variables['top_menu'] = subtheme_get_menu('top-menu');
   // }
 }
+
+function subtheme_preprocess_form(&$variables){
+  // dpm($variable['element']['field_category_course']['#attributes']);
+  //below returns 0 if anonymous user
+  if($variables['element']['#form_id'] == "comment_recipe_comment_form") {
+    $user_id = $variables['user']->id();
+    $user_node = \Drupal\user\Entity\User::load($user_id);
+    $file_url = $user_node->field_account_image->entity->url();
+    $variables['user_image_url'] = $file_url;
+  }
+}
+
 
 function collectFieldValues($entity, $field_definition) {
   $bundle = $entity->bundle();
@@ -164,7 +176,9 @@ function subtheme_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_
 
     //['rating']['#widget']['#attributes']['placeholder'][] = "What did you think of this recipe? Would you make it again? Your review and tips help others get the best out of their baking.";required="required"
     $form['comment_body']['widget']['0']['#title_display'] = "none";
-    $form['subject']['widget']['0']['value']['#default_value'][] = "Set Recipe label here (Ask Juan)";
+    // dump($form);
+    // $user = user_load($variables['user']->id());
+    // $variables['user_img'] = $user->field_acct_img->getValue();
   }
 }
 
@@ -189,6 +203,7 @@ function subtheme_preprocess_comment(&$variables) {
   $recipe_node = \Drupal\node\Entity\Node::load($recipe_nid);
   $recipe_title = $recipe_node->get('title')[0]->value;
   $variables['title'] = $recipe_title;
+  // dump($variables);
 }
 
 // function subtheme_theme() {
@@ -219,7 +234,4 @@ function subtheme_preprocess_form_element_label(&$variable){
   // unset($variable['element']['#title']);
 }
 
-function subtheme_preprocess_form(&$variable){
-  // dpm($variable['element']['field_category_course']['#attributes']);
-}
 
