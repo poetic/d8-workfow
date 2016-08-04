@@ -1,0 +1,13 @@
+langcode: en
+status: true
+dependencies: {  }
+name: account_image_style_small
+label: account_image_style_small
+effects:
+  94071357-c8f9-4bb3-920c-93d8cb01ab15:
+    uuid: 94071357-c8f9-4bb3-920c-93d8cb01ab15
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 90
+      height: 90
