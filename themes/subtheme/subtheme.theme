@@ -16,17 +16,23 @@ function subtheme_preprocess_node(array &$variables) {
     $variables['node_label'] = $variables['label']['0']['#context']['value'];
   }
   if(!empty($variables['elements']['#node'])) {
+    $user_id = $variables['user']->id();
+    $user_node = \Drupal\user\Entity\User::load($user_id);
+    $flag_service = \Drupal::service('flag');
+    $flag_link_builder = \Drupal::service('flag.link_builder');
+    $follow_flag = $flag_link_builder->build($user_node->getEntityTypeId(), $user_node->id(), 'follow');
+    $variables['follow_flag'] = $follow_flag;
+    $variables['follow_flag']['link']['#attributes']['class'][] = "txt-link-sm";
     // $entity = $variables['elements']['#node'];
     // $variables['main_menu'] = subtheme_get_menu('main_menu');
     // $variables['date'] = format_date($entity->created->value, "custom", "F d, Y");
+    $flag = $flag_service->getFlagById("favorite");
+    $variables['favorite_count'] = \Drupal::service('flag.count')->getFlagFlaggingCount($flag);
+    $comment_view = views_embed_view('comment_view');
+    $variables['comment_view'] = $comment_view;
+    $related_recipes = views_embed_view('related_recipes');
+    $variables['related_recipes'] = $related_recipes;
   }
-  // $related_rcp = views_embed_view('related_rcp');
-  // $variables['related_rcp'] = $related_rcp;
-  $comment_view = views_embed_view('comment_view');
-  $variables['comment_view'] = $comment_view;
-  $flag_service = \Drupal::service('flag');
-  $flag = $flag_service->getFlagById("favorite");
-  $variables['favorite_count'] = \Drupal::service('flag.count')->getFlagFlaggingCount($flag);
 }
 
 function subtheme_preprocess_user(array &$variables) {
@@ -145,6 +151,10 @@ function subtheme_preprocess_image(&$variables) {
   unset($variables['attributes']['width']);
   unset($variables['attributes']['height']);
   // $variables['attributes']['height'] = "150";
+}
+
+function subtheme_preprocess_taxonomy_term(&$variables) {
+  // dump($variables);
 }
 
 // function subtheme_field_widget_checkbox_form_alter(&$element, \Drupal\Core\Form\FormStateInterface $form_state, $context) {

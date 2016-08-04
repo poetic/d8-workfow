@@ -1,0 +1,25 @@
+<div class="rcp-info-wrapper rcp-list">
+  <div class="activity list w-clearfix">
+    <div class="list saves w-clearfix">
+      {% if logged_in %}
+      <div class="faved list save-icon">{{content.flag_favorite}}</div>
+      {% elseif not logged_in %}
+      <div class="list save-icon" data-ix="modal-login-show"></div>
+      {% endif %}
+      <div class="rcp-list saved-tally">{{favorite_count}}</div>
+    </div>
+    <div class="stars star-{{content.field_rating_average.0}}"></div>
+  </div>
+  <a class="list rcp-title w-inline-block" href="recipes/recipe.html">
+    <h4>{{ label }}</h4>
+  </a>
+  <div class="rcp-list summary">
+    <div class="dynamic-data rcp-summary-data">
+      By:
+      <a class="txt-link-sm" href="user/recipe-box.html">{{author_name}}</a>
+    </div>
+  </div>
+</div>
+<div class="object-fit rcp-img-list">
+  {{ content.recipe_recipe_image }}
+</div>
