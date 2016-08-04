@@ -1,4 +1,8 @@
 global-css:
   css:
     theme:
-      css/custom.css: {}
+      css/custom_config.css: {}
+global-js:
+  ja:
+    theme:
+      js/custom_config.js: {}
