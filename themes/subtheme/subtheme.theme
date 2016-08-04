@@ -24,9 +24,9 @@ function subtheme_preprocess_node(array &$variables) {
   // $variables['related_rcp'] = $related_rcp;
   $comment_view = views_embed_view('comment_view');
   $variables['comment_view'] = $comment_view;
-  // $flag_service = \Drupal::service('flag');
-  // $flag = $flag_service->getFlagById("favorite");
-  // $variables['fav_count'] = \Drupal::service('flag.count')->getFlagFlaggingCount($flag);
+  $flag_service = \Drupal::service('flag');
+  $flag = $flag_service->getFlagById("favorite");
+  $variables['favorite_count'] = \Drupal::service('flag.count')->getFlagFlaggingCount($flag);
 }
 
 function subtheme_preprocess_user(array &$variables) {

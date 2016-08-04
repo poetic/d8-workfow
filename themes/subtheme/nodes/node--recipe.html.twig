@@ -496,9 +496,12 @@
               <div class="rcp-main stars"></div>
             </div>
             <div class="rcp-main saves w-clearfix">
-              <div class="rcp-main saved-tally">31</div>
+              <div class="rcp-main saved-tally">{{favorite_count}}</div>
+              {% if not logged_in %}
               <div class="rcp-main save-icon" data-ix="modal-login-show"></div>
-              <div class="faved rcp-main save-icon"></div>
+              {% else %}
+              <div class="faved rcp-main save-icon">{{content.flag_favorite}}</div>
+              {% endif %}
             </div>
           </div>
           <h1>{{ label }}</h1>
