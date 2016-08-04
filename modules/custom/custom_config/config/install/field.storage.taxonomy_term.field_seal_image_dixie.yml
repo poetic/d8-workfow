@@ -5,8 +5,8 @@ dependencies:
     - file
     - image
     - taxonomy
-id: taxonomy_term.field_badge_image
-field_name: field_badge_image
+id: taxonomy_term.field_seal_image_dixie
+field_name: field_seal_image_dixie
 entity_type: taxonomy_term
 type: image
 settings:

@@ -23,7 +23,7 @@
         <a class="modal side-nav-close-wrapper w-clearfix w-inline-block" data-ix="modal-login-hide" href="#">
           <div class="main-nav-link-bg-highlight side-nav-close">Cancel</div>
           <img height="14" src="/themes/isonetheme/../images/side%20nav%20close%20x.svg" width="14"></a>
-        <img class="login logo" src="/themes/isonetheme/../images/Imperial_Brand_Logo.svg" width="100"><div class="w-form">
+        <img class="login logo" src="/themes/isonetheme/../images/Imperial_Brand_Logo.svg" width="100"><div class="">
           <form data-name="Email Form 2" id="email-form-2" name="email-form-2">
             <p>Sign in with email and password</p>
             <label class="hidden" for="email-signin-2" id="email-signin">Email Address:</label>
@@ -46,7 +46,7 @@
         <a class="modal side-nav-close-wrapper w-clearfix w-inline-block" data-ix="modal-login-hide" href="#">
           <div class="main-nav-link-bg-highlight side-nav-close">Cancel</div>
           <img height="14" src="/themes/isonetheme/../images/side%20nav%20close%20x.svg" width="14"></a>
-        <img class="login logo" src="/themes/isonetheme/../images/Imperial_Brand_Logo.svg" width="100"><div class="w-form">
+        <img class="login logo" src="/themes/isonetheme/../images/Imperial_Brand_Logo.svg" width="100"><div class="">
           <form data-name="Email Form 2" id="email-form-2" name="email-form-2">
             <p>Enter your email to create an account</p>
             <label class="hidden" for="email-create-account-3">Email Address:</label>
@@ -76,7 +76,7 @@
         <a class="modal side-nav-close-wrapper w-clearfix w-inline-block" data-ix="modal-login-hide" href="#">
           <div class="main-nav-link-bg-highlight side-nav-close">Cancel</div>
           <img height="14" src="/themes/isonetheme/../images/side%20nav%20close%20x.svg" width="14"></a>
-        <img class="login logo" src="/themes/isonetheme/../images/Imperial_Brand_Logo.svg" width="100"><div class="w-form">
+        <img class="login logo" src="/themes/isonetheme/../images/Imperial_Brand_Logo.svg" width="100"><div class="">
           <form data-name="Email Form 2" id="email-form-2" name="email-form-2">
             <p>Set your password</p>
             <label for="password-create-2">Type your password</label>
@@ -118,7 +118,7 @@
     </div>
     <a class="logo-wrapper w-inline-block" href="../index.html">
       <img class="logo" height="80%" src="/themes/isonetheme/../images/Imperial_Brand_Logo.svg" width="80%"><img class="logo w-hidden-main w-hidden-medium w-hidden-small w-hidden-tiny" src="/themes/isonetheme/../images/DixieCrystals_Color.svg" width="110"></a>
-    <div class="search-bar-position w-form" data-ix="search-bar-hide">
+    <div class="search-bar-position " data-ix="search-bar-hide">
       <form class="search-form-wrapper w-clearfix" data-name="Email Form" id="email-form" name="email-form">
         <input autofocus="autofocus" class="search-field-global w-input" data-ix="search-bar-show" data-name="Search" id="Search" maxlength="256" name="Search" placeholder="Search recipes, ideas, anything&hellip;" type="text"><input class="search-btn-global w-button" data-wait="Please wait..." type="submit" value="Search" wait="Please wait..."><a class="cancel search-btn-global w-button w-hidden-main w-hidden-medium" data-ix="search-bar-hide" href="#">Cancel</a>
       </form>
@@ -425,7 +425,7 @@
           <div class="sidebar subscribe-text">
             Subscribe to our newsletter for exclusive recipes, coupons, and promotions.
           </div>
-          <div class="sidebar subscribe-form-position w-form">
+          <div class="sidebar subscribe-form-position">
             <form class="form-field-shadow subscribe-form-wrapper w-clearfix" data-name="Email Form" id="email-form" name="email-form">
               <input class="subscribe-field w-input" data-ix="search-bar-show" data-name="Subscribe 2" id="Subscribe-2" maxlength="256" name="Subscribe-2" placeholder="Email Address" type="text"><input class="btn subscribe-btn w-button" data-wait="Please wait..." type="submit" value="Subscribe" wait="Please wait..."></form>
             <div class="w-form-done">
@@ -447,29 +447,7 @@
         </div>
         <div class="rcp-list-col w-clearfix w-hidden-medium w-hidden-small w-hidden-tiny">
           <h3 class="secondary">Related Recipes</h3>
-          <div class="list rcp-wrapper" data-node="recipe" data-view-mode="list">
-            <div class="rcp-info-wrapper rcp-list">
-              <div class="activity list w-clearfix">
-                <div class="list saves w-clearfix">
-                  <div class="faved list save-icon"></div>
-                  <div class="list save-icon" data-ix="modal-login-show"></div>
-                  <div class="rcp-list saved-tally">31</div>
-                </div>
-                <div class="stars"></div>
-              </div>
-              <a class="list rcp-title w-inline-block" href="recipes/recipe.html">
-                <h4>Delicious Praline Cinnamon Monkey Bread</h4>
-              </a>
-              <div class="rcp-list summary">
-                <div class="dynamic-data rcp-summary-data">
-                  By:
-                  <a class="txt-link-sm" href="user/recipe-box.html">Chef Eddie Van Damme</a>
-                </div>
-              </div>
-            </div>
-            <div class="object-fit rcp-img-list">
-              <img height="99" src="/themes/isonetheme/../images/Praline-Cinnamon-Monkey-Bread.jpg"></div>
-          </div>
+          {{related_recipes}}
         </div>
       </div>
       <div class="_66-pc rcp-main w-clearfix">
@@ -478,7 +456,8 @@
             <div class="video-btn-wrapper">
               <img src="/themes/isonetheme/../images/icon-video-play-white.svg"></div>
             <div>
-              {{ content.recipe_recipe_image }}</div>
+              {{ content.recipe_recipe_image }}
+            </div>
             <script class="w-json" type="application/json">
               { "items": [{
                 "type": "video",
@@ -513,7 +492,9 @@
               <a href="#">{{author_name}}</a>
             </div>
             <div class="rcp-author rcp-main rcp-summary-data">
-              <a class="txt-link-sm" href="#">Follow this Chef</a>
+              {{follow_flag.link}}
+              <!-- <a class="txt-link-sm" href="#">Follow this Chef</a> -->
+              
             </div>
           </div>
           <div data-node-field="description">{{ content.recipe_description }}</div>
@@ -552,50 +533,19 @@
             <div class="dynamic-data rcp-main rcp-summary-data">20</div>
             <div class="rcp-main rcp-summary-data">mins</div>
           </div>
+          
+
           <div class="rcp-seals-wrapper" data-vocabulary="seals">
+            {% set count = content.field_recipe_seals['#items'].value|length %}
+            {% for i in 0..count-1 %}
             <div class="rcp-seal-img">
-              <img height="70" src="/themes/isonetheme/../images/WebsiteSealEmblem-On-the-ISC-bag-210.png" width="70"></div>
-            <div class="rcp-seal-img">
-              <img height="70" src="/themes/isonetheme/../images/WebsiteSealEmblem-VintageRecipe-210.png" width="70"></div>
-            <div class="rcp-seal-img">
-              <img height="70" src="/themes/isonetheme/../images/WebsiteSealEmblem-TestedBy-ISC_xl.png" width="70"></div>
-            <div class="rcp-seal-img">
-              <img height="70" src="/themes/isonetheme/../images/WebsiteSealEmblem-TestedBy-DC_xl.png" width="70"></div>
-            <div class="rcp-seal-img">
-              <img height="70" src="/themes/isonetheme/../images/WebsiteSealEmblem-TestedBy-ChefEddy_xl.png" width="70"></div>
-            <div class="rcp-seal-img">
-              <img height="70" src="/themes/isonetheme/../images/WebsiteSealEmblem-MostPopular-210.png" width="70"></div>
-            <div class="rcp-seal-img">
-              <img height="70" src="/themes/isonetheme/../images/WebsiteSealEmblem-Member-210.png" width="70"></div>
-            <div class="rcp-seal-img">
-              <img height="70" src="/themes/isonetheme/../images/WebsiteSealEmblem-FoodBlogger-210.png" width="70"></div>
-            <div class="rcp-seal-img">
-              <img height="70" src="/themes/isonetheme/../images/WebsiteSealEmblem-On-the-DC-bag-210.png" width="70"></div>
-            <div class="rcp-seal-img">
-              <img height="70" src="/themes/isonetheme/../images/WebsiteSealEmblem-Blogger-210.png" width="70"></div>
-            <div class="rcp-seal-img">
-              <img height="70" src="/themes/isonetheme/../images/WebsiteSealEmblem-AwardWinner_xl.png" width="70"></div>
-            <div class="rcp-seal-img">
-              <img height="70" src="/themes/isonetheme/../images/WebsiteSealEmblem-Featured_xl.png" width="70"></div>
-            <div class="rcp-seal-img">
-              <img height="70" src="/themes/isonetheme/../images/WebsiteSealEmblem-5StarsBlueRibbon-xl.png" width="70"></div>
-            <div class="rcp-seal-img">
-              <img height="70" src="/themes/isonetheme/../images/Seal-RecipeTester-ISC.png" width="70"></div>
-            <div class="rcp-seal-img">
-              <img height="70" src="/themes/isonetheme/../images/Seal-RecipeDeveloper-ISC.png" width="70"></div>
-            <div class="rcp-seal-img">
-              <img height="70" src="/themes/isonetheme/../images/Seal-CulinarySpecialist-ISC.png" width="70"></div>
-            <div class="rcp-seal-img">
-              <img height="70" src="/themes/isonetheme/../images/Seal-BlogAmbassador-ISC.png" width="70"></div>
-            <div class="rcp-seal-img">
-              <img height="70" src="/themes/isonetheme/../images/Seal-CulinarySpecialist-DC.png" width="70"></div>
-            <div class="rcp-seal-img">
-              <img height="70" src="/themes/isonetheme/../images/Seal-RecipeTester-DC.png" width="70"></div>
-            <div class="rcp-seal-img">
-              <img height="70" src="/themes/isonetheme/../images/Seal-RecipeDeveloper-DC.png" width="70"></div>
-            <div class="rcp-seal-img">
-              <img height="70" src="/themes/isonetheme/../images/Seal-BlogAmbassador-DC.png" width="70"></div>
-          </div>
+                  {{ content.field_recipe_seals[i] }}
+            </div>
+            {% endfor %}
+
+
+
+
         </div>
         <div class="cta-wrapper follow-social separator-line-top-bottom sidebar w-hidden-main">
           <div class="scl-wrapper sidebar">
@@ -612,42 +562,10 @@
         </div>
         <div class="rcp-text-wrapper">
           <h2 class="secondary">Ingredients</h2>
-          <div class="rcp-ingredients-section">
-            <h3>Pastry</h3>
-            <p class="rcp-ingredients">
-              &bull; &nbsp;1 package (8 oz) cream cheese, room temperature&nbsp;
-              <br>
-              &bull; &nbsp;3/4 cup
-              <a class="rcp-ingredients-coupon-inline" href="#">Imperial Sugar Confectioners Powdered Sugar</a>
-              <br>
-              &bull; &nbsp;3 tablespoons finely grated lemon zest (no white bitter pith)
-              <br>
-              &bull; &nbsp;1 tablespoon fresh lemon juice
-              <br>
-              &bull; &nbsp;1 cup ricotta cheese
-              <br>
-              &bull; &nbsp;12 cannoli shells, store bought or homemade:
-              <a href="#">Chocolate Peppermint Cannoli</a>
-              <br>&bull; &nbsp;1/2 cup white chocolate chips</p>
-          </div>
-          <div class="rcp-ingredients-section">
-            <h3>Filling</h3>
-            <p class="rcp-ingredients">
-              &bull; &nbsp;1 package (8 oz) cream cheese, room temperature&nbsp;
-              <br>
-              &bull; &nbsp;3/4 cup
-              <a href="#">Imperial Sugar Confectioners Powdered Sugar</a>
-              <br>
-              &bull; &nbsp;3 tablespoons finely grated lemon zest (no white bitter pith)
-              <br>
-              &bull; &nbsp;1 tablespoon fresh lemon juice
-              <br>
-              &bull; &nbsp;1 cup ricotta cheese
-              <br>
-              &bull; &nbsp;12 cannoli shells, store bought or homemade:
-              <a href="#">Chocolate Peppermint Cannoli</a>
-              <br>&bull; &nbsp;1/2 cup white chocolate chips</p>
-          </div>
+          {% set pcount = content.field_recipe_ingredients['#items'].value|length %}
+          {% for j in 0..pcount %}
+            {{content.field_recipe_ingredients[j]}}
+          {% endfor %}
           <h2 class="secondary">Directions</h2>
             <div class="rcp-directions" data-node-field="directions">{{ content.recipe_directions }}</div>
           <h2 class="secondary">Handy Tips</h2>
@@ -655,7 +573,7 @@
         </div>
 
         <div class="cta-wrapper duplicate scl-actions sidebar w-clearfix">
-          <h4>Tell others you&rsquo;re making this recipe!</h4>
+          <h4>Tell others you're making this recipe!</h4>
           <a class="btn btn-tertiary pn scl-actions w-button" href="#">Pin it</a>
           <a class="btn btn-tertiary fb scl-actions w-button" href="#">Share it</a>
           <a class="btn btn-tertiary scl-actions tw w-button" href="#">Tweet it</a>
@@ -673,7 +591,7 @@
       <div class="subscribe-text">
         Sign up to our newsletter for exclusive recipes, coupons, and promotions.
       </div>
-      <div class="subscribe-form-position w-form">
+      <div class="subscribe-form-position">
         <form class="form-field-shadow subscribe-form-wrapper" data-name="Email Form" id="email-form" name="email-form">
           <input class="subscribe-field w-input" data-ix="search-bar-show" data-name="Subscribe" id="Subscribe" maxlength="256" name="Subscribe" placeholder="Email Address" type="text"><input class="btn subscribe-btn w-button" data-wait="Please wait..." type="submit" value="Sign up!" wait="Please wait..."></form>
         <div class="w-form-done">

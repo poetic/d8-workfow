@@ -2,15 +2,15 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.taxonomy_term.field_badge_image
+    - field.storage.taxonomy_term.field_seal_image_dixie
     - taxonomy.vocabulary.seals
   module:
     - image
-id: taxonomy_term.seals.field_badge_image
-field_name: field_badge_image
+id: taxonomy_term.seals.field_seal_image_dixie
+field_name: field_seal_image_dixie
 entity_type: taxonomy_term
 bundle: seals
-label: badge_image
+label: seal_image_dixie
 description: ''
 required: false
 translatable: false
@@ -20,7 +20,7 @@ settings:
   file_directory: '[date:custom:Y]-[date:custom:m]'
   file_extensions: 'png gif jpg jpeg'
   max_filesize: ''
-  max_resolution: 70x70
+  max_resolution: 210x210
   min_resolution: ''
   alt_field: true
   alt_field_required: true

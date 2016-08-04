@@ -1,0 +1,13 @@
+langcode: en
+status: true
+dependencies: {  }
+name: seal_70_70
+label: seal_70_70
+effects:
+  3176b9f8-0991-49bc-82ac-5380ac706254:
+    uuid: 3176b9f8-0991-49bc-82ac-5380ac706254
+    id: image_resize
+    weight: 1
+    data:
+      width: 70
+      height: 70
