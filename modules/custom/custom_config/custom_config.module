@@ -23,6 +23,33 @@ function custom_config_help($route_name, RouteMatchInterface $route_match) {
   }
 }
 
-function custom_config_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
-	$form['comment_body']['widget']['0']['value']['#attributes']['class'][] = "form-multi-line-text-heigh w-input";
+// function custom_config_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+// 	$form['comment_body']['widget']['0']['value']['#attributes']['class'][] = "form-multi-line-text-heigh w-input";
+// }
+
+function custom_config_comment_update($entity) {
+  $comment_rating = $entity->get('field_comment_rating')->getValue()[0]['rating'];
+  // dump($entity);
+  // dump($comment_rating);
+  //node field rating
+  $node = Node::load($entity->get('entity_id')->target_id);
+  $field_rating = $node->get('field_rating_average')->value;
+  $comment_count = $node->get('field_recipe_comments')->getValue()[0]['comment_count'];
+  $node->set('field_rating', round( ( ($field_rating * $comment_count) + $comment_rating) / ($comment_count + 1),-1 ) );
+  
+  $node->save();
+  // dpm($field_rating);
+}
+
+function custom_config_comment_delete($entity) {
+  $comment_rating = $entity->get('field_comment_rating')->getValue()[0]['rating'];
+  // dump($entity);
+  // node field rating
+  $node = Node::load($entity->get('entity_id')->target_id);
+  $field_rating = $node->get('field_rating_average')->value;
+  $comment_count = $node->get('field_recipe_comments')->getValue()[0]['comment_count'];
+  $node->set('field_rating', round( ( ($field_rating * $comment_count) - $comment_rating) / ($comment_count - 1),-1 ) );
+  
+  $node->save();
+  // dpm($field_rating);
 }
