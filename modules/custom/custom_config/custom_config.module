@@ -6,6 +6,16 @@
  */
 
 use Drupal\Core\Routing\RouteMatchInterface;
+use Symfony\Component\Yaml\Yaml;
+use Drupal\block_content\Entity\BlockContent;
+use Drupal\block_content\Entity\BlockContentType;
+use Drupal\node\Entity\Node;
+use Drupal\node\Entity\NodeType;
+use Drupal\field\Entity\FieldStorageConfig;
+use Drupal\field\Entity\FieldConfig;
+use Drupal\page_manager\Entity\Page;
+use Drupal\page_manager\Entity\PageVariant;
+use Drupal\file\Entity\File;
 
 /**
  * Implements hook_help().
@@ -35,10 +45,11 @@ function custom_config_comment_update($entity) {
   $node = Node::load($entity->get('entity_id')->target_id);
   $field_rating = $node->get('field_rating_average')->value;
   $comment_count = $node->get('field_recipe_comments')->getValue()[0]['comment_count'];
-  $node->set('field_rating', round( ( ($field_rating * $comment_count) + $comment_rating) / ($comment_count + 1),-1 ) );
+  $node->set('field_rating_average', round( ( ($field_rating * $comment_count) + $comment_rating) / ($comment_count + 1),-1 ) );
   
   $node->save();
-  // dpm($field_rating);
+  $field_rating = $node->get('field_rating_average')->value;
+  dpm($field_rating);
 }
 
 function custom_config_comment_delete($entity) {
@@ -48,7 +59,7 @@ function custom_config_comment_delete($entity) {
   $node = Node::load($entity->get('entity_id')->target_id);
   $field_rating = $node->get('field_rating_average')->value;
   $comment_count = $node->get('field_recipe_comments')->getValue()[0]['comment_count'];
-  $node->set('field_rating', round( ( ($field_rating * $comment_count) - $comment_rating) / ($comment_count - 1),-1 ) );
+  $node->set('field_rating_average', round( ( ($field_rating * $comment_count) - $comment_rating) / ($comment_count - 1),-1 ) );
   
   $node->save();
   // dpm($field_rating);
