@@ -3,6 +3,6 @@ global-css:
     theme:
       css/custom_config.css: {}
 global-js:
-  ja:
+  js:
     theme:
       js/custom_config.js: {}
