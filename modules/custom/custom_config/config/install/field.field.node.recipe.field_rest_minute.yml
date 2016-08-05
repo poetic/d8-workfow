@@ -1,0 +1,23 @@
+uuid: c0ed5131-d783-4094-a7d9-83597f61aa1b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_rest_minute
+    - node.type.recipe
+id: node.recipe.field_rest_minute
+field_name: field_rest_minute
+entity_type: node
+bundle: recipe
+label: rest_minute
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: 0
+  max: 59
+  prefix: ''
+  suffix: ''
+field_type: integer

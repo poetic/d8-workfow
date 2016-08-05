@@ -3,7 +3,6 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.recipe_ingredients.field_ingredient_section_body
-    - field.field.paragraph.recipe_ingredients.field_ingredient_section_body2
     - field.field.paragraph.recipe_ingredients.field_ingredient_section_title
     - paragraphs.paragraphs_type.recipe_ingredients
   module:
