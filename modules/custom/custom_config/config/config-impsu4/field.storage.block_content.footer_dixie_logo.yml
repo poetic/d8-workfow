@@ -1,0 +1,32 @@
+uuid: 0f6e1998-201b-4fa8-937e-276f4c586851
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+    - file
+    - image
+_core:
+  default_config_hash: 1iD688spTcCnsQFCZaHjpzJ24KboaV5l69G8xGvRgQY
+id: block_content.footer_dixie_logo
+field_name: footer_dixie_logo
+entity_type: block_content
+type: image
+settings:
+  default_image:
+    uuid: null
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  target_type: file
+  display_field: false
+  display_default: false
+  uri_scheme: public
+module: image
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,42 @@
+uuid: de2fc252-8b68-44fa-bdf6-728ca547f5a6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.seals.field_seal_image_dixie
+    - field.field.taxonomy_term.seals.field_seal_image_imperial
+    - image.style.seal_70_70
+    - taxonomy.vocabulary.seals
+  module:
+    - image
+    - text
+_core:
+  default_config_hash: aDCbEu8d16-VFv4pPu1P7Z2JIk0UMA3JLTwT57oD_w4
+id: taxonomy_term.seals.default
+targetEntityType: taxonomy_term
+bundle: seals
+mode: default
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+  field_seal_image_dixie:
+    weight: 3
+    label: hidden
+    settings:
+      image_style: seal_70_70
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+  field_seal_image_imperial:
+    weight: 2
+    label: hidden
+    settings:
+      image_style: seal_70_70
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+hidden: {  }

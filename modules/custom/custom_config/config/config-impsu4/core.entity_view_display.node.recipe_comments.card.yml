@@ -1,0 +1,19 @@
+uuid: b023f705-88b3-4210-ad60-f7ad7831135b
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.card
+    - node.type.recipe_comments
+  module:
+    - user
+_core:
+  default_config_hash: 24QcBUVUFUDEhbINlvpjITab9DgYiuJglWvKI-EKpNU
+id: node.recipe_comments.card
+targetEntityType: node
+bundle: recipe_comments
+mode: card
+content:
+  links:
+    weight: 100
+hidden: {  }

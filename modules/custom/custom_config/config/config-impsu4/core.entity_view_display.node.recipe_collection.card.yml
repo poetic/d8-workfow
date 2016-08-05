@@ -1,0 +1,25 @@
+uuid: 889e58bc-2777-4e95-b5fe-b3317e8ab695
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.card
+    - field.field.node.recipe_collection.recipe_collection_image
+    - field.field.node.recipe_collection.recipe_collection_popular
+    - field.field.node.recipe_collection.recipe_collection_trending
+    - node.type.recipe_collection
+  module:
+    - user
+_core:
+  default_config_hash: ajDQKBVFwwGh_Lhd2zs9gRHGEbIV--1t9osRi6_8Yr4
+id: node.recipe_collection.card
+targetEntityType: node
+bundle: recipe_collection
+mode: card
+content:
+  links:
+    weight: 100
+hidden:
+  recipe_collection_image: true
+  recipe_collection_popular: true
+  recipe_collection_trending: true

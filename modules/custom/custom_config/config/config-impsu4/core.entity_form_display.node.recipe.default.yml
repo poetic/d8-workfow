@@ -1,0 +1,86 @@
+uuid: cb6846e1-28a3-4b92-90e9-3838b8bce3e7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.recipe.recipe_description
+    - field.field.node.recipe.recipe_directions
+    - field.field.node.recipe.recipe_handy_tips
+    - field.field.node.recipe.recipe_recipe_image
+    - field.field.node.recipe.recipe_yield
+    - image.style.thumbnail
+    - node.type.recipe
+  module:
+    - image
+    - path
+    - text
+_core:
+  default_config_hash: uUbNrb7XQzBwRnQVbbJXKn4Q-OMN-CrdgXKXoTztiE4
+id: node.recipe.default
+targetEntityType: node
+bundle: recipe
+mode: default
+content:
+  created:
+    type: datetime_timestamp
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 30
+    settings: {  }
+    third_party_settings: {  }
+  promote:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 15
+    third_party_settings: {  }
+  recipe_description:
+    type: text_textarea
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+  recipe_directions:
+    type: text_textarea
+    weight: 4
+    settings: {  }
+    third_party_settings: {  }
+  recipe_handy_tips:
+    type: text_textarea
+    weight: 5
+    settings: {  }
+    third_party_settings: {  }
+  recipe_recipe_image:
+    type: image_image
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+  recipe_yield:
+    type: string_textfield
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+  sticky:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 16
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: -5
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 5
+    settings:
+      match_operator: CONTAINS
+      size: '60'
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

@@ -1,0 +1,33 @@
+uuid: 5e063568-7d89-4d3c-bcc4-7ecac39d4eb5
+langcode: en
+status: true
+dependencies:
+  module:
+    - user
+_core:
+  default_config_hash: AyEqa-dmg27pyZhY3iSfZhWv_QrDsI9rvtATHzgecRs
+id: follow
+label: follow
+bundles: {  }
+entity_type: user
+enabled: true
+global: false
+weight: 0
+flag_short: 'Follow this Chef'
+flag_long: ''
+flag_message: ''
+unflag_short: 'Unfollow this Chef'
+unflag_long: ''
+unflag_message: ''
+unflag_denied_text: ''
+flag_type: 'entity:user'
+link_type: ajax_link
+flagTypeConfig:
+  show_in_links:
+    full: full
+  show_as_field: 1
+  show_on_form: 0
+  show_contextual_link: 0
+  show_on_profile: false
+  access_uid: '0'
+linkTypeConfig: {  }

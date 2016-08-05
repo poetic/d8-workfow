@@ -1,0 +1,29 @@
+uuid: 8df6dba8-30d0-4d19-9441-b374e3783591
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.hero
+    - field.field.node.recipe.recipe_description
+    - field.field.node.recipe.recipe_directions
+    - field.field.node.recipe.recipe_handy_tips
+    - field.field.node.recipe.recipe_recipe_image
+    - field.field.node.recipe.recipe_yield
+    - node.type.recipe
+  module:
+    - user
+_core:
+  default_config_hash: ck2nqLLTYET-XGkUkksRhPzK26U0rHAFrWI1CUyr7uU
+id: node.recipe.hero
+targetEntityType: node
+bundle: recipe
+mode: hero
+content:
+  links:
+    weight: 100
+hidden:
+  recipe_description: true
+  recipe_directions: true
+  recipe_handy_tips: true
+  recipe_recipe_image: true
+  recipe_yield: true

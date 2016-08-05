@@ -1,0 +1,30 @@
+uuid: 212f8a5d-e335-4656-8272-23ce9792c910
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_recipe_seals
+    - node.type.recipe
+    - taxonomy.vocabulary.seals
+_core:
+  default_config_hash: bVby0fLiMNUl1uVWIoYW0Mq-M9ut0Pa_gv4ASF-ZXIk
+id: node.recipe.field_recipe_seals
+field_name: field_recipe_seals
+entity_type: node
+bundle: recipe
+label: recipe_seals
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      seals: seals
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

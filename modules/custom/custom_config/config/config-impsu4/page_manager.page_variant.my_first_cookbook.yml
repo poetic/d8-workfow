@@ -1,0 +1,28 @@
+uuid: bca8f857-cce3-422b-af40-e8db1119774f
+langcode: en
+status: true
+dependencies:
+  config:
+    - page_manager.page.my_first_cookbook
+  module:
+    - panels
+id: my_first_cookbook
+label: 'My First Cookbook'
+variant: panels_variant
+variant_settings:
+  blocks: {  }
+  id: panels_variant
+  layout: one_column
+  storage_type: page_manager
+  storage_id: my_first_cookbook
+  builder: standard
+  uuid: 985af929-5c8f-49bf-ac6e-40a810401b8b
+  label: ''
+  weight: 0
+  layout_settings: {  }
+  page_title: ''
+page: my_first_cookbook
+weight: 0
+selection_criteria: {  }
+selection_logic: and
+static_context: {  }

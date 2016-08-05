@@ -1,0 +1,23 @@
+uuid: 1f912f27-cf39-45b7-bac8-a74011eba8af
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.side_nav
+    - field.field.block_content.side_nav.side_nav_sidenav
+_core:
+  default_config_hash: Bzw-zZYKk7p2UiNKvRIttEHcLzNc8REF7rfbEQ7tJg4
+id: block_content.side_nav.default
+targetEntityType: block_content
+bundle: side_nav
+mode: default
+content:
+  info:
+    type: string_textfield
+    weight: -5
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  side_nav_sidenav: true

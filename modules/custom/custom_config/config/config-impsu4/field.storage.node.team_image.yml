@@ -1,0 +1,32 @@
+uuid: 3c90b466-9236-4ea6-a1de-0309aeb09c84
+langcode: en
+status: true
+dependencies:
+  module:
+    - file
+    - image
+    - node
+_core:
+  default_config_hash: LJL1WhGQYLFt85QWIIilbAiFe6la92lI0bBNfK9ql6I
+id: node.team_image
+field_name: team_image
+entity_type: node
+type: image
+settings:
+  default_image:
+    uuid: null
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  target_type: file
+  display_field: false
+  display_default: false
+  uri_scheme: public
+module: image
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

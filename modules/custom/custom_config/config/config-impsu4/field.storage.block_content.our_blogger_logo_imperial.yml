@@ -1,0 +1,32 @@
+uuid: d1f7c2a9-a510-4301-b502-d7eecf3a10d9
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+    - file
+    - image
+_core:
+  default_config_hash: bybkeuBfSZd8ombxEbwmwqpj1iqtFaAcgOgIYppoFnY
+id: block_content.our_blogger_logo_imperial
+field_name: our_blogger_logo_imperial
+entity_type: block_content
+type: image
+settings:
+  default_image:
+    uuid: null
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  target_type: file
+  display_field: false
+  display_default: false
+  uri_scheme: public
+module: image
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

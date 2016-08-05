@@ -1,0 +1,28 @@
+uuid: e88ace13-539a-4b1b-a24e-6b05e7fb6f5c
+langcode: en
+status: true
+dependencies:
+  config:
+    - page_manager.page.coupons
+  module:
+    - panels
+id: coupons
+label: Coupons
+variant: panels_variant
+variant_settings:
+  blocks: {  }
+  id: panels_variant
+  layout: one_column
+  storage_type: page_manager
+  storage_id: coupons
+  builder: standard
+  uuid: 60f54094-0aeb-4492-b024-557095ab61e5
+  label: ''
+  weight: 0
+  layout_settings: {  }
+  page_title: ''
+page: coupons
+weight: 0
+selection_criteria: {  }
+selection_logic: and
+static_context: {  }

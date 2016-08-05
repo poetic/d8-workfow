@@ -1,0 +1,13 @@
+uuid: cae5246e-654f-478f-849b-43516d152a35
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: kgxoAuBRg_n3ApTG3AJJND1OH_Gxpd7S4SEUMith0nA
+id: baking_videos
+label: 'Baking Videos'
+use_admin_theme: null
+path: /baking-videos
+access_logic: and
+access_conditions: {  }
+parameters: {  }

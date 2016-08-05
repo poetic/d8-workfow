@@ -1,0 +1,35 @@
+uuid: f4c1fb20-1e1a-4504-a73c-acd071a0c775
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_recipe_comments
+    - node.type.recipe
+  module:
+    - comment
+_core:
+  default_config_hash: CgIhdTz46xaVS9bP5P4cUKcmdJ-Gf9K6dtsqTE5HMj0
+id: node.recipe.field_recipe_comments
+field_name: field_recipe_comments
+entity_type: node
+bundle: recipe
+label: recipe_comments
+description: 'This is a collection of all comments for this recipe.'
+required: false
+translatable: false
+default_value:
+  -
+    status: 2
+    cid: 0
+    last_comment_timestamp: 0
+    last_comment_name: null
+    last_comment_uid: 0
+    comment_count: 0
+default_value_callback: ''
+settings:
+  default_mode: 1
+  per_page: 50
+  anonymous: 0
+  form_location: true
+  preview: 0
+field_type: comment

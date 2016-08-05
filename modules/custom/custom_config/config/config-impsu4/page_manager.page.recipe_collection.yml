@@ -1,0 +1,13 @@
+uuid: 7df4bff6-4fb1-4dc5-8716-5410d54fcb53
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: H6BeE9dV_ACQbxP4MXSHBfHU0-rDw2UMYVg9M3R6Vgo
+id: recipe_collection
+label: 'Recipe Collection'
+use_admin_theme: null
+path: /recipe-collection
+access_logic: and
+access_conditions: {  }
+parameters: {  }

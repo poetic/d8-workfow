@@ -1,0 +1,21 @@
+uuid: d6fd3b30-1fa7-4900-975b-e79dcc904659
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.side_nav
+    - field.field.block_content.side_nav.side_nav_sidenav
+_core:
+  default_config_hash: KoMqGYZsnaiWs2h5_aji3Z8e--PXVG8HtN5DnQMmWpM
+id: block_content.side_nav.default
+targetEntityType: block_content
+bundle: side_nav
+mode: default
+content:
+  side_nav_sidenav:
+    label: hidden
+    type: entity_reference_entity_id
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

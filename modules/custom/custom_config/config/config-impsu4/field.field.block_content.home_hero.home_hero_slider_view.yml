@@ -1,0 +1,28 @@
+uuid: ef71bde5-deec-4271-8848-f54d9b5fee83
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.home_hero
+    - field.storage.block_content.home_hero_slider_view
+    - views.view.slider_view
+_core:
+  default_config_hash: eGJDKLl9OXHldDhOnG9UH3mGwbqSIMzVMhW9gZBoE00
+id: block_content.home_hero.home_hero_slider_view
+field_name: home_hero_slider_view
+entity_type: block_content
+bundle: home_hero
+label: 'Home Hero Slider View'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    target_uuid: 4785e02a-5644-472b-875a-7529de53b165
+default_value_callback: ''
+settings:
+  handler: 'default:view'
+  handler_settings:
+    target_bundles: null
+    auto_create: false
+field_type: entity_reference

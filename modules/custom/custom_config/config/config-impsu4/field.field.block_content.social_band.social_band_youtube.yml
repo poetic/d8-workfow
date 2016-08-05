@@ -1,0 +1,25 @@
+uuid: 977370ad-71f5-4f3d-88b8-33519110ca94
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.social_band
+    - field.storage.block_content.social_band_youtube
+  module:
+    - link
+_core:
+  default_config_hash: 3xgt-1Bdy4ZNxmmxGd8KrrlyIQt_BtvVhz-VU8Ic_eI
+id: block_content.social_band.social_band_youtube
+field_name: social_band_youtube
+entity_type: block_content
+bundle: social_band
+label: 'Social Band Youtube'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 1
+  link_type: 17
+field_type: link

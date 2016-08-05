@@ -1,0 +1,51 @@
+uuid: e63536e9-ffa2-41a9-b9b9-8ae16195e898
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.header
+    - field.field.block_content.header.header_background_img
+    - field.field.block_content.header.header_dixie_logo
+    - field.field.block_content.header.header_imperial_logo
+    - field.field.block_content.header.header_main
+    - field.field.block_content.header.header_usernav
+  module:
+    - image
+_core:
+  default_config_hash: b8ZillRUuQMf4bey2Yu0T96iB60fgSuQY8yL9DM0UUQ
+id: block_content.header.default
+targetEntityType: block_content
+bundle: header
+mode: default
+content:
+  header_background_img:
+    label: hidden
+    type: image
+    weight: 5
+    settings: {  }
+    third_party_settings: {  }
+  header_dixie_logo:
+    label: hidden
+    type: image
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+  header_imperial_logo:
+    label: hidden
+    type: image
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+  header_main:
+    label: hidden
+    type: entity_reference_entity_id
+    weight: 4
+    settings: {  }
+    third_party_settings: {  }
+  header_usernav:
+    label: hidden
+    type: entity_reference_entity_id
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

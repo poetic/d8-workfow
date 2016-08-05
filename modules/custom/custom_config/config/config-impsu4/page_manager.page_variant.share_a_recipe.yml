@@ -1,0 +1,28 @@
+uuid: 7691a98e-5bf3-41bc-bd9f-3ab132ab4381
+langcode: en
+status: true
+dependencies:
+  config:
+    - page_manager.page.share_a_recipe
+  module:
+    - panels
+id: share_a_recipe
+label: 'Share A Recipe'
+variant: panels_variant
+variant_settings:
+  blocks: {  }
+  id: panels_variant
+  layout: one_column
+  storage_type: page_manager
+  storage_id: share_a_recipe
+  builder: standard
+  uuid: 7beb0f21-6565-4925-b961-0a80d0681e93
+  label: ''
+  weight: 0
+  layout_settings: {  }
+  page_title: ''
+page: share_a_recipe
+weight: 0
+selection_criteria: {  }
+selection_logic: and
+static_context: {  }

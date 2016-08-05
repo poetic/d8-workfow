@@ -1,0 +1,13 @@
+uuid: 87c2630b-f3a3-4cc4-ae37-cea8132455d2
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: ggrl3ZHwpubTo_yvWfWID6CN6GHbr32vTRs79N6zca0
+id: cooking_and_baking_tips
+label: 'Cooking And Baking Tips'
+use_admin_theme: null
+path: /cooking-and-baking-tips
+access_logic: and
+access_conditions: {  }
+parameters: {  }

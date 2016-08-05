@@ -1,0 +1,28 @@
+uuid: 352e9f5c-9bfc-4f89-9fb5-88fb15106d93
+langcode: en
+status: true
+dependencies:
+  config:
+    - page_manager.page.recipe
+  module:
+    - panels
+id: recipe
+label: Recipe
+variant: panels_variant
+variant_settings:
+  blocks: {  }
+  id: panels_variant
+  layout: one_column
+  storage_type: page_manager
+  storage_id: recipe
+  builder: standard
+  uuid: a84aa14a-8c47-4fa1-85d1-bc98dfc4b3c9
+  label: ''
+  weight: 0
+  layout_settings: {  }
+  page_title: ''
+page: recipe
+weight: 0
+selection_criteria: {  }
+selection_logic: and
+static_context: {  }

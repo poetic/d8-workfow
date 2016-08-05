@@ -1,0 +1,33 @@
+uuid: b63c96d7-deef-4182-8afe-ed98d88afef4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.sugar_101.sugar_101_description
+    - field.field.node.sugar_101.sugar_101_image
+    - node.type.sugar_101
+  module:
+    - image
+    - user
+_core:
+  default_config_hash: QTycoAmiplAi2hypbsGYIDM2WVN1ay9Fra1fETbDw1Y
+id: node.sugar_101.default
+targetEntityType: node
+bundle: sugar_101
+mode: default
+content:
+  links:
+    weight: 100
+  sugar_101_description:
+    label: hidden
+    type: basic_string
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+  sugar_101_image:
+    label: hidden
+    type: image
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

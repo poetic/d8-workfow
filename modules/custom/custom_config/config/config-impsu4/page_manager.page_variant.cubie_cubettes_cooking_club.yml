@@ -1,0 +1,28 @@
+uuid: 2bbffc0d-7cc6-472d-b831-fd2f6d8c7099
+langcode: en
+status: true
+dependencies:
+  config:
+    - page_manager.page.cubie_cubettes_cooking_club
+  module:
+    - panels
+id: cubie_cubettes_cooking_club
+label: 'Cubie Cubettes Cooking Club'
+variant: panels_variant
+variant_settings:
+  blocks: {  }
+  id: panels_variant
+  layout: one_column
+  storage_type: page_manager
+  storage_id: cubie_cubettes_cooking_club
+  builder: standard
+  uuid: fdb2c088-0318-447c-bf5c-6fbbdc65d9ca
+  label: ''
+  weight: 0
+  layout_settings: {  }
+  page_title: ''
+page: cubie_cubettes_cooking_club
+weight: 0
+selection_criteria: {  }
+selection_logic: and
+static_context: {  }

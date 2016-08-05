@@ -1,0 +1,13 @@
+uuid: e702c003-ba1c-4686-b8a9-ad3536cd30b7
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: LtUW_q8FVCUn5b2dD2yQrm7lRL0xLPDrGOfFiS9p-pQ
+id: cubie_cubettes_cooking_club
+label: 'Cubie Cubettes Cooking Club'
+use_admin_theme: null
+path: /cubie-cubettes-cooking-club
+access_logic: and
+access_conditions: {  }
+parameters: {  }

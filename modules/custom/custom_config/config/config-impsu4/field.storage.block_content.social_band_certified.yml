@@ -1,0 +1,23 @@
+uuid: 810d83bb-107b-4eff-bdaa-64946bcd1317
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+_core:
+  default_config_hash: JD2PdJTPdPVVn1rvqwYAv-E-7uca9oxbM_g1KfDlAVA
+id: block_content.social_band_certified
+field_name: social_band_certified
+entity_type: block_content
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

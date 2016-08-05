@@ -1,0 +1,32 @@
+uuid: 03dd06f8-2570-458a-9d9e-d3bdf4b68e2c
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+    - file
+    - image
+_core:
+  default_config_hash: BfLXRHHMy7vRaxNPkrQ8G6d_tvdqijiUoP3DNE-pz5A
+id: block_content.header_background_img
+field_name: header_background_img
+entity_type: block_content
+type: image
+settings:
+  default_image:
+    uuid: null
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  target_type: file
+  display_field: false
+  display_default: false
+  uri_scheme: public
+module: image
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,92 @@
+uuid: bc6c9747-22a3-4545-aec3-ba60050eccf1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.kids_landing.kids_landing_background
+    - field.field.node.kids_landing.kids_landing_collection_kids
+    - field.field.node.kids_landing.kids_landing_collection_title
+    - field.field.node.kids_landing.kids_landing_description
+    - field.field.node.kids_landing.kids_landing_overlay
+    - field.field.node.kids_landing.kids_landing_popular_recipe
+    - field.field.node.kids_landing.kids_landing_title
+    - field.field.node.kids_landing.kids_landing_trending_recipe
+    - image.style.thumbnail
+    - node.type.kids_landing
+  module:
+    - image
+    - path
+    - text
+_core:
+  default_config_hash: csMd5XHOZVHQPzGZ3WcurUZzDqYlN-H-GKouNwpxiVw
+id: node.kids_landing.default
+targetEntityType: node
+bundle: kids_landing
+mode: default
+content:
+  created:
+    type: datetime_timestamp
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+  kids_landing_background:
+    type: image_image
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+  kids_landing_collection_title:
+    type: string_textfield
+    weight: 5
+    settings: {  }
+    third_party_settings: {  }
+  kids_landing_description:
+    type: text_textarea
+    weight: 4
+    settings: {  }
+    third_party_settings: {  }
+  kids_landing_overlay:
+    type: image_image
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+  kids_landing_title:
+    type: string_textfield
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 30
+    settings: {  }
+    third_party_settings: {  }
+  promote:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 15
+    third_party_settings: {  }
+  sticky:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 16
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: -5
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 5
+    settings:
+      match_operator: CONTAINS
+      size: '60'
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  kids_landing_collection_kids: true
+  kids_landing_popular_recipe: true
+  kids_landing_trending_recipe: true

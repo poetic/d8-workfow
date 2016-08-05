@@ -1,0 +1,23 @@
+uuid: a52ca1b8-8f97-4d03-8f90-2d389a635c09
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+_core:
+  default_config_hash: PGfjnRT7rZ-gfDvkK8YuAOMrFMRJZBDtqglK3bY5hsQ
+id: block_content.learn_more_imperial_title
+field_name: learn_more_imperial_title
+entity_type: block_content
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

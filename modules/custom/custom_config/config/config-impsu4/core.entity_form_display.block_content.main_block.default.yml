@@ -1,0 +1,25 @@
+uuid: b9b3e89a-4adc-41c4-a780-75ada6df237b
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.main_block
+    - field.field.block_content.main_block.main_block_hero
+    - field.field.block_content.main_block.main_block_trending
+_core:
+  default_config_hash: qvZyzOrjmcp-DWUzN3mzYKPlws65FddQtkk_xZnBaIw
+id: block_content.main_block.default
+targetEntityType: block_content
+bundle: main_block
+mode: default
+content:
+  info:
+    type: string_textfield
+    weight: -5
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  main_block_hero: true
+  main_block_trending: true

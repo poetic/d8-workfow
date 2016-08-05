@@ -1,0 +1,30 @@
+uuid: 4a27b54e-49d7-4bc9-bb44-730fef91da92
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.footer_subscribe
+    - field.field.block_content.footer_subscribe.footer_subscribe_description
+    - field.field.block_content.footer_subscribe.footer_subscribe_subscribe
+  module:
+    - text
+_core:
+  default_config_hash: ShT_Yj5ykECW3IeohKt34tyN2zDlxh0NCdOmUdJ0_Oc
+id: block_content.footer_subscribe.default
+targetEntityType: block_content
+bundle: footer_subscribe
+mode: default
+content:
+  footer_subscribe_description:
+    label: hidden
+    type: text_default
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+  footer_subscribe_subscribe:
+    label: hidden
+    type: entity_reference_entity_view
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

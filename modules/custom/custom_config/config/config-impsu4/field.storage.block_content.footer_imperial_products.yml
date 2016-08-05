@@ -1,0 +1,32 @@
+uuid: 89b0818b-aa77-460c-8254-264f24b91ab5
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+    - file
+    - image
+_core:
+  default_config_hash: S_Ly7sVLswljoo3y1qb_b5KafKSkt7xjN43RpqydOL4
+id: block_content.footer_imperial_products
+field_name: footer_imperial_products
+entity_type: block_content
+type: image
+settings:
+  default_image:
+    uuid: null
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  target_type: file
+  display_field: false
+  display_default: false
+  uri_scheme: public
+module: image
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

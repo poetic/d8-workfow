@@ -1,0 +1,28 @@
+uuid: f184e5a5-389e-4155-9490-550640a0fdb8
+langcode: en
+status: true
+dependencies:
+  config:
+    - page_manager.page.terms_of_use
+  module:
+    - panels
+id: terms_of_use
+label: 'Terms Of Use'
+variant: panels_variant
+variant_settings:
+  blocks: {  }
+  id: panels_variant
+  layout: one_column
+  storage_type: page_manager
+  storage_id: terms_of_use
+  builder: standard
+  uuid: b2c5c916-0e10-4933-9b31-ca1a2f53eeb7
+  label: ''
+  weight: 0
+  layout_settings: {  }
+  page_title: ''
+page: terms_of_use
+weight: 0
+selection_criteria: {  }
+selection_logic: and
+static_context: {  }

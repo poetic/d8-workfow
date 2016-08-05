@@ -1,0 +1,22 @@
+uuid: f3c3a085-3972-40c1-9c27-853d55bae04a
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+    - system
+_core:
+  default_config_hash: ueyMkm67cY8FT6_cabk1M0IkPg91sVNj9Yl4VambDfc
+id: block_content.footer_coporatemenu
+field_name: footer_coporatemenu
+entity_type: block_content
+type: entity_reference
+settings:
+  target_type: menu
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

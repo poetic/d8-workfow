@@ -1,0 +1,50 @@
+uuid: 897f514a-9c69-4f08-a466-85f5221a9e6e
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.share_band_imperial
+    - field.field.block_content.share_band_imperial.share_band_imperial_cupcake_icon
+    - field.field.block_content.share_band_imperial.share_band_imperial_description
+    - field.field.block_content.share_band_imperial.share_band_imperial_share
+    - field.field.block_content.share_band_imperial.share_band_imperial_title
+    - image.style.thumbnail
+  module:
+    - image
+    - link
+    - text
+_core:
+  default_config_hash: V6OT-QDhiUb4UTZeQLS6SjrQyiXAcCfMht8aoQoXS5A
+id: block_content.share_band_imperial.default
+targetEntityType: block_content
+bundle: share_band_imperial
+mode: default
+content:
+  info:
+    type: string_textfield
+    weight: -5
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  share_band_imperial_cupcake_icon:
+    type: image_image
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+  share_band_imperial_description:
+    type: text_textarea
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+  share_band_imperial_share:
+    type: link_default
+    weight: 4
+    settings: {  }
+    third_party_settings: {  }
+  share_band_imperial_title:
+    type: string_textfield
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

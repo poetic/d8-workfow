@@ -1,0 +1,22 @@
+uuid: b0e1ca6d-c2de-498c-9d4e-4a361b8511de
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - taxonomy
+_core:
+  default_config_hash: za_EBuYg5-D2ylUy3ANQXEMI0xf8yltdThSfGdD8qx4
+id: node.field_recipe_seals
+field_name: field_recipe_seals
+entity_type: node
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

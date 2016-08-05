@@ -1,0 +1,28 @@
+uuid: 3f32f4bd-3ec8-4786-bc64-afe3d720ced6
+langcode: en
+status: true
+dependencies:
+  config:
+    - page_manager.page.cane_sugar_101
+  module:
+    - panels
+id: cane_sugar_101
+label: 'Cane Sugar 101'
+variant: panels_variant
+variant_settings:
+  blocks: {  }
+  id: panels_variant
+  layout: one_column
+  storage_type: page_manager
+  storage_id: cane_sugar_101
+  builder: standard
+  uuid: 46c2ad87-8688-4108-8b83-f6c88da0c51b
+  label: ''
+  weight: 0
+  layout_settings: {  }
+  page_title: ''
+page: cane_sugar_101
+weight: 0
+selection_criteria: {  }
+selection_logic: and
+static_context: {  }

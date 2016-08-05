@@ -1,0 +1,23 @@
+uuid: b9b58360-fb1f-4616-a3cf-411a503abfc0
+langcode: en
+status: true
+dependencies:
+  module:
+    - entity_reference_revisions
+    - node
+    - paragraphs
+_core:
+  default_config_hash: DV2rHtQbjD68GzK6AEhye2SVrEXhb5wWEfxAt9B123I
+id: node.field_recipe_ingredients
+field_name: field_recipe_ingredients
+entity_type: node
+type: entity_reference_revisions
+settings:
+  target_type: paragraph
+module: entity_reference_revisions
+locked: false
+cardinality: 4
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

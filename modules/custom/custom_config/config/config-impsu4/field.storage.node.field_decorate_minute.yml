@@ -1,0 +1,22 @@
+uuid: 1579e21f-7c15-4f70-a36f-70832f613902
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: s5nZrNA_VZhJiqq9-M3O4fVIACiERt2RxJLpA6zk6Gw
+id: node.field_decorate_minute
+field_name: field_decorate_minute
+entity_type: node
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,25 @@
+uuid: 587d5182-681d-43cc-b58d-afdb091528ec
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_freeze_hour
+    - node.type.recipe
+_core:
+  default_config_hash: D4rYH1J65X6ZynGUqIEG2r6RrKVieDjio4odggg1bPk
+id: node.recipe.field_freeze_hour
+field_name: field_freeze_hour
+entity_type: node
+bundle: recipe
+label: freeze_hour
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: 0
+  max: 24
+  prefix: ''
+  suffix: ''
+field_type: integer

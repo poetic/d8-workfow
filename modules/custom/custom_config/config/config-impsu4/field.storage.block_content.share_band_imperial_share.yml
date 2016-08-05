@@ -1,0 +1,21 @@
+uuid: db590e24-605b-4d12-86da-17633a24369f
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+    - link
+_core:
+  default_config_hash: 4UC19nY6qJMl1IgZx9JbFCvv3iaP3XJwTCOG9SfgQ0g
+id: block_content.share_band_imperial_share
+field_name: share_band_imperial_share
+entity_type: block_content
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

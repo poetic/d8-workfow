@@ -1,0 +1,55 @@
+uuid: e3f86002-8a58-425f-8786-42c8227790e9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.recipe.recipe_description
+    - field.field.node.recipe.recipe_directions
+    - field.field.node.recipe.recipe_handy_tips
+    - field.field.node.recipe.recipe_recipe_image
+    - field.field.node.recipe.recipe_yield
+    - node.type.recipe
+  module:
+    - image
+    - text
+    - user
+_core:
+  default_config_hash: IvHynX5RcGwn53u04T1ntlOGDlz3HAP83TLA5c3Lui0
+id: node.recipe.default
+targetEntityType: node
+bundle: recipe
+mode: default
+content:
+  links:
+    weight: 100
+  recipe_description:
+    label: hidden
+    type: text_default
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+  recipe_directions:
+    label: hidden
+    type: text_default
+    weight: 4
+    settings: {  }
+    third_party_settings: {  }
+  recipe_handy_tips:
+    label: hidden
+    type: text_default
+    weight: 5
+    settings: {  }
+    third_party_settings: {  }
+  recipe_recipe_image:
+    label: hidden
+    type: image
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+  recipe_yield:
+    label: hidden
+    type: string
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

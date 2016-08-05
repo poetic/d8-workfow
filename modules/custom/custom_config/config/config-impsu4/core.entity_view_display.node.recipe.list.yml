@@ -1,0 +1,29 @@
+uuid: 2099f3df-5a1e-46ff-b560-0ea6346360f0
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.list
+    - field.field.node.recipe.recipe_description
+    - field.field.node.recipe.recipe_directions
+    - field.field.node.recipe.recipe_handy_tips
+    - field.field.node.recipe.recipe_recipe_image
+    - field.field.node.recipe.recipe_yield
+    - node.type.recipe
+  module:
+    - user
+_core:
+  default_config_hash: p_lgj44h7y0XhzqlbFh5hiutLF1OmxGQtB9GjzDOCD0
+id: node.recipe.list
+targetEntityType: node
+bundle: recipe
+mode: list
+content:
+  links:
+    weight: 100
+hidden:
+  recipe_description: true
+  recipe_directions: true
+  recipe_handy_tips: true
+  recipe_recipe_image: true
+  recipe_yield: true

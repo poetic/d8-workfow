@@ -1,0 +1,28 @@
+uuid: f7390258-ddf9-4629-b55d-dff53f990f97
+langcode: en
+status: true
+dependencies:
+  config:
+    - page_manager.page.digital_cookbooks
+  module:
+    - panels
+id: digital_cookbooks
+label: 'Digital Cookbooks'
+variant: panels_variant
+variant_settings:
+  blocks: {  }
+  id: panels_variant
+  layout: one_column
+  storage_type: page_manager
+  storage_id: digital_cookbooks
+  builder: standard
+  uuid: 00d6e021-fed3-4428-a421-93a5d1b09f4b
+  label: ''
+  weight: 0
+  layout_settings: {  }
+  page_title: ''
+page: digital_cookbooks
+weight: 0
+selection_criteria: {  }
+selection_logic: and
+static_context: {  }

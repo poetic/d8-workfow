@@ -1,0 +1,32 @@
+uuid: 5fa0ef45-9d17-42f4-8d8b-240843b62659
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.user.user.field_account_image
+    - image.style.account_image_style_small
+  module:
+    - image
+    - user
+_core:
+  default_config_hash: QJkqtnYAi4Ynlj0IZRqd5BLVfT7OnOUrHa-7cA0gS18
+id: user.user.default
+targetEntityType: user
+bundle: user
+mode: default
+content:
+  field_account_image:
+    type: image
+    weight: 1
+    label: hidden
+    settings:
+      image_style: account_image_style_small
+      image_link: ''
+    third_party_settings: {  }
+  flag_follow:
+    weight: 10
+  member_for:
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }
