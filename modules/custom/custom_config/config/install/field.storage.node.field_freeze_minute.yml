@@ -4,6 +4,8 @@ status: true
 dependencies:
   module:
     - node
+_core:
+  default_config_hash: WRmGvgQRD1sOlM_KWjnlaVMM4HGn9V5wzkzQqh7E-0s
 id: node.field_freeze_minute
 field_name: field_freeze_minute
 entity_type: node

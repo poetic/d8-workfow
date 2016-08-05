@@ -5,6 +5,8 @@ dependencies:
   config:
     - field.storage.node.field_cook_hour
     - node.type.recipe
+_core:
+  default_config_hash: xTOygbnSZ0ONKgIh8PoV_R6olnEVcnm6svz6EyiIqJA
 id: node.recipe.field_cook_hour
 field_name: field_cook_hour
 entity_type: node

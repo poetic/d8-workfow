@@ -1,8 +1,11 @@
+uuid: 3bdba41a-0400-4e9d-90e2-9627031dabc6
 langcode: en
 status: true
 dependencies:
   module:
     - node
+_core:
+  default_config_hash: Scts2vRtR_y4TmZaxDP87mrKKu64RfhM6BSbKeT-IR4
 id: node.field_rating_average
 field_name: field_rating_average
 entity_type: node

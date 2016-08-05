@@ -1,9 +1,12 @@
+uuid: 37baf8ab-4440-4556-8b20-9b95fc1f4548
 langcode: en
 status: true
 dependencies:
   module:
     - comment
     - fivestar
+_core:
+  default_config_hash: rgVYN4fv5FOkvWrwNDdJMYje2RpcKbGxDrYTtrX4USs
 id: comment.field_comment_rating
 field_name: field_comment_rating
 entity_type: comment

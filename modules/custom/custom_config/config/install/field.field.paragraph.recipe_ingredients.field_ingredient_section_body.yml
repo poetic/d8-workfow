@@ -1,3 +1,4 @@
+uuid: 92332227-ab34-466e-81cc-38645dacafcb
 langcode: en
 status: true
 dependencies:
@@ -6,6 +7,8 @@ dependencies:
     - paragraphs.paragraphs_type.recipe_ingredients
   module:
     - text
+_core:
+  default_config_hash: 8VD80zoiug0d5Q1dZIFrjMydKi9MzTR5LjepOb09XCg
 id: paragraph.recipe_ingredients.field_ingredient_section_body
 field_name: field_ingredient_section_body
 entity_type: paragraph

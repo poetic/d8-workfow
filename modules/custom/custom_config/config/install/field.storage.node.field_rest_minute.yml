@@ -4,6 +4,8 @@ status: true
 dependencies:
   module:
     - node
+_core:
+  default_config_hash: FVDvOAtkxVAvBFjKmT5-I6xpSi34tuHKoBlotIvZbaE
 id: node.field_rest_minute
 field_name: field_rest_minute
 entity_type: node

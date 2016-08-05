@@ -1,3 +1,4 @@
+uuid: bab16951-3647-404c-a9b5-e7bbfa9899ee
 langcode: en
 status: true
 dependencies:
@@ -5,6 +6,8 @@ dependencies:
     - file
     - image
     - user
+_core:
+  default_config_hash: fihnPozKgkRg1C6B7_VESR4yMZqE3lGoiIAxq3Rb3ec
 id: user.field_account_image
 field_name: field_account_image
 entity_type: user

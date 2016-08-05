@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+uuid: ac733846-2790-48bd-890c-6cd8918e57f9
+>>>>>>> c9ec9d6360736dcbf5de0ca9382eed40c89fe1c5
 langcode: en
 status: true
 dependencies:
@@ -8,6 +12,8 @@ dependencies:
   module:
     - fivestar
     - text
+_core:
+  default_config_hash: PY560U8DWO-XI3_g_Gihhgq8EL0frnWGd9hD2pBHaus
 id: comment.recipe_comment.default
 targetEntityType: comment
 bundle: recipe_comment

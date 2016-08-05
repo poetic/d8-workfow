@@ -8,6 +8,8 @@ dependencies:
     - paragraphs.paragraphs_type.recipe_ingredients
   module:
     - text
+_core:
+  default_config_hash: OhRbxwf6q8yRgPkffbJtR-_yvsTeQRkpAlAenxVdaQs
 id: paragraph.recipe_ingredients.default
 targetEntityType: paragraph
 bundle: recipe_ingredients

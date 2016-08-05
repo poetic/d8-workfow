@@ -4,6 +4,8 @@ status: true
 dependencies:
   module:
     - node
+_core:
+  default_config_hash: GL8h9bBa0iHmhVH-JKTJfVpn1QMJnm2HgXWsGr3ihC0
 id: node.field_decorate_hour
 field_name: field_decorate_hour
 entity_type: node

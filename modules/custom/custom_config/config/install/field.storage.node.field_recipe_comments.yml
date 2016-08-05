@@ -1,9 +1,12 @@
+uuid: ea95d212-1e4b-410d-8b7a-faad80bd9738
 langcode: en
 status: true
 dependencies:
   module:
     - comment
     - node
+_core:
+  default_config_hash: fcZz8zVIJ8G2lzi6oKaxnfCd18ms_a008SlJaRQnjfA
 id: node.field_recipe_comments
 field_name: field_recipe_comments
 entity_type: node

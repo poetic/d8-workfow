@@ -5,6 +5,8 @@ dependencies:
   config:
     - field.storage.node.field_decorate_minute
     - node.type.recipe
+_core:
+  default_config_hash: pgyqKXy1RZJqU80j_Ikb5-nWE3Y25yHla2nqB3L3V0s
 id: node.recipe.field_decorate_minute
 field_name: field_decorate_minute
 entity_type: node

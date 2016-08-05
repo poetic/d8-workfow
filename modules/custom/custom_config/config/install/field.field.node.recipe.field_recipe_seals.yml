@@ -1,3 +1,4 @@
+uuid: 212f8a5d-e335-4656-8272-23ce9792c910
 langcode: en
 status: true
 dependencies:
@@ -5,6 +6,8 @@ dependencies:
     - field.storage.node.field_recipe_seals
     - node.type.recipe
     - taxonomy.vocabulary.seals
+_core:
+  default_config_hash: bVby0fLiMNUl1uVWIoYW0Mq-M9ut0Pa_gv4ASF-ZXIk
 id: node.recipe.field_recipe_seals
 field_name: field_recipe_seals
 entity_type: node

@@ -11,6 +11,8 @@ dependencies:
     - image
     - path
     - text
+_core:
+  default_config_hash: tWTTzk0X6q3NUK7CMEWumgEpGBKOguoaOid4mjL9Xw0
 id: taxonomy_term.seals.default
 targetEntityType: taxonomy_term
 bundle: seals

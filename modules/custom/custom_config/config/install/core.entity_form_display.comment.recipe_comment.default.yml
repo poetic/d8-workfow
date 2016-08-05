@@ -9,8 +9,6 @@ dependencies:
   module:
     - fivestar
     - text
-_core:
-  default_config_hash: iE54_Y-cTdpSger9cOiqTuN0dEgZqQWhJ1zzUpWH2-c
 id: comment.recipe_comment.default
 targetEntityType: comment
 bundle: recipe_comment

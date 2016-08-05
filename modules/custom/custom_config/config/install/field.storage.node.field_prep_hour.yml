@@ -4,6 +4,8 @@ status: true
 dependencies:
   module:
     - node
+_core:
+  default_config_hash: Uldiv-CVnyGAfEiObNx-j_8cJaAgIaurt3kCUUDxbU0
 id: node.field_prep_hour
 field_name: field_prep_hour
 entity_type: node

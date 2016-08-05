@@ -5,6 +5,8 @@ dependencies:
   config:
     - field.storage.node.field_freeze_minute
     - node.type.recipe
+_core:
+  default_config_hash: KtxlnqFEAYf6Teg6M_cxfgXYyR3sLhUlVX4TWOyDXm0
 id: node.recipe.field_freeze_minute
 field_name: field_freeze_minute
 entity_type: node

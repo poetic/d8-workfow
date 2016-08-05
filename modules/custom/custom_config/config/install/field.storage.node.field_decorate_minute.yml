@@ -4,6 +4,8 @@ status: true
 dependencies:
   module:
     - node
+_core:
+  default_config_hash: s5nZrNA_VZhJiqq9-M3O4fVIACiERt2RxJLpA6zk6Gw
 id: node.field_decorate_minute
 field_name: field_decorate_minute
 entity_type: node

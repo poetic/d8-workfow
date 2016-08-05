@@ -5,6 +5,8 @@ dependencies:
   config:
     - field.storage.node.field_prep_hour
     - node.type.recipe
+_core:
+  default_config_hash: Fsg057ElxM4twHbUiwFiUvVQG6krbJvuqWbUT-YCgK8
 id: node.recipe.field_prep_hour
 field_name: field_prep_hour
 entity_type: node

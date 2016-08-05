@@ -1,3 +1,4 @@
+uuid: 70570163-d734-4640-93e2-11d80afea649
 langcode: en
 status: true
 dependencies:
@@ -5,6 +6,8 @@ dependencies:
     - file
     - image
     - taxonomy
+_core:
+  default_config_hash: MfdMRIGhhz7Thc2Dmjc-yeQo7GL3P8LHtvcXeiX2acM
 id: taxonomy_term.field_seal_image_imperial
 field_name: field_seal_image_imperial
 entity_type: taxonomy_term

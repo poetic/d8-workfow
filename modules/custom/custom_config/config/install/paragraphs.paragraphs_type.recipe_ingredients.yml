@@ -1,5 +1,8 @@
+uuid: 40335515-3a7c-4638-be6b-ce16fd5267e8
 langcode: en
 status: true
 dependencies: {  }
+_core:
+  default_config_hash: hpWhZHCVlSBf3NTh9zybLbrI50nSgYVn9SI22xSp3z8
 id: recipe_ingredients
 label: recipe_ingredients

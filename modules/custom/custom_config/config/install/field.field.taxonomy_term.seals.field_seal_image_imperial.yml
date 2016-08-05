@@ -1,3 +1,4 @@
+uuid: 16cfeb96-a09b-429e-8cd0-9135edd4a175
 langcode: en
 status: true
 dependencies:
@@ -6,6 +7,8 @@ dependencies:
     - taxonomy.vocabulary.seals
   module:
     - image
+_core:
+  default_config_hash: p4vqwB1y5LSXNp1Z6dj4d3XUjn0QEX4JVMvzvX-D6XM
 id: taxonomy_term.seals.field_seal_image_imperial
 field_name: field_seal_image_imperial
 entity_type: taxonomy_term

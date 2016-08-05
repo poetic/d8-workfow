@@ -1,3 +1,4 @@
+uuid: cae01bfd-072f-4955-ad7b-b114a26324f1
 langcode: en
 status: true
 dependencies:
@@ -7,6 +8,8 @@ dependencies:
     - paragraphs.paragraphs_type.recipe_ingredients
   module:
     - text
+_core:
+  default_config_hash: FmCxL2uKjq4FG9Ol8DWfa6xrHWBJxCZrpYdJ_WAT7XE
 id: paragraph.recipe_ingredients.default
 targetEntityType: paragraph
 bundle: recipe_ingredients

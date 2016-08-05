@@ -4,6 +4,8 @@ status: true
 dependencies:
   module:
     - node
+_core:
+  default_config_hash: V3GCzr8fppmppDPN2iokg0787J2zt6WNxZMjkergZDk
 id: node.field_prep_minute
 field_name: field_prep_minute
 entity_type: node

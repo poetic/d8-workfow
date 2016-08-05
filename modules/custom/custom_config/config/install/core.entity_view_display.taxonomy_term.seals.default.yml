@@ -1,3 +1,4 @@
+uuid: de2fc252-8b68-44fa-bdf6-728ca547f5a6
 langcode: en
 status: true
 dependencies:
@@ -9,6 +10,8 @@ dependencies:
   module:
     - image
     - text
+_core:
+  default_config_hash: aDCbEu8d16-VFv4pPu1P7Z2JIk0UMA3JLTwT57oD_w4
 id: taxonomy_term.seals.default
 targetEntityType: taxonomy_term
 bundle: seals

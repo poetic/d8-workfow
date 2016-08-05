@@ -1,6 +1,9 @@
+uuid: ab5163ee-3acb-468f-ad80-f59ab6ce4574
 langcode: en
 status: true
 dependencies: {  }
+_core:
+  default_config_hash: gPmwFFe4Mihn7LM7n0BTxtG3ZUPiWbmNtoqlCDHmw1k
 name: seal_70_70
 label: seal_70_70
 effects:

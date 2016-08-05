@@ -1,8 +1,11 @@
+uuid: 5e063568-7d89-4d3c-bcc4-7ecac39d4eb5
 langcode: en
 status: true
 dependencies:
   module:
     - user
+_core:
+  default_config_hash: AyEqa-dmg27pyZhY3iSfZhWv_QrDsI9rvtATHzgecRs
 id: follow
 label: follow
 bundles: {  }

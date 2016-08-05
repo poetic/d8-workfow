@@ -1,8 +1,11 @@
+uuid: 48712841-1575-4cab-93a4-f829cc47986b
 langcode: en
 status: true
 dependencies:
   module:
     - node
+_core:
+  default_config_hash: 1LZjkomQZY-fKZw7ebatJ-_Qk8p3Cp_h7X_85BcmPMc
 id: bookmark
 label: bookmark
 bundles:

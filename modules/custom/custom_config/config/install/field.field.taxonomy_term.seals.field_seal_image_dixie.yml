@@ -1,3 +1,4 @@
+uuid: b7e9bade-0cc6-49bb-8699-bb3b79ea1249
 langcode: en
 status: true
 dependencies:
@@ -6,6 +7,8 @@ dependencies:
     - taxonomy.vocabulary.seals
   module:
     - image
+_core:
+  default_config_hash: GsPvvZg_N7kaiZz6btAeRA1W0iwucSZTw6snD6isSjU
 id: taxonomy_term.seals.field_seal_image_dixie
 field_name: field_seal_image_dixie
 entity_type: taxonomy_term

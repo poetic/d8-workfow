@@ -1,8 +1,11 @@
+uuid: d088eb98-3aaa-48de-b25b-2674864a4a82
 langcode: en
 status: true
 dependencies:
   module:
     - node
+_core:
+  default_config_hash: nwmAvHBoblWf4bMpspHRATKGy4XuBpluMn6ptCwAIeE
 id: favorite
 label: favorite
 bundles:

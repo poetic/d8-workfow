@@ -1,3 +1,4 @@
+uuid: 42cd9ffa-47c6-4c19-84f4-8ff1dce6b43c
 langcode: en
 status: true
 dependencies:
@@ -5,6 +6,8 @@ dependencies:
     - file
     - image
     - taxonomy
+_core:
+  default_config_hash: 7bR1MTCLLog-dgtcCBbcYSbpXbXJ5nYD8g4Gd10gS40
 id: taxonomy_term.field_seal_image_dixie
 field_name: field_seal_image_dixie
 entity_type: taxonomy_term

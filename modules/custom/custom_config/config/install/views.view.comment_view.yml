@@ -1,3 +1,4 @@
+uuid: d04fcf63-ba07-40a5-9efd-8872dff27e70
 langcode: en
 status: true
 dependencies:
@@ -14,7 +15,7 @@ dependencies:
     - user
     - views_load_more
 _core:
-  default_config_hash: FyOPylv50v4rdQSJFcG6kgJG6TLlSVSEbfLNMVBxQiI
+  default_config_hash: zrhNsFVAMA0mSuCaFHWXqaglKIMPQQwyJ_m7HDd7l-8
 id: comment_view
 label: comment_view
 module: views

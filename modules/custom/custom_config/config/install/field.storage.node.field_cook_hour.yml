@@ -4,6 +4,8 @@ status: true
 dependencies:
   module:
     - node
+_core:
+  default_config_hash: 0oSsU6ZTEL-BwC3W7vWhFbswfVisRMrcIY9t32qOwqk
 id: node.field_cook_hour
 field_name: field_cook_hour
 entity_type: node
