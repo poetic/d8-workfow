@@ -1,0 +1,19 @@
+uuid: 7784e973-f902-46d1-b431-9ca781253ad8
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.slider
+    - node.type.kids_kitchen
+  module:
+    - user
+_core:
+  default_config_hash: OwKuhNcLjBakec0rG8JPXpEpGYHFHojYHvrqzHGy9is
+id: node.kids_kitchen.slider
+targetEntityType: node
+bundle: kids_kitchen
+mode: slider
+content:
+  links:
+    weight: 100
+hidden: {  }

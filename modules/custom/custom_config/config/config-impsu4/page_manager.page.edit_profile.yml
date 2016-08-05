@@ -1,0 +1,13 @@
+uuid: ddd6ea00-5a84-406c-9469-1998a4f7cb3f
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: 46rBkwTclnDv3TJhahqTJzRRldUnishkg_zN3IKzF5s
+id: edit_profile
+label: 'Edit Profile'
+use_admin_theme: null
+path: /edit-profile
+access_logic: and
+access_conditions: {  }
+parameters: {  }

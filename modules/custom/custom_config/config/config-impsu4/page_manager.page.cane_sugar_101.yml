@@ -1,0 +1,13 @@
+uuid: 9730b3c2-2040-483c-b861-bd6cdc53b608
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: F5xe3Ijbzy8_3q7Eq3zmyNDes6cciPUMcOVeQLyvDtE
+id: cane_sugar_101
+label: 'Cane Sugar 101'
+use_admin_theme: null
+path: /cane-sugar-101
+access_logic: and
+access_conditions: {  }
+parameters: {  }

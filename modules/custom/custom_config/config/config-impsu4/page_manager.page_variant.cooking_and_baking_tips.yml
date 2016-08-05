@@ -1,0 +1,28 @@
+uuid: 0e78ce53-2341-45b4-be0a-122bc73564e9
+langcode: en
+status: true
+dependencies:
+  config:
+    - page_manager.page.cooking_and_baking_tips
+  module:
+    - panels
+id: cooking_and_baking_tips
+label: 'Cooking And Baking Tips'
+variant: panels_variant
+variant_settings:
+  blocks: {  }
+  id: panels_variant
+  layout: one_column
+  storage_type: page_manager
+  storage_id: cooking_and_baking_tips
+  builder: standard
+  uuid: a81ae89b-b460-457d-bd84-bbb59f520332
+  label: ''
+  weight: 0
+  layout_settings: {  }
+  page_title: ''
+page: cooking_and_baking_tips
+weight: 0
+selection_criteria: {  }
+selection_logic: and
+static_context: {  }

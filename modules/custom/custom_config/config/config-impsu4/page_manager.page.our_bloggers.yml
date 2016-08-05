@@ -1,0 +1,13 @@
+uuid: 44f9fde4-9142-4a77-9c48-533ec861056f
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: RcHImlXOLSuULbz0BGRsZ5B7T8jiLpA7KOFjJJlzCjc
+id: our_bloggers
+label: 'Our Bloggers'
+use_admin_theme: null
+path: /our-bloggers
+access_logic: and
+access_conditions: {  }
+parameters: {  }

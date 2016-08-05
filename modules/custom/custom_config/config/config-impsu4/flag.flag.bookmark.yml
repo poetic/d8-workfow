@@ -1,0 +1,39 @@
+uuid: 48712841-1575-4cab-93a4-f829cc47986b
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: 1LZjkomQZY-fKZw7ebatJ-_Qk8p3Cp_h7X_85BcmPMc
+id: bookmark
+label: bookmark
+bundles:
+  - recipe
+entity_type: node
+enabled: true
+global: false
+weight: 0
+flag_short: 'Bookmark this recipe'
+flag_long: ''
+flag_message: ''
+unflag_short: 'Unbookmark this recipe'
+unflag_long: ''
+unflag_message: ''
+unflag_denied_text: ''
+flag_type: 'entity:node'
+link_type: ajax_link
+flagTypeConfig:
+  show_in_links:
+    card: card
+    full: full
+    hero: hero
+    list: list
+    slider: slider
+    teaser: teaser
+    trending: trending
+  show_as_field: 1
+  show_on_form: 0
+  show_contextual_link: 0
+  access_author: ''
+linkTypeConfig: {  }

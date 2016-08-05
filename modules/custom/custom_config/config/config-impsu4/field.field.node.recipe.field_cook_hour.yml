@@ -1,0 +1,25 @@
+uuid: b2d07bb5-608a-459a-91b6-cbc2c90a52a4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_cook_hour
+    - node.type.recipe
+_core:
+  default_config_hash: xTOygbnSZ0ONKgIh8PoV_R6olnEVcnm6svz6EyiIqJA
+id: node.recipe.field_cook_hour
+field_name: field_cook_hour
+entity_type: node
+bundle: recipe
+label: cook_hour
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: 0
+  max: 24
+  prefix: ''
+  suffix: ''
+field_type: integer

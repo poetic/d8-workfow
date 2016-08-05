@@ -1,0 +1,19 @@
+uuid: 54cd2c93-5c3b-44e5-b7a3-9fd3ba3ba555
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.trending
+    - node.type.kids_kitchen
+  module:
+    - user
+_core:
+  default_config_hash: jU-VjwkITq5A94eXION-A8vH_EmRELX938jOTLED9v0
+id: node.kids_kitchen.trending
+targetEntityType: node
+bundle: kids_kitchen
+mode: trending
+content:
+  links:
+    weight: 100
+hidden: {  }

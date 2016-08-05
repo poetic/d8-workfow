@@ -1,0 +1,23 @@
+uuid: 1027a911-9bc9-4e70-bca9-da853ad549a9
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+_core:
+  default_config_hash: Wjwx2Z_u9WUXs0oJYGeuohbk3XZWQfvfYX66TpbDrAg
+id: block_content.home_hero_special
+field_name: home_hero_special
+entity_type: block_content
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,3 +1,4 @@
+uuid: cb6846e1-28a3-4b92-90e9-3838b8bce3e7
 langcode: en
 status: true
 dependencies:
@@ -32,8 +33,6 @@ dependencies:
     - path
     - text
     - youtube
-_core:
-  default_config_hash: uUbNrb7XQzBwRnQVbbJXKn4Q-OMN-CrdgXKXoTztiE4
 id: node.recipe.default
 targetEntityType: node
 bundle: recipe

@@ -1,0 +1,138 @@
+uuid: 41555143-a2ed-4a3d-8f5c-2ce0c51a6dd9
+langcode: en
+status: true
+dependencies:
+  config:
+    - page_manager.page.index
+  content:
+    - 'block_content:footer_subscribe:d973ad78-539c-40b4-b709-dd912a6f27c0'
+    - 'block_content:header:b1f14499-2e83-4110-a1c0-0d0578be933a'
+    - 'block_content:home_hero:0146600b-0ffb-43ce-8c35-05e60c1a2113'
+    - 'block_content:home_projects:0736a420-8602-4dfa-b6c5-57267f92d372'
+    - 'block_content:learn_more:cda43b53-4e2c-4b07-ba0a-e7e9b1201c84'
+    - 'block_content:main_block:a358ddb8-376e-41ce-9aa2-26bd8d37dd77'
+    - 'block_content:share_band_imperial:05548cb5-646e-47d3-87b7-6bdc12426178'
+    - 'block_content:side_nav:462f8d68-eedb-4ddf-9038-3a321d443e9d'
+    - 'block_content:social_band:aae5f9da-37c3-4878-b055-8b4f1915a18d'
+  module:
+    - block_content
+    - panels
+id: index
+label: Index
+variant: panels_variant
+variant_settings:
+  blocks:
+    abe58641-2d7f-487e-9948-ca21c2e35243:
+      id: 'block_content:b1f14499-2e83-4110-a1c0-0d0578be933a'
+      label: ''
+      provider: block_content
+      label_display: visible
+      status: true
+      info: ''
+      view_mode: full
+      region: contentmain
+      weight: 0
+      uuid: abe58641-2d7f-487e-9948-ca21c2e35243
+    8196e0f2-0781-4188-a928-023f37f2aa59:
+      id: 'block_content:462f8d68-eedb-4ddf-9038-3a321d443e9d'
+      label: ''
+      provider: block_content
+      label_display: visible
+      status: true
+      info: ''
+      view_mode: full
+      region: contentmain
+      weight: 1
+      uuid: 8196e0f2-0781-4188-a928-023f37f2aa59
+    77893354-133c-45a1-b9ed-0f5bbc30a0eb:
+      id: 'block_content:a358ddb8-376e-41ce-9aa2-26bd8d37dd77'
+      label: ''
+      provider: block_content
+      label_display: visible
+      status: true
+      info: ''
+      view_mode: full
+      region: contentmain
+      weight: 2
+      uuid: 77893354-133c-45a1-b9ed-0f5bbc30a0eb
+    9246fc99-fb14-4198-b973-0be7d7f5ff28:
+      id: 'block_content:aae5f9da-37c3-4878-b055-8b4f1915a18d'
+      label: ''
+      provider: block_content
+      label_display: visible
+      status: true
+      info: ''
+      view_mode: full
+      region: contentmain
+      weight: 3
+      uuid: 9246fc99-fb14-4198-b973-0be7d7f5ff28
+    55b67f94-8df9-4e50-8aad-daebc6057f40:
+      id: 'block_content:0146600b-0ffb-43ce-8c35-05e60c1a2113'
+      label: ''
+      provider: block_content
+      label_display: visible
+      status: true
+      info: ''
+      view_mode: full
+      region: contentmain
+      weight: 4
+      uuid: 55b67f94-8df9-4e50-8aad-daebc6057f40
+    da5ce99b-58da-4c22-ad39-d62c50a5d6ae:
+      id: 'block_content:05548cb5-646e-47d3-87b7-6bdc12426178'
+      label: ''
+      provider: block_content
+      label_display: visible
+      status: true
+      info: ''
+      view_mode: full
+      region: contentmain
+      weight: 5
+      uuid: da5ce99b-58da-4c22-ad39-d62c50a5d6ae
+    36029f0a-0ac3-4304-b20e-872e297eddc5:
+      id: 'block_content:0736a420-8602-4dfa-b6c5-57267f92d372'
+      label: ''
+      provider: block_content
+      label_display: visible
+      status: true
+      info: ''
+      view_mode: full
+      region: contentmain
+      weight: 6
+      uuid: 36029f0a-0ac3-4304-b20e-872e297eddc5
+    e6eae2a6-0c43-4af7-85d8-17d8aa6854e4:
+      id: 'block_content:cda43b53-4e2c-4b07-ba0a-e7e9b1201c84'
+      label: ''
+      provider: block_content
+      label_display: visible
+      status: true
+      info: ''
+      view_mode: full
+      region: contentmain
+      weight: 7
+      uuid: e6eae2a6-0c43-4af7-85d8-17d8aa6854e4
+    3e382fd5-4bdf-4972-a362-44de4745090e:
+      id: 'block_content:d973ad78-539c-40b4-b709-dd912a6f27c0'
+      label: ''
+      provider: block_content
+      label_display: visible
+      status: true
+      info: ''
+      view_mode: full
+      region: contentmain
+      weight: 8
+      uuid: 3e382fd5-4bdf-4972-a362-44de4745090e
+  id: panels_variant
+  layout: one_column
+  storage_type: page_manager
+  storage_id: index
+  builder: standard
+  uuid: f9907460-0131-444f-9fdd-0f182e2d8abd
+  label: ''
+  weight: 0
+  layout_settings: {  }
+  page_title: ''
+page: index
+weight: 0
+selection_criteria: {  }
+selection_logic: and
+static_context: {  }

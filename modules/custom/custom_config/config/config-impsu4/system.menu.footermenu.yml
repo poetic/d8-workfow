@@ -1,0 +1,10 @@
+uuid: 76c56d22-c24a-40ba-bd3f-40a8e3d731ce
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: pbRyOJgxZ5yfuCy2CayKoO9c41OanUMH-0RvX-StXX0
+id: footermenu
+label: Footermenu
+description: null
+locked: false

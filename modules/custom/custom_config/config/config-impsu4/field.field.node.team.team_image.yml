@@ -1,0 +1,40 @@
+uuid: 0816fe8c-12c0-499d-a82e-514d1fe3e7c2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.team_image
+    - node.type.team
+  module:
+    - image
+_core:
+  default_config_hash: xcj33G84yY9ccBmWAK3ZQeqdrrjMC_XSYgleYpTJgxk
+id: node.team.team_image
+field_name: team_image
+entity_type: node
+bundle: team
+label: 'Team Image'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_extensions: 'png gif jpg jpeg'
+  alt_field: true
+  alt_field_required: true
+  title_field: false
+  title_field_required: false
+  max_resolution: ''
+  min_resolution: ''
+  default_image:
+    uuid: null
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  file_directory: team
+  max_filesize: '2 MB'
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: image

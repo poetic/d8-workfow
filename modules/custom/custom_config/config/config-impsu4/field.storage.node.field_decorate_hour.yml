@@ -1,0 +1,22 @@
+uuid: bad8b4f5-cd41-40ad-8a37-14ff5c287833
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: GL8h9bBa0iHmhVH-JKTJfVpn1QMJnm2HgXWsGr3ihC0
+id: node.field_decorate_hour
+field_name: field_decorate_hour
+entity_type: node
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

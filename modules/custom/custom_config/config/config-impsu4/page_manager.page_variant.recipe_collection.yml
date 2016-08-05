@@ -1,0 +1,28 @@
+uuid: 9bac37b8-f82b-4987-9fb1-36aec43110d6
+langcode: en
+status: true
+dependencies:
+  config:
+    - page_manager.page.recipe_collection
+  module:
+    - panels
+id: recipe_collection
+label: 'Recipe Collection'
+variant: panels_variant
+variant_settings:
+  blocks: {  }
+  id: panels_variant
+  layout: one_column
+  storage_type: page_manager
+  storage_id: recipe_collection
+  builder: standard
+  uuid: 6b4cf22c-d162-4d9e-8efc-f2fdc31f2476
+  label: ''
+  weight: 0
+  layout_settings: {  }
+  page_title: ''
+page: recipe_collection
+weight: 0
+selection_criteria: {  }
+selection_logic: and
+static_context: {  }

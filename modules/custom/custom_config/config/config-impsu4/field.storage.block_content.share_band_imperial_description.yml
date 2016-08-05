@@ -1,0 +1,21 @@
+uuid: 1a45a79b-e044-4dd8-825d-b5b5e8c88687
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+    - text
+_core:
+  default_config_hash: BjUmq-wZAR0U2J7JYEz3VBATPnL-EAnw3J4fHmcNjhw
+id: block_content.share_band_imperial_description
+field_name: share_band_imperial_description
+entity_type: block_content
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

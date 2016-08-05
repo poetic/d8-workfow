@@ -1,0 +1,13 @@
+uuid: 680976ca-a5cc-4e41-8370-d17d650ffb35
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: ssnrlfpjVYTWK6pm9nkohWwNxJ7li3wjF1vPMTEOby0
+id: sitemap
+label: Sitemap
+use_admin_theme: null
+path: /sitemap
+access_logic: and
+access_conditions: {  }
+parameters: {  }

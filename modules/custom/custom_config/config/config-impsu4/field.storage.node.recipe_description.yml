@@ -1,0 +1,21 @@
+uuid: 4c68b5d9-5569-4062-a5f3-62144dfea8a3
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - text
+_core:
+  default_config_hash: vDI28hk50W7gGblLIyIw4g4Qgum1UAkKsuKesYZ_3T8
+id: node.recipe_description
+field_name: recipe_description
+entity_type: node
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

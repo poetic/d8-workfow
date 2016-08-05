@@ -1,0 +1,10 @@
+uuid: 8f0773da-d2b4-4900-8be0-921f634a69b1
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: szSRISOTYD-jSD0hsLd4K21SComEDLcvHZk_2xJcxaM
+id: footer
+label: Footer
+revision: 1
+description: Footer

@@ -1,0 +1,13 @@
+uuid: 8b41d9c9-47e8-4767-8ea4-5103ea09fd7e
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: Qybz5HyQfg4vRvIpHJN20_4qgvBLBH0ITByGRiJFcg4
+id: coupons
+label: Coupons
+use_admin_theme: null
+path: /coupons
+access_logic: and
+access_conditions: {  }
+parameters: {  }

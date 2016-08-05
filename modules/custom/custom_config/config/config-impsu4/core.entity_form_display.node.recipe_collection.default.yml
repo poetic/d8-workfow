@@ -1,0 +1,65 @@
+uuid: c9f23729-21f4-4de4-b579-3ccbf6372650
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.recipe_collection.recipe_collection_image
+    - field.field.node.recipe_collection.recipe_collection_popular
+    - field.field.node.recipe_collection.recipe_collection_trending
+    - image.style.thumbnail
+    - node.type.recipe_collection
+  module:
+    - image
+    - path
+_core:
+  default_config_hash: bl7T9gzJsDys0QSB26yqUEjYcTolJAgwbVZPt-0tKaE
+id: node.recipe_collection.default
+targetEntityType: node
+bundle: recipe_collection
+mode: default
+content:
+  created:
+    type: datetime_timestamp
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 30
+    settings: {  }
+    third_party_settings: {  }
+  promote:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 15
+    third_party_settings: {  }
+  recipe_collection_image:
+    type: image_image
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+  sticky:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 16
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: -5
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 5
+    settings:
+      match_operator: CONTAINS
+      size: '60'
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  recipe_collection_popular: true
+  recipe_collection_trending: true

@@ -1,0 +1,23 @@
+uuid: a76926e8-6f28-4f2c-a57e-5a05b0027b1d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.kids_landing_description
+    - node.type.kids_landing
+  module:
+    - text
+_core:
+  default_config_hash: VCwDj0E2sR_UzoaIiXoPUbyfX49AYDeLZ4wUalLXIV8
+id: node.kids_landing.kids_landing_description
+field_name: kids_landing_description
+entity_type: node
+bundle: kids_landing
+label: 'Kids Landing Description'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

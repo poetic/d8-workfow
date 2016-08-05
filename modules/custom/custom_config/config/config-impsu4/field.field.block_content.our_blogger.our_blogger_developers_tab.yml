@@ -1,0 +1,21 @@
+uuid: ea2d5188-4c7c-4ec7-b4c8-6661731cbcfd
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.our_blogger
+    - field.storage.block_content.our_blogger_developers_tab
+_core:
+  default_config_hash: m4-ivT-b2WbJ1ShdouzCC8k9f6YVtnj2kD1uQ0snCw8
+id: block_content.our_blogger.our_blogger_developers_tab
+field_name: our_blogger_developers_tab
+entity_type: block_content
+bundle: our_blogger
+label: 'Our Blogger Developers Tab'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

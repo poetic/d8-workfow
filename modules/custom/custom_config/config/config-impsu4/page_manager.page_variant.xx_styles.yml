@@ -1,0 +1,28 @@
+uuid: 231a142f-3bcb-4433-a07b-6a591bc4d41b
+langcode: en
+status: true
+dependencies:
+  config:
+    - page_manager.page.xx_styles
+  module:
+    - panels
+id: xx_styles
+label: 'Xx Styles'
+variant: panels_variant
+variant_settings:
+  blocks: {  }
+  id: panels_variant
+  layout: one_column
+  storage_type: page_manager
+  storage_id: xx_styles
+  builder: standard
+  uuid: d98b74eb-d423-4ec1-95c8-3e112365d6f1
+  label: ''
+  weight: 0
+  layout_settings: {  }
+  page_title: ''
+page: xx_styles
+weight: 0
+selection_criteria: {  }
+selection_logic: and
+static_context: {  }

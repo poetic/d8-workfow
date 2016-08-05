@@ -1,0 +1,28 @@
+uuid: 3fa285cd-804d-493f-813a-65894b881bc5
+langcode: en
+status: true
+dependencies:
+  config:
+    - page_manager.page.edit_profile
+  module:
+    - panels
+id: edit_profile
+label: 'Edit Profile'
+variant: panels_variant
+variant_settings:
+  blocks: {  }
+  id: panels_variant
+  layout: one_column
+  storage_type: page_manager
+  storage_id: edit_profile
+  builder: standard
+  uuid: 877e4afc-4f2a-4a30-b843-4c89aecb274a
+  label: ''
+  weight: 0
+  layout_settings: {  }
+  page_title: ''
+page: edit_profile
+weight: 0
+selection_criteria: {  }
+selection_logic: and
+static_context: {  }

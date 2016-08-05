@@ -1,0 +1,40 @@
+uuid: 7aa91529-943b-417c-8a22-9eed5a97efc6
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.our_blogger
+    - field.storage.block_content.our_blogger_seal_tester
+  module:
+    - image
+_core:
+  default_config_hash: yZV-GhylmdU4TwuXb0Tb7Rd5zXqYDhXuBWehJj2m0qg
+id: block_content.our_blogger.our_blogger_seal_tester
+field_name: our_blogger_seal_tester
+entity_type: block_content
+bundle: our_blogger
+label: 'Our Blogger Seal Tester'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_extensions: 'png gif jpg jpeg'
+  alt_field: true
+  alt_field_required: true
+  title_field: false
+  title_field_required: false
+  max_resolution: ''
+  min_resolution: ''
+  default_image:
+    uuid: null
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  file_directory: our_blogger
+  max_filesize: '2 MB'
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: image

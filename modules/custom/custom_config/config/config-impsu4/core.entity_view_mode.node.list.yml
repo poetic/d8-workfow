@@ -1,0 +1,12 @@
+uuid: fb888977-001d-400b-a4d8-8a3bdff64dc8
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: U6PPS109fOo2IBUik8kmoTRIDP1ZU6ijlQ3bXE_PDUA
+id: node.list
+label: List
+targetEntityType: node
+cache: true

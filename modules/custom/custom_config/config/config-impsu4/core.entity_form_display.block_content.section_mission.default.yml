@@ -1,0 +1,21 @@
+uuid: 5abc23d9-abb7-4d2a-92aa-a8499d83863a
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.section_mission
+_core:
+  default_config_hash: FKI4tJxVIoNSybNlmxtCPOySOIRriNPZVm8YfB1pce4
+id: block_content.section_mission.default
+targetEntityType: block_content
+bundle: section_mission
+mode: default
+content:
+  info:
+    type: string_textfield
+    weight: -5
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

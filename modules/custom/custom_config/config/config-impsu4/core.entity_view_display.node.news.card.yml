@@ -1,0 +1,23 @@
+uuid: 2ccb0e24-e2a0-4899-bc1c-9fb0ebe065eb
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.card
+    - field.field.node.news.news_description
+    - field.field.node.news.news_main
+    - node.type.news
+  module:
+    - user
+_core:
+  default_config_hash: xb8NPmsuRCxr37ezNcw__rl1y6xUhUpC-7sFyDE5j38
+id: node.news.card
+targetEntityType: node
+bundle: news
+mode: card
+content:
+  links:
+    weight: 100
+hidden:
+  news_description: true
+  news_main: true

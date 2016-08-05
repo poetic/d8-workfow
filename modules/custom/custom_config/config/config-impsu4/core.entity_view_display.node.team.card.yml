@@ -1,0 +1,35 @@
+uuid: a9035ab0-4194-4278-9b3d-f104563dcdf8
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.card
+    - field.field.node.team.team_blog
+    - field.field.node.team.team_image
+    - node.type.team
+  module:
+    - image
+    - link
+    - user
+_core:
+  default_config_hash: GAew9F1v_CibPmo0A1vKHakY9CsXxnUeVyRyGUsVcjc
+id: node.team.card
+targetEntityType: node
+bundle: team
+mode: card
+content:
+  links:
+    weight: 100
+  team_blog:
+    label: hidden
+    type: link
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+  team_image:
+    label: hidden
+    type: image
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

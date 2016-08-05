@@ -1,0 +1,13 @@
+uuid: 112756ff-ff39-466c-b825-1b11d4ad253e
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: ZVsHUDDyngrYjpyXbs1SCIiTUTGdTs5VzdcLlmQH0a4
+id: work_with_us
+label: 'Work With Us'
+use_admin_theme: null
+path: /work-with-us
+access_logic: and
+access_conditions: {  }
+parameters: {  }

@@ -1,0 +1,25 @@
+uuid: 334b4527-d757-4128-b741-41c1b4119a17
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_prep_minute
+    - node.type.recipe
+_core:
+  default_config_hash: 1brkgUhZzHvAVx63ryk9Bi1J9W3Eo7UXmBaIlUbt0tE
+id: node.recipe.field_prep_minute
+field_name: field_prep_minute
+entity_type: node
+bundle: recipe
+label: prep_minute
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: 0
+  max: 59
+  prefix: ''
+  suffix: ''
+field_type: integer

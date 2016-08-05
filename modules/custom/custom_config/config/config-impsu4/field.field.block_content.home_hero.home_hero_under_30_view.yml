@@ -1,0 +1,28 @@
+uuid: fd5aaf4c-6b69-4aa5-aebf-c5b815f9f157
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.home_hero
+    - field.storage.block_content.home_hero_under_30_view
+    - views.view.under_30_view
+_core:
+  default_config_hash: uvtAK-nrRUOaoXFBCXOkU2hJaH3OGZowxdGDLPixG2I
+id: block_content.home_hero.home_hero_under_30_view
+field_name: home_hero_under_30_view
+entity_type: block_content
+bundle: home_hero
+label: 'Home Hero Under 30 View'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    target_uuid: 8a6671c0-196a-420e-bda4-6e58e9925288
+default_value_callback: ''
+settings:
+  handler: 'default:view'
+  handler_settings:
+    target_bundles: null
+    auto_create: false
+field_type: entity_reference

@@ -1,0 +1,58 @@
+uuid: 267b4222-b3ae-4cfc-99e1-42de6c2243da
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.footer
+    - field.field.block_content.footer.footer_coporatemenu
+    - field.field.block_content.footer.footer_dixie_logo
+    - field.field.block_content.footer.footer_dixie_products
+    - field.field.block_content.footer.footer_footermenu
+    - field.field.block_content.footer.footer_imperial_logo
+    - field.field.block_content.footer.footer_imperial_products
+  module:
+    - image
+_core:
+  default_config_hash: Am-dl5gJ5WffrHEh8g6wjr4UusTAjX2NoLi_adEEw90
+id: block_content.footer.default
+targetEntityType: block_content
+bundle: footer
+mode: default
+content:
+  footer_coporatemenu:
+    label: hidden
+    type: entity_reference_entity_id
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+  footer_dixie_logo:
+    label: hidden
+    type: image
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+  footer_dixie_products:
+    label: hidden
+    type: image
+    weight: 6
+    settings: {  }
+    third_party_settings: {  }
+  footer_footermenu:
+    label: hidden
+    type: entity_reference_entity_id
+    weight: 4
+    settings: {  }
+    third_party_settings: {  }
+  footer_imperial_logo:
+    label: hidden
+    type: image
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+  footer_imperial_products:
+    label: hidden
+    type: image
+    weight: 5
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

@@ -1,0 +1,12 @@
+uuid: 1a2bd4b7-bc1f-439c-9bf5-02c77423ea29
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: bLbfgajfd-6vb5qA2WSenFk3alUjVtLlsRabbGthkrQ
+id: node.trending
+label: Trending
+targetEntityType: node
+cache: true

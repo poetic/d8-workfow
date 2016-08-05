@@ -1,0 +1,13 @@
+uuid: 66426ad3-51bf-471b-a354-f1150dbcc1a2
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: tLRSkH-u_z86112e_ODDQa0DjNqFtmBg2GZ4DuqT4Cw
+id: contest_terms
+label: 'Contest Terms'
+use_admin_theme: null
+path: /contest-terms
+access_logic: and
+access_conditions: {  }
+parameters: {  }

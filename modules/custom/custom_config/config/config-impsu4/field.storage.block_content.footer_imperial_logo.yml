@@ -1,0 +1,32 @@
+uuid: defb2062-1322-43bc-b46f-a6a3846ffb82
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+    - file
+    - image
+_core:
+  default_config_hash: XWOtaaa8y6GN-zXJA-7NGujd2CSylHVCoJ_OjzMx6nk
+id: block_content.footer_imperial_logo
+field_name: footer_imperial_logo
+entity_type: block_content
+type: image
+settings:
+  default_image:
+    uuid: null
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  target_type: file
+  display_field: false
+  display_default: false
+  uri_scheme: public
+module: image
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

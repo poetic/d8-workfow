@@ -1,0 +1,13 @@
+uuid: 292b202d-91a9-43a4-a6b5-fcea32f7814a
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: yFsCMG5mT993EDiNnCdhgHi83ayXl_yELYrVW4yInaw
+id: my_first_cookbook
+label: 'My First Cookbook'
+use_admin_theme: null
+path: /my-first-cookbook
+access_logic: and
+access_conditions: {  }
+parameters: {  }

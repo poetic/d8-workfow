@@ -1,0 +1,22 @@
+uuid: 7df66b5a-0103-4876-bab7-bc6fd4523861
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+    - views
+_core:
+  default_config_hash: fTml7HRtl9RlyOZPTT6PT8KOFQ5oEBXxvoRA6uNkyKQ
+id: block_content.main_block_hero
+field_name: main_block_hero
+entity_type: block_content
+type: entity_reference
+settings:
+  target_type: view
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

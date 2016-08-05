@@ -1,0 +1,23 @@
+uuid: 681aa808-0cfb-4c47-adf3-6a378b29b712
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.news
+    - field.field.node.news.news_description
+    - field.field.node.news.news_main
+    - node.type.news
+  module:
+    - user
+_core:
+  default_config_hash: Ml-zgDXvnnnRT6W-iWBhp1MDgG4K6iyWQF3Yxj78ZFg
+id: node.news.news
+targetEntityType: node
+bundle: news
+mode: news
+content:
+  links:
+    weight: 100
+hidden:
+  news_description: true
+  news_main: true

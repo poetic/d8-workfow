@@ -1,0 +1,13 @@
+uuid: 8a0822c3-eca2-48f6-bccb-2b662a7fd046
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: af39cFR-mfox06aN-mp85fKlhREQyQuZzUhBqdGHKMI
+id: search_results
+label: 'Search Results'
+use_admin_theme: null
+path: /search-results
+access_logic: and
+access_conditions: {  }
+parameters: {  }

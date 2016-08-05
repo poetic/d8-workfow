@@ -1,0 +1,21 @@
+uuid: 02651ee6-edb1-417d-80f8-6fb808869c08
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - text
+_core:
+  default_config_hash: JLoYSQEXTV15weD1ZdaqVDWiO1HQiRj6OcfbOI476do
+id: node.recipe_directions
+field_name: recipe_directions
+entity_type: node
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

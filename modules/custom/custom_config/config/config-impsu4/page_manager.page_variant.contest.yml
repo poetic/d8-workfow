@@ -1,0 +1,28 @@
+uuid: 557394b2-83fb-41ac-ade9-4f28f6fa1f91
+langcode: en
+status: true
+dependencies:
+  config:
+    - page_manager.page.contest
+  module:
+    - panels
+id: contest
+label: Contest
+variant: panels_variant
+variant_settings:
+  blocks: {  }
+  id: panels_variant
+  layout: one_column
+  storage_type: page_manager
+  storage_id: contest
+  builder: standard
+  uuid: 1ef8a86d-c4da-4dcc-b0a8-4b3711171e8a
+  label: ''
+  weight: 0
+  layout_settings: {  }
+  page_title: ''
+page: contest
+weight: 0
+selection_criteria: {  }
+selection_logic: and
+static_context: {  }

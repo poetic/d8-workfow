@@ -1,0 +1,39 @@
+uuid: cae01bfd-072f-4955-ad7b-b114a26324f1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.recipe_ingredients.field_ingredient_section_body
+    - field.field.paragraph.recipe_ingredients.field_ingredient_section_title
+    - paragraphs.paragraphs_type.recipe_ingredients
+  module:
+    - text
+_core:
+  default_config_hash: FmCxL2uKjq4FG9Ol8DWfa6xrHWBJxCZrpYdJ_WAT7XE
+id: paragraph.recipe_ingredients.default
+targetEntityType: paragraph
+bundle: recipe_ingredients
+mode: default
+content:
+  field_ingredient_section_body:
+    weight: 1
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+  field_ingredient_section_body2:
+    weight: 2
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+  field_ingredient_section_title:
+    weight: 0
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+hidden:
+  created: true
+  uid: true

@@ -1,0 +1,13 @@
+uuid: 40b55f89-25dd-443b-b24a-37994aa882ed
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: 3NhwsCtEgXWd269nVl-JA_v-xCnKoHibVu-SUf4d83U
+id: recipe
+label: Recipe
+use_admin_theme: null
+path: /recipe
+access_logic: and
+access_conditions: {  }
+parameters: {  }

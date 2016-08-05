@@ -1,0 +1,28 @@
+uuid: b4060016-9b66-4af7-b27a-067dc888e384
+langcode: en
+status: true
+dependencies:
+  config:
+    - page_manager.page.sitemap
+  module:
+    - panels
+id: sitemap
+label: Sitemap
+variant: panels_variant
+variant_settings:
+  blocks: {  }
+  id: panels_variant
+  layout: one_column
+  storage_type: page_manager
+  storage_id: sitemap
+  builder: standard
+  uuid: dd6d36a5-5bfd-4acd-897c-a412b2511413
+  label: ''
+  weight: 0
+  layout_settings: {  }
+  page_title: ''
+page: sitemap
+weight: 0
+selection_criteria: {  }
+selection_logic: and
+static_context: {  }

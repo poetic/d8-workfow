@@ -1,0 +1,23 @@
+uuid: edd9dd97-68ef-48f2-bcb7-32cec3a8f6cf
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.card
+    - field.field.node.sugar_101.sugar_101_description
+    - field.field.node.sugar_101.sugar_101_image
+    - node.type.sugar_101
+  module:
+    - user
+_core:
+  default_config_hash: 94z6UuV0uay_iu1mpPRGnZPupZ9TDF3Be8Cq1vLtBrA
+id: node.sugar_101.card
+targetEntityType: node
+bundle: sugar_101
+mode: card
+content:
+  links:
+    weight: 100
+hidden:
+  sugar_101_description: true
+  sugar_101_image: true

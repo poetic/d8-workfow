@@ -1,0 +1,10 @@
+uuid: 1f7b51e6-a913-455e-b3e4-5bdf3a195901
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: xkfQjPz_ctj1ASkcOHTvsInCvUPmogTgoqzyq2BP6qQ
+id: coporatemenu
+label: Coporatemenu
+description: null
+locked: false

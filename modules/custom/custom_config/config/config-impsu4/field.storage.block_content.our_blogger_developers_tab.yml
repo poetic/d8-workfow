@@ -1,0 +1,23 @@
+uuid: a7388c19-2d7d-448f-b3d4-200acdd38409
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+_core:
+  default_config_hash: c8eNSP4N2hF-sqlW1G3S8c4cKiO_mccUafaBgXZTOgY
+id: block_content.our_blogger_developers_tab
+field_name: our_blogger_developers_tab
+entity_type: block_content
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

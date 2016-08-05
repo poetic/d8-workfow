@@ -1,0 +1,13 @@
+uuid: 5e75258e-2342-4f4c-8e9a-22fcbe163820
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: 1bP_S_Lz40sEw1SBlbC9btHXK5BYXH3auN3kqZIwZE0
+id: recipes_2
+label: 'Recipes 2'
+use_admin_theme: null
+path: /recipes-2
+access_logic: and
+access_conditions: {  }
+parameters: {  }

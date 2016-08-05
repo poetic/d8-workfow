@@ -1,0 +1,11 @@
+uuid: 081f2766-924f-4d1b-9139-a0ab4327df82
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: rDysUjGFhkW6iLZxT-UD7BfjHCf7S4ut0MuxhUMBM2k
+name: Seals
+vid: seals
+description: ''
+hierarchy: 0
+weight: 0
