@@ -1,9 +1,12 @@
+uuid: ff8e94f2-2564-430e-864b-9711005ead8d
 langcode: en
 status: true
 dependencies:
   config:
-    - node.type.recipe
     - field.storage.node.recipe_yield
+    - node.type.recipe
+_core:
+  default_config_hash: RIJQ4U9ZD4Cf1iGpMLIvuLb5txBVsMrKw_XiyFc6I4Y
 id: node.recipe.recipe_yield
 field_name: recipe_yield
 entity_type: node

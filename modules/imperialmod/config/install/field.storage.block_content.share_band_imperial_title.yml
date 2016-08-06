@@ -1,7 +1,11 @@
+uuid: cb680a13-7f41-4da6-9af8-7d9f155e68f4
 langcode: en
 status: true
 dependencies:
-  - block_content
+  module:
+    - block_content
+_core:
+  default_config_hash: IsQUHYbS2K0C5bBOezREepUCoWjuNJeRwB1YKdBLkYM
 id: block_content.share_band_imperial_title
 field_name: share_band_imperial_title
 entity_type: block_content

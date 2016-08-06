@@ -1,9 +1,13 @@
+uuid: 9a005257-5be6-4420-b08b-e1ec1bd48be8
 langcode: en
 status: true
 dependencies:
-  - block_content
-  - file
-  - image
+  module:
+    - block_content
+    - file
+    - image
+_core:
+  default_config_hash: lkP_8Md0C4nflaIrlnN2eVwtPEN36qx1ZpvaYGSbQ8A
 id: block_content.our_blogger_seal_dev_dixie
 field_name: our_blogger_seal_dev_dixie
 entity_type: block_content

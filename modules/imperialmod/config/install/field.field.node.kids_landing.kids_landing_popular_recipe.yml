@@ -1,10 +1,13 @@
+uuid: 221332ac-2ee6-4bd2-97c2-03bdcf15bb58
 langcode: en
 status: true
 dependencies:
   config:
-  - node.type.kids_landing
-  - field.storage.node.kids_landing_popular_recipe
-  - views.view.kids_popular_recipe
+    - field.storage.node.kids_landing_popular_recipe
+    - node.type.kids_landing
+    - views.view.kids_popular_recipe
+_core:
+  default_config_hash: KPmVLcVL93tS30riqsK0FHqrrQ-rqHXNXA3kMC3kEDo
 id: node.kids_landing.kids_landing_popular_recipe
 field_name: kids_landing_popular_recipe
 entity_type: node

@@ -1,9 +1,12 @@
+uuid: 3e68a1cf-40f8-4562-ac2d-aefbf151bd69
 langcode: en
 status: true
 dependencies:
   config:
-  - block_content.type.header
-  - field.storage.block_content.header_usernav
+    - block_content.type.header
+    - field.storage.block_content.header_usernav
+_core:
+  default_config_hash: 2M2JaR3lFac7PgEf6_1si_BsjhKM_gBIIxgQQViN53k
 id: block_content.header.header_usernav
 field_name: header_usernav
 entity_type: block_content

@@ -1,9 +1,13 @@
+uuid: f81e45c1-71cd-4f5e-b49c-2b1e9b2ada16
 langcode: en
 status: true
 dependencies:
-  - node
-  - file
-  - image
+  module:
+    - file
+    - image
+    - node
+_core:
+  default_config_hash: lPGw7rmR7c_s5nM_b7VheLmOZnguKEbi0i--vkiIg2g
 id: node.kids_landing_background
 field_name: kids_landing_background
 entity_type: node

@@ -1,11 +1,14 @@
+uuid: 11e45bc3-c212-487a-b99e-eec6b72c787a
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.block_content.footer_subscribe_description
     - block_content.type.footer_subscribe
+    - field.storage.block_content.footer_subscribe_description
   module:
     - text
+_core:
+  default_config_hash: iuwQGEcSCdLjh2Zikt7i5Rc5T08_bjoFXPzpCsldVio
 id: block_content.footer_subscribe.footer_subscribe_description
 field_name: footer_subscribe_description
 entity_type: block_content

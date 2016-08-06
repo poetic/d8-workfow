@@ -1,8 +1,11 @@
+uuid: 7d4794fd-837d-4254-8bae-919832f4ea34
 langcode: en
 status: true
 dependencies: {  }
+_core:
+  default_config_hash: Ic0e9OMSnA0MiBrwPBOXsK9-AEFkR0ruLDWcnFLOsjw
 id: share_a_recipe
-label: Share A Recipe
+label: 'Share A Recipe'
 use_admin_theme: null
 path: /share-a-recipe
 access_logic: and

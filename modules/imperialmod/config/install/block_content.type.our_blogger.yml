@@ -1,7 +1,10 @@
+uuid: 4e3c40b4-d748-46c0-8d76-5344002b5147
 langcode: en
 status: true
 dependencies: {  }
+_core:
+  default_config_hash: k1jUhXoGuWdgnCrSOj0le7o7rG8iCisJwXRipuhjUB8
 id: our_blogger
-label: Our Blogger
+label: 'Our Blogger'
 revision: 1
 description: 'Our Blogger'

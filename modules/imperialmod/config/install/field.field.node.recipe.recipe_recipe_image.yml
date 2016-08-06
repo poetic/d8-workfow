@@ -1,11 +1,14 @@
+uuid: 66e3d89d-2bfa-4fef-9246-bb7e3606b3dd
 langcode: en
 status: true
 dependencies:
   config:
-    - node.type.recipe
     - field.storage.node.recipe_recipe_image
+    - node.type.recipe
   module:
     - image
+_core:
+  default_config_hash: nSDaeiYvSfNdmSQacUmeHbrrYe-1vOdHMQ-2qhnxELg
 id: node.recipe.recipe_recipe_image
 field_name: recipe_recipe_image
 entity_type: node
@@ -30,7 +33,7 @@ settings:
     title: ''
     width: null
     height: null
-  file_directory: 'recipe'
+  file_directory: recipe
   max_filesize: '2 MB'
   handler: 'default:file'
   handler_settings: {  }

@@ -1,9 +1,12 @@
+uuid: 9b769f07-0b71-4297-98e0-1b4a9d67b0d3
 langcode: en
 status: true
 dependencies:
   config:
     - block_content.type.home_hero
     - field.storage.block_content.home_hero_special
+_core:
+  default_config_hash: ytzIBWaTKpN_2Z56PWQNU6gc3V0Y2yeZIt2weuU-kxE
 id: block_content.home_hero.home_hero_special
 field_name: home_hero_special
 entity_type: block_content

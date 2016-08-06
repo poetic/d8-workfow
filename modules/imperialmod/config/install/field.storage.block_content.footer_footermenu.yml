@@ -1,7 +1,12 @@
+uuid: f59363f5-c340-4afc-8219-784c075810a5
 langcode: en
 status: true
 dependencies:
-  - block_content
+  module:
+    - block_content
+    - system
+_core:
+  default_config_hash: JerWDHNBNYnCBcVeY8KRNpNfyuKpYVwvbvdWruuTBVg
 id: block_content.footer_footermenu
 field_name: footer_footermenu
 entity_type: block_content

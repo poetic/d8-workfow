@@ -1,3 +1,4 @@
+uuid: 1de4d664-5e5d-4b7d-b284-f121141ac813
 langcode: en
 status: true
 dependencies:
@@ -6,6 +7,8 @@ dependencies:
     - field.storage.block_content.header_background_img
   module:
     - image
+_core:
+  default_config_hash: nWyFEXTtD0e-Bjb0TFK42U8CrRvzV6CMi7f85Wf0JOk
 id: block_content.header.header_background_img
 field_name: header_background_img
 entity_type: block_content
@@ -30,7 +33,7 @@ settings:
     title: ''
     width: null
     height: null
-  file_directory: 'header'
+  file_directory: header
   max_filesize: '2 MB'
   handler: 'default:file'
   handler_settings: {  }

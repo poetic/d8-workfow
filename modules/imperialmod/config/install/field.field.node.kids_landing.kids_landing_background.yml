@@ -1,11 +1,14 @@
+uuid: 78590c4b-1100-4cc0-bea6-d2a880f78cd1
 langcode: en
 status: true
 dependencies:
   config:
-    - node.type.kids_landing
     - field.storage.node.kids_landing_background
+    - node.type.kids_landing
   module:
     - image
+_core:
+  default_config_hash: Na51d_boWMNfq4u8uc4bverZHElxUfTaxOg2wVmtaKY
 id: node.kids_landing.kids_landing_background
 field_name: kids_landing_background
 entity_type: node
@@ -30,7 +33,7 @@ settings:
     title: ''
     width: null
     height: null
-  file_directory: 'kids_landing'
+  file_directory: kids_landing
   max_filesize: '2 MB'
   handler: 'default:file'
   handler_settings: {  }

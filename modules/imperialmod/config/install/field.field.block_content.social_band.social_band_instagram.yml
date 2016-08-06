@@ -1,3 +1,4 @@
+uuid: 37cf2882-1f32-4f4b-9d9b-a719b4ca108e
 langcode: en
 status: true
 dependencies:
@@ -6,6 +7,8 @@ dependencies:
     - field.storage.block_content.social_band_instagram
   module:
     - link
+_core:
+  default_config_hash: 3Ty1mKTWzLJRIkSEqOkuCbhDuNeuiot5NgNjOBYiUL4
 id: block_content.social_band.social_band_instagram
 field_name: social_band_instagram
 entity_type: block_content

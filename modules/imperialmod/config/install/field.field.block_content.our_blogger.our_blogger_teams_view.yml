@@ -1,10 +1,13 @@
+uuid: 780367bf-9b0b-4eab-9a13-ed79690dab9d
 langcode: en
 status: true
 dependencies:
   config:
-  - block_content.type.our_blogger
-  - field.storage.block_content.our_blogger_teams_view
-  - views.view.tester_team
+    - block_content.type.our_blogger
+    - field.storage.block_content.our_blogger_teams_view
+    - views.view.tester_team
+_core:
+  default_config_hash: PrdpQtgtkK1-L_JyCntA-ArTlw47dyfw9NdY0_FqXGI
 id: block_content.our_blogger.our_blogger_teams_view
 field_name: our_blogger_teams_view
 entity_type: block_content

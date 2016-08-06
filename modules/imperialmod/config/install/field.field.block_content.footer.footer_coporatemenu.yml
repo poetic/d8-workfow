@@ -1,9 +1,12 @@
+uuid: 31c33790-a748-48f2-92a0-8d68e333095f
 langcode: en
 status: true
 dependencies:
   config:
-  - block_content.type.footer
-  - field.storage.block_content.footer_coporatemenu
+    - block_content.type.footer
+    - field.storage.block_content.footer_coporatemenu
+_core:
+  default_config_hash: RnFyodg3ndi_rJYszeFO0smX3_WkOYfqVYe52JOVJ98
 id: block_content.footer.footer_coporatemenu
 field_name: footer_coporatemenu
 entity_type: block_content

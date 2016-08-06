@@ -1,3 +1,4 @@
+uuid: ed9b216b-e9fc-493e-b74f-65ce3524dbc2
 langcode: en
 status: true
 dependencies:
@@ -6,6 +7,8 @@ dependencies:
     - field.storage.block_content.learn_more_dixie
   module:
     - image
+_core:
+  default_config_hash: gRb6DNdfbKCqmWRdLsMZDH7Rotmuhh09CBV6NNwD-vE
 id: block_content.learn_more.learn_more_dixie
 field_name: learn_more_dixie
 entity_type: block_content
@@ -30,7 +33,7 @@ settings:
     title: ''
     width: null
     height: null
-  file_directory: 'learn_more'
+  file_directory: learn_more
   max_filesize: '2 MB'
   handler: 'default:file'
   handler_settings: {  }

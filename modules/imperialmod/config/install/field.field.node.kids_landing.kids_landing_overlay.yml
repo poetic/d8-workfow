@@ -1,11 +1,14 @@
+uuid: 99fce68a-108b-478c-8349-c4ea0918c24d
 langcode: en
 status: true
 dependencies:
   config:
-    - node.type.kids_landing
     - field.storage.node.kids_landing_overlay
+    - node.type.kids_landing
   module:
     - image
+_core:
+  default_config_hash: '-wkXwShzr1t3r1J2KHEqi3DzN-YqDm_YDD_nTCT-Ag4'
 id: node.kids_landing.kids_landing_overlay
 field_name: kids_landing_overlay
 entity_type: node
@@ -30,7 +33,7 @@ settings:
     title: ''
     width: null
     height: null
-  file_directory: 'kids_landing'
+  file_directory: kids_landing
   max_filesize: '2 MB'
   handler: 'default:file'
   handler_settings: {  }

@@ -7,8 +7,10 @@ dependencies:
   module:
     - node
     - user
+_core:
+  default_config_hash: UIy53e3rF8LNRD95pMTZpSEP2dUB7TrDDpWaGelvvic
 id: slider_view
-label: Slider View
+label: 'Slider View'
 module: views
 description: ''
 tag: ''
@@ -186,7 +188,7 @@ display:
   slider_view:
     display_plugin: block
     id: slider_view
-    display_title: Slider View
+    display_title: 'Slider View'
     position: 1
     display_options:
       display_extenders: {  }

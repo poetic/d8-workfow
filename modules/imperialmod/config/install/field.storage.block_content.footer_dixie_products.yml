@@ -1,9 +1,13 @@
+uuid: c168429c-13b5-4516-8b5c-f94af820ad73
 langcode: en
 status: true
 dependencies:
-  - block_content
-  - file
-  - image
+  module:
+    - block_content
+    - file
+    - image
+_core:
+  default_config_hash: 7ZA5tDQttWuiu8nckSmp6iJVHlDz_XrIWM1Yu4DvmdQ
 id: block_content.footer_dixie_products
 field_name: footer_dixie_products
 entity_type: block_content

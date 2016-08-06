@@ -1,9 +1,12 @@
+uuid: 6159eecc-ab86-476a-93c8-026fc0ff0d8a
 langcode: en
 status: true
 dependencies:
   module:
     - node
     - text
+_core:
+  default_config_hash: TfbN2nAmmVg8SVNPhWF4-nGrMXhZGOeu2p_5p3ViQHM
 id: node.news_description
 field_name: news_description
 entity_type: node

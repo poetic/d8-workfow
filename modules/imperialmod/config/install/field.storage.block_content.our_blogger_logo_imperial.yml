@@ -1,9 +1,13 @@
+uuid: d1f7c2a9-a510-4301-b502-d7eecf3a10d9
 langcode: en
 status: true
 dependencies:
-  - block_content
-  - file
-  - image
+  module:
+    - block_content
+    - file
+    - image
+_core:
+  default_config_hash: bybkeuBfSZd8ombxEbwmwqpj1iqtFaAcgOgIYppoFnY
 id: block_content.our_blogger_logo_imperial
 field_name: our_blogger_logo_imperial
 entity_type: block_content

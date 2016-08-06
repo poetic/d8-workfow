@@ -1,8 +1,12 @@
+uuid: c2440c9e-8e2e-4042-8116-8d8bdebdcbd3
 langcode: en
 status: true
 dependencies:
-  - block_content
-  - contact
+  module:
+    - block_content
+    - contact
+_core:
+  default_config_hash: uwL-goq5bmeLE_kVZyVuxwxRhUElKfuzMFbvcoOuYRs
 id: block_content.footer_subscribe_subscribe
 field_name: footer_subscribe_subscribe
 entity_type: block_content

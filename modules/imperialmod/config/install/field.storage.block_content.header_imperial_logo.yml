@@ -1,9 +1,13 @@
+uuid: 39eaa938-e9b7-42b6-b308-8ddaac56f115
 langcode: en
 status: true
 dependencies:
-  - block_content
-  - file
-  - image
+  module:
+    - block_content
+    - file
+    - image
+_core:
+  default_config_hash: KJ7vzWsfhTTU1mmdO4D5-hIHharjNBkuhQTo-9W3cTc
 id: block_content.header_imperial_logo
 field_name: header_imperial_logo
 entity_type: block_content

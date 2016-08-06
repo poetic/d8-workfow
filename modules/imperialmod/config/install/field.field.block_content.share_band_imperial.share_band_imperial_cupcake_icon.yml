@@ -1,3 +1,4 @@
+uuid: 738adf1a-0ec9-47f1-a4e9-f11c8e49d4f1
 langcode: en
 status: true
 dependencies:
@@ -6,6 +7,8 @@ dependencies:
     - field.storage.block_content.share_band_imperial_cupcake_icon
   module:
     - image
+_core:
+  default_config_hash: 59loxaOu2Xd7cSyr6mxZwhTafHSz_bOsj1e6Uuvg2E0
 id: block_content.share_band_imperial.share_band_imperial_cupcake_icon
 field_name: share_band_imperial_cupcake_icon
 entity_type: block_content
@@ -30,7 +33,7 @@ settings:
     title: ''
     width: null
     height: null
-  file_directory: 'share_band_imperial'
+  file_directory: share_band_imperial
   max_filesize: '2 MB'
   handler: 'default:file'
   handler_settings: {  }

@@ -1,7 +1,10 @@
+uuid: ad015f44-21c0-4820-870f-f01b3e017a3f
 langcode: en
 status: true
 dependencies: {  }
+_core:
+  default_config_hash: dFGwL1ZbFRLEU3I8EJj1Co7ZTVrC4313Bf_wddnHIZk
 id: share_band_imperial
-label: Share Band Imperial
+label: 'Share Band Imperial'
 revision: 1
 description: 'Share Band Imperial'

@@ -1,11 +1,14 @@
+uuid: a04b0aea-ff6e-46a2-b242-e14b681c6683
 langcode: en
 status: true
 dependencies:
   config:
-    - node.type.news
     - field.storage.node.news_main
+    - node.type.news
   module:
     - image
+_core:
+  default_config_hash: v99eGJ_fbA73BBQC4Aj0VtgvZdRGte0O64gqjMe4CG4
 id: node.news.news_main
 field_name: news_main
 entity_type: node
@@ -30,7 +33,7 @@ settings:
     title: ''
     width: null
     height: null
-  file_directory: 'news'
+  file_directory: news
   max_filesize: '2 MB'
   handler: 'default:file'
   handler_settings: {  }

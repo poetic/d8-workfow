@@ -1,3 +1,4 @@
+uuid: 151b9871-80e1-469b-923c-72ae7d79e486
 langcode: en
 status: true
 dependencies:
@@ -6,6 +7,8 @@ dependencies:
     - field.storage.block_content.header_dixie_logo
   module:
     - image
+_core:
+  default_config_hash: CerkAu8t2sLzC8WBM2FHiv2mkLLqtGjpH2EZhdaPc7E
 id: block_content.header.header_dixie_logo
 field_name: header_dixie_logo
 entity_type: block_content
@@ -30,7 +33,7 @@ settings:
     title: ''
     width: null
     height: null
-  file_directory: 'header'
+  file_directory: header
   max_filesize: '2 MB'
   handler: 'default:file'
   handler_settings: {  }

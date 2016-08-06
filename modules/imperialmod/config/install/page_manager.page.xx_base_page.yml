@@ -1,8 +1,11 @@
+uuid: 7af0dc9f-4251-4af7-876b-e9a39a41d573
 langcode: en
 status: true
 dependencies: {  }
+_core:
+  default_config_hash: M4KNCBEQ0oqL5A5LpJEWSH11dVPn2knbTrwbaI2wnYg
 id: xx_base_page
-label: Xx Base Page
+label: 'Xx Base Page'
 use_admin_theme: null
 path: /xx-base-page
 access_logic: and

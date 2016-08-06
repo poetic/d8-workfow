@@ -1,11 +1,14 @@
+uuid: c4807fa8-24f9-4b65-8f66-4c7c13a118ef
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.block_content.share_band_imperial_description
     - block_content.type.share_band_imperial
+    - field.storage.block_content.share_band_imperial_description
   module:
     - text
+_core:
+  default_config_hash: oddp63Iku3EytLktA6JgBzC5mXkdxv8Xj48ApUHviAk
 id: block_content.share_band_imperial.share_band_imperial_description
 field_name: share_band_imperial_description
 entity_type: block_content

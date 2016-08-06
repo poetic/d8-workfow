@@ -1,8 +1,12 @@
+uuid: 6094ad3e-bebd-4988-96b2-7825bc211193
 langcode: en
 status: true
 dependencies:
-  - block_content
-  - link
+  module:
+    - block_content
+    - link
+_core:
+  default_config_hash: IOovqTEFdVDIyJ1D3zpgxjhLxjT0HMWcMr05HTWXk9o
 id: block_content.social_band_google
 field_name: social_band_google
 entity_type: block_content

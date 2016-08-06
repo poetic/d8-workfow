@@ -1,3 +1,4 @@
+uuid: 26c06115-d292-4981-ad4c-1549a4e4f20f
 langcode: en
 status: true
 dependencies:
@@ -6,6 +7,8 @@ dependencies:
     - field.storage.block_content.social_band_gmo
   module:
     - image
+_core:
+  default_config_hash: qaglygY1ofC4iPDeWvRVHD6XkqD7D-zFOYLdgsp62xE
 id: block_content.social_band.social_band_gmo
 field_name: social_band_gmo
 entity_type: block_content
@@ -30,7 +33,7 @@ settings:
     title: ''
     width: null
     height: null
-  file_directory: 'social_band'
+  file_directory: social_band
   max_filesize: '2 MB'
   handler: 'default:file'
   handler_settings: {  }

@@ -1,8 +1,12 @@
+uuid: a814caea-1f04-4221-8ed9-2ba0c1e97159
 langcode: en
 status: true
 dependencies:
-  - block_content
-  - link
+  module:
+    - block_content
+    - link
+_core:
+  default_config_hash: DRXYaW00laxuzt3b2zC7l0iYYoXBWZZPMWORSRqoPSE
 id: block_content.social_band_pinterest
 field_name: social_band_pinterest
 entity_type: block_content

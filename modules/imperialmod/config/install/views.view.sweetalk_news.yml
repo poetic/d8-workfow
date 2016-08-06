@@ -7,8 +7,10 @@ dependencies:
   module:
     - node
     - user
+_core:
+  default_config_hash: 54iRm_pgmm0MjCkzgbjda3FqPk5FBpRcbq4pNz2Z4PY
 id: sweetalk_news
-label: Sweetalk News
+label: 'Sweetalk News'
 module: views
 description: ''
 tag: ''
@@ -186,7 +188,7 @@ display:
   sweetalk_news:
     display_plugin: block
     id: sweetalk_news
-    display_title: Sweetalk News
+    display_title: 'Sweetalk News'
     position: 1
     display_options:
       display_extenders: {  }

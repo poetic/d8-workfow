@@ -1,8 +1,12 @@
+uuid: 396e0002-c252-4904-a1ba-651996b78f12
 langcode: en
 status: true
 dependencies:
-  - block_content
-  - views
+  module:
+    - block_content
+    - views
+_core:
+  default_config_hash: F10tR_BXlxF99-Oy42WyTvyYW5aN6kAXljiRH6edj2s
 id: block_content.main_block_trending
 field_name: main_block_trending
 entity_type: block_content

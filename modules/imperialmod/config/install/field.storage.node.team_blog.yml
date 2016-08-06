@@ -1,8 +1,12 @@
+uuid: 6389b32a-fc56-4e24-ae42-92d13bfaf3d0
 langcode: en
 status: true
 dependencies:
-  - node
-  - link
+  module:
+    - link
+    - node
+_core:
+  default_config_hash: cCK-TGcSa6uDEi0zgG-3dg5FGgRYgp6dHKt-JBalorE
 id: node.team_blog
 field_name: team_blog
 entity_type: node

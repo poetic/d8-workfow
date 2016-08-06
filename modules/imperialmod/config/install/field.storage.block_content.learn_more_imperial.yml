@@ -1,9 +1,13 @@
+uuid: 55f1cbd0-14da-40dd-a2dc-0ece2bf6c925
 langcode: en
 status: true
 dependencies:
-  - block_content
-  - file
-  - image
+  module:
+    - block_content
+    - file
+    - image
+_core:
+  default_config_hash: p-VAemC1DVCGV3I50VapC-eF-h3TWu8FCfoFKMXzB-w
 id: block_content.learn_more_imperial
 field_name: learn_more_imperial
 entity_type: block_content

@@ -1,3 +1,4 @@
+uuid: 96790d36-a8b4-4f2f-a6c0-898aed7a8ac5
 langcode: en
 status: true
 dependencies:
@@ -6,6 +7,8 @@ dependencies:
     - field.storage.block_content.our_blogger_seal_tester_dixie
   module:
     - image
+_core:
+  default_config_hash: G4d6-epAv3FCNIUAw5FcuQhlxLT8fLWT_hUzXLoHYXI
 id: block_content.our_blogger.our_blogger_seal_tester_dixie
 field_name: our_blogger_seal_tester_dixie
 entity_type: block_content
@@ -30,7 +33,7 @@ settings:
     title: ''
     width: null
     height: null
-  file_directory: 'our_blogger'
+  file_directory: our_blogger
   max_filesize: '2 MB'
   handler: 'default:file'
   handler_settings: {  }

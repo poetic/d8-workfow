@@ -7,8 +7,10 @@ dependencies:
   module:
     - node
     - user
+_core:
+  default_config_hash: ex2O7az7CiTGaOBb-cVTwE_ddHOTciwsMsYdjf7M_uY
 id: related_news
-label: Related News
+label: 'Related News'
 module: views
 description: ''
 tag: ''
@@ -186,7 +188,7 @@ display:
   related_news:
     display_plugin: block
     id: related_news
-    display_title: Related News
+    display_title: 'Related News'
     position: 1
     display_options:
       display_extenders: {  }

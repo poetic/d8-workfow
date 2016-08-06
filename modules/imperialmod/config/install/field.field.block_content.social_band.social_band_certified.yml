@@ -1,9 +1,12 @@
+uuid: 25dc7d7f-ca7e-4cc8-9975-92955acfe5d5
 langcode: en
 status: true
 dependencies:
   config:
     - block_content.type.social_band
     - field.storage.block_content.social_band_certified
+_core:
+  default_config_hash: a3mVRK_jTbpRA1BWI1ynHFM4F_50tDTHL6DfbIGC_T4
 id: block_content.social_band.social_band_certified
 field_name: social_band_certified
 entity_type: block_content

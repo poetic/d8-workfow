@@ -7,8 +7,10 @@ dependencies:
   module:
     - node
     - user
+_core:
+  default_config_hash: rXZv5WNcHIcyaX8s0XpbHImOjEyic-Jz2s-hZWx-Wqs
 id: trending_collection
-label: Trending Collection
+label: 'Trending Collection'
 module: views
 description: ''
 tag: ''
@@ -186,7 +188,7 @@ display:
   trending_collection:
     display_plugin: block
     id: trending_collection
-    display_title: Trending Collection
+    display_title: 'Trending Collection'
     position: 1
     display_options:
       display_extenders: {  }

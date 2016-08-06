@@ -2,8 +2,10 @@ uuid: 2dd75632-978e-4802-b81e-0811bfa0d02d
 langcode: en
 status: true
 dependencies: {  }
+_core:
+  default_config_hash: VTGOYXjHcquh1gHxSjbjiSgSS6NmBdZfxpKBnjGIO-M
 id: subscribe
-label: 'Subscribe'
+label: Subscribe
 recipients: {  }
 reply: ''
 weight: 0

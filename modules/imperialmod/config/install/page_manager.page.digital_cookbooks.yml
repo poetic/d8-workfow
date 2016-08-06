@@ -1,8 +1,11 @@
+uuid: 31befc43-1a07-47b0-a7cc-cb2c9d3a90f2
 langcode: en
 status: true
 dependencies: {  }
+_core:
+  default_config_hash: WTIGw6lI7DPA2ABwpmutAJOJDaToIWK4cCSNabOC8Rg
 id: digital_cookbooks
-label: Digital Cookbooks
+label: 'Digital Cookbooks'
 use_admin_theme: null
 path: /digital-cookbooks
 access_logic: and

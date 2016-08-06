@@ -1,8 +1,12 @@
+uuid: 0e424673-a93b-4da1-ab65-ed135db1485a
 langcode: en
 status: true
 dependencies:
-  - block_content
-  - views
+  module:
+    - block_content
+    - views
+_core:
+  default_config_hash: jxGAiM1XVmMRcVKK0_2LpQrtkEdQpajJKDbZMqGYcf8
 id: block_content.our_blogger_teams_view
 field_name: our_blogger_teams_view
 entity_type: block_content

@@ -1,10 +1,13 @@
+uuid: fd5aaf4c-6b69-4aa5-aebf-c5b815f9f157
 langcode: en
 status: true
 dependencies:
   config:
-  - block_content.type.home_hero
-  - field.storage.block_content.home_hero_under_30_view
-  - views.view.under_30_view
+    - block_content.type.home_hero
+    - field.storage.block_content.home_hero_under_30_view
+    - views.view.under_30_view
+_core:
+  default_config_hash: uvtAK-nrRUOaoXFBCXOkU2hJaH3OGZowxdGDLPixG2I
 id: block_content.home_hero.home_hero_under_30_view
 field_name: home_hero_under_30_view
 entity_type: block_content

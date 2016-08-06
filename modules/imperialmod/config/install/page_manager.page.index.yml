@@ -1,6 +1,9 @@
+uuid: 52f4ef60-12f1-4d23-ab2f-8dcc08838150
 langcode: en
 status: true
 dependencies: {  }
+_core:
+  default_config_hash: jnFJtCsDJ7tlWlW5RWjOBohltvDWw4YZiToi_fgm-u0
 id: index
 label: Index
 use_admin_theme: null

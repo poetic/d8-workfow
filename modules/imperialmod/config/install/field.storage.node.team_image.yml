@@ -1,9 +1,13 @@
+uuid: 3c90b466-9236-4ea6-a1de-0309aeb09c84
 langcode: en
 status: true
 dependencies:
-  - node
-  - file
-  - image
+  module:
+    - file
+    - image
+    - node
+_core:
+  default_config_hash: LJL1WhGQYLFt85QWIIilbAiFe6la92lI0bBNfK9ql6I
 id: node.team_image
 field_name: team_image
 entity_type: node

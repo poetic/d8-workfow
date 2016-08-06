@@ -1,3 +1,4 @@
+uuid: 8c75edb2-f4c1-4dd3-9a67-1d6a3d31a183
 langcode: en
 status: true
 dependencies:
@@ -8,7 +9,9 @@ third_party_settings:
     available_menus:
       - main
     parent: 'main:'
-name: Kids Landing
+_core:
+  default_config_hash: CdXHfAK8kBrCF4tGwVsvHCA2d4t6_IOkbvxBitbtzLE
+name: 'Kids Landing'
 type: kids_landing
 description: 'Kids Landing'
 help: ''

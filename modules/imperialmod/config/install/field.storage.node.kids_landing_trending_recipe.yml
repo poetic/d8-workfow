@@ -1,8 +1,12 @@
+uuid: ea85b236-189d-41b2-b87d-706b900f131b
 langcode: en
 status: true
 dependencies:
-  - node
-  - views
+  module:
+    - node
+    - views
+_core:
+  default_config_hash: QMcskPcQAvWdSvbceO5vzzQK6cj63TWDCzAo_d3lWss
 id: node.kids_landing_trending_recipe
 field_name: kids_landing_trending_recipe
 entity_type: node

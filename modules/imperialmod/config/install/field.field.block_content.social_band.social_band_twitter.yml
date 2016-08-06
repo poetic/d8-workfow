@@ -1,3 +1,4 @@
+uuid: b6c9e736-bfb5-48be-b9e8-f7e851743296
 langcode: en
 status: true
 dependencies:
@@ -6,6 +7,8 @@ dependencies:
     - field.storage.block_content.social_band_twitter
   module:
     - link
+_core:
+  default_config_hash: Oo3cUU325q78r0j-TO3taCclvCX54YGY40ec1jsBJU0
 id: block_content.social_band.social_band_twitter
 field_name: social_band_twitter
 entity_type: block_content

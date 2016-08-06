@@ -1,9 +1,13 @@
+uuid: 16195ad6-dd6b-4ff6-9128-e630297adcb9
 langcode: en
 status: true
 dependencies:
-  - block_content
-  - file
-  - image
+  module:
+    - block_content
+    - file
+    - image
+_core:
+  default_config_hash: 2Tbfl7WYP0oQol6ggVnEcHbeHikAb97pSXRH_FfTXBI
 id: block_content.our_blogger_seal_tester
 field_name: our_blogger_seal_tester
 entity_type: block_content

@@ -1,10 +1,13 @@
+uuid: b1a205c8-796f-4ba1-bc15-cfadaae5b5f4
 langcode: en
 status: true
 dependencies:
   config:
-  - node.type.recipe_collection
-  - field.storage.node.recipe_collection_popular
-  - views.view.recipe_collection
+    - field.storage.node.recipe_collection_popular
+    - node.type.recipe_collection
+    - views.view.recipe_collection
+_core:
+  default_config_hash: DDQeGulp-OsOf4d4SBaasEG6ql1Q3L3ImzQl6YJJXH0
 id: node.recipe_collection.recipe_collection_popular
 field_name: recipe_collection_popular
 entity_type: node

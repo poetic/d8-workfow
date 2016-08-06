@@ -1,7 +1,10 @@
+uuid: de725bdc-65a4-4565-b770-7d62a2dc78dc
 langcode: en
 status: true
 dependencies: {  }
+_core:
+  default_config_hash: p0YAZtO19442283EUgADO1ZQlqQls2RY7YUYJFdytnQ
 id: home_projects
-label: Home Projects
+label: 'Home Projects'
 revision: 1
 description: 'Home Projects'

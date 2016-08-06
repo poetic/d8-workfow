@@ -1,9 +1,13 @@
+uuid: ac106708-02c9-42d2-ac34-ce4fd923772f
 langcode: en
 status: true
 dependencies:
-  - block_content
-  - file
-  - image
+  module:
+    - block_content
+    - file
+    - image
+_core:
+  default_config_hash: BR8JjwnngdI_kH9LL-12C-KXzjFzrb6zc82zmv0cNhU
 id: block_content.social_band_cert
 field_name: social_band_cert
 entity_type: block_content

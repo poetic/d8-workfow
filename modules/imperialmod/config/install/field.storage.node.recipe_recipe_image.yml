@@ -1,9 +1,13 @@
+uuid: eab7d001-0955-4c65-a7bb-4635efc9d211
 langcode: en
 status: true
 dependencies:
-  - node
-  - file
-  - image
+  module:
+    - file
+    - image
+    - node
+_core:
+  default_config_hash: tMZn2hUTwCWcd8dRon5uhRMvvJdAjPaRuYbVYHtxbws
 id: node.recipe_recipe_image
 field_name: recipe_recipe_image
 entity_type: node

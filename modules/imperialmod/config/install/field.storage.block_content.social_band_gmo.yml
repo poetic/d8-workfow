@@ -1,9 +1,13 @@
+uuid: 0ff62112-a9af-46ec-aaad-0b938753d2f0
 langcode: en
 status: true
 dependencies:
-  - block_content
-  - file
-  - image
+  module:
+    - block_content
+    - file
+    - image
+_core:
+  default_config_hash: Po2kMgVZ8GjM6PMGCpNbbAlMweXetuJNtHt0yr5ItlA
 id: block_content.social_band_gmo
 field_name: social_band_gmo
 entity_type: block_content

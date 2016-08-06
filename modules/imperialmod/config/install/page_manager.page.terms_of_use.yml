@@ -1,8 +1,11 @@
+uuid: 1d8fc6c2-da02-4ee5-b199-5019197b8c83
 langcode: en
 status: true
 dependencies: {  }
+_core:
+  default_config_hash: apv_408EssG9YmCNH8P0yFHmx52H8zA9XzRpQIa5pi0
 id: terms_of_use
-label: Terms Of Use
+label: 'Terms Of Use'
 use_admin_theme: null
 path: /terms-of-use
 access_logic: and

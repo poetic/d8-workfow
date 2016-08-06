@@ -1,8 +1,12 @@
+uuid: db590e24-605b-4d12-86da-17633a24369f
 langcode: en
 status: true
 dependencies:
-  - block_content
-  - link
+  module:
+    - block_content
+    - link
+_core:
+  default_config_hash: 4UC19nY6qJMl1IgZx9JbFCvv3iaP3XJwTCOG9SfgQ0g
 id: block_content.share_band_imperial_share
 field_name: share_band_imperial_share
 entity_type: block_content

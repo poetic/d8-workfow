@@ -1,9 +1,12 @@
+uuid: ddf16b7b-3e55-4195-95d8-7360769c80c8
 langcode: en
 status: true
 dependencies:
   config:
-  - block_content.type.footer
-  - field.storage.block_content.footer_footermenu
+    - block_content.type.footer
+    - field.storage.block_content.footer_footermenu
+_core:
+  default_config_hash: U-eTPey4-4fPIZRbyV2U92VB0vimeZ79QC4A4cVr74E
 id: block_content.footer.footer_footermenu
 field_name: footer_footermenu
 entity_type: block_content

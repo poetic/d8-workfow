@@ -1,6 +1,9 @@
+uuid: b0938a6b-89c2-4551-b6c9-e03b62e047f1
 langcode: en
 status: true
 dependencies: {  }
+_core:
+  default_config_hash: '-012Ee28BKwJH59TUIvxnrLrO7XD_-UZQD5eK8mMzL8'
 id: article
 label: Article
 use_admin_theme: null

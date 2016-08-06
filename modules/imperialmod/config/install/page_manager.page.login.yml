@@ -1,6 +1,9 @@
+uuid: 4f86e718-c4af-4aa3-a133-3229f18b5f9a
 langcode: en
 status: true
 dependencies: {  }
+_core:
+  default_config_hash: ImX7U3KnbbU-p6lIhOk1T2D-2qu9xMe2Fn56NbvnUo4
 id: login
 label: Login
 use_admin_theme: null

@@ -1,7 +1,10 @@
+uuid: 0fd9c355-7798-4203-8101-7b3f520d5b0c
 langcode: en
 status: true
 dependencies: {  }
+_core:
+  default_config_hash: SJjzdNhefFbuJwDyVhCB9Env8GsthkPC2f9w8sqXwWU
 id: section_mission
-label: Section Mission
+label: 'Section Mission'
 revision: 1
 description: 'Section Mission'

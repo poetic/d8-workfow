@@ -1,8 +1,12 @@
+uuid: aac3ed6d-d5bb-4112-8656-09dbc7c29cf4
 langcode: en
 status: true
 dependencies:
-  - node
-  - views
+  module:
+    - node
+    - views
+_core:
+  default_config_hash: t3CdqxciKgxxFqWPj_QlM5G1XG30WihA1iYMQxvpEHc
 id: node.recipe_collection_popular
 field_name: recipe_collection_popular
 entity_type: node

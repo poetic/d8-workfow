@@ -1,11 +1,14 @@
+uuid: 21f9eca2-54ac-48aa-a1d7-671daffc2072
 langcode: en
 status: true
 dependencies:
   config:
-    - node.type.sugar_101
     - field.storage.node.sugar_101_image
+    - node.type.sugar_101
   module:
     - image
+_core:
+  default_config_hash: q93JTsFY6vN-ko-m02yWxv2i5FXQwEV8Bn_wcvSDNUc
 id: node.sugar_101.sugar_101_image
 field_name: sugar_101_image
 entity_type: node
@@ -30,7 +33,7 @@ settings:
     title: ''
     width: null
     height: null
-  file_directory: 'sugar_101'
+  file_directory: sugar_101
   max_filesize: '2 MB'
   handler: 'default:file'
   handler_settings: {  }

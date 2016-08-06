@@ -1,7 +1,10 @@
+uuid: e6657c54-2eab-496b-be0b-4c3a4375ac07
 langcode: en
 status: true
 dependencies: {  }
+_core:
+  default_config_hash: MkaQeC8DmcRD7RqabospiVOwkHPL-maf9aVn5EQSWwE
 id: canesugar
-label: 'Canesugar'
+label: Canesugar
 description: null
 locked: false

@@ -1,8 +1,12 @@
+uuid: ef1c19bb-6af3-4be3-9e15-41fbf7900329
 langcode: en
 status: true
 dependencies:
-  - block_content
-  - link
+  module:
+    - block_content
+    - link
+_core:
+  default_config_hash: yB-T96fqSv2y00dTp8h6kEwE1_g894t95FWoVWM_3hM
 id: block_content.social_band_facebook
 field_name: social_band_facebook
 entity_type: block_content

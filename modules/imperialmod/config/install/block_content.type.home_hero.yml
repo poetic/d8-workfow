@@ -1,7 +1,10 @@
+uuid: 5c86b1d0-9c6c-446d-a962-b206b7418646
 langcode: en
 status: true
 dependencies: {  }
+_core:
+  default_config_hash: WLVR8ZOSmTO4EWKYVmjXSuqwYlE3UEVrpcyoFmpB0Uk
 id: home_hero
-label: Home Hero
+label: 'Home Hero'
 revision: 1
 description: 'Home Hero'

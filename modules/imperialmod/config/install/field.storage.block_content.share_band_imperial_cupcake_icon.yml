@@ -1,9 +1,13 @@
+uuid: 69c89387-b5ad-495d-99cf-d2166baf3f5a
 langcode: en
 status: true
 dependencies:
-  - block_content
-  - file
-  - image
+  module:
+    - block_content
+    - file
+    - image
+_core:
+  default_config_hash: 29JJ3jVcYMO6xA5VY9bWuYomRk_RZTq-QUoKCWX-2mM
 id: block_content.share_band_imperial_cupcake_icon
 field_name: share_band_imperial_cupcake_icon
 entity_type: block_content

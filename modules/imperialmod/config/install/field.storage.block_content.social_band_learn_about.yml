@@ -1,8 +1,12 @@
+uuid: c35ada3b-3f81-4eb9-88a9-4ddb1a10c2a3
 langcode: en
 status: true
 dependencies:
-  - block_content
-  - link
+  module:
+    - block_content
+    - link
+_core:
+  default_config_hash: rEVqbqGE4bnwo7s_O9XQnUWx8xZeh9eWjtGxjTlRvfo
 id: block_content.social_band_learn_about
 field_name: social_band_learn_about
 entity_type: block_content

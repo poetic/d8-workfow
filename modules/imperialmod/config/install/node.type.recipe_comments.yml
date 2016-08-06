@@ -1,3 +1,4 @@
+uuid: 5d7bfcce-2dc0-40e8-ba2d-ea535003d1db
 langcode: en
 status: true
 dependencies:
@@ -8,7 +9,9 @@ third_party_settings:
     available_menus:
       - main
     parent: 'main:'
-name: Recipe Comments
+_core:
+  default_config_hash: PbLAHzbiv-ognMW7FdbQA2V_-nwFFo5A6sgYvrTY7bs
+name: 'Recipe Comments'
 type: recipe_comments
 description: 'Recipe Comments'
 help: ''

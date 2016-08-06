@@ -1,6 +1,9 @@
+uuid: d182f3f3-cac4-4834-9100-77a0180245a2
 langcode: en
 status: true
 dependencies: {  }
+_core:
+  default_config_hash: iRfkChFUFCNFtVEitXvbIbMR1aZmhA7V5oD19m4XljA
 id: contest
 label: Contest
 use_admin_theme: null

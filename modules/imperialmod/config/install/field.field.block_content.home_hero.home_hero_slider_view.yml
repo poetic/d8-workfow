@@ -1,10 +1,13 @@
+uuid: ef71bde5-deec-4271-8848-f54d9b5fee83
 langcode: en
 status: true
 dependencies:
   config:
-  - block_content.type.home_hero
-  - field.storage.block_content.home_hero_slider_view
-  - views.view.slider_view
+    - block_content.type.home_hero
+    - field.storage.block_content.home_hero_slider_view
+    - views.view.slider_view
+_core:
+  default_config_hash: eGJDKLl9OXHldDhOnG9UH3mGwbqSIMzVMhW9gZBoE00
 id: block_content.home_hero.home_hero_slider_view
 field_name: home_hero_slider_view
 entity_type: block_content

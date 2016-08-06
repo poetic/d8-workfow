@@ -1,3 +1,4 @@
+uuid: c67a052f-0dd9-4241-9960-8516a0962f21
 langcode: en
 status: true
 dependencies:
@@ -6,6 +7,8 @@ dependencies:
     - field.storage.block_content.footer_imperial_products
   module:
     - image
+_core:
+  default_config_hash: RxMFIf_yMt20H-eapbtbzm0dJ7Ep6vDNQ0W8a5Dho1k
 id: block_content.footer.footer_imperial_products
 field_name: footer_imperial_products
 entity_type: block_content
@@ -30,7 +33,7 @@ settings:
     title: ''
     width: null
     height: null
-  file_directory: 'footer'
+  file_directory: footer
   max_filesize: '2 MB'
   handler: 'default:file'
   handler_settings: {  }

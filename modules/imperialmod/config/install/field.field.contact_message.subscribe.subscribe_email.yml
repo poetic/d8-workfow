@@ -1,14 +1,17 @@
+uuid: e8e2a421-7fa5-4ff7-bcb6-d50380fa4fa6
 langcode: en
 status: true
 dependencies:
   config:
     - contact.form.subscribe
     - field.storage.contact_message.subscribe_email
+_core:
+  default_config_hash: mQ-aVzJ7CIVelhuUn9-QSwyM30UyWiAhF5DXeLKu6iE
 id: contact_message.subscribe.subscribe_email
 field_name: subscribe_email
 entity_type: contact_message
 bundle: subscribe
-label: Subscribe Email
+label: 'Subscribe Email'
 description: ''
 required: false
 translatable: true

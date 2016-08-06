@@ -7,8 +7,10 @@ dependencies:
   module:
     - node
     - user
+_core:
+  default_config_hash: 72E3cdRmUTv1gxh2T44OZUxyMIMHQ3ghpLpy7x9qBZ8
 id: collection_kids
-label: Collection Kids
+label: 'Collection Kids'
 module: views
 description: ''
 tag: ''
@@ -186,7 +188,7 @@ display:
   collection_kids:
     display_plugin: block
     id: collection_kids
-    display_title: Collection Kids
+    display_title: 'Collection Kids'
     position: 1
     display_options:
       display_extenders: {  }

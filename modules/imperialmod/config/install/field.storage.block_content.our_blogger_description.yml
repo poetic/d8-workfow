@@ -1,9 +1,12 @@
+uuid: 77a1ef29-6300-47f0-8629-d7731c345df1
 langcode: en
 status: true
 dependencies:
   module:
     - block_content
     - text
+_core:
+  default_config_hash: 1EvJJ6sE9JJ_KohfThPtvV2y9WTN82poM-ZhjRa988k
 id: block_content.our_blogger_description
 field_name: our_blogger_description
 entity_type: block_content

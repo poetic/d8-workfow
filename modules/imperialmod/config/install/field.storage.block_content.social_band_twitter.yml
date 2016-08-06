@@ -1,8 +1,12 @@
+uuid: 4c9fd018-bef1-436c-bfe4-93a7bfeaadaf
 langcode: en
 status: true
 dependencies:
-  - block_content
-  - link
+  module:
+    - block_content
+    - link
+_core:
+  default_config_hash: lfgoFLK7NSv7RknQNcVmMvSDndSQLKgFrNQn4zCK81g
 id: block_content.social_band_twitter
 field_name: social_band_twitter
 entity_type: block_content

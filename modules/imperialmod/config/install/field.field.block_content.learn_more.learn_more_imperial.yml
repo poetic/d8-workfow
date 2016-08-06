@@ -1,3 +1,4 @@
+uuid: 7bc5a122-746e-4853-a865-b5346d404bdc
 langcode: en
 status: true
 dependencies:
@@ -6,6 +7,8 @@ dependencies:
     - field.storage.block_content.learn_more_imperial
   module:
     - image
+_core:
+  default_config_hash: '-_p9tt2K2GfBI5RYMEYsIXrOyADlWG36HbtAXj0euAY'
 id: block_content.learn_more.learn_more_imperial
 field_name: learn_more_imperial
 entity_type: block_content
@@ -30,7 +33,7 @@ settings:
     title: ''
     width: null
     height: null
-  file_directory: 'learn_more'
+  file_directory: learn_more
   max_filesize: '2 MB'
   handler: 'default:file'
   handler_settings: {  }
