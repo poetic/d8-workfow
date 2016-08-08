@@ -512,34 +512,40 @@
           </div>
           <div class="rcp-main summary">
             <h6 class="rcp-main secondary">Prep</h6>
-            <div class="dynamic-data rcp-main rcp-summary-data">1</div>
+            <div class="dynamic-data rcp-main rcp-summary-data">{{content.field_prep_hour}}</div>
             <div class="rcp-main rcp-summary-data">hr</div>
-            <div class="dynamic-data rcp-main rcp-summary-data">20</div>
+            <div class="dynamic-data rcp-main rcp-summary-data">{{content.field_prep_minute}}</div>
             <div class="rcp-main rcp-summary-data">mins</div>
           </div>
           <div class="rcp-main summary">
             <h6 class="rcp-main secondary">Cook</h6>
-            <div class="dynamic-data rcp-main rcp-summary-data">20</div>
+            <div class="dynamic-data rcp-main rcp-summary-data">
+            {{content.field_cook_hour}}</div>
+            <div class="rcp-main rcp-summary-data">hr</div>
+            <div class="dynamic-data rcp-main rcp-summary-data">{{content.field_cook_minute}}</div>
             <div class="rcp-main rcp-summary-data">mins</div>
           </div>
           <div class="rcp-main summary">
             <h6 class="rcp-main secondary">Freeze</h6>
-            <div class="dynamic-data rcp-main rcp-summary-data">2</div>
+            <div class="dynamic-data rcp-main rcp-summary-data">{{content.field_freeze_hour}}</div>
             <div class="rcp-main rcp-summary-data">hrs</div>
+            <div class="dynamic-data rcp-main rcp-summary-data">{{content.field_freeze_minute}}</div>
+            <div class="rcp-main rcp-summary-data">mins</div>
           </div>
           <div class="rcp-main summary">
             <h6 class="rcp-main secondary">Rest</h6>
-            <div class="dynamic-data rcp-main rcp-summary-data">45</div>
+            <div class="dynamic-data rcp-main rcp-summary-data">{{content.field_rest_hour}}</div>
+            <div class="rcp-main rcp-summary-data">hrs</div>
+            <div class="dynamic-data rcp-main rcp-summary-data">{{content.field_rest_minute}}</div>
             <div class="rcp-main rcp-summary-data">mins</div>
           </div>
           <div class="rcp-main summary">
             <h6 class="rcp-main secondary">Decorate</h6>
-            <div class="dynamic-data rcp-main rcp-summary-data">1</div>
+            <div class="dynamic-data rcp-main rcp-summary-data">{{content.field_decorate_hour}}</div>
             <div class="rcp-main rcp-summary-data">hr</div>
-            <div class="dynamic-data rcp-main rcp-summary-data">20</div>
+            <div class="dynamic-data rcp-main rcp-summary-data">{{content.field_decorate_minute}}</div>
             <div class="rcp-main rcp-summary-data">mins</div>
           </div>
-          
 
           <div class="rcp-seals-wrapper" data-vocabulary="seals">
             {% set count = content.field_recipe_seals['#items'].value|length %}

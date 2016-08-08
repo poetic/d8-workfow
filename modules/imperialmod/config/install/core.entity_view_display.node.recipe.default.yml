@@ -138,7 +138,7 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    type: entity_reference_label
+    type: entity_reference_entity_view
   field_rest_hour:
     weight: 22
     label: hidden

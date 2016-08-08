@@ -40,16 +40,17 @@ function custom_config_help($route_name, RouteMatchInterface $route_match) {
 
 function custom_config_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
   if($form['#id'] == "node-recipe-form") {
+    // dump($form);
     $form['title']['widget']['0']['value']['#attributes']['placeholder'] = "Recipe name";
     $form['title']['widget']['0']['value']['#attributes']['class'][] = 'form-field-66-pc w-input';
     $form['title']['widget']['0']['value']['#title_display'] = "none";
 
-    $form['field_description']['widget']['0']['value']['#title_display'] = "none";
-    $form['field_description']['widget']['0']['value']['#attributes']['placeholder'][] = "What is the sotry? Did you invent this recipe or has it been handed down through generations?";
-    $form['field_description']['widget']['0']['value']['#attributes']['class'][] = "js-text-full text-full form-multi-line-text-heigh w-input form-textarea required";
+    $form['recipe_description']['widget']['0']['#title_display'] = "none";
+    $form['recipe_description']['widget']['0']['value']['#attributes']['placeholder'][] = "What is the sotry? Did you invent this recipe or has it been handed down through generations?";
+    $form['recipe_description']['widget']['0']['value']['#attributes']['class'][] = "js-text-full text-full form-multi-line-text-heigh w-input form-textarea required";
     
     $form['recipe_recipe_image']['widget']['0']['value']['#title_display'] = "none";
-    $form['recipe_recipe_image']['widget']['0']['upload_button']['#attributes']['class'][] = "btn btn-sm form-btn-position w-button";
+    // $form['recipe_recipe_image']['widget']['0']['upload_button']['#attributes']['class'][] = "btn btn-sm form-btn-position w-button";
     
     // bye bye title display
     $form['field_prep_hour']['widget']['0']['value']['#title_display'] = "none";
@@ -93,11 +94,12 @@ function custom_config_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $
 
     $form['field_recipe_ingredients']['widget']['0']['value']['#title_display'] = "none";
 
-    $form['recipe_directions']['widget']['0']['value']['#title_display'] = "none";
-    $form['recipe_directions']['widget']['0']['value']['#attributes']['class'][] = "form-multi-line-text-heigh w-input"; 
-    $form['recipe_directions']['widget']['0']['value']['#attributes']['placeholder'][] = "Add your step-by-step instructions";
+    $form['recipe_directions']['widget']['0']['#title_display'] = "none";
+    $form['recipe_directions']['widget']['0']['#attributes']['class'][] = "form-multi-line-text-heigh w-input"; 
+    $form['recipe_directions']['widget']['0']['#attributes']['placeholder'][] = "Add your step-by-step instructions";
     $form['recipe_directions']['widget']['0']['#discription'] = 'Pretend we are in your kitchen and you want to walk us through, step by step, how to make your dish. Keep in mind we’ve never made this exact recipe before, so be descriptive and provide lots of details. For example “Remove chicken from oven and drain off excess liquid. Pour on half of prepared sauce and cook in oven for 45-60 minutes at reduced temperature of 350°F."';
 
+    $form['actions']['submit']['#attributes']['class'][] = "btn btn-form btn-submit w-button";
     // $form['field_tips']['widget']['0']['value']['#attributes']['placeholder'][] = "Eg. Don’t forget to let the cake sit for 30 mins before your guests arrive";
 
     // $form['field_comment_']['widget']['0']['value']['#attributes']['class'][] = "form-multi-line-text-heigh w-input";
@@ -120,6 +122,7 @@ function custom_config_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $
 
   
 }
+
 
 
 function custom_config_comment_create($entity) {

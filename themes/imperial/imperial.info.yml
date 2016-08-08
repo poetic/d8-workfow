@@ -8,6 +8,9 @@ libraries:
   - imperial/global-css
   - imperial/global-js
   
+ckeditor_stylesheets:
+  - imperial/global-css
+  
 region:
   header:   Header
   content:  Content

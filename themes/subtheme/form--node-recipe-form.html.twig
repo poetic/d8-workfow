@@ -134,7 +134,6 @@
 						<label class="label-w-tooltip" for="Recipe-name">Step-by-Step instructions</label>
 					</div>
 					<div class="_75-pc">
-						<!-- <textarea class="form-multi-line-text-heigh w-input" data-name="Instructions" id="Instructions" maxlength="5000" name="Instructions" placeholder="Add your step-by-step instructions"></textarea> -->
 						{{element.recipe_directions}}
 						<p class="body-sm">
 							
@@ -157,14 +156,9 @@
 				<p>Select any categories that apply to your recipe</p>
 					
 				<div class="form-input-wrapper">
-					<h4>Course</h4>
-					{%
-					  set classes = [
-					    'display-none',
-					    'w-checkbox-input',
-					  ]
-					%}
-					{% for tax in element.field_recipe_tags.widget %}
+				  {%if is_admin%}
+					<h4>Seals</h4>
+					{% for tax in element.field_recipe_seals.widget %}
 						{% if tax['#type'] == "checkbox" %}
 							<div class="clickable-tag-wrapper w-checkbox w-clearfix js-form-item form-item js-form-type-checkbox">
 								<input drupal-data-selector="{{tax['#attribute']['data-drupal-selector']}}" value="{{tax['#attributes']['value']}}" class=" display-none w-checkbox-input form-checkbox" data-name="{{ tax['#name'] }}" id="{{ tax['#id'] }}" name="{{ tax['#name'] }}" type="checkbox">	
@@ -172,6 +166,7 @@
 							</div>
 						{% endif %}
 					{% endfor %}
+				  {% endif %}
 				</div>
 				<div class="extra-margin separator-line"></div>
 				<h3 class="txt-centered">Submit your Recipe</h3>
@@ -181,12 +176,15 @@
 				</div>
 				<div class="txt-centered">
 					<a class="btn btn-form w-button" href="#">Cancel</a>
-					<input class="btn btn-form btn-submit w-button" data-wait="Please wait..." type="submit" value="Submit Recipe!"></div>
-				{{element.render_children}}
-				{{element.form_token}}
-				{{element.form_build_id}}
-				{{element.form_id}}
-				{{element.actions}}
+					{{element.actions}}
+					<!-- <input class="btn btn-form btn-submit w-button" data-wait="Please wait..." type="submit" value="Submit Recipe!"> -->
+					{{element.render_children}}
+					{{element.form_token}}
+					{{element.form_build_id}}
+					{{element.form_id}}
+					
+				</div>
+				
 			</form>
 		</div>
 	</div>

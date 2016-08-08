@@ -124,7 +124,7 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: entity_reference_autocomplete
+    type: options_buttons
   field_rest_hour:
     weight: 37
     settings:
