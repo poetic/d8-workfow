@@ -86,8 +86,10 @@ function subtheme_preprocess_form(&$variables){
   if($variables['element']['#form_id'] == "comment_recipe_comment_form") {
     $user_id = $variables['user']->id();
     $user_node = \Drupal\user\Entity\User::load($user_id);
-    $file_url = $user_node->field_account_image->entity->url();
-    $variables['user_image_url'] = $file_url;
+    if(!is_null($user_node->field_account_image->entity)) {
+      $file_url = $user_node->field_account_image->entity->url();
+      $variables['user_image_url'] = $file_url;
+    }
   }
 }
 

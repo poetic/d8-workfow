@@ -1,0 +1,85 @@
+uuid: b64f877b-b7bb-439b-9f18-b928b7d82330
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.list
+    - field.field.node.recipe.field_cook_hour
+    - field.field.node.recipe.field_cook_minute
+    - field.field.node.recipe.field_decorate_hour
+    - field.field.node.recipe.field_decorate_minute
+    - field.field.node.recipe.field_freeze_hour
+    - field.field.node.recipe.field_freeze_minute
+    - field.field.node.recipe.field_prep_hour
+    - field.field.node.recipe.field_prep_minute
+    - field.field.node.recipe.field_rating_average
+    - field.field.node.recipe.field_recipe_comments
+    - field.field.node.recipe.field_recipe_ingredients
+    - field.field.node.recipe.field_recipe_seals
+    - field.field.node.recipe.field_recipe_tags
+    - field.field.node.recipe.field_rest_hour
+    - field.field.node.recipe.field_rest_minute
+    - field.field.node.recipe.field_video_url
+    - field.field.node.recipe.recipe_description
+    - field.field.node.recipe.recipe_directions
+    - field.field.node.recipe.recipe_handy_tips
+    - field.field.node.recipe.recipe_recipe_image
+    - field.field.node.recipe.recipe_yield
+    - node.type.recipe
+  module:
+    - image
+    - user
+_core:
+  default_config_hash: p_lgj44h7y0XhzqlbFh5hiutLF1OmxGQtB9GjzDOCD0
+id: node.recipe.list
+targetEntityType: node
+bundle: recipe
+mode: list
+content:
+  field_rating_average:
+    type: number_unformatted
+    weight: 3
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+  flag_bookmark:
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+  flag_favorite:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+  links:
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+  recipe_recipe_image:
+    type: image
+    weight: 4
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: ''
+    third_party_settings: {  }
+hidden:
+  field_cook_hour: true
+  field_cook_minute: true
+  field_decorate_hour: true
+  field_decorate_minute: true
+  field_freeze_hour: true
+  field_freeze_minute: true
+  field_prep_hour: true
+  field_prep_minute: true
+  field_recipe_comments: true
+  field_recipe_ingredients: true
+  field_recipe_seals: true
+  field_recipe_tags: true
+  field_rest_hour: true
+  field_rest_minute: true
+  field_video_url: true
+  recipe_description: true
+  recipe_directions: true
+  recipe_handy_tips: true
+  recipe_recipe_image: true
+  recipe_yield: true
