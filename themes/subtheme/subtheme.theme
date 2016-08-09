@@ -56,16 +56,16 @@ function subtheme_preprocess_block(array &$variables) {
   //   $entity = $variables['content']['#block_content'];
   //   $bundle = $entity->bundle();
 
-  //   $fields_definition = $entity->getFieldDefinitions();
-  //   foreach($fields_definition as $field_definition) {
-  //    if(!empty($field_definition->getTargetBundle()) && $field_definition->get('field_type') == 'entity_reference') { 
-  //       $entity_reference_field = collectFieldValues($entity, $field_definition);
-  //       if($entity_reference_field) {
-  //         $key = key($entity_reference_field);
-  //         $variables['content'][$key] = ($entity_reference_field[$key]);
-  //       }
-  //     }
-  //   }
+    $fields_definition = $entity->getFieldDefinitions();
+    foreach($fields_definition as $field_definition) {
+     if(!empty($field_definition->getTargetBundle()) && $field_definition->get('field_type') == 'entity_reference') { 
+        $entity_reference_field = collectFieldValues($entity, $field_definition);
+        if($entity_reference_field) {
+          $key = key($entity_reference_field);
+          $variables['content'][$key] = ($entity_reference_field[$key]);
+        }
+      }
+    }
   //   $variables['main_menu'] = subtheme_get_menu('main_menu');
   //   $variables['top_menu'] = subtheme_get_menu('top-menu');
   // }
@@ -148,7 +148,7 @@ function subtheme_preprocess_comment(&$variables) {
 
 function subtheme_preprocess_form_element(&$variable){
   if ($variable['type']=="checkbox"){
-    $variable['element']['#attributes']['class'][] = "display-none w-checkbox-input";
+    // $variable['element']['#attributes']['class'][] = "display-none w-checkbox-input";
   }
 }
 
@@ -210,5 +210,5 @@ function subtheme_theme_suggestions_node_alter(array &$suggestions, array $varia
 
 function subtheme_theme_suggestions_form_alter(array &$suggestions, array $variables) {
   $suggestions[] = 'form__' . $variables['element']['#form_id'];
-  $suggestions[] = 'form_element__' . $variables['element']['field_category_course']['widget']['#title'];
+  // $suggestions[] = 'form_element__' . $variables['element']['field_category_course']['widget']['#title'];
 }

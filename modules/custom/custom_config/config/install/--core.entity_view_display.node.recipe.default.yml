@@ -1,4 +1,4 @@
-uuid: fa8a6e74-10b5-43f8-836c-87601b6a07b3
+uuid: 547df950-bff7-4eca-bc71-c3008893e962
 langcode: en
 status: true
 dependencies:
@@ -24,6 +24,7 @@ dependencies:
     - field.field.node.recipe.recipe_handy_tips
     - field.field.node.recipe.recipe_recipe_image
     - field.field.node.recipe.recipe_yield
+    - image.style.recipe_image_node_full
     - node.type.recipe
   module:
     - comment
@@ -137,6 +138,7 @@ content:
     label: hidden
     settings:
       link: true
+      view_mode: default
     third_party_settings: {  }
     type: entity_reference_entity_view
   field_rest_hour:
@@ -205,7 +207,7 @@ content:
     type: image
     weight: 0
     settings:
-      image_style: ''
+      image_style: recipe_image_node_full
       image_link: ''
     third_party_settings: {  }
   recipe_yield:
