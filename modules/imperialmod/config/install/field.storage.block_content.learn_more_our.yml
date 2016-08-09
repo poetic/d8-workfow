@@ -1,11 +1,7 @@
-uuid: 0d37783f-068d-4080-b061-e0aa60d0d6f9
 langcode: en
 status: true
 dependencies:
-  module:
-    - block_content
-_core:
-  default_config_hash: FNnu8Y7VAPY_u2VhU5ZHJgCzNf45XoklEHJrRk6dD6Q
+  - block_content
 id: block_content.learn_more_our
 field_name: learn_more_our
 entity_type: block_content

@@ -1,11 +1,7 @@
-uuid: 5e06c789-4e61-4997-aa43-12216ac0a262
 langcode: en
 status: true
 dependencies:
-  module:
-    - block_content
-_core:
-  default_config_hash: gjPIhzKJPeeSeEdbUxbONp9lRZNQ3pvLLCklZ8LxvKk
+  - block_content
 id: block_content.home_hero_under_30
 field_name: home_hero_under_30
 entity_type: block_content

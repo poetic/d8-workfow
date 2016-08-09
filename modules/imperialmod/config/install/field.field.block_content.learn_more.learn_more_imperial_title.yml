@@ -1,12 +1,9 @@
-uuid: 79d91005-55d8-45c6-9474-cd360e490cdf
 langcode: en
 status: true
 dependencies:
   config:
     - block_content.type.learn_more
     - field.storage.block_content.learn_more_imperial_title
-_core:
-  default_config_hash: JGM-cRmIPXd_QH9sBls5ygI4XQqu7YQlmATfAaM-OOM
 id: block_content.learn_more.learn_more_imperial_title
 field_name: learn_more_imperial_title
 entity_type: block_content

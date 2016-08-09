@@ -1,14 +1,11 @@
-uuid: 0816fe8c-12c0-499d-a82e-514d1fe3e7c2
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.team_image
     - node.type.team
+    - field.storage.node.team_image
   module:
     - image
-_core:
-  default_config_hash: xcj33G84yY9ccBmWAK3ZQeqdrrjMC_XSYgleYpTJgxk
 id: node.team.team_image
 field_name: team_image
 entity_type: node
@@ -33,7 +30,7 @@ settings:
     title: ''
     width: null
     height: null
-  file_directory: team
+  file_directory: 'team'
   max_filesize: '2 MB'
   handler: 'default:file'
   handler_settings: {  }

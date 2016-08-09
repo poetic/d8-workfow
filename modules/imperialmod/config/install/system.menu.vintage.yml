@@ -1,10 +1,7 @@
-uuid: da67c594-8d44-4dcb-a637-0d4dfea5d534
 langcode: en
 status: true
 dependencies: {  }
-_core:
-  default_config_hash: aKH5s5aN7INHgd_ZCskWhuZbVzyWSUSm2fW8dwV794I
 id: vintage
-label: Vintage
+label: 'Vintage'
 description: null
 locked: false

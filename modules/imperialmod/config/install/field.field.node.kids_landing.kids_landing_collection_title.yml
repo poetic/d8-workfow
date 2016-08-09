@@ -1,12 +1,9 @@
-uuid: d5881a58-1856-4ab0-b8f9-340b264d5930
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.kids_landing_collection_title
     - node.type.kids_landing
-_core:
-  default_config_hash: pwaEHZXx7P3jOsBFqYHrFi5_WkuO9TMl7cYEDX0aZ7w
+    - field.storage.node.kids_landing_collection_title
 id: node.kids_landing.kids_landing_collection_title
 field_name: kids_landing_collection_title
 entity_type: node

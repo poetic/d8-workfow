@@ -1,13 +1,10 @@
-uuid: 9ed399d9-eb29-4719-89f0-0ffb6c903e06
 langcode: en
 status: true
 dependencies:
   config:
-    - block_content.type.main_block
-    - field.storage.block_content.main_block_trending
-    - views.view.trending
-_core:
-  default_config_hash: 2dhSVwbedgWSFI5cEhpdIHBgahk0uDALI_iBQUAnDRA
+  - block_content.type.main_block
+  - field.storage.block_content.main_block_trending
+  - views.view.trending
 id: block_content.main_block.main_block_trending
 field_name: main_block_trending
 entity_type: block_content

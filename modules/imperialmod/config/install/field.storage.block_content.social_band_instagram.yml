@@ -1,12 +1,8 @@
-uuid: c6aa203a-7807-4096-97d3-c73ea4019200
 langcode: en
 status: true
 dependencies:
-  module:
-    - block_content
-    - link
-_core:
-  default_config_hash: 6V0M-K_B5jUKp0X2J-WzoldX5BzuV30AujkT_cJN0q4
+  - block_content
+  - link
 id: block_content.social_band_instagram
 field_name: social_band_instagram
 entity_type: block_content

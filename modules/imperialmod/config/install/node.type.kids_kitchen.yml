@@ -1,4 +1,3 @@
-uuid: 9d052be5-3c1d-4db6-93ca-6745e13ae811
 langcode: en
 status: true
 dependencies:
@@ -9,9 +8,7 @@ third_party_settings:
     available_menus:
       - main
     parent: 'main:'
-_core:
-  default_config_hash: DPa-7AoSesCKPePEqUse3buiayuLa2c9PoI_00ZvT2U
-name: 'Kids Kitchen'
+name: Kids Kitchen
 type: kids_kitchen
 description: 'Kids Kitchen'
 help: ''

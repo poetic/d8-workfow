@@ -1,10 +1,7 @@
-uuid: 82c10c7b-3bbd-4e18-8142-da6f0cad8ee6
 langcode: en
 status: true
 dependencies: {  }
-_core:
-  default_config_hash: qOmYGWyvPC-724_OcFAePtQxp9R4henS_VgWxK44-yM
 id: social_band
-label: 'Social Band'
+label: Social Band
 revision: 1
 description: 'Social Band'

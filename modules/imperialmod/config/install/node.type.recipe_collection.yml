@@ -1,4 +1,3 @@
-uuid: ec6ca263-098b-4ab5-b4d1-bdc194794bb6
 langcode: en
 status: true
 dependencies:
@@ -9,9 +8,7 @@ third_party_settings:
     available_menus:
       - main
     parent: 'main:'
-_core:
-  default_config_hash: ZdcL50cvw8uHjbMGlUDlTQeCG8e_HQpmkkJQbpkQwt8
-name: 'Recipe Collection'
+name: Recipe Collection
 type: recipe_collection
 description: 'Recipe Collection'
 help: ''

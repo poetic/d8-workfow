@@ -1,12 +1,9 @@
-uuid: e29e59a1-5583-4b23-a97c-61e4664980b3
 langcode: en
 status: true
 dependencies:
   config:
-    - block_content.type.header
-    - field.storage.block_content.header_main
-_core:
-  default_config_hash: oemOCrLtU6fTjN5DtMrt3ygS9hYL04O_IYkcCjj0E4I
+  - block_content.type.header
+  - field.storage.block_content.header_main
 id: block_content.header.header_main
 field_name: header_main
 entity_type: block_content

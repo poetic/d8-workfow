@@ -7,10 +7,8 @@ dependencies:
   module:
     - node
     - user
-_core:
-  default_config_hash: BnckZza5WanBfRoM8alXb7iz6pLo5Pq9diGvfLqP_GA
 id: tester_team
-label: 'Tester Team'
+label: Tester Team
 module: views
 description: ''
 tag: ''
@@ -188,7 +186,7 @@ display:
   tester_team:
     display_plugin: block
     id: tester_team
-    display_title: 'Tester Team'
+    display_title: Tester Team
     position: 1
     display_options:
       display_extenders: {  }

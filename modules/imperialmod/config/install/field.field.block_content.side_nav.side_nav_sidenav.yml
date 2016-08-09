@@ -1,12 +1,9 @@
-uuid: 4e576007-5938-4b1c-9b67-4066c0061161
 langcode: en
 status: true
 dependencies:
   config:
-    - block_content.type.side_nav
-    - field.storage.block_content.side_nav_sidenav
-_core:
-  default_config_hash: BNZ3UohewDeMb-QeLodmkXi6FO5GqbyoSDLukmSZUmo
+  - block_content.type.side_nav
+  - field.storage.block_content.side_nav_sidenav
 id: block_content.side_nav.side_nav_sidenav
 field_name: side_nav_sidenav
 entity_type: block_content

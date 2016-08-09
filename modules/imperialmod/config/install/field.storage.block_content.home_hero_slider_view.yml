@@ -1,12 +1,8 @@
-uuid: 4fcc06a0-c273-492d-bd2e-9b1bcbd13bfa
 langcode: en
 status: true
 dependencies:
-  module:
-    - block_content
-    - views
-_core:
-  default_config_hash: 4a0HmBPiwOW3Oi3ER1rAkICBSg7AedGYljmE1xuaksg
+  - block_content
+  - views
 id: block_content.home_hero_slider_view
 field_name: home_hero_slider_view
 entity_type: block_content

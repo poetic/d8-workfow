@@ -1,4 +1,3 @@
-uuid: 5cb8710f-a45a-49c6-bc3f-814272d9f5e2
 langcode: en
 status: true
 dependencies:
@@ -7,8 +6,6 @@ dependencies:
     - field.storage.block_content.footer_dixie_logo
   module:
     - image
-_core:
-  default_config_hash: jnSs_NFGEk0QlxFHkTkFC3nMFgyI8IO0x_EZA_fiOdM
 id: block_content.footer.footer_dixie_logo
 field_name: footer_dixie_logo
 entity_type: block_content
@@ -33,7 +30,7 @@ settings:
     title: ''
     width: null
     height: null
-  file_directory: footer
+  file_directory: 'footer'
   max_filesize: '2 MB'
   handler: 'default:file'
   handler_settings: {  }

@@ -1,4 +1,3 @@
-uuid: 0afbaa66-06f1-4ca6-9735-5364052ea791
 langcode: en
 status: true
 dependencies:
@@ -7,8 +6,6 @@ dependencies:
     - field.storage.block_content.social_band_learn_about
   module:
     - link
-_core:
-  default_config_hash: LgqgRpEzRK0G9JtXjfoPrBon0-lwCgvr4rsBrY4yNkE
 id: block_content.social_band.social_band_learn_about
 field_name: social_band_learn_about
 entity_type: block_content

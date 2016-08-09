@@ -1,9 +1,6 @@
-uuid: 76755c1d-b389-43a9-81d5-1d2958e485fb
 langcode: en
 status: true
 dependencies: {  }
-_core:
-  default_config_hash: zWHzIDlqUsAsbR-UMDOdG46iSvmgNQCGSdfrrBzyMp4
 id: contact
 label: Contact
 use_admin_theme: null

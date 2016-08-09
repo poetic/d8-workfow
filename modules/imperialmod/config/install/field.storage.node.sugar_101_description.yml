@@ -1,11 +1,7 @@
-uuid: b3811132-9c48-45e3-8bf8-4ba823c39f9a
 langcode: en
 status: true
 dependencies:
-  module:
-    - node
-_core:
-  default_config_hash: NJiEw3ENPaDFo5V1mZ9QidESmrKC7EjnGX1cmW5E2VQ
+  - node
 id: node.sugar_101_description
 field_name: sugar_101_description
 entity_type: node

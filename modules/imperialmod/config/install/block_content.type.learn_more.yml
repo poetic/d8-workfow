@@ -1,10 +1,7 @@
-uuid: 6274e4c9-eec6-4171-9347-bfef2cbfee43
 langcode: en
 status: true
 dependencies: {  }
-_core:
-  default_config_hash: UjExOmBJOWzVeTA_y0BwostqoMKH6vsJXfVjzvCrUjQ
 id: learn_more
-label: 'Learn More'
+label: Learn More
 revision: 1
 description: 'Learn More'

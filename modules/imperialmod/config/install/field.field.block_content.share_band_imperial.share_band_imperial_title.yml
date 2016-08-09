@@ -1,12 +1,9 @@
-uuid: 47d6289e-7a75-493f-b9ef-820865ec3ff7
 langcode: en
 status: true
 dependencies:
   config:
     - block_content.type.share_band_imperial
     - field.storage.block_content.share_band_imperial_title
-_core:
-  default_config_hash: tVZ5_vGpvx--iJbZOstW5p1D83cmRK_rEfCdIOg8mJ0
 id: block_content.share_band_imperial.share_band_imperial_title
 field_name: share_band_imperial_title
 entity_type: block_content

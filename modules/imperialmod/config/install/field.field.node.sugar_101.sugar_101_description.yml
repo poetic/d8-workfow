@@ -1,12 +1,9 @@
-uuid: b80021b5-b8ba-42a5-99f0-3ed7731f2019
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.sugar_101_description
     - node.type.sugar_101
-_core:
-  default_config_hash: eSpFet60COgMCeftsPqzogx7kiKpK_JOf8I0Gw8FOrs
+    - field.storage.node.sugar_101_description
 id: node.sugar_101.sugar_101_description
 field_name: sugar_101_description
 entity_type: node

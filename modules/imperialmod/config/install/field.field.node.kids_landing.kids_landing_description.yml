@@ -1,4 +1,3 @@
-uuid: a76926e8-6f28-4f2c-a57e-5a05b0027b1d
 langcode: en
 status: true
 dependencies:
@@ -7,8 +6,6 @@ dependencies:
     - node.type.kids_landing
   module:
     - text
-_core:
-  default_config_hash: VCwDj0E2sR_UzoaIiXoPUbyfX49AYDeLZ4wUalLXIV8
 id: node.kids_landing.kids_landing_description
 field_name: kids_landing_description
 entity_type: node

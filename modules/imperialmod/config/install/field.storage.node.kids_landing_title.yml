@@ -1,11 +1,7 @@
-uuid: 9537f4ae-9ac5-46df-b0ba-2b38918910d7
 langcode: en
 status: true
 dependencies:
-  module:
-    - node
-_core:
-  default_config_hash: 1--_P60tCOQGMTIrEjO37j539Ce2OdpOA7nw9ma_juo
+  - node
 id: node.kids_landing_title
 field_name: kids_landing_title
 entity_type: node

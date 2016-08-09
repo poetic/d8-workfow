@@ -7,8 +7,6 @@ dependencies:
   module:
     - node
     - user
-_core:
-  default_config_hash: bNu3b_xgveQhGcuIbUcrl211E44seFLXVGPiCtIYsek
 id: trending
 label: Trending
 module: views

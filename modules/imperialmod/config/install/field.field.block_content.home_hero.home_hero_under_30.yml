@@ -1,12 +1,9 @@
-uuid: 09e4a114-d481-4f89-a968-3ece44e7ecbb
 langcode: en
 status: true
 dependencies:
   config:
     - block_content.type.home_hero
     - field.storage.block_content.home_hero_under_30
-_core:
-  default_config_hash: UbYCvhtxKA2-nnXhjhEqwD0ZHDCgIPqR6Cwzbb59ZQU
 id: block_content.home_hero.home_hero_under_30
 field_name: home_hero_under_30
 entity_type: block_content

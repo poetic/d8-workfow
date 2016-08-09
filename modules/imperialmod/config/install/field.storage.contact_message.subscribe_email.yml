@@ -1,11 +1,7 @@
-uuid: ecfa8abb-0af1-440e-8749-5d0e81f0f40c
 langcode: en
 status: true
 dependencies:
-  module:
-    - contact
-_core:
-  default_config_hash: fvxaAMeO7_IGlOzvwvOplc913oUUT7f_P578CpEnX00
+  - contact
 id: contact_message.subscribe_email
 field_name: subscribe_email
 entity_type: contact_message

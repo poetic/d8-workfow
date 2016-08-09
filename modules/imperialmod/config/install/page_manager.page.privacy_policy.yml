@@ -1,11 +1,8 @@
-uuid: 4e6eb70d-73e9-4cb7-a535-d98bd3a2b837
 langcode: en
 status: true
 dependencies: {  }
-_core:
-  default_config_hash: 4xMH6jx7q0aW4T8WiCQ8z0PuQgsjeupyt8_lcSr8yys
 id: privacy_policy
-label: 'Privacy Policy'
+label: Privacy Policy
 use_admin_theme: null
 path: /privacy-policy
 access_logic: and

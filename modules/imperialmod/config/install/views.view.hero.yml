@@ -7,8 +7,6 @@ dependencies:
   module:
     - node
     - user
-_core:
-  default_config_hash: 1rbD9CU9opArfjMw6ngEI7YA8JfD1ARRX17FGDAv6T4
 id: hero
 label: Hero
 module: views

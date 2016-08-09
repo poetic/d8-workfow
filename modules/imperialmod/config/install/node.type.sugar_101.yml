@@ -1,4 +1,3 @@
-uuid: 5ee95413-d88a-480d-bbb7-f98c9a7f857d
 langcode: en
 status: true
 dependencies:
@@ -9,9 +8,7 @@ third_party_settings:
     available_menus:
       - main
     parent: 'main:'
-_core:
-  default_config_hash: 4D4i-e7EEyubvkpVat6x5WzYuRZdTtGYqeDO3kGaBfs
-name: 'Sugar 101'
+name: Sugar 101
 type: sugar_101
 description: 'Sugar 101'
 help: ''

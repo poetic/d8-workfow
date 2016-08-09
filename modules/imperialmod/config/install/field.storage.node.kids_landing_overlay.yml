@@ -1,13 +1,9 @@
-uuid: a7594283-2940-42d9-85c8-36219b56dc22
 langcode: en
 status: true
 dependencies:
-  module:
-    - file
-    - image
-    - node
-_core:
-  default_config_hash: bvo05SyCfuT1lQayZmQ4bOGcVYSK4VJ5fu5U4WGR2GQ
+  - node
+  - file
+  - image
 id: node.kids_landing_overlay
 field_name: kids_landing_overlay
 entity_type: node

@@ -7,10 +7,8 @@ dependencies:
   module:
     - node
     - user
-_core:
-  default_config_hash: A67TK4SRBU4c_fXmK_AG1NhdGOT0qTadCZIdNF2wlAc
 id: under_30_view
-label: 'Under 30 View'
+label: Under 30 View
 module: views
 description: ''
 tag: ''
@@ -188,7 +186,7 @@ display:
   under_30_view:
     display_plugin: block
     id: under_30_view
-    display_title: 'Under 30 View'
+    display_title: Under 30 View
     position: 1
     display_options:
       display_extenders: {  }

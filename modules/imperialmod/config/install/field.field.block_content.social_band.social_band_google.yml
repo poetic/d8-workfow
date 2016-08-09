@@ -1,4 +1,3 @@
-uuid: 5fda86c5-73dd-43ed-ae4e-04ff7d421bbe
 langcode: en
 status: true
 dependencies:
@@ -7,8 +6,6 @@ dependencies:
     - field.storage.block_content.social_band_google
   module:
     - link
-_core:
-  default_config_hash: MOunMG51eg24SopvSsdRJ1AMyirgKYr2NbwA3U4-iL4
 id: block_content.social_band.social_band_google
 field_name: social_band_google
 entity_type: block_content

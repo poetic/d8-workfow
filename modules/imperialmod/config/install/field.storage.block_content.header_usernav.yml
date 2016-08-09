@@ -1,12 +1,7 @@
-uuid: 341bc743-8f01-49ab-90b6-c57f00d44164
 langcode: en
 status: true
 dependencies:
-  module:
-    - block_content
-    - system
-_core:
-  default_config_hash: drprp5i9SMFGlzhNyE77ZPgje16780RLu0Z6LxAf1mU
+  - block_content
 id: block_content.header_usernav
 field_name: header_usernav
 entity_type: block_content

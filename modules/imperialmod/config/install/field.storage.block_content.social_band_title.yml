@@ -1,11 +1,7 @@
-uuid: bab52fd4-a6b7-4468-a2dd-3eb2a0a1af53
 langcode: en
 status: true
 dependencies:
-  module:
-    - block_content
-_core:
-  default_config_hash: T5beWlFhpDt-M6Oc7jx0VcoPwKZj_ZvMbLuL1ZAv4zQ
+  - block_content
 id: block_content.social_band_title
 field_name: social_band_title
 entity_type: block_content

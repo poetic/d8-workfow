@@ -1,4 +1,3 @@
-uuid: b4268848-8cb4-46fd-8d69-3ba51e7c168e
 langcode: en
 status: true
 dependencies:
@@ -7,8 +6,6 @@ dependencies:
     - field.storage.block_content.social_band_pinterest
   module:
     - link
-_core:
-  default_config_hash: 6ItHOvW2XJM6pIIRZ1oyLsK7nkrddelet6h8Hp8aTHw
 id: block_content.social_band.social_band_pinterest
 field_name: social_band_pinterest
 entity_type: block_content

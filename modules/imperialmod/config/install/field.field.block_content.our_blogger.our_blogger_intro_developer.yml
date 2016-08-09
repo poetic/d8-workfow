@@ -1,14 +1,11 @@
-uuid: d6d41ec2-ad2f-4428-ad23-d5c37408830d
 langcode: en
 status: true
 dependencies:
   config:
-    - block_content.type.our_blogger
     - field.storage.block_content.our_blogger_intro_developer
+    - block_content.type.our_blogger
   module:
     - text
-_core:
-  default_config_hash: hcUJIcXkV16Orxfnvb30kVH8O7azPVyiqOE9iiFeSn8
 id: block_content.our_blogger.our_blogger_intro_developer
 field_name: our_blogger_intro_developer
 entity_type: block_content

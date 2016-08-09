@@ -1,11 +1,8 @@
-uuid: 4dda5ebb-671d-4ee1-a888-55e728e1b974
 langcode: en
 status: true
 dependencies: {  }
-_core:
-  default_config_hash: ZnuqmeREeYj1gi9B0S-0Jedhk3m13HraQuDkUaxqr8s
 id: conversion_charts
-label: 'Conversion Charts'
+label: Conversion Charts
 use_admin_theme: null
 path: /conversion-charts
 access_logic: and

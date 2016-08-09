@@ -1,14 +1,11 @@
-uuid: 22f5975f-b724-41ef-a253-563fbf434248
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.team_blog
     - node.type.team
+    - field.storage.node.team_blog
   module:
     - link
-_core:
-  default_config_hash: nPXEC-yfNJ-eQW5Lx4QJTRYO9SrtxkByp9JGGsViVqI
 id: node.team.team_blog
 field_name: team_blog
 entity_type: node

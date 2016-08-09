@@ -7,10 +7,8 @@ dependencies:
   module:
     - node
     - user
-_core:
-  default_config_hash: hnBpgpLUpkBCAf3CD8Ot16h9Dj8r65OIEo4ttTZOYPU
 id: recipe_collection
-label: 'Recipe Collection'
+label: Recipe Collection
 module: views
 description: ''
 tag: ''
@@ -188,7 +186,7 @@ display:
   recipe_collection:
     display_plugin: block
     id: recipe_collection
-    display_title: 'Recipe Collection'
+    display_title: Recipe Collection
     position: 1
     display_options:
       display_extenders: {  }

@@ -1,9 +1,6 @@
-uuid: 499cfc5a-002f-4064-a0ee-08d5ae8351a7
 langcode: en
 status: true
 dependencies: {  }
-_core:
-  default_config_hash: SksaAP7Oo5DUep-HT9LgmCxO5K2s_OTHl04QdmwKztY
 name: Tags
 vid: tags
 description: ''

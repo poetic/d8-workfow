@@ -1,12 +1,8 @@
-uuid: a072df4f-59f8-4270-83cf-05057e506818
 langcode: en
 status: true
 dependencies:
-  module:
-    - block_content
-    - views
-_core:
-  default_config_hash: NoC8ZoGyg9sqCR8jiaTjiu6QlCsbthtLIg9rjs7TnTI
+  - block_content
+  - views
 id: block_content.home_projects_sweetalk_news
 field_name: home_projects_sweetalk_news
 entity_type: block_content

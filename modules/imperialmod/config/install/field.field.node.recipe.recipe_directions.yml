@@ -1,4 +1,3 @@
-uuid: 779f8272-839b-4752-a7fb-62663a15123b
 langcode: en
 status: true
 dependencies:
@@ -7,8 +6,6 @@ dependencies:
     - node.type.recipe
   module:
     - text
-_core:
-  default_config_hash: gAUwWg27uUh8K0_k6-7n9HngBFopKCbw5o5R8pDQBR4
 id: node.recipe.recipe_directions
 field_name: recipe_directions
 entity_type: node

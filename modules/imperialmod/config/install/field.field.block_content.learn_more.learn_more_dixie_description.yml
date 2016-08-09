@@ -1,14 +1,11 @@
-uuid: 571aadb9-5f80-4967-ac09-d19d1afe7dbf
 langcode: en
 status: true
 dependencies:
   config:
-    - block_content.type.learn_more
     - field.storage.block_content.learn_more_dixie_description
+    - block_content.type.learn_more
   module:
     - text
-_core:
-  default_config_hash: U_h9LwnVNhqFDrtvFJ5DQKcbmzNgCe8xHNQzoj_zSGM
 id: block_content.learn_more.learn_more_dixie_description
 field_name: learn_more_dixie_description
 entity_type: block_content

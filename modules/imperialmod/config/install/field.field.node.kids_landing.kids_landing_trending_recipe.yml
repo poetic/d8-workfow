@@ -1,13 +1,10 @@
-uuid: 3310b9a2-15d0-4adf-8730-f1853f30b4c6
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.kids_landing_trending_recipe
-    - node.type.kids_landing
-    - views.view.kids_trending_recipe
-_core:
-  default_config_hash: dKW7FUPD8QzXK9Y6LYJ8SXRPqq4cGWpsjdfXArRkPE8
+  - node.type.kids_landing
+  - field.storage.node.kids_landing_trending_recipe
+  - views.view.kids_trending_recipe
 id: node.kids_landing.kids_landing_trending_recipe
 field_name: kids_landing_trending_recipe
 entity_type: node

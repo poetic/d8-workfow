@@ -1,10 +1,7 @@
-uuid: b1034bce-efbb-4531-b2a6-6020e000a16c
 langcode: en
 status: true
 dependencies: {  }
-_core:
-  default_config_hash: E5YNt7UytcPstGoofNWLqqd4nfg-Dlq-OTfJxIomORE
 id: footer_subscribe
-label: 'Footer Subscribe'
+label: Footer Subscribe
 revision: 1
 description: 'Footer Subscribe'

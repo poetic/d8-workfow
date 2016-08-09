@@ -1,11 +1,8 @@
-uuid: 840b8de2-008b-4598-8ba1-b7af93005d07
 langcode: en
 status: true
 dependencies: {  }
-_core:
-  default_config_hash: kK_YfcM4Vm68tIVVbO4RUZWpZmyb57VM04FPY2CpbKg
 id: blog_article
-label: 'Blog Article'
+label: Blog Article
 use_admin_theme: null
 path: /blog-article
 access_logic: and

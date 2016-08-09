@@ -1,12 +1,9 @@
-uuid: 4d507217-2a83-4e14-b154-3607b2dc88f6
 langcode: en
 status: true
 dependencies:
   module:
     - block_content
     - text
-_core:
-  default_config_hash: 9B0cJA9sgYAcqcBg9PggDrl1yIRxuTxslhrlvHYUks4
 id: block_content.our_blogger_intro_developer
 field_name: our_blogger_intro_developer
 entity_type: block_content

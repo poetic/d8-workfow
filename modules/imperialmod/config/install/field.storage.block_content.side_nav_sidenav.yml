@@ -1,12 +1,7 @@
-uuid: a4859a48-72ff-4044-9b98-111a3072dfab
 langcode: en
 status: true
 dependencies:
-  module:
-    - block_content
-    - system
-_core:
-  default_config_hash: TMN59lM_j6cLe2UWLriRaZs0ennyuRUtKe9JrFGZPA8
+  - block_content
 id: block_content.side_nav_sidenav
 field_name: side_nav_sidenav
 entity_type: block_content

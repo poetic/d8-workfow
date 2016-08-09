@@ -1,10 +1,7 @@
-uuid: 36720ea9-4e97-49a4-b893-97378dd339a2
 langcode: en
 status: true
 dependencies: {  }
-_core:
-  default_config_hash: nWO64ekP62uHonP8Or0xvY7sT6KLIJSDSwY6kHermkY
 id: usernav
-label: Usernav
+label: 'Usernav'
 description: null
 locked: false

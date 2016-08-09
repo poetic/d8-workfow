@@ -1,13 +1,10 @@
-uuid: b1e7b53e-6c76-48b6-a2e6-7c7759a51d77
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.recipe_collection_trending
-    - node.type.recipe_collection
-    - views.view.trending_collection
-_core:
-  default_config_hash: 4o7fhiJbtxTpcC1xbkusaFfIb6Us8pMFMZ62fITYBNQ
+  - node.type.recipe_collection
+  - field.storage.node.recipe_collection_trending
+  - views.view.trending_collection
 id: node.recipe_collection.recipe_collection_trending
 field_name: recipe_collection_trending
 entity_type: node

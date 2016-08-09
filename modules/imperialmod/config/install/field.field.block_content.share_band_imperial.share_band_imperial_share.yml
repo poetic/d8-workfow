@@ -1,4 +1,3 @@
-uuid: c625f433-4fb0-4b14-b225-9cfde99d945f
 langcode: en
 status: true
 dependencies:
@@ -7,8 +6,6 @@ dependencies:
     - field.storage.block_content.share_band_imperial_share
   module:
     - link
-_core:
-  default_config_hash: Giujg6yCbPoWH-9-uIwEbluHZu9gotyx-tKKRZVVLIM
 id: block_content.share_band_imperial.share_band_imperial_share
 field_name: share_band_imperial_share
 entity_type: block_content

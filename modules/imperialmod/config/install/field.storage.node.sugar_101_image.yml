@@ -1,13 +1,9 @@
-uuid: bc18d2e8-3a61-412f-a303-9b3968bf19d1
 langcode: en
 status: true
 dependencies:
-  module:
-    - file
-    - image
-    - node
-_core:
-  default_config_hash: MjYuWUY2RirtoLNvl9feCBrtT7n_BRfyY2Sot0UASGc
+  - node
+  - file
+  - image
 id: node.sugar_101_image
 field_name: sugar_101_image
 entity_type: node

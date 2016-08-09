@@ -7,10 +7,8 @@ dependencies:
   module:
     - node
     - user
-_core:
-  default_config_hash: sQeaHY61eD9lYm-L2rzq9UlSm5Yy7Qhr_IJXPizRzkk
 id: kids_popular_recipe
-label: 'Kids Popular Recipe'
+label: Kids Popular Recipe
 module: views
 description: ''
 tag: ''
@@ -188,7 +186,7 @@ display:
   kids_popular_recipe:
     display_plugin: block
     id: kids_popular_recipe
-    display_title: 'Kids Popular Recipe'
+    display_title: Kids Popular Recipe
     position: 1
     display_options:
       display_extenders: {  }
