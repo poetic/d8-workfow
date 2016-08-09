@@ -23,9 +23,7 @@ function subtheme_preprocess_node(array &$variables) {
     $follow_flag = $flag_link_builder->build($user_node->getEntityTypeId(), $user_node->id(), 'follow');
     $variables['follow_flag'] = $follow_flag;
     $variables['follow_flag']['link']['#attributes']['class'][] = "txt-link-sm";
-    // $entity = $variables['elements']['#node'];
-    // $variables['main_menu'] = subtheme_get_menu('main_menu');
-    // $variables['date'] = format_date($entity->created->value, "custom", "F d, Y");
+    
     $flag = $flag_service->getFlagById("favorite");
     $variables['favorite_count'] = \Drupal::service('flag.count')->getFlagFlaggingCount($flag);
     $comment_view = views_embed_view('comment_view');
@@ -33,9 +31,6 @@ function subtheme_preprocess_node(array &$variables) {
     $related_recipes = views_embed_view('related_recipes');
     $variables['related_recipes'] = $related_recipes;
     $variables['vid_id'] = $variables['content']['field_video_url'][0]['#video_id'];
-    // $vid_id = explode("?v=", $variables['content']['field_video_url'][0]);
-    
-    // dump($variables['vid_id']);
   }
 }
 
@@ -56,7 +51,7 @@ function subtheme_preprocess_user(array &$variables) {
  */
 
 function subtheme_preprocess_block(array &$variables) {
-  // dump($variables['elements']['content']['header_background_image']);
+  // dump($variables);
   // if(!empty($variables['content']['#block_content'])) {
   //   $entity = $variables['content']['#block_content'];
   //   $bundle = $entity->bundle();
@@ -87,7 +82,6 @@ function subtheme_preprocess_field(&$variables){
 }
 
 function subtheme_preprocess_form(&$variables){
-  // dpm($variable['element']['field_category_course']['#attributes']);
   //below returns 0 if anonymous user
   if($variables['element']['#form_id'] == "comment_recipe_comment_form") {
     $user_id = $variables['user']->id();
@@ -96,6 +90,66 @@ function subtheme_preprocess_form(&$variables){
     $variables['user_image_url'] = $file_url;
   }
 }
+
+
+function subtheme_preprocess_input(&$variables) { 
+  if($variables['theme_hook_original'] == "input__submit") {
+     if($variables['element']['#name'] == "field_recipe_ingredients_recipe_ingredients_add_more") {
+        $variables['attributes']['value'] = new TranslatableMarkup("+ Add Ingredient section");
+    }
+  }
+}
+
+function subtheme_preprocess_image(&$variables) {
+  unset($variables['attributes']['width']);
+  unset($variables['attributes']['height']);
+  // select image field and set height
+  // $variables['attributes']['height'] = "150";
+}
+
+
+function subtheme_preprocess_textarea(&$variables) {
+  if($variable['element']['#title'] == "Comment") {
+    // $variable['#attributes']['class'][] = "form-multi-line-text-heigh w-input";
+  }
+}
+function subtheme_preprocess_table(&$variables) {
+  unset($variables['header']);
+  // // // unset($variables['rows'][1]);
+  // unset($variables['rows'][0]['cells'][0]);
+  // unset($variables['rows'][0]['cells'][2]);
+  
+  // dump($variables);
+
+  $variables['rows'][0]['cells'][1]['content']['subform']['field_ingredient_section_title']['widget'][0]['value']['#title_display'] = "none";
+  $variables['rows'][0]['cells'][1]['content']['subform']['field_ingredient_section_title']['widget'][0]['value']['#attributes']['class'][] = "form-field-66-pc w-input";
+  $variables['rows'][0]['cells'][1]['content']['subform']['field_ingredient_section_title']['widget'][0]['value']['#attributes']['data-name'][] = "Ingredient Section Title";
+  $variables['rows'][0]['cells'][1]['content']['subform']['field_ingredient_section_title']['widget'][0]['value']['#attributes']['placeholder'][] = "Eg. Cake, or Frosting (if recipe has multiple parts)";
+  $variables['rows'][0]['cells'][1]['content']['subform']['field_ingredient_section_body']['widget'][0]['value']['#title_display'] = "none";
+  $variables['rows'][0]['cells'][1]['content']['subform']['field_ingredient_section_body']['widget'][0]['value']['#attributes']['class'][] = "form-multi-line-text-heigh w-input";
+  $variables['rows'][0]['cells'][1]['content']['subform']['field_ingredient_section_body']['widget'][0]['value']['#attributes']['data-name'][] = "Ingredients";
+  $variables['rows'][0]['cells'][1]['content']['subform']['field_ingredient_section_body']['widget'][0]['value']['#attributes']['data-name']['placeholder'][] = "Add your ingredients here — add as many ingredients as you need!";
+  // unset($variables['rows'][0]['cells'][2]);
+  // dump($variables['rows']['0']);
+  // dump($variables);
+}
+
+function subtheme_preprocess_comment(&$variables) {
+  $date_formatted = DateTime::createFromFormat('D, m/d/Y - H:i', $variables['created'])->format('M d, Y');
+  $variables['created'] = $date_formatted;
+  $recipe_nid = $variables['commented_entity']->get('nid')[0]->value;
+  $recipe_node = \Drupal\node\Entity\Node::load($recipe_nid);
+  $recipe_title = $recipe_node->get('title')[0]->value;
+  $variables['title'] = $recipe_title;
+  // dump($variables);
+}
+
+function subtheme_preprocess_form_element(&$variable){
+  if ($variable['type']=="checkbox"){
+    $variable['element']['#attributes']['class'][] = "display-none w-checkbox-input";
+  }
+}
+
 
 
 function collectFieldValues($entity, $field_definition) {
@@ -117,32 +171,30 @@ function collectFieldValues($entity, $field_definition) {
   }
 }
 
-/**
- * Implements hook_theme_suggestions_HOOK_alter() for block templates.
- 
-/*
-function subtheme_theme_suggestions_block_alter(array &$suggestions, array $variables) {
-  if(!empty($variables['elements']['content']['#block_content'])) {
-    $block = $variables['elements']['content']['#block_content'];
-    $bundle = $block->bundle();
-    array_unshift($suggestions, 'block__block_content__' . $bundle);
-  }
-}
-
-/**
- * Implements hook_theme_suggestions_HOOK_alter() for user templates.
- */
-
 function subtheme_theme_suggestions_user_alter(array &$suggestions, array $variables) {
   if(!empty($variables['elements']['#view_mode'])) {
     $userviewmode = $variables['elements']['#view_mode'];
     array_unshift($suggestions, 'user__' . $userviewmode);
   }
 }
-/**
- * Implements hook_theme_suggestions_HOOK_alter() for node templates.
- */
-/*
+
+function subtheme_theme_suggestions_input_alter(array &$suggestions, array $variables) {
+  if($variables['element']['#name'] == "field_recipe_ingredients_recipe_ingredients_add_more") {
+    $suggestions[] = 'input__recipe_add_form_paragraph_add';
+  }
+  if($variables['theme_hook_original'] == "input__textfield") {
+    if( strpos($variables['element']['#name'], "field_recipe_ingredients[0][subform][field_ingredient_section_title]") !== false) {
+      $suggestions[] = 'input__recipe_add_paragraph_title';
+    }
+  }
+}
+
+function subtheme_theme_suggestions_table_alter(array &$suggestions, array $variables) {
+  if( strpos($variables['attributes']['id'], "field-recipe-ingredients-values") !== false) {
+    $suggestions[] = 'table__paragraph_recipe_add';
+  }
+}
+
 function subtheme_theme_suggestions_node_alter(array &$suggestions, array $variables) {
   // if(!empty($variables['elements']['#view_mode'])) {
   //   $userviewmode = $variables['elements']['#view_mode'];
@@ -157,102 +209,4 @@ function subtheme_theme_suggestions_node_alter(array &$suggestions, array $varia
 function subtheme_theme_suggestions_form_alter(array &$suggestions, array $variables) {
   $suggestions[] = 'form__' . $variables['element']['#form_id'];
   $suggestions[] = 'form_element__' . $variables['element']['field_category_course']['widget']['#title'];
-  // dpm($variables['element']['field_category_course']['widget']['#title']);
-  // dpm($suggestions);
-}
-
-function subtheme_preprocess_image(&$variables) {
-  unset($variables['attributes']['width']);
-  unset($variables['attributes']['height']);
-  // $variables['attributes']['height'] = "150";
-}
-
-function subtheme_preprocess_taxonomy_term(&$variables) {
-  // dump($variables);
-}
-
-// function subtheme_field_widget_checkbox_form_alter(&$element, \Drupal\Core\Form\FormStateInterface $form_state, $context) {
-
-// }
-/*
-function hook_field_widget_form_alter(&$element, \Drupal\Core\Form\FormStateInterface $form_state, $context) {
-  // Add a css class to widget form elements for all fields of type mytype.
-  $field_definition = $context['items']->getFieldDefinition();
-  // dpm($element);
-  if ($field_definition->getType() == 'container') {
-    // Be sure not to overwrite existing attributes.
-    // dpm($element);
-    $element['#attributes']['class'][] = 'myclass';
-  }
-}
-*/
-
-
-function subtheme_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
-  
-}
-
-
-function subtheme_preprocess_input(&$variable) {
-  if($variable['element']['#title'] == "Subject") {
-  }
-  
-}
-
-function subtheme_preprocess_textarea(&$variable) {
-  if($variable['element']['#title'] == "Comment") {
-    // $variable['#attributes']['class'][] = "form-multi-line-text-heigh w-input";
-  }
-}
-function subtheme_preprocess_table(&$variables) {
-  
-  unset($variables['header']);
-  // // unset($variables['rows'][1]);
-  unset($variables['rows'][0]['cells'][0]);
-  
-  $variables['rows'][0]['cells'][1]['content']['subform']['field_ingredient_section_title']['widget'][0]['value']['#title_display'] = "none";
-  $variables['rows'][0]['cells'][1]['content']['subform']['field_ingredient_section_title']['widget'][0]['value']['#attributes']['class'][] = "form-field-66-pc w-input";
-  $variables['rows'][0]['cells'][1]['content']['subform']['field_ingredient_section_title']['widget'][0]['value']['#attributes']['data-name'][] = "Ingredient Section Title";
-  $variables['rows'][0]['cells'][1]['content']['subform']['field_ingredient_section_title']['widget'][0]['value']['#attributes']['placeholder'][] = "Eg. Cake, or Frosting (if recipe has multiple parts)";
-  $variables['rows'][0]['cells'][1]['content']['subform']['field_ingredient_section_body2']['widget'][0]['value']['#title_display'] = "none";
-  $variables['rows'][0]['cells'][1]['content']['subform']['field_ingredient_section_body2']['widget'][0]['value']['#attributes']['class'][] = "form-multi-line-text-heigh w-input";
-  $variables['rows'][0]['cells'][1]['content']['subform']['field_ingredient_section_body2']['widget'][0]['value']['#attributes']['data-name'][] = "Ingredients";
-  $variables['rows'][0]['cells'][1]['content']['subform']['field_ingredient_section_body2']['widget'][0]['value']['#attributes']['data-name']['placeholder'][] = "Add your ingredients here — add as many ingredients as you need!";
-  unset($variables['rows'][0]['cells'][2]);
-  // dump($variables);
-}
-
-function subtheme_preprocess_comment(&$variables) {
-  $date_formatted = DateTime::createFromFormat('D, m/d/Y - H:i', $variables['created'])->format('M d, Y');
-  $variables['created'] = $date_formatted;
-  $recipe_nid = $variables['commented_entity']->get('nid')[0]->value;
-  $recipe_node = \Drupal\node\Entity\Node::load($recipe_nid);
-  $recipe_title = $recipe_node->get('title')[0]->value;
-  $variables['title'] = $recipe_title;
-  // dump($variables);
-}
-
-// function subtheme_theme() {
-//   $themes['impsu_user_edit_form'] = [
-//     'render element' => 'form'
-//   ];
-//   return $themes;
-// }
-/*
-function subtheme_get_menu($menu_name) {
-  $block_manager = \Drupal::service('plugin.manager.block');
-  $plugin_block = $block_manager->createInstance("system_menu_block:$menu_name");
-  $render = $plugin_block->build();
-  return $render;
-}
-*/
-function subtheme_preprocess_form_element(&$variable){
-  if ($variable['type']=="checkbox"){
-    $variable['element']['#attributes']['class'][] = "display-none w-checkbox-input";
-  }
-}
-
-
-function subtheme_preprocess_form_element_label(&$variable){
-  // unset($variable['element']['#title']);
 }

@@ -167,6 +167,16 @@
 						{% endif %}
 					{% endfor %}
 				  {% endif %}
+				  <h4>Tags</h4>
+					{% for tax in element.field_recipe_tags.widget %}
+						{% if tax['#type'] == "checkbox" %}
+							<div class="clickable-tag-wrapper w-checkbox w-clearfix js-form-item form-item js-form-type-checkbox">
+								<input drupal-data-selector="{{tax['#attribute']['data-drupal-selector']}}" value="{{tax['#attributes']['value']}}" class=" display-none w-checkbox-input form-checkbox" data-name="{{ tax['#name'] }}" id="{{ tax['#id'] }}" name="{{ tax['#name'] }}" type="checkbox">	
+								<label class="clickable-tag w-form-label option" for="{{ tax['#id'] }}">{{ tax['#title'] }}</label>	
+							</div>
+						{% endif %}
+					{% endfor %}
+				  
 				</div>
 				<div class="extra-margin separator-line"></div>
 				<h3 class="txt-centered">Submit your Recipe</h3>
@@ -176,13 +186,14 @@
 				</div>
 				<div class="txt-centered">
 					<a class="btn btn-form w-button" href="#">Cancel</a>
-					{{element.actions}}
-					<!-- <input class="btn btn-form btn-submit w-button" data-wait="Please wait..." type="submit" value="Submit Recipe!"> -->
-					{{element.render_children}}
-					{{element.form_token}}
-					{{element.form_build_id}}
-					{{element.form_id}}
 					
+					<!-- <input class="btn btn-form btn-submit w-button" data-wait="Please wait..." type="submit" value="Submit Recipe!"> -->
+					
+				{{ element.actions.publish }}	
+				{{element.render_children}}
+				{{element.form_token}}
+				{{element.form_build_id}}
+				{{element.form_id}}
 				</div>
 				
 			</form>
