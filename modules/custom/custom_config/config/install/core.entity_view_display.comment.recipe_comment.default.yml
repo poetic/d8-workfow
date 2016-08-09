@@ -1,0 +1,31 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - comment.type.recipe_comment
+    - field.field.comment.recipe_comment.comment_body
+    - field.field.comment.recipe_comment.field_comment_rating
+  module:
+    - fivestar
+    - text
+id: comment.recipe_comment.default
+targetEntityType: comment
+bundle: recipe_comment
+mode: default
+content:
+  comment_body:
+    label: hidden
+    type: text_default
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+  field_comment_rating:
+    weight: 101
+    label: above
+    settings:
+      fivestar_widget: modules/fivestar/widgets/basic/basic.css
+    third_party_settings: {  }
+    type: fivestar_stars
+  links:
+    weight: 100
+hidden: {  }

@@ -1,0 +1,20 @@
+uuid: 14b48993-f57b-4db3-af6d-cc08137d98f8
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_freeze_minute
+field_name: field_freeze_minute
+entity_type: node
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

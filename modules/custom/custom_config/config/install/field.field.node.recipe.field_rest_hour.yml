@@ -1,0 +1,23 @@
+uuid: 722dbc94-e480-4ebf-9a3f-654f5d102e75
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_rest_hour
+    - node.type.recipe
+id: node.recipe.field_rest_hour
+field_name: field_rest_hour
+entity_type: node
+bundle: recipe
+label: rest_hour
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: 0
+  max: 24
+  prefix: ''
+  suffix: ''
+field_type: integer

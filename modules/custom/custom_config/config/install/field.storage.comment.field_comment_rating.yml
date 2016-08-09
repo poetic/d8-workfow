@@ -1,0 +1,19 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - comment
+    - fivestar
+id: comment.field_comment_rating
+field_name: field_comment_rating
+entity_type: comment
+type: fivestar
+settings:
+  voting_tag: vote
+module: fivestar
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

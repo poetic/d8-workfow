@@ -1,0 +1,13 @@
+langcode: en
+status: true
+dependencies: {  }
+name: recipe_image_node_full
+label: recipe_image_node_full
+effects:
+  68fe8a5e-1406-4d3d-9218-bf97315e1320:
+    uuid: 68fe8a5e-1406-4d3d-9218-bf97315e1320
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 727
+      height: 500
