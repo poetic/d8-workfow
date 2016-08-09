@@ -1,0 +1,25 @@
+langcode: en
+status: true
+dependencies:
+  config:
+  - block_content.type.sugar_landing
+  - field.storage.block_content.sugar_landing_sugar_list
+  - views.view.sugar_list
+id: block_content.sugar_landing.sugar_landing_sugar_list
+field_name: sugar_landing_sugar_list
+entity_type: block_content
+bundle: sugar_landing
+label: 'Sugar Landing Sugar List'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    target_uuid: f3261c43-0264-407f-875b-31bae44fee83
+default_value_callback: ''
+settings:
+  handler: 'default:view'
+  handler_settings:
+    target_bundles: null
+    auto_create: false
+field_type: entity_reference

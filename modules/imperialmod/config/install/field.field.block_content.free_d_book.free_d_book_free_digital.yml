@@ -1,0 +1,25 @@
+langcode: en
+status: true
+dependencies:
+  config:
+  - block_content.type.free_d_book
+  - field.storage.block_content.free_d_book_free_digital
+  - views.view.free_digital
+id: block_content.free_d_book.free_d_book_free_digital
+field_name: free_d_book_free_digital
+entity_type: block_content
+bundle: free_d_book
+label: 'Free D Book Free Digital'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    target_uuid: 1bf7ce20-2ad3-45b8-a111-edd16690565f
+default_value_callback: ''
+settings:
+  handler: 'default:view'
+  handler_settings:
+    target_bundles: null
+    auto_create: false
+field_type: entity_reference

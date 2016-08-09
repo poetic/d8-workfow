@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+id: community_view
+label: Community View
+revision: 1
+description: 'Community View'

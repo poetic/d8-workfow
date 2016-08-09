@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.dixie_learn
+    - field.storage.block_content.dixie_learn_title
+id: block_content.dixie_learn.dixie_learn_title
+field_name: dixie_learn_title
+entity_type: block_content
+bundle: dixie_learn
+label: 'Dixie Learn Title'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

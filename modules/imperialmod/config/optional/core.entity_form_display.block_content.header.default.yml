@@ -2,7 +2,6 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.block_content.header.header_usernav
     - field.field.block_content.header.header_imperial_logo
     - field.field.block_content.header.header_dixie_logo
     - field.field.block_content.header.header_main
@@ -24,9 +23,14 @@ content:
     weight: 2
     settings: { }
     third_party_settings: { }
+  header_main:
+    type: entity_reference_autocomplete
+    weight: 3
+    settings: { }
+    third_party_settings: { }
   header_background_img:
     type: image_image
-    weight: 3
+    weight: 4
     settings: { }
     third_party_settings: { }
 hidden: {  }

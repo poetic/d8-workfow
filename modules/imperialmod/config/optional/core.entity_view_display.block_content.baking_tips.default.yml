@@ -1,0 +1,102 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.block_content.baking_tips.baking_tips_image
+    - field.field.block_content.baking_tips.baking_tips_title
+    - field.field.block_content.baking_tips.baking_tips_subtitle
+    - field.field.block_content.baking_tips.baking_tips_description
+    - field.field.block_content.baking_tips.baking_tips_c_surfaces
+    - field.field.block_content.baking_tips.baking_tips_c_surfaces
+    - field.field.block_content.baking_tips.baking_tips_link1
+    - field.field.block_content.baking_tips.baking_tips_link2
+    - field.field.block_content.baking_tips.baking_tips_link3
+    - field.field.block_content.baking_tips.baking_tips_cookie_sheet
+    - field.field.block_content.baking_tips.baking_tips_c_sheet
+    - field.field.block_content.baking_tips.baking_tips_soften
+    - field.field.block_content.baking_tips.baking_tips_soften_desc
+    - block_content.type.baking_tips
+id: block_content.baking_tips.default
+targetEntityType: block_content
+bundle: baking_tips
+mode: default
+content:
+  baking_tips_image:
+    label: hidden
+    type: image
+    weight: 1
+    settings: { }
+    third_party_settings: { }
+  baking_tips_title:
+    label: hidden
+    type: string
+    weight: 2
+    settings: { }
+    third_party_settings: { }
+  baking_tips_subtitle:
+    label: hidden
+    type: string
+    weight: 3
+    settings: { }
+    third_party_settings: { }
+  baking_tips_description:
+    label: hidden
+    type: text_default
+    weight: 4
+    settings: { }
+    third_party_settings: { }
+  baking_tips_c_surfaces:
+    label: hidden
+    type: string
+    weight: 5
+    settings: { }
+    third_party_settings: { }
+  baking_tips_c_surfaces:
+    label: hidden
+    type: text_default
+    weight: 6
+    settings: { }
+    third_party_settings: { }
+  baking_tips_link1:
+    label: hidden
+    type: link
+    weight: 7
+    settings: { }
+    third_party_settings: { }
+  baking_tips_link2:
+    label: hidden
+    type: link
+    weight: 8
+    settings: { }
+    third_party_settings: { }
+  baking_tips_link3:
+    label: hidden
+    type: link
+    weight: 9
+    settings: { }
+    third_party_settings: { }
+  baking_tips_cookie_sheet:
+    label: hidden
+    type: string
+    weight: 10
+    settings: { }
+    third_party_settings: { }
+  baking_tips_c_sheet:
+    label: hidden
+    type: text_default
+    weight: 11
+    settings: { }
+    third_party_settings: { }
+  baking_tips_soften:
+    label: hidden
+    type: string
+    weight: 12
+    settings: { }
+    third_party_settings: { }
+  baking_tips_soften_desc:
+    label: hidden
+    type: text_default
+    weight: 13
+    settings: { }
+    third_party_settings: { }
+hidden: {  }

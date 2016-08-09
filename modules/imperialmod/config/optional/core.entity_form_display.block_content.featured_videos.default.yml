@@ -1,0 +1,24 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.block_content.featured_videos.featured_videos_title
+    - field.field.block_content.featured_videos.featured_videos_description
+    - field.field.block_content.featured_videos.featured_videos_baking_featured
+    - block_content.type.featured_videos
+id: block_content.featured_videos.default
+targetEntityType: block_content
+bundle: featured_videos
+mode: default
+content:
+  featured_videos_title:
+    type: string_textfield
+    weight: 1
+    settings: { }
+    third_party_settings: { }
+  featured_videos_description:
+    type: string_textarea
+    weight: 2
+    settings: { }
+    third_party_settings: { }
+hidden: {  }

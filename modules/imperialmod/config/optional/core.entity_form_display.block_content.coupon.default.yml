@@ -1,0 +1,44 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.block_content.coupon.coupon_scissors
+    - field.field.block_content.coupon.coupon_title
+    - field.field.block_content.coupon.coupon_title
+    - field.field.block_content.coupon.coupon_name
+    - field.field.block_content.coupon.coupon_description
+    - field.field.block_content.coupon.coupon_coupons
+    - block_content.type.coupon
+id: block_content.coupon.default
+targetEntityType: block_content
+bundle: coupon
+mode: default
+content:
+  coupon_scissors:
+    type: image_image
+    weight: 1
+    settings: { }
+    third_party_settings: { }
+  coupon_title:
+    type: string_textfield
+    weight: 2
+    settings: { }
+    third_party_settings: { }
+  coupon_title:
+    type: string_textfield
+    weight: 3
+    settings: { }
+    third_party_settings: { }
+  coupon_name:
+    type: link_default
+    weight: 4
+    settings: { }
+    third_party_settings: { }
+  coupon_description:
+    type: text_textarea
+    weight: 5
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: { }
+hidden: {  }

@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.block_content.sugar_landing_items_list
+    - block_content.type.sugar_landing
+  module:
+    - text
+id: block_content.sugar_landing.sugar_landing_items_list
+field_name: sugar_landing_items_list
+entity_type: block_content
+bundle: sugar_landing
+label: 'Sugar Landing Items List'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

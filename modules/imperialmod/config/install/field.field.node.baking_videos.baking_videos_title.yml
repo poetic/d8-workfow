@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.baking_videos
+    - field.storage.node.baking_videos_title
+id: node.baking_videos.baking_videos_title
+field_name: baking_videos_title
+entity_type: node
+bundle: baking_videos
+label: 'Baking Videos Title'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

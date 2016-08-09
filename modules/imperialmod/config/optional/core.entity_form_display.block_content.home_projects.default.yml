@@ -5,7 +5,7 @@ dependencies:
     - field.field.block_content.home_projects.home_projects_column_title
     - field.field.block_content.home_projects.home_projects_column_title
     - field.field.block_content.home_projects.home_projects_column_title
-    - field.field.block_content.home_projects.home_projects_sweetalk_news
+    - field.field.block_content.home_projects.home_projects_sweetalk_blog
     - block_content.type.home_projects
 id: block_content.home_projects.default
 targetEntityType: block_content

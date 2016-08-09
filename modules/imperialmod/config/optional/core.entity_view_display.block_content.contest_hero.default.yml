@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.block_content.contest_hero.contest_hero_hero
+    - block_content.type.contest_hero
+id: block_content.contest_hero.default
+targetEntityType: block_content
+bundle: contest_hero
+mode: default
+content:
+  contest_hero_hero:
+    label: hidden
+    type: entity_reference_entity_id
+    weight: 1
+    settings: { }
+    third_party_settings: { }
+hidden: {  }

@@ -1,0 +1,12 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.hero
+    - node.type.rc_overview
+id: node.rc_overview.hero
+targetEntityType: node
+bundle: rc_overview
+mode: hero
+content: {  }
+hidden: {  }

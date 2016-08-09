@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.featured_videos
+    - field.storage.block_content.featured_videos_title
+id: block_content.featured_videos.featured_videos_title
+field_name: featured_videos_title
+entity_type: block_content
+bundle: featured_videos
+label: 'Featured Videos Title'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

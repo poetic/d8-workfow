@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+id: blog_landing
+label: Blog Landing
+revision: 1
+description: 'Blog Landing'

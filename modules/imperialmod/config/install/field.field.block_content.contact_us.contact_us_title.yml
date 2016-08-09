@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.contact_us
+    - field.storage.block_content.contact_us_title
+id: block_content.contact_us.contact_us_title
+field_name: contact_us_title
+entity_type: block_content
+bundle: contact_us
+label: 'Contact Us Title'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

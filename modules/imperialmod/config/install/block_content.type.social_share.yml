@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+id: social_share
+label: Social Share
+revision: 1
+description: 'Social Share'

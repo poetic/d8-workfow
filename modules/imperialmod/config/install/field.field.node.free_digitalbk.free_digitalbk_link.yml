@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.free_digitalbk
+    - field.storage.node.free_digitalbk_link
+  module:
+    - link
+id: node.free_digitalbk.free_digitalbk_link
+field_name: free_digitalbk_link
+entity_type: node
+bundle: free_digitalbk
+label: 'Free Digitalbk Link'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 1
+  link_type: 17
+field_type: link

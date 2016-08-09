@@ -3,17 +3,18 @@ status: true
 dependencies:
   config:
     - field.field.block_content.our_blogger.our_blogger_logo_imperial
-    - field.field.block_content.our_blogger.our_blogger_logo_imperial
+    - field.field.block_content.our_blogger.our_blogger_logo_dixie
     - field.field.block_content.our_blogger.our_blogger_description
     - field.field.block_content.our_blogger.our_blogger_developers_tab
     - field.field.block_content.our_blogger.our_blogger_testers_tab
     - field.field.block_content.our_blogger.our_blogger_seal_dev
     - field.field.block_content.our_blogger.our_blogger_seal_dev_dixie
     - field.field.block_content.our_blogger.our_blogger_intro_developer
+    - field.field.block_content.our_blogger.our_blogger_dev_team
     - field.field.block_content.our_blogger.our_blogger_seal_tester
     - field.field.block_content.our_blogger.our_blogger_seal_tester_dixie
     - field.field.block_content.our_blogger.our_blogger_intro_tester
-    - field.field.block_content.our_blogger.our_blogger_teams_view
+    - field.field.block_content.our_blogger.our_blogger_tester_team
     - field.field.block_content.our_blogger.our_blogger_description
     - block_content.type.our_blogger
 id: block_content.our_blogger.default
@@ -27,7 +28,7 @@ content:
     weight: 1
     settings: { }
     third_party_settings: { }
-  our_blogger_logo_imperial:
+  our_blogger_logo_dixie:
     label: hidden
     type: image
     weight: 2
@@ -69,34 +70,40 @@ content:
     weight: 8
     settings: { }
     third_party_settings: { }
-  our_blogger_seal_tester:
+  our_blogger_dev_team:
     label: hidden
-    type: image
+    type: entity_reference_entity_id
     weight: 9
     settings: { }
     third_party_settings: { }
-  our_blogger_seal_tester_dixie:
+  our_blogger_seal_tester:
     label: hidden
     type: image
     weight: 10
     settings: { }
     third_party_settings: { }
-  our_blogger_intro_tester:
+  our_blogger_seal_tester_dixie:
     label: hidden
-    type: text_default
+    type: image
     weight: 11
     settings: { }
     third_party_settings: { }
-  our_blogger_teams_view:
+  our_blogger_intro_tester:
+    label: hidden
+    type: text_default
+    weight: 12
+    settings: { }
+    third_party_settings: { }
+  our_blogger_tester_team:
     label: hidden
     type: entity_reference_entity_id
-    weight: 12
+    weight: 13
     settings: { }
     third_party_settings: { }
   our_blogger_description:
     label: hidden
     type: text_default
-    weight: 13
+    weight: 14
     settings: { }
     third_party_settings: { }
 hidden: {  }

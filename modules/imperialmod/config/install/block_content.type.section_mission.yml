@@ -1,7 +1,0 @@
-langcode: en
-status: true
-dependencies: {  }
-id: section_mission
-label: Section Mission
-revision: 1
-description: 'Section Mission'

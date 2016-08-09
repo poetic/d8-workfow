@@ -1,0 +1,25 @@
+langcode: en
+status: true
+dependencies:
+  config:
+  - node.type.blog
+  - field.storage.node.blog_related_news
+  - views.view.related_news
+id: node.blog.blog_related_news
+field_name: blog_related_news
+entity_type: node
+bundle: blog
+label: 'Blog Related News'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    target_uuid: 13792237-374a-4f94-83d9-d62d126bcc47
+default_value_callback: ''
+settings:
+  handler: 'default:view'
+  handler_settings:
+    target_bundles: null
+    auto_create: false
+field_type: entity_reference

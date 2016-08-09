@@ -1,0 +1,11 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.r_subcribe
+id: block_content.r_subcribe.default
+targetEntityType: block_content
+bundle: r_subcribe
+mode: default
+content: {  }
+hidden: {  }

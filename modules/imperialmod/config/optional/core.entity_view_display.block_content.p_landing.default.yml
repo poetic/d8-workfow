@@ -1,0 +1,46 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.block_content.p_landing.p_landing_imperial
+    - field.field.block_content.p_landing.p_landing_dixie
+    - field.field.block_content.p_landing.p_landing_title
+    - field.field.block_content.p_landing.p_landing_subtitle
+    - field.field.block_content.p_landing.p_landing_description
+    - block_content.type.p_landing
+id: block_content.p_landing.default
+targetEntityType: block_content
+bundle: p_landing
+mode: default
+content:
+  p_landing_imperial:
+    label: hidden
+    type: image
+    weight: 1
+    settings: { }
+    third_party_settings: { }
+  p_landing_dixie:
+    label: hidden
+    type: image
+    weight: 2
+    settings: { }
+    third_party_settings: { }
+  p_landing_title:
+    label: hidden
+    type: string
+    weight: 3
+    settings: { }
+    third_party_settings: { }
+  p_landing_subtitle:
+    label: hidden
+    type: string
+    weight: 4
+    settings: { }
+    third_party_settings: { }
+  p_landing_description:
+    label: hidden
+    type: text_default
+    weight: 5
+    settings: { }
+    third_party_settings: { }
+hidden: {  }

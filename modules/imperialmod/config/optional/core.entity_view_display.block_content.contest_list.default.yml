@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.block_content.contest_list.contest_list_list
+    - block_content.type.contest_list
+id: block_content.contest_list.default
+targetEntityType: block_content
+bundle: contest_list
+mode: default
+content:
+  contest_list_list:
+    label: hidden
+    type: entity_reference_entity_id
+    weight: 1
+    settings: { }
+    third_party_settings: { }
+hidden: {  }

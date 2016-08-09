@@ -25,7 +25,9 @@ content:
   share_band_imperial_description:
     type: text_textarea
     weight: 3
-    settings: { }
+    settings:
+      rows: 5
+      placeholder: ''
     third_party_settings: { }
   share_band_imperial_share:
     type: link_default

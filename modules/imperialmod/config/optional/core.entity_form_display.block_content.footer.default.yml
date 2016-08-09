@@ -25,14 +25,24 @@ content:
     weight: 2
     settings: { }
     third_party_settings: { }
+  footer_coporatemenu:
+    type: entity_reference_autocomplete
+    weight: 3
+    settings: { }
+    third_party_settings: { }
+  footer_footermenu:
+    type: entity_reference_autocomplete
+    weight: 4
+    settings: { }
+    third_party_settings: { }
   footer_imperial_products:
     type: image_image
-    weight: 3
+    weight: 5
     settings: { }
     third_party_settings: { }
   footer_dixie_products:
     type: image_image
-    weight: 4
+    weight: 6
     settings: { }
     third_party_settings: { }
 hidden: {  }

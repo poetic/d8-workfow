@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.block_content.consumer_description
+    - block_content.type.consumer
+  module:
+    - text
+id: block_content.consumer.consumer_description
+field_name: consumer_description
+entity_type: block_content
+bundle: consumer
+label: 'Consumer Description'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

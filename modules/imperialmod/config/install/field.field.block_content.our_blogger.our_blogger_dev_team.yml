@@ -1,0 +1,25 @@
+langcode: en
+status: true
+dependencies:
+  config:
+  - block_content.type.our_blogger
+  - field.storage.block_content.our_blogger_dev_team
+  - views.view.dev_team
+id: block_content.our_blogger.our_blogger_dev_team
+field_name: our_blogger_dev_team
+entity_type: block_content
+bundle: our_blogger
+label: 'Our Blogger Dev Team'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    target_uuid: af1e5231-e948-4eb7-936e-1cff3ee0e46e
+default_value_callback: ''
+settings:
+  handler: 'default:view'
+  handler_settings:
+    target_bundles: null
+    auto_create: false
+field_type: entity_reference

@@ -1,0 +1,40 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.card
+    - field.field.node.free_digitalbk.free_digitalbk_image
+    - field.field.node.free_digitalbk.free_digitalbk_name
+    - field.field.node.free_digitalbk.free_digitalbk_year
+    - field.field.node.free_digitalbk.free_digitalbk_link
+    - node.type.free_digitalbk
+id: node.free_digitalbk.card
+targetEntityType: node
+bundle: free_digitalbk
+mode: card
+content:
+  free_digitalbk_image:
+    label: hidden
+    type: image
+    weight: 1
+    settings: { }
+    third_party_settings: { }
+  free_digitalbk_name:
+    label: hidden
+    type: string
+    weight: 2
+    settings: { }
+    third_party_settings: { }
+  free_digitalbk_year:
+    label: hidden
+    type: string
+    weight: 3
+    settings: { }
+    third_party_settings: { }
+  free_digitalbk_link:
+    label: hidden
+    type: link
+    weight: 4
+    settings: { }
+    third_party_settings: { }
+hidden: {  }

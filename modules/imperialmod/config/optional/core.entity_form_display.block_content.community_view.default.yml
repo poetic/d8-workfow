@@ -1,0 +1,11 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.community_view
+id: block_content.community_view.default
+targetEntityType: block_content
+bundle: community_view
+mode: default
+content: {  }
+hidden: {  }

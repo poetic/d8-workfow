@@ -1,0 +1,17 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - contact.form.tags
+    - contact_message.type.tags
+id: contact_message.tags.default
+targetEntityType: contact_message
+bundle: tags
+mode: default
+content: {  }
+hidden:
+  copy: true
+  mail: true
+  message: true
+  name: true
+  subject: true

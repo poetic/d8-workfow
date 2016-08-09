@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+id: baking_tips
+label: Baking Tips
+revision: 1
+description: 'Baking Tips'

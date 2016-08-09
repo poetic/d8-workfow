@@ -1,0 +1,37 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.blog
+    - field.storage.node.blog_main
+  module:
+    - image
+id: node.blog.blog_main
+field_name: blog_main
+entity_type: node
+bundle: blog
+label: 'Blog Main'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_extensions: 'png gif jpg jpeg'
+  alt_field: true
+  alt_field_required: true
+  title_field: false
+  title_field_required: false
+  max_resolution: ''
+  min_resolution: ''
+  default_image:
+    uuid: null
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  file_directory: 'blog'
+  max_filesize: '2 MB'
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: image

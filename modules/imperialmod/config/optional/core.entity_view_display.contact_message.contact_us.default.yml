@@ -1,0 +1,12 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - contact.form.contact_us
+    - contact_message.type.contact_us
+id: contact_message.contact_us.default
+targetEntityType: contact_message
+bundle: contact_us
+mode: default
+content: {  }
+hidden: {  }

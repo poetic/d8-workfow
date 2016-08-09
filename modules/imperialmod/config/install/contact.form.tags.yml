@@ -1,0 +1,14 @@
+uuid: cfb82748-4f9a-42aa-b7b4-5ebdf8050d9b
+langcode: en
+status: true
+dependencies: {  }
+third_party_settings:
+  contact_storage:
+    redirect_uri: ''
+    submit_text: 'Submit'
+    show_preview: false
+id: tags
+label: 'Tags'
+recipients: {  }
+reply: ''
+weight: 0

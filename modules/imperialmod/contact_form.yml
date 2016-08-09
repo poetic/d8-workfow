@@ -5,3 +5,4 @@ subscribe:
         form_display: email_default
         formatter: basic_string
         cardinality: 1
+        label: ''

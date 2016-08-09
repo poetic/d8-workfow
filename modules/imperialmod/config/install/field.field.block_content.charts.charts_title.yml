@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.charts
+    - field.storage.block_content.charts_title
+id: block_content.charts.charts_title
+field_name: charts_title
+entity_type: block_content
+bundle: charts
+label: 'Charts Title'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

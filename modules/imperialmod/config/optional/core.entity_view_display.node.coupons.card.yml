@@ -1,0 +1,47 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.card
+    - field.field.node.coupons.coupons_imperial
+    - field.field.node.coupons.coupons_dixie
+    - field.field.node.coupons.coupons_title
+    - field.field.node.coupons.coupons_price
+    - field.field.node.coupons.coupons_cent
+    - node.type.coupons
+id: node.coupons.card
+targetEntityType: node
+bundle: coupons
+mode: card
+content:
+  coupons_imperial:
+    label: hidden
+    type: image
+    weight: 1
+    settings: { }
+    third_party_settings: { }
+  coupons_dixie:
+    label: hidden
+    type: image
+    weight: 2
+    settings: { }
+    third_party_settings: { }
+  coupons_title:
+    label: hidden
+    type: string
+    weight: 3
+    settings: { }
+    third_party_settings: { }
+  coupons_price:
+    label: hidden
+    type: string
+    weight: 4
+    settings: { }
+    third_party_settings: { }
+  coupons_cent:
+    label: hidden
+    type: string
+    weight: 5
+    settings: { }
+    third_party_settings: { }
+hidden: {  }

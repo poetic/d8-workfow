@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.block_content.charts_product_tips
+    - block_content.type.charts
+  module:
+    - text
+id: block_content.charts.charts_product_tips
+field_name: charts_product_tips
+entity_type: block_content
+bundle: charts
+label: 'Charts Product Tips'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

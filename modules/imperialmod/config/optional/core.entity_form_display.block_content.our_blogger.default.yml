@@ -3,17 +3,18 @@ status: true
 dependencies:
   config:
     - field.field.block_content.our_blogger.our_blogger_logo_imperial
-    - field.field.block_content.our_blogger.our_blogger_logo_imperial
+    - field.field.block_content.our_blogger.our_blogger_logo_dixie
     - field.field.block_content.our_blogger.our_blogger_description
     - field.field.block_content.our_blogger.our_blogger_developers_tab
     - field.field.block_content.our_blogger.our_blogger_testers_tab
     - field.field.block_content.our_blogger.our_blogger_seal_dev
     - field.field.block_content.our_blogger.our_blogger_seal_dev_dixie
     - field.field.block_content.our_blogger.our_blogger_intro_developer
+    - field.field.block_content.our_blogger.our_blogger_dev_team
     - field.field.block_content.our_blogger.our_blogger_seal_tester
     - field.field.block_content.our_blogger.our_blogger_seal_tester_dixie
     - field.field.block_content.our_blogger.our_blogger_intro_tester
-    - field.field.block_content.our_blogger.our_blogger_teams_view
+    - field.field.block_content.our_blogger.our_blogger_tester_team
     - field.field.block_content.our_blogger.our_blogger_description
     - block_content.type.our_blogger
 id: block_content.our_blogger.default
@@ -26,7 +27,7 @@ content:
     weight: 1
     settings: { }
     third_party_settings: { }
-  our_blogger_logo_imperial:
+  our_blogger_logo_dixie:
     type: image_image
     weight: 2
     settings: { }
@@ -34,7 +35,9 @@ content:
   our_blogger_description:
     type: text_textarea
     weight: 3
-    settings: { }
+    settings:
+      rows: 5
+      placeholder: ''
     third_party_settings: { }
   our_blogger_developers_tab:
     type: string_textfield
@@ -59,7 +62,9 @@ content:
   our_blogger_intro_developer:
     type: text_textarea
     weight: 8
-    settings: { }
+    settings:
+      rows: 5
+      placeholder: ''
     third_party_settings: { }
   our_blogger_seal_tester:
     type: image_image
@@ -74,11 +79,15 @@ content:
   our_blogger_intro_tester:
     type: text_textarea
     weight: 11
-    settings: { }
+    settings:
+      rows: 5
+      placeholder: ''
     third_party_settings: { }
   our_blogger_description:
     type: text_textarea
     weight: 12
-    settings: { }
+    settings:
+      rows: 5
+      placeholder: ''
     third_party_settings: { }
 hidden: {  }

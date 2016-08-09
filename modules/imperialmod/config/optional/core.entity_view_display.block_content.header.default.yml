@@ -2,7 +2,6 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.block_content.header.header_usernav
     - field.field.block_content.header.header_imperial_logo
     - field.field.block_content.header.header_dixie_logo
     - field.field.block_content.header.header_main
@@ -14,34 +13,28 @@ targetEntityType: block_content
 bundle: header
 mode: default
 content:
-  header_usernav:
-    label: hidden
-    type: entity_reference_entity_id
-    weight: 1
-    settings: { }
-    third_party_settings: { }
   header_imperial_logo:
     label: hidden
     type: image
-    weight: 2
+    weight: 1
     settings: { }
     third_party_settings: { }
   header_dixie_logo:
     label: hidden
     type: image
-    weight: 3
+    weight: 2
     settings: { }
     third_party_settings: { }
   header_main:
     label: hidden
     type: entity_reference_entity_id
-    weight: 4
+    weight: 3
     settings: { }
     third_party_settings: { }
   header_background_img:
     label: hidden
     type: image
-    weight: 5
+    weight: 4
     settings: { }
     third_party_settings: { }
 hidden: {  }

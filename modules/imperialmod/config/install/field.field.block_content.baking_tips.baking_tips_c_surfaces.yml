@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.baking_tips
+    - field.storage.block_content.baking_tips_c_surfaces
+id: block_content.baking_tips.baking_tips_c_surfaces
+field_name: baking_tips_c_surfaces
+entity_type: block_content
+bundle: baking_tips
+label: 'Baking Tips C Surfaces'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

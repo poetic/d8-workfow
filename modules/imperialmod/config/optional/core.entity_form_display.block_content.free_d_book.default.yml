@@ -1,0 +1,26 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.block_content.free_d_book.free_d_book_title
+    - field.field.block_content.free_d_book.free_d_book_description
+    - field.field.block_content.free_d_book.free_d_book_free_digital
+    - block_content.type.free_d_book
+id: block_content.free_d_book.default
+targetEntityType: block_content
+bundle: free_d_book
+mode: default
+content:
+  free_d_book_title:
+    type: string_textfield
+    weight: 1
+    settings: { }
+    third_party_settings: { }
+  free_d_book_description:
+    type: text_textarea
+    weight: 2
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: { }
+hidden: {  }

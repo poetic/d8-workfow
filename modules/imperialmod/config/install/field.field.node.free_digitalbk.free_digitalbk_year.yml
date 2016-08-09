@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.free_digitalbk
+    - field.storage.node.free_digitalbk_year
+id: node.free_digitalbk.free_digitalbk_year
+field_name: free_digitalbk_year
+entity_type: node
+bundle: free_digitalbk
+label: 'Free Digitalbk Year'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

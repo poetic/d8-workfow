@@ -1,0 +1,32 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.block_content.free_d_book.free_d_book_title
+    - field.field.block_content.free_d_book.free_d_book_description
+    - field.field.block_content.free_d_book.free_d_book_free_digital
+    - block_content.type.free_d_book
+id: block_content.free_d_book.default
+targetEntityType: block_content
+bundle: free_d_book
+mode: default
+content:
+  free_d_book_title:
+    label: hidden
+    type: string
+    weight: 1
+    settings: { }
+    third_party_settings: { }
+  free_d_book_description:
+    label: hidden
+    type: text_default
+    weight: 2
+    settings: { }
+    third_party_settings: { }
+  free_d_book_free_digital:
+    label: hidden
+    type: entity_reference_entity_id
+    weight: 3
+    settings: { }
+    third_party_settings: { }
+hidden: {  }

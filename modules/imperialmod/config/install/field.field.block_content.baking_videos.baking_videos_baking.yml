@@ -1,0 +1,25 @@
+langcode: en
+status: true
+dependencies:
+  config:
+  - block_content.type.baking_videos
+  - field.storage.block_content.baking_videos_baking
+  - views.view.baking_videos
+id: block_content.baking_videos.baking_videos_baking
+field_name: baking_videos_baking
+entity_type: block_content
+bundle: baking_videos
+label: 'Baking Videos Baking'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    target_uuid: a9929bbc-af0d-4036-a184-ac0866311af5
+default_value_callback: ''
+settings:
+  handler: 'default:view'
+  handler_settings:
+    target_bundles: null
+    auto_create: false
+field_type: entity_reference

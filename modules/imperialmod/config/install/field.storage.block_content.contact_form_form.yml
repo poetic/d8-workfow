@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  - block_content
+  - contact
+id: block_content.contact_form_form
+field_name: contact_form_form
+entity_type: block_content
+type: entity_reference
+settings:
+  target_type: contact_form
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

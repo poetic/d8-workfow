@@ -1,0 +1,11 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.r_social
+id: block_content.r_social.default
+targetEntityType: block_content
+bundle: r_social
+mode: default
+content: {  }
+hidden: {  }

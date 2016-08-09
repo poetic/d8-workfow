@@ -1,0 +1,12 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.blog
+    - node.type.blog
+id: node.blog.blog
+targetEntityType: node
+bundle: blog
+mode: blog
+content: {  }
+hidden: {  }

@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.block_content.contact_form.contact_form_form
+    - block_content.type.contact_form
+id: block_content.contact_form.default
+targetEntityType: block_content
+bundle: contact_form
+mode: default
+content:
+  contact_form_form:
+    label: hidden
+    type: entity_reference_entity_view
+    weight: 1
+    settings: { }
+    third_party_settings: { }
+hidden: {  }

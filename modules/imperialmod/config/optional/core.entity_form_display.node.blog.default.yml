@@ -1,0 +1,38 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.blog.blog_main
+    - field.field.node.blog.blog_description
+    - field.field.node.blog.blog_tags
+    - field.field.node.blog.blog_notes
+    - field.field.node.blog.blog_related_news
+    - node.type.blog
+id: node.blog.default
+targetEntityType: node
+bundle: blog
+mode: default
+content:
+  blog_main:
+    type: image_image
+    weight: 1
+    settings: { }
+    third_party_settings: { }
+  blog_description:
+    type: text_textarea
+    weight: 2
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: { }
+  blog_tags:
+    type: entity_reference_autocomplete
+    weight: 3
+    settings: { }
+    third_party_settings: { }
+  blog_notes:
+    type: string_textarea
+    weight: 4
+    settings: { }
+    third_party_settings: { }
+hidden: {  }

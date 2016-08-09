@@ -1,16 +1,53 @@
-news:
-    news_main:
-        type: image
-        name: news_main
-        form_display: image_image
-        formatter: image
+baking_videos:
+    baking_videos_title:
+        type: string
+        name: baking_videos_title
+        form_display: string_textfield
+        formatter: string
         cardinality: 1
-    news_description:
+    baking_videos_description:
         type: text_long
-        name: news_description
+        name: baking_videos_description
         form_display: text_textarea
         formatter: text_default
         cardinality: 1
+blog:
+    blog_main:
+        type: image
+        name: blog_main
+        form_display: image_image
+        formatter: image
+        cardinality: 1
+    blog_description:
+        type: text_long
+        name: blog_description
+        form_display: text_textarea
+        formatter: text_default
+        cardinality: 1
+    blog_tags:
+        type: entity_reference
+        name: blog_tags
+        form_display: entity_reference_autocomplete
+        formatter: entity_reference_entity_view
+        cardinality: null
+        target_type: taxonomy_term
+        target_bundle: tags
+        target_uuid: null
+    blog_notes:
+        type: string_long
+        name: blog_notes
+        form_display: string_textarea
+        formatter: basic_string
+        cardinality: 1
+    blog_related_news:
+        type: entity_reference
+        name: blog_related_news
+        form_display: hidden
+        formatter: entity_reference_entity_id
+        cardinality: null
+        target_type: view
+        target_bundle: related_news
+        target_uuid: 13792237-374a-4f94-83d9-d62d126bcc47
 sugar_101:
     sugar_101_image:
         type: image
@@ -34,6 +71,62 @@ team:
     team_blog:
         type: link
         name: team_blog
+        form_display: link_default
+        formatter: link
+        cardinality: 1
+coupons:
+    coupons_imperial:
+        type: image
+        name: coupons_imperial
+        form_display: image_image
+        formatter: image
+        cardinality: 1
+    coupons_dixie:
+        type: image
+        name: coupons_dixie
+        form_display: image_image
+        formatter: image
+        cardinality: 1
+    coupons_title:
+        type: string
+        name: coupons_title
+        form_display: string_textfield
+        formatter: string
+        cardinality: 1
+    coupons_price:
+        type: string
+        name: coupons_price
+        form_display: string_textfield
+        formatter: string
+        cardinality: 1
+    coupons_cent:
+        type: string
+        name: coupons_cent
+        form_display: string_textfield
+        formatter: string
+        cardinality: 1
+free_digitalbk:
+    free_digitalbk_image:
+        type: image
+        name: free_digitalbk_image
+        form_display: image_image
+        formatter: image
+        cardinality: 1
+    free_digitalbk_name:
+        type: string
+        name: free_digitalbk_name
+        form_display: string_textfield
+        formatter: string
+        cardinality: 1
+    free_digitalbk_year:
+        type: string
+        name: free_digitalbk_year
+        form_display: string_textfield
+        formatter: string
+        cardinality: 1
+    free_digitalbk_link:
+        type: link
+        name: free_digitalbk_link
         form_display: link_default
         formatter: link
         cardinality: 1
@@ -70,7 +163,7 @@ kids_landing:
         cardinality: null
         target_type: view
         target_bundle: kids_popular_recipe
-        target_uuid: 6eeda95e-135f-4ca1-98b1-46ff99e131c3
+        target_uuid: b07e4a52-7446-4ccd-bf3e-ca4a44351367
     kids_landing_trending_recipe:
         type: entity_reference
         name: kids_landing_trending_recipe
@@ -79,7 +172,7 @@ kids_landing:
         cardinality: null
         target_type: view
         target_bundle: kids_trending_recipe
-        target_uuid: fc7fa9b6-ef50-4fb7-8f2a-4ee39d2cb6ae
+        target_uuid: 5fe1add9-5a42-4146-b885-51b1bf5cd8fc
     kids_landing_collection_title:
         type: string
         name: kids_landing_collection_title
@@ -94,7 +187,32 @@ kids_landing:
         cardinality: null
         target_type: view
         target_bundle: collection_kids
-        target_uuid: fd5570e8-1792-4bdd-8371-9f4433491c72
+        target_uuid: 4af5ccd5-3a8b-4482-965c-781a4a503ab5
+rc_overview:
+    rc_overview_header:
+        type: image
+        name: rc_overview_header
+        form_display: image_image
+        formatter: image
+        cardinality: 1
+    rc_overview_hero:
+        type: entity_reference
+        name: rc_overview_hero
+        form_display: hidden
+        formatter: entity_reference_entity_id
+        cardinality: null
+        target_type: view
+        target_bundle: rc_hero
+        target_uuid: a5f66cc2-d519-4835-bd11-746c48d01507
+    rc_overview_trend:
+        type: entity_reference
+        name: rc_overview_trend
+        form_display: hidden
+        formatter: entity_reference_entity_id
+        cardinality: null
+        target_type: view
+        target_bundle: rc_trend
+        target_uuid: 853cb8d5-eb30-44e0-b7ca-062948529c4a
 recipe_collection:
     recipe_collection_image:
         type: image
@@ -110,7 +228,7 @@ recipe_collection:
         cardinality: null
         target_type: view
         target_bundle: recipe_collection
-        target_uuid: 760d8426-9e43-4503-aa84-e038f1316fe4
+        target_uuid: 8de6549d-c550-444b-9dbd-dbba89c9edef
     recipe_collection_trending:
         type: entity_reference
         name: recipe_collection_trending
@@ -119,7 +237,7 @@ recipe_collection:
         cardinality: null
         target_type: view
         target_bundle: trending_collection
-        target_uuid: 0a14f47f-84e6-43ad-9167-f108ac188594
+        target_uuid: cf75576c-55c6-4030-9e85-3fb0a1d1ae9f
 recipe:
     recipe_recipe_image:
         type: image

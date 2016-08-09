@@ -3,11 +3,8 @@ status: true
 dependencies:
   config:
     - field.field.block_content.learn_more.learn_more_imperial
-    - field.field.block_content.learn_more.learn_more_dixie
-    - field.field.block_content.learn_more.learn_more_imperial_title
-    - field.field.block_content.learn_more.learn_more_dixie_title
-    - field.field.block_content.learn_more.learn_more_imperial_description
-    - field.field.block_content.learn_more.learn_more_dixie_description
+    - field.field.block_content.learn_more.learn_more_title
+    - field.field.block_content.learn_more.learn_more_description
     - field.field.block_content.learn_more.learn_more_vintage
     - field.field.block_content.learn_more.learn_more_cane
     - field.field.block_content.learn_more.learn_more_our
@@ -22,44 +19,31 @@ content:
     weight: 1
     settings: { }
     third_party_settings: { }
-  learn_more_dixie:
-    type: image_image
+  learn_more_title:
+    type: string_textfield
     weight: 2
     settings: { }
     third_party_settings: { }
-  learn_more_imperial_title:
-    type: string_textfield
+  learn_more_description:
+    type: text_textarea
     weight: 3
-    settings: { }
+    settings:
+      rows: 5
+      placeholder: ''
     third_party_settings: { }
-  learn_more_dixie_title:
+  learn_more_vintage:
     type: string_textfield
     weight: 4
     settings: { }
     third_party_settings: { }
-  learn_more_imperial_description:
-    type: text_textarea
-    weight: 5
-    settings: { }
-    third_party_settings: { }
-  learn_more_dixie_description:
-    type: text_textarea
-    weight: 6
-    settings: { }
-    third_party_settings: { }
-  learn_more_vintage:
-    type: string_textfield
-    weight: 7
-    settings: { }
-    third_party_settings: { }
   learn_more_cane:
     type: string_textfield
-    weight: 8
+    weight: 5
     settings: { }
     third_party_settings: { }
   learn_more_our:
     type: string_textfield
-    weight: 9
+    weight: 6
     settings: { }
     third_party_settings: { }
 hidden: {  }

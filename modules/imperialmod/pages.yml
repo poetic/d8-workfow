@@ -1,22 +1,40 @@
-baking_videos: {  }
+baking_videos:
+    - featured_videos
+    - baking_videos
 blog_article:
     - related_news
-blog_2: {  }
+blog_2:
+    - blog_landing
 article: {  }
-cane_sugar_101: {  }
+cane_sugar_101:
+    - sugar_landing
 our_bloggers:
     - our_blogger
 share_a_recipe: {  }
 work_with_us: {  }
-community: {  }
-contact: {  }
+community:
+    - sweet_com
+    - sweet_com_login
+    - community_view
+contact:
+    - contact_us
+    - contact_form
+    - consumer
 contest_terms: {  }
 contest: {  }
-contests: {  }
-conversion_charts: {  }
-cooking_and_baking_tips: {  }
-coupons: {  }
-digital_cookbooks: {  }
+contests:
+    - contest_hero
+    - contest_list
+conversion_charts:
+    - charts
+    - social_share
+cooking_and_baking_tips:
+    - baking_tips
+    - social_share
+coupons:
+    - coupon
+digital_cookbooks:
+    - free_d_book
 index:
     - header
     - side_nav
@@ -26,6 +44,7 @@ index:
     - share_band_imperial
     - home_projects
     - learn_more
+    - dixie_learn
     - footer_subscribe
 cubie_cubettes_cooking_club: {  }
 my_first_cookbook: {  }
@@ -36,10 +55,14 @@ kids_in_the_kitchen_2:
     - kids_trending_recipe
     - collection_kids
 login: {  }
-privacy_policy: {  }
+privacy_policy:
+    - privacy
 product: {  }
-products_3: {  }
-recipe_collection_overview: {  }
+products_3:
+    - p_landing
+recipe_collection_overview:
+    - rc_hero
+    - rc_trend
 recipes_2: {  }
 search_results: {  }
 sitemap: {  }
@@ -49,5 +72,3 @@ terms_of_use: {  }
 edit_profile: {  }
 recipe_box: {  }
 vintage_imperial: {  }
-xx_base_page: {  }
-xx_styles: {  }

@@ -1,0 +1,25 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.block_content.contact_us.contact_us_title
+    - field.field.block_content.contact_us.contact_us_description
+    - block_content.type.contact_us
+id: block_content.contact_us.default
+targetEntityType: block_content
+bundle: contact_us
+mode: default
+content:
+  contact_us_title:
+    type: string_textfield
+    weight: 1
+    settings: { }
+    third_party_settings: { }
+  contact_us_description:
+    type: text_textarea
+    weight: 2
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: { }
+hidden: {  }

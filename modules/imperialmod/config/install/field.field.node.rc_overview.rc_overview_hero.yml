@@ -1,0 +1,25 @@
+langcode: en
+status: true
+dependencies:
+  config:
+  - node.type.rc_overview
+  - field.storage.node.rc_overview_hero
+  - views.view.rc_hero
+id: node.rc_overview.rc_overview_hero
+field_name: rc_overview_hero
+entity_type: node
+bundle: rc_overview
+label: 'Rc Overview Hero'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    target_uuid: a5f66cc2-d519-4835-bd11-746c48d01507
+default_value_callback: ''
+settings:
+  handler: 'default:view'
+  handler_settings:
+    target_bundles: null
+    auto_create: false
+field_type: entity_reference

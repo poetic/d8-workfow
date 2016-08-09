@@ -1,0 +1,12 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.card
+    - node.type.rc_overview
+id: node.rc_overview.card
+targetEntityType: node
+bundle: rc_overview
+mode: card
+content: {  }
+hidden: {  }

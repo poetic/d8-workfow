@@ -3,11 +3,8 @@ status: true
 dependencies:
   config:
     - field.field.block_content.learn_more.learn_more_imperial
-    - field.field.block_content.learn_more.learn_more_dixie
-    - field.field.block_content.learn_more.learn_more_imperial_title
-    - field.field.block_content.learn_more.learn_more_dixie_title
-    - field.field.block_content.learn_more.learn_more_imperial_description
-    - field.field.block_content.learn_more.learn_more_dixie_description
+    - field.field.block_content.learn_more.learn_more_title
+    - field.field.block_content.learn_more.learn_more_description
     - field.field.block_content.learn_more.learn_more_vintage
     - field.field.block_content.learn_more.learn_more_cane
     - field.field.block_content.learn_more.learn_more_our
@@ -23,52 +20,34 @@ content:
     weight: 1
     settings: { }
     third_party_settings: { }
-  learn_more_dixie:
+  learn_more_title:
     label: hidden
-    type: image
+    type: string
     weight: 2
     settings: { }
     third_party_settings: { }
-  learn_more_imperial_title:
+  learn_more_description:
     label: hidden
-    type: string
+    type: text_default
     weight: 3
-    settings: { }
-    third_party_settings: { }
-  learn_more_dixie_title:
-    label: hidden
-    type: string
-    weight: 4
-    settings: { }
-    third_party_settings: { }
-  learn_more_imperial_description:
-    label: hidden
-    type: text_default
-    weight: 5
-    settings: { }
-    third_party_settings: { }
-  learn_more_dixie_description:
-    label: hidden
-    type: text_default
-    weight: 6
     settings: { }
     third_party_settings: { }
   learn_more_vintage:
     label: hidden
     type: string
-    weight: 7
+    weight: 4
     settings: { }
     third_party_settings: { }
   learn_more_cane:
     label: hidden
     type: string
-    weight: 8
+    weight: 5
     settings: { }
     third_party_settings: { }
   learn_more_our:
     label: hidden
     type: string
-    weight: 9
+    weight: 6
     settings: { }
     third_party_settings: { }
 hidden: {  }

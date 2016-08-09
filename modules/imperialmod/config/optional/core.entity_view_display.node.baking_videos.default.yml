@@ -1,0 +1,25 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.baking_videos.baking_videos_title
+    - field.field.node.baking_videos.baking_videos_description
+    - node.type.baking_videos
+id: node.baking_videos.default
+targetEntityType: node
+bundle: baking_videos
+mode: default
+content:
+  baking_videos_title:
+    label: hidden
+    type: string
+    weight: 1
+    settings: { }
+    third_party_settings: { }
+  baking_videos_description:
+    label: hidden
+    type: text_default
+    weight: 2
+    settings: { }
+    third_party_settings: { }
+hidden: {  }

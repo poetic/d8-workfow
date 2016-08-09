@@ -1,0 +1,14 @@
+uuid: f5720ec9-c577-473b-b6b9-84c7f7cd9372
+langcode: en
+status: true
+dependencies: {  }
+third_party_settings:
+  contact_storage:
+    redirect_uri: ''
+    submit_text: 'Submit'
+    show_preview: false
+id: contact_us
+label: 'Contact Us'
+recipients: {  }
+reply: ''
+weight: 0

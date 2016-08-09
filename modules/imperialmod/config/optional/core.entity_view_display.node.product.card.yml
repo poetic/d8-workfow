@@ -1,0 +1,12 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.card
+    - node.type.product
+id: node.product.card
+targetEntityType: node
+bundle: product
+mode: card
+content: {  }
+hidden: {  }

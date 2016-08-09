@@ -1,0 +1,17 @@
+langcode: en
+status: true
+dependencies:
+  - block_content
+  - link
+id: block_content.coupon_name
+field_name: coupon_name
+entity_type: block_content
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

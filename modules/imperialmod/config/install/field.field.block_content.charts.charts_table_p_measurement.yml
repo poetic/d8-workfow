@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.block_content.charts_table_p_measurement
+    - block_content.type.charts
+  module:
+    - text
+id: block_content.charts.charts_table_p_measurement
+field_name: charts_table_p_measurement
+entity_type: block_content
+bundle: charts
+label: 'Charts Table P Measurement'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

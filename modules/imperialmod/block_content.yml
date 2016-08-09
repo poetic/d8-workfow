@@ -1,7 +1,113 @@
+featured_videos:
+    featured_videos_title:
+        type: string
+        name: featured_videos_title
+        form_display: string_textfield
+        formatter: string
+        cardinality: 1
+    featured_videos_description:
+        type: string_long
+        name: featured_videos_description
+        form_display: string_textarea
+        formatter: basic_string
+        cardinality: 1
+    featured_videos_baking_featured:
+        type: entity_reference
+        name: featured_videos_baking_featured
+        form_display: hidden
+        formatter: entity_reference_entity_id
+        cardinality: null
+        target_type: view
+        target_bundle: baking_featured
+        target_uuid: baed740c-204e-4fc0-b8a2-a63d81c08565
+baking_videos:
+    baking_videos_baking:
+        type: entity_reference
+        name: baking_videos_baking
+        form_display: hidden
+        formatter: entity_reference_entity_id
+        cardinality: null
+        target_type: view
+        target_bundle: baking_videos
+        target_uuid: a9929bbc-af0d-4036-a184-ac0866311af5
+blog_landing:
+    blog_landing_hero:
+        type: entity_reference
+        name: blog_landing_hero
+        form_display: hidden
+        formatter: entity_reference_entity_id
+        cardinality: null
+        target_type: view
+        target_bundle: blog_hero
+        target_uuid: 219b187d-58dc-439c-99a0-207049a68d31
+    blog_landing_popular:
+        type: entity_reference
+        name: blog_landing_popular
+        form_display: hidden
+        formatter: entity_reference_entity_id
+        cardinality: null
+        target_type: view
+        target_bundle: popular_blogs
+        target_uuid: 8b8285d4-0868-4537-af97-9724ea2720fb
+    blog_landing_latest:
+        type: entity_reference
+        name: blog_landing_latest
+        form_display: hidden
+        formatter: entity_reference_entity_id
+        cardinality: null
+        target_type: view
+        target_bundle: latest_blog
+        target_uuid: bb7d77e1-0fb2-46f6-8ac7-b5eb72f23001
+sugar_landing:
+    sugar_landing_header:
+        type: image
+        name: sugar_landing_header
+        form_display: image_image
+        formatter: image
+        cardinality: 1
+    sugar_landing_title:
+        type: string
+        name: sugar_landing_title
+        form_display: string_textfield
+        formatter: string
+        cardinality: 1
+    sugar_landing_top:
+        type: text_long
+        name: sugar_landing_top
+        form_display: text_textarea
+        formatter: text_default
+        cardinality: 1
+    sugar_landing_items_list:
+        type: text_long
+        name: sugar_landing_items_list
+        form_display: text_textarea
+        formatter: text_default
+        cardinality: 1
+    sugar_landing_bottom:
+        type: text_long
+        name: sugar_landing_bottom
+        form_display: text_textarea
+        formatter: text_default
+        cardinality: 1
+    sugar_landing_sugar_list:
+        type: entity_reference
+        name: sugar_landing_sugar_list
+        form_display: hidden
+        formatter: entity_reference_entity_id
+        cardinality: null
+        target_type: view
+        target_bundle: sugar_list
+        target_uuid: f3261c43-0264-407f-875b-31bae44fee83
 our_blogger:
     our_blogger_logo_imperial:
         type: image
         name: our_blogger_logo_imperial
+        form_display: image_image
+        formatter: image
+        cardinality: 1
+    our_blogger_logo_dixie:
+        type: image
+        name: our_blogger_logo_dixie
         form_display: image_image
         formatter: image
         cardinality: 1
@@ -41,6 +147,15 @@ our_blogger:
         form_display: text_textarea
         formatter: text_default
         cardinality: 1
+    our_blogger_dev_team:
+        type: entity_reference
+        name: our_blogger_dev_team
+        form_display: hidden
+        formatter: entity_reference_entity_id
+        cardinality: null
+        target_type: view
+        target_bundle: dev_team
+        target_uuid: af1e5231-e948-4eb7-936e-1cff3ee0e46e
     our_blogger_seal_tester:
         type: image
         name: our_blogger_seal_tester
@@ -59,25 +174,275 @@ our_blogger:
         form_display: text_textarea
         formatter: text_default
         cardinality: 1
-    our_blogger_teams_view:
+    our_blogger_tester_team:
         type: entity_reference
-        name: our_blogger_teams_view
+        name: our_blogger_tester_team
         form_display: hidden
         formatter: entity_reference_entity_id
         cardinality: null
         target_type: view
         target_bundle: tester_team
-        target_uuid: e469ad66-c6ec-4708-b35b-128fdfeec778
-header:
-    header_usernav:
+        target_uuid: 20dcc10d-26a2-4065-b3ab-f74ff4e45e25
+contact_us:
+    contact_us_title:
+        type: string
+        name: contact_us_title
+        form_display: string_textfield
+        formatter: string
+        cardinality: 1
+    contact_us_description:
+        type: text_long
+        name: contact_us_description
+        form_display: text_textarea
+        formatter: text_default
+        cardinality: 1
+contact_form:
+    contact_form_form:
         type: entity_reference
-        name: header_usernav
+        name: contact_form_form
+        form_display: hidden
+        formatter: entity_reference_entity_view
+        cardinality: null
+        target_type: contact_form
+        target_bundle: contact_us
+        target_uuid: f5720ec9-c577-473b-b6b9-84c7f7cd9372
+consumer:
+    consumer_title:
+        type: string
+        name: consumer_title
+        form_display: string_textfield
+        formatter: string
+        cardinality: 1
+    consumer_description:
+        type: text_long
+        name: consumer_description
+        form_display: text_textarea
+        formatter: text_default
+        cardinality: 1
+contest_hero:
+    contest_hero_hero:
+        type: entity_reference
+        name: contest_hero_hero
         form_display: hidden
         formatter: entity_reference_entity_id
         cardinality: null
-        target_type: menu
-        target_bundle: usernav
-        target_uuid: null
+        target_type: view
+        target_bundle: contest_hero
+        target_uuid: 47b8ba76-c220-4ff5-98c0-c63adeb71662
+contest_list:
+    contest_list_list:
+        type: entity_reference
+        name: contest_list_list
+        form_display: hidden
+        formatter: entity_reference_entity_id
+        cardinality: null
+        target_type: view
+        target_bundle: all_contest
+        target_uuid: 0a5eda46-f18c-45e0-81ad-56fe9d46a173
+charts:
+    charts_title:
+        type: string
+        name: charts_title
+        form_display: string_textfield
+        formatter: string
+        cardinality: 1
+    charts_subtile:
+        type: string
+        name: charts_subtile
+        form_display: string_textfield
+        formatter: string
+        cardinality: 1
+    charts_product_tips:
+        type: text_long
+        name: charts_product_tips
+        form_display: text_textarea
+        formatter: text_default
+        cardinality: 1
+    charts_note:
+        type: text_long
+        name: charts_note
+        form_display: text_textarea
+        formatter: text_default
+        cardinality: 1
+    charts_p_measurement:
+        type: string
+        name: charts_p_measurement
+        form_display: string_textfield
+        formatter: string
+        cardinality: 1
+    charts_table_p_measurement:
+        type: text_long
+        name: charts_table_p_measurement
+        form_display: text_textarea
+        formatter: text_default
+        cardinality: 1
+    charts_g_measurement:
+        type: string
+        name: charts_g_measurement
+        form_display: string_textfield
+        formatter: string
+        cardinality: 1
+    charts_anchor:
+        type: text_long
+        name: charts_anchor
+        form_display: text_textarea
+        formatter: text_default
+        cardinality: 1
+    charts_another_way:
+        type: text_long
+        name: charts_another_way
+        form_display: text_textarea
+        formatter: text_default
+        cardinality: 1
+social_share:
+    social_share_title:
+        type: string
+        name: social_share_title
+        form_display: string_textfield
+        formatter: string
+        cardinality: 1
+    social_share_subtitle:
+        type: string
+        name: social_share_subtitle
+        form_display: string_textfield
+        formatter: string
+        cardinality: 1
+    social_share_link:
+        type: link
+        name: social_share_link
+        form_display: link_default
+        formatter: link
+        cardinality: 1
+baking_tips:
+    baking_tips_image:
+        type: image
+        name: baking_tips_image
+        form_display: image_image
+        formatter: image
+        cardinality: 1
+    baking_tips_title:
+        type: string
+        name: baking_tips_title
+        form_display: string_textfield
+        formatter: string
+        cardinality: 1
+    baking_tips_subtitle:
+        type: string
+        name: baking_tips_subtitle
+        form_display: string_textfield
+        formatter: string
+        cardinality: 1
+    baking_tips_description:
+        type: text_long
+        name: baking_tips_description
+        form_display: text_textarea
+        formatter: text_default
+        cardinality: 1
+    baking_tips_c_surfaces:
+        type: text_long
+        name: baking_tips_c_surfaces
+        form_display: text_textarea
+        formatter: text_default
+        cardinality: 1
+    baking_tips_link1:
+        type: link
+        name: baking_tips_link1
+        form_display: link_default
+        formatter: link
+        cardinality: 1
+    baking_tips_link2:
+        type: link
+        name: baking_tips_link2
+        form_display: link_default
+        formatter: link
+        cardinality: 1
+    baking_tips_link3:
+        type: link
+        name: baking_tips_link3
+        form_display: link_default
+        formatter: link
+        cardinality: 1
+    baking_tips_cookie_sheet:
+        type: string
+        name: baking_tips_cookie_sheet
+        form_display: string_textfield
+        formatter: string
+        cardinality: 1
+    baking_tips_c_sheet:
+        type: text_long
+        name: baking_tips_c_sheet
+        form_display: text_textarea
+        formatter: text_default
+        cardinality: 1
+    baking_tips_soften:
+        type: string
+        name: baking_tips_soften
+        form_display: string_textfield
+        formatter: string
+        cardinality: 1
+    baking_tips_soften_desc:
+        type: text_long
+        name: baking_tips_soften_desc
+        form_display: text_textarea
+        formatter: text_default
+        cardinality: 1
+coupon:
+    coupon_scissors:
+        type: image
+        name: coupon_scissors
+        form_display: image_image
+        formatter: image
+        cardinality: 1
+    coupon_title:
+        type: string
+        name: coupon_title
+        form_display: string_textfield
+        formatter: string
+        cardinality: 1
+    coupon_name:
+        type: link
+        name: coupon_name
+        form_display: link_default
+        formatter: link
+        cardinality: 1
+    coupon_description:
+        type: text_long
+        name: coupon_description
+        form_display: text_textarea
+        formatter: text_default
+        cardinality: 1
+    coupon_coupons:
+        type: entity_reference
+        name: coupon_coupons
+        form_display: hidden
+        formatter: entity_reference_entity_id
+        cardinality: null
+        target_type: view
+        target_bundle: coupons
+        target_uuid: 280680ea-17d5-4632-8d93-040c250849b3
+free_d_book:
+    free_d_book_title:
+        type: string
+        name: free_d_book_title
+        form_display: string_textfield
+        formatter: string
+        cardinality: 1
+    free_d_book_description:
+        type: text_long
+        name: free_d_book_description
+        form_display: text_textarea
+        formatter: text_default
+        cardinality: 1
+    free_d_book_free_digital:
+        type: entity_reference
+        name: free_d_book_free_digital
+        form_display: hidden
+        formatter: entity_reference_entity_id
+        cardinality: null
+        target_type: view
+        target_bundle: free_digital
+        target_uuid: 1bf7ce20-2ad3-45b8-a111-edd16690565f
+header:
     header_imperial_logo:
         type: image
         name: header_imperial_logo
@@ -93,7 +458,7 @@ header:
     header_main:
         type: entity_reference
         name: header_main
-        form_display: hidden
+        form_display: entity_reference_autocomplete
         formatter: entity_reference_entity_id
         cardinality: null
         target_type: menu
@@ -109,7 +474,7 @@ side_nav:
     side_nav_sidenav:
         type: entity_reference
         name: side_nav_sidenav
-        form_display: hidden
+        form_display: entity_reference_autocomplete
         formatter: entity_reference_entity_id
         cardinality: null
         target_type: menu
@@ -124,7 +489,16 @@ main_block:
         cardinality: null
         target_type: view
         target_bundle: hero
-        target_uuid: a943a6d3-ea1b-4282-8f9b-a49dee97dad0
+        target_uuid: d3c0a983-30bb-46b1-a729-032399f25bfc
+    main_block_hero_slider:
+        type: entity_reference
+        name: main_block_hero_slider
+        form_display: hidden
+        formatter: entity_reference_entity_id
+        cardinality: null
+        target_type: view
+        target_bundle: hero_slider
+        target_uuid: 2a5a7c47-1b7d-4df1-b9e4-33906ed1c969
     main_block_trending:
         type: entity_reference
         name: main_block_trending
@@ -133,7 +507,7 @@ main_block:
         cardinality: null
         target_type: view
         target_bundle: trending
-        target_uuid: a2e1aa18-6f05-411b-a721-dfbfd54dda84
+        target_uuid: 90b9e7a1-d284-4344-bd4f-01096f3f384e
 social_band:
     social_band_facebook:
         type: link
@@ -216,7 +590,7 @@ home_hero:
         cardinality: null
         target_type: view
         target_bundle: slider_view
-        target_uuid: 4785e02a-5644-472b-875a-7529de53b165
+        target_uuid: 2c189d6e-f531-42af-9b18-0fe23f05c30c
     home_hero_under_30:
         type: string
         name: home_hero_under_30
@@ -231,7 +605,7 @@ home_hero:
         cardinality: null
         target_type: view
         target_bundle: under_30_view
-        target_uuid: 8a6671c0-196a-420e-bda4-6e58e9925288
+        target_uuid: 0a3eb895-3d38-4607-9d08-376ad89bd9b2
 share_band_imperial:
     share_band_imperial_cupcake_icon:
         type: image
@@ -264,15 +638,15 @@ home_projects:
         form_display: string_textfield
         formatter: string
         cardinality: 1
-    home_projects_sweetalk_news:
+    home_projects_sweetalk_blog:
         type: entity_reference
-        name: home_projects_sweetalk_news
+        name: home_projects_sweetalk_blog
         form_display: hidden
         formatter: entity_reference_entity_id
         cardinality: null
         target_type: view
-        target_bundle: sweetalk_news
-        target_uuid: 43c7a4a8-4315-408c-ac60-327a58e41788
+        target_bundle: sweetalk_blog
+        target_uuid: c75ef582-27ac-4fda-a08b-a7fafb7eed20
 learn_more:
     learn_more_imperial:
         type: image
@@ -280,33 +654,15 @@ learn_more:
         form_display: image_image
         formatter: image
         cardinality: 1
-    learn_more_dixie:
-        type: image
-        name: learn_more_dixie
-        form_display: image_image
-        formatter: image
-        cardinality: 1
-    learn_more_imperial_title:
+    learn_more_title:
         type: string
-        name: learn_more_imperial_title
+        name: learn_more_title
         form_display: string_textfield
         formatter: string
         cardinality: 1
-    learn_more_dixie_title:
-        type: string
-        name: learn_more_dixie_title
-        form_display: string_textfield
-        formatter: string
-        cardinality: 1
-    learn_more_imperial_description:
+    learn_more_description:
         type: text_long
-        name: learn_more_imperial_description
-        form_display: text_textarea
-        formatter: text_default
-        cardinality: 1
-    learn_more_dixie_description:
-        type: text_long
-        name: learn_more_dixie_description
+        name: learn_more_description
         form_display: text_textarea
         formatter: text_default
         cardinality: 1
@@ -328,6 +684,25 @@ learn_more:
         form_display: string_textfield
         formatter: string
         cardinality: 1
+dixie_learn:
+    dixie_learn_dixie:
+        type: image
+        name: dixie_learn_dixie
+        form_display: image_image
+        formatter: image
+        cardinality: 1
+    dixie_learn_title:
+        type: string
+        name: dixie_learn_title
+        form_display: string_textfield
+        formatter: string
+        cardinality: 1
+    dixie_learn_description:
+        type: text_long
+        name: dixie_learn_description
+        form_display: text_textarea
+        formatter: text_default
+        cardinality: 1
 footer_subscribe:
     footer_subscribe_description:
         type: text_long
@@ -343,7 +718,7 @@ footer_subscribe:
         cardinality: null
         target_type: contact_form
         target_bundle: subscribe
-        target_uuid: 2dd75632-978e-4802-b81e-0811bfa0d02d
+        target_uuid: 51192871-03f5-4141-90b1-23b1ceae0733
 footer:
     footer_imperial_logo:
         type: image
@@ -360,7 +735,7 @@ footer:
     footer_coporatemenu:
         type: entity_reference
         name: footer_coporatemenu
-        form_display: hidden
+        form_display: entity_reference_autocomplete
         formatter: entity_reference_entity_id
         cardinality: null
         target_type: menu
@@ -369,7 +744,7 @@ footer:
     footer_footermenu:
         type: entity_reference
         name: footer_footermenu
-        form_display: hidden
+        form_display: entity_reference_autocomplete
         formatter: entity_reference_entity_id
         cardinality: null
         target_type: menu
@@ -386,4 +761,60 @@ footer:
         name: footer_dixie_products
         form_display: image_image
         formatter: image
+        cardinality: 1
+privacy:
+    privacy_imperial:
+        type: image
+        name: privacy_imperial
+        form_display: image_image
+        formatter: image
+        cardinality: 1
+    privacy_dixie:
+        type: image
+        name: privacy_dixie
+        form_display: image_image
+        formatter: image
+        cardinality: 1
+    privacy_title:
+        type: string
+        name: privacy_title
+        form_display: string_textfield
+        formatter: string
+        cardinality: 1
+    privacy_description:
+        type: text_long
+        name: privacy_description
+        form_display: text_textarea
+        formatter: text_default
+        cardinality: 1
+p_landing:
+    p_landing_imperial:
+        type: image
+        name: p_landing_imperial
+        form_display: image_image
+        formatter: image
+        cardinality: 1
+    p_landing_dixie:
+        type: image
+        name: p_landing_dixie
+        form_display: image_image
+        formatter: image
+        cardinality: 1
+    p_landing_title:
+        type: string
+        name: p_landing_title
+        form_display: string_textfield
+        formatter: string
+        cardinality: 1
+    p_landing_subtitle:
+        type: string
+        name: p_landing_subtitle
+        form_display: string_textfield
+        formatter: string
+        cardinality: 1
+    p_landing_description:
+        type: text_long
+        name: p_landing_description
+        form_display: text_textarea
+        formatter: text_default
         cardinality: 1

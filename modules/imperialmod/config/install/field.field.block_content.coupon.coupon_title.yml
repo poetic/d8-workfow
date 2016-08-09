@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.coupon
+    - field.storage.block_content.coupon_title
+id: block_content.coupon.coupon_title
+field_name: coupon_title
+entity_type: block_content
+bundle: coupon
+label: 'Coupon Title'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

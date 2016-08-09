@@ -1,0 +1,25 @@
+langcode: en
+status: true
+dependencies:
+  config:
+  - block_content.type.home_projects
+  - field.storage.block_content.home_projects_sweetalk_blog
+  - views.view.sweetalk_blog
+id: block_content.home_projects.home_projects_sweetalk_blog
+field_name: home_projects_sweetalk_blog
+entity_type: block_content
+bundle: home_projects
+label: 'Home Projects Sweetalk Blog'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    target_uuid: c75ef582-27ac-4fda-a08b-a7fafb7eed20
+default_value_callback: ''
+settings:
+  handler: 'default:view'
+  handler_settings:
+    target_bundles: null
+    auto_create: false
+field_type: entity_reference

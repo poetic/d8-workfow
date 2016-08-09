@@ -1,0 +1,32 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.block_content.social_share.social_share_title
+    - field.field.block_content.social_share.social_share_subtitle
+    - field.field.block_content.social_share.social_share_link
+    - block_content.type.social_share
+id: block_content.social_share.default
+targetEntityType: block_content
+bundle: social_share
+mode: default
+content:
+  social_share_title:
+    label: hidden
+    type: string
+    weight: 1
+    settings: { }
+    third_party_settings: { }
+  social_share_subtitle:
+    label: hidden
+    type: string
+    weight: 2
+    settings: { }
+    third_party_settings: { }
+  social_share_link:
+    label: hidden
+    type: link
+    weight: 3
+    settings: { }
+    third_party_settings: { }
+hidden: {  }

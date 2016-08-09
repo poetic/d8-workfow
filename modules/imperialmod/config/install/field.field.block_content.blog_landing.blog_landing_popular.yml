@@ -1,0 +1,25 @@
+langcode: en
+status: true
+dependencies:
+  config:
+  - block_content.type.blog_landing
+  - field.storage.block_content.blog_landing_popular
+  - views.view.popular_blogs
+id: block_content.blog_landing.blog_landing_popular
+field_name: blog_landing_popular
+entity_type: block_content
+bundle: blog_landing
+label: 'Blog Landing Popular'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    target_uuid: 8b8285d4-0868-4537-af97-9724ea2720fb
+default_value_callback: ''
+settings:
+  handler: 'default:view'
+  handler_settings:
+    target_bundles: null
+    auto_create: false
+field_type: entity_reference

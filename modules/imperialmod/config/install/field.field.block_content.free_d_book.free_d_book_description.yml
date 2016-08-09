@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.block_content.free_d_book_description
+    - block_content.type.free_d_book
+  module:
+    - text
+id: block_content.free_d_book.free_d_book_description
+field_name: free_d_book_description
+entity_type: block_content
+bundle: free_d_book
+label: 'Free D Book Description'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

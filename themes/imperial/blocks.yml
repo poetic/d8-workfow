@@ -1,21 +1,39 @@
-baking_videos: {  }
+baking_videos:
+    - featured_videos
+    - baking_videos
 blog_article: {  }
-blog_2: {  }
+blog_2:
+    - blog_landing
 article: {  }
-cane_sugar_101: {  }
+cane_sugar_101:
+    - sugar_landing
 our_bloggers:
     - our_blogger
 share_a_recipe: {  }
 work_with_us: {  }
-community: {  }
-contact: {  }
+community:
+    - sweet_com
+    - sweet_com_login
+    - community_view
+contact:
+    - contact_us
+    - contact_form
+    - consumer
 contest_terms: {  }
 contest: {  }
-contests: {  }
-conversion_charts: {  }
-cooking_and_baking_tips: {  }
-coupons: {  }
-digital_cookbooks: {  }
+contests:
+    - contest_hero
+    - contest_list
+conversion_charts:
+    - charts
+    - social_share
+cooking_and_baking_tips:
+    - baking_tips
+    - social_share
+coupons:
+    - coupon
+digital_cookbooks:
+    - free_d_book
 index:
     - header
     - side_nav
@@ -25,6 +43,7 @@ index:
     - share_band_imperial
     - home_projects
     - learn_more
+    - dixie_learn
     - footer_subscribe
     - footer
 cubie_cubettes_cooking_club: {  }
@@ -33,9 +52,11 @@ recipe_collection: {  }
 recipe: {  }
 kids_in_the_kitchen_2: {  }
 login: {  }
-privacy_policy: {  }
+privacy_policy:
+    - privacy
 product: {  }
-products_3: {  }
+products_3:
+    - p_landing
 recipe_collection_overview: {  }
 recipes_2: {  }
 search_results: {  }
@@ -46,5 +67,72 @@ terms_of_use: {  }
 edit_profile: {  }
 recipe_box: {  }
 vintage_imperial: {  }
-xx_base_page: {  }
-xx_styles: {  }
+baking_videos:
+    - featured_videos
+    - baking_videos
+blog_article: {  }
+blog_2:
+    - blog_landing
+article: {  }
+cane_sugar_101:
+    - sugar_landing
+our_bloggers:
+    - our_blogger
+share_a_recipe: {  }
+work_with_us: {  }
+community:
+    - sweet_com
+    - sweet_com_login
+    - community_view
+contact:
+    - contact_us
+    - contact_form
+    - consumer
+contest_terms: {  }
+contest: {  }
+contests:
+    - contest_hero
+    - contest_list
+conversion_charts:
+    - charts
+    - social_share
+cooking_and_baking_tips:
+    - baking_tips
+    - social_share
+coupons:
+    - coupon
+digital_cookbooks:
+    - free_d_book
+index:
+    - header
+    - side_nav
+    - main_block
+    - social_band
+    - home_hero
+    - share_band_imperial
+    - home_projects
+    - learn_more
+    - dixie_learn
+    - footer_subscribe
+    - footer
+cubie_cubettes_cooking_club: {  }
+my_first_cookbook: {  }
+recipe_collection: {  }
+recipe: {  }
+kids_in_the_kitchen_2: {  }
+login: {  }
+privacy_policy:
+    - privacy
+product: {  }
+products_3:
+    - p_landing
+recipe_collection_overview: {  }
+recipes_2: {  }
+search_results: {  }
+sitemap: {  }
+sugar_spa: {  }
+sweetalk_newsletter: {  }
+terms_of_use: {  }
+edit_profile: {  }
+recipe_box: {  }
+vintage_imperial: {  }

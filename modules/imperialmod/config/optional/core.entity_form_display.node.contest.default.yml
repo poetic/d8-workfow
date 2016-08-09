@@ -1,0 +1,11 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.contest
+id: node.contest.default
+targetEntityType: node
+bundle: contest
+mode: default
+content: {  }
+hidden: {  }

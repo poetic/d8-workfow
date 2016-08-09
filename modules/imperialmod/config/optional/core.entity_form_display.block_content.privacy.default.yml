@@ -1,0 +1,37 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.block_content.privacy.privacy_imperial
+    - field.field.block_content.privacy.privacy_dixie
+    - field.field.block_content.privacy.privacy_title
+    - field.field.block_content.privacy.privacy_description
+    - block_content.type.privacy
+id: block_content.privacy.default
+targetEntityType: block_content
+bundle: privacy
+mode: default
+content:
+  privacy_imperial:
+    type: image_image
+    weight: 1
+    settings: { }
+    third_party_settings: { }
+  privacy_dixie:
+    type: image_image
+    weight: 2
+    settings: { }
+    third_party_settings: { }
+  privacy_title:
+    type: string_textfield
+    weight: 3
+    settings: { }
+    third_party_settings: { }
+  privacy_description:
+    type: text_textarea
+    weight: 4
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: { }
+hidden: {  }

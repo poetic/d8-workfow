@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.p_landing
+    - field.storage.block_content.p_landing_title
+id: block_content.p_landing.p_landing_title
+field_name: p_landing_title
+entity_type: block_content
+bundle: p_landing
+label: 'P Landing Title'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

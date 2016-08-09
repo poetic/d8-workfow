@@ -1,0 +1,48 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.block_content.sugar_landing.sugar_landing_header
+    - field.field.block_content.sugar_landing.sugar_landing_title
+    - field.field.block_content.sugar_landing.sugar_landing_top
+    - field.field.block_content.sugar_landing.sugar_landing_items_list
+    - field.field.block_content.sugar_landing.sugar_landing_bottom
+    - field.field.block_content.sugar_landing.sugar_landing_sugar_list
+    - block_content.type.sugar_landing
+id: block_content.sugar_landing.default
+targetEntityType: block_content
+bundle: sugar_landing
+mode: default
+content:
+  sugar_landing_header:
+    type: image_image
+    weight: 1
+    settings: { }
+    third_party_settings: { }
+  sugar_landing_title:
+    type: string_textfield
+    weight: 2
+    settings: { }
+    third_party_settings: { }
+  sugar_landing_top:
+    type: text_textarea
+    weight: 3
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: { }
+  sugar_landing_items_list:
+    type: text_textarea
+    weight: 4
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: { }
+  sugar_landing_bottom:
+    type: text_textarea
+    weight: 5
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: { }
+hidden: {  }

@@ -1,0 +1,9 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.rc_list
+label: Rc List
+targetEntityType: node
+cache: true

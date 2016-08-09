@@ -1,0 +1,25 @@
+langcode: en
+status: true
+dependencies:
+  config:
+  - block_content.type.main_block
+  - field.storage.block_content.main_block_hero_slider
+  - views.view.hero_slider
+id: block_content.main_block.main_block_hero_slider
+field_name: main_block_hero_slider
+entity_type: block_content
+bundle: main_block
+label: 'Main Block Hero Slider'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    target_uuid: 2a5a7c47-1b7d-4df1-b9e4-33906ed1c969
+default_value_callback: ''
+settings:
+  handler: 'default:view'
+  handler_settings:
+    target_bundles: null
+    auto_create: false
+field_type: entity_reference

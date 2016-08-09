@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.coupons
+    - field.storage.node.coupons_price
+id: node.coupons.coupons_price
+field_name: coupons_price
+entity_type: node
+bundle: coupons
+label: 'Coupons Price'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.sugar_landing
+    - field.storage.block_content.sugar_landing_title
+id: block_content.sugar_landing.sugar_landing_title
+field_name: sugar_landing_title
+entity_type: block_content
+bundle: sugar_landing
+label: 'Sugar Landing Title'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

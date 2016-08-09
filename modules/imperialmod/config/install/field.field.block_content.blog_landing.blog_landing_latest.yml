@@ -1,0 +1,25 @@
+langcode: en
+status: true
+dependencies:
+  config:
+  - block_content.type.blog_landing
+  - field.storage.block_content.blog_landing_latest
+  - views.view.latest_blog
+id: block_content.blog_landing.blog_landing_latest
+field_name: blog_landing_latest
+entity_type: block_content
+bundle: blog_landing
+label: 'Blog Landing Latest'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    target_uuid: bb7d77e1-0fb2-46f6-8ac7-b5eb72f23001
+default_value_callback: ''
+settings:
+  handler: 'default:view'
+  handler_settings:
+    target_bundles: null
+    auto_create: false
+field_type: entity_reference

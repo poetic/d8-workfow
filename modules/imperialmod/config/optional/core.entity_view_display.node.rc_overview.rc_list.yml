@@ -1,0 +1,12 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.rc_list
+    - node.type.rc_overview
+id: node.rc_overview.rc_list
+targetEntityType: node
+bundle: rc_overview
+mode: rc_list
+content: {  }
+hidden: {  }

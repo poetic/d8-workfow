@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+id: featured_videos
+label: Featured Videos
+revision: 1
+description: 'Featured Videos'

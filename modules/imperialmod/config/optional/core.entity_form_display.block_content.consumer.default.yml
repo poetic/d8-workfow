@@ -1,0 +1,25 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.block_content.consumer.consumer_title
+    - field.field.block_content.consumer.consumer_description
+    - block_content.type.consumer
+id: block_content.consumer.default
+targetEntityType: block_content
+bundle: consumer
+mode: default
+content:
+  consumer_title:
+    type: string_textfield
+    weight: 1
+    settings: { }
+    third_party_settings: { }
+  consumer_description:
+    type: text_textarea
+    weight: 2
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: { }
+hidden: {  }

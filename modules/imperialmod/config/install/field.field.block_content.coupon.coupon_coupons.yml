@@ -1,0 +1,25 @@
+langcode: en
+status: true
+dependencies:
+  config:
+  - block_content.type.coupon
+  - field.storage.block_content.coupon_coupons
+  - views.view.coupons
+id: block_content.coupon.coupon_coupons
+field_name: coupon_coupons
+entity_type: block_content
+bundle: coupon
+label: 'Coupon Coupons'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    target_uuid: 280680ea-17d5-4632-8d93-040c250849b3
+default_value_callback: ''
+settings:
+  handler: 'default:view'
+  handler_settings:
+    target_bundles: null
+    auto_create: false
+field_type: entity_reference

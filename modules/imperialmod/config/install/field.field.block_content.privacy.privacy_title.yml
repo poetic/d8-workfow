@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.privacy
+    - field.storage.block_content.privacy_title
+id: block_content.privacy.privacy_title
+field_name: privacy_title
+entity_type: block_content
+bundle: privacy
+label: 'Privacy Title'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.block_content.baking_tips_soften_desc
+    - block_content.type.baking_tips
+  module:
+    - text
+id: block_content.baking_tips.baking_tips_soften_desc
+field_name: baking_tips_soften_desc
+entity_type: block_content
+bundle: baking_tips
+label: 'Baking Tips Soften Desc'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

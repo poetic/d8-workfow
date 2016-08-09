@@ -1,0 +1,11 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.sweet_com
+id: block_content.sweet_com.default
+targetEntityType: block_content
+bundle: sweet_com
+mode: default
+content: {  }
+hidden: {  }

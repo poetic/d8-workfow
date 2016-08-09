@@ -1,0 +1,12 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.block_content.baking_videos.baking_videos_baking
+    - block_content.type.baking_videos
+id: block_content.baking_videos.default
+targetEntityType: block_content
+bundle: baking_videos
+mode: default
+content: {  }
+hidden: {  }

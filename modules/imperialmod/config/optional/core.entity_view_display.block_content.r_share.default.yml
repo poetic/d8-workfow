@@ -1,0 +1,11 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.r_share
+id: block_content.r_share.default
+targetEntityType: block_content
+bundle: r_share
+mode: default
+content: {  }
+hidden: {  }

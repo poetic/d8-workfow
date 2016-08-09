@@ -92,17 +92,20 @@ label {
 }
 
 .default-section {
-  padding: 40px 5% 60px;
+  padding: 20px 5% 60px;
 }
 
 .default-section.corporate-section {
-  padding-right: 5%;
-  padding-bottom: 400px;
-  padding-left: 5%;
-  background-image: url('../images/baker.jpg');
+  padding: 40px 5% 400px;
+  background-image: url('../images/baker-woman-imperial-sugar.jpg');
   background-position: 50% 100%;
-  background-size: auto 400px;
+  background-size: 1440px;
   background-repeat: no-repeat;
+}
+
+.default-section.corporate-section.dixie {
+  background-image: url('../images/baker-woman-dixie-crystals.jpg');
+  background-size: 1440px;
 }
 
 .default-section.ftr-section {
@@ -136,14 +139,6 @@ label {
   margin-bottom: auto;
 }
 
-.container._8col.txt-centered.position-absolute {
-  position: absolute;
-  left: 0px;
-  top: 30%;
-  right: 0px;
-  bottom: 0px;
-}
-
 .container._6col {
   max-width: 620px;
   float: none;
@@ -160,7 +155,6 @@ label {
 }
 
 .container.ftr-wrapper {
-  height: 30px;
   margin-top: 0px;
 }
 
@@ -177,7 +171,7 @@ label {
 }
 
 .container.card-slider {
-  margin-bottom: 39px;
+  margin-bottom: 40px;
 }
 
 .container.tab-container-top-margin {
@@ -281,10 +275,6 @@ label {
 
 .quatinery {
   color: #ff6169;
-}
-
-.quatinery:hover {
-  color: #e2424a;
 }
 
 .quatinery.user-profile-link.card {
@@ -518,6 +508,11 @@ label {
 .btn.btn-sm.form-btn-position.edit-profile {
   margin-right: 20px;
   margin-left: 20px;
+  background-color: #ff6169;
+}
+
+.btn.btn-sm.form-btn-position.edit-profile:hover {
+  background-color: #e2424a;
 }
 
 .btn.btn-sm.cookbk {
@@ -698,11 +693,9 @@ label {
 
 .top-nav {
   position: relative;
-  z-index: 1000;
   width: 100%;
   height: 150px;
   background-image: none;
-  background-position: 0px 0px;
   background-size: auto;
   background-repeat: repeat;
 }
@@ -768,9 +761,11 @@ label {
 .nav-bg-image-overlay {
   position: absolute;
   z-index: 10;
+  display: block;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, .25);
+  background-image: -webkit-linear-gradient(90deg, hsla(43, 40%, 76%, .5), hsla(30, 50%, 96%, .1));
+  background-image: linear-gradient(0deg, hsla(43, 40%, 76%, .5), hsla(30, 50%, 96%, .1));
 }
 
 .nav-links-wrapper {
@@ -781,7 +776,8 @@ label {
   z-index: 20;
   width: 100%;
   height: 40px;
-  background-color: hsla(0, 0%, 100%, .65);
+  border-bottom: 1px solid hsla(0, 0%, 61%, .25);
+  background-color: hsla(0, 0%, 100%, .6);
 }
 
 .nav-links {
@@ -834,10 +830,12 @@ label {
 
 .main-nav-link-bg-highlight.l3 {
   display: block;
+  padding-top: 5px;
+  padding-bottom: 5px;
   font-family: 'Open Sans', sans-serif;
   color: #4a90e2;
   font-size: 14px;
-  line-height: 30px;
+  line-height: 20px;
   font-weight: 400;
 }
 
@@ -847,6 +845,7 @@ label {
 }
 
 .main-nav-link-bg-highlight.l3.nav-account {
+  min-width: 100px;
   color: #ff6169;
   text-align: right;
 }
@@ -898,13 +897,13 @@ label {
 
 .mega-menu-wrapper.w--open {
   min-width: 200px;
-  margin-left: -20px;
+  margin-left: -10px;
   background-color: #fff;
   box-shadow: 0 5px 10px 0 rgba(0, 0, 0, .25);
 }
 
 .mega-menu-wrapper.super-wide.w--open {
-  width: 960px;
+  min-width: 800px;
 }
 
 .mega-menu-wrapper.nav-account {
@@ -914,6 +913,8 @@ label {
 .mega-menu-wrapper.nav-account.w--open {
   top: 80px;
   right: 0px;
+  min-width: 100px;
+  text-align: right;
 }
 
 .mega-menu-column {
@@ -921,7 +922,16 @@ label {
   min-width: 150px;
   padding-right: 10px;
   padding-left: 10px;
-  float: left;
+}
+
+.mega-menu-column.valign-t {
+  min-width: 120px;
+}
+
+.mega-menu-column.nav-account {
+  min-width: 100px;
+  margin-right: 20px;
+  margin-left: 20px;
 }
 
 .dropdown-toggle {
@@ -1216,6 +1226,10 @@ label {
   margin-bottom: 20px;
 }
 
+.scl-wrapper.scl-ftr {
+  float: left;
+}
+
 .scl-wrapper.sidebar {
   display: block;
   margin-right: auto;
@@ -1223,22 +1237,24 @@ label {
 }
 
 .scl-wrapper.card {
-  width: 170px;
   margin-right: 0px;
   margin-bottom: 0px;
 }
 
 .ftr-copyright {
   display: inline-block;
+  margin-right: 20px;
+  margin-left: 20px;
+  float: left;
   font-size: 10px;
-  line-height: 30px;
+  line-height: 20px;
 }
 
 .ftr-products {
   position: relative;
   right: 0px;
   bottom: 0px;
-  max-width: 20%;
+  max-width: 16%;
   margin-top: -70px;
   float: right;
 }
@@ -1249,11 +1265,12 @@ label {
   float: left;
 }
 
-.ftr-logo {
+.ftr-logo-wrapper {
   width: 80px;
   height: 80px;
   margin-right: 20px;
   float: left;
+  line-height: 80px;
 }
 
 .subscribe-wrapper {
@@ -1610,8 +1627,7 @@ label {
   margin-right: 20px;
 }
 
-.saves {
-  width: 50%;
+.likes {
   padding-right: 4px;
   float: right;
   font-family: Raleway, sans-serif;
@@ -1620,7 +1636,7 @@ label {
   text-align: right;
 }
 
-.saves.list {
+.likes.list {
   display: inline-block;
   width: auto;
   height: 20px;
@@ -1630,18 +1646,14 @@ label {
   text-align: left;
 }
 
-.saves.rcp-main {
-  width: 40%;
-}
-
-.saves.video {
+.likes.video {
   width: auto;
   margin-top: 20px;
   padding-right: 0px;
   text-align: left;
 }
 
-.saves.video.card {
+.likes.video.card {
   position: relative;
   top: 10px;
   right: 0px;
@@ -1730,7 +1742,7 @@ label {
 }
 
 .stars.hero {
-  min-height: 30px;
+  min-height: 25px;
   min-width: 120px;
   background-size: auto 18px;
 }
@@ -1745,26 +1757,15 @@ label {
   text-transform: uppercase;
 }
 
-.save-icon {
+.like-icon {
   overflow: hidden;
-  background-image: url('../images/Rcp star.svg');
-  background-position: 100% 0px;
-  background-repeat: no-repeat;
-  color: transparent;
 }
 
-.save-icon.hero {
-  width: 35px;
-  min-height: 25px;
-  float: right;
-  background-size: auto 28px;
-}
-
-.save-icon.hero.video {
+.like-icon.hero.video {
   float: left;
 }
 
-.save-icon.list {
+.like-icon.list {
   display: inline-block;
   width: 20px;
   height: 20px;
@@ -1772,35 +1773,40 @@ label {
   background-size: auto 18px;
 }
 
-.save-icon.rcp-main {
-  width: 40px;
+.like-icon.rcp-main {
+  width: 34px;
   min-height: 30px;
   float: right;
-  background-size: auto 35px;
+  background-size: auto 30px;
 }
 
-.save-icon.faved {
+.like-icon.faved {
   background-image: url('../images/Rcp star active.svg');
   background-size: auto 35px;
 }
 
-.save-icon.faved.hero {
+.like-icon.faved.hero {
+  background-position: 0px 0px;
   background-size: auto 28px;
 }
 
-.save-icon.faved.hero.video {
+.like-icon.faved.hero.video {
   background-size: auto 28px;
 }
 
-.save-icon.faved.list {
+.like-icon.faved.list {
   width: 20px;
   height: 20px;
   background-size: auto 18px;
 }
 
-.save-icon.card {
-  width: 30px;
-  min-height: 20px;
+.like-icon.faved.rcp-main {
+  background-size: auto 30px;
+}
+
+.like-icon.card {
+  width: 20px;
+  height: 20px;
   float: right;
   background-size: auto 20px;
 }
@@ -2320,7 +2326,7 @@ label {
 
 .tab-menu-wrapper {
   margin-top: 0px;
-  margin-bottom: 0px;
+  margin-bottom: 20px;
   padding-bottom: 10px;
   text-align: center;
 }
@@ -2397,7 +2403,6 @@ label {
 .rcp-cllctn-wrapper {
   position: relative;
   width: 100%;
-  height: 330px;
 }
 
 .img-overlay-35 {
@@ -2435,6 +2440,7 @@ label {
 }
 
 .modal-wrapper {
+  z-index: 10;
   display: block;
   max-width: 500px;
   margin: 100px auto 40px;
@@ -2445,6 +2451,7 @@ label {
 }
 
 .modal-wrapper.txt-centered {
+  position: relative;
   display: block;
 }
 
@@ -2636,12 +2643,9 @@ label {
 }
 
 .kids-kitchen-title-override {
-  position: absolute;
-  left: 0px;
-  top: 0px;
-  right: 0px;
   display: block;
   margin-right: auto;
+  margin-bottom: 10px;
   margin-left: auto;
 }
 
@@ -2656,6 +2660,10 @@ label {
   padding: 29% 20px 20px;
   color: #fff;
   text-align: center;
+}
+
+.title-absolute-center:hover {
+  color: #fff;
 }
 
 .custom-label-img {
@@ -2820,7 +2828,7 @@ label {
   width: 100%;
   min-height: 100vh;
   background-color: rgba(0, 0, 0, .75);
-  opacity: 0;
+  opacity: 1;
   -webkit-transform: scale(1.1);
   -ms-transform: scale(1.1);
   transform: scale(1.1);
@@ -3096,6 +3104,49 @@ label {
   background-color: rgba(0, 0, 0, .75);
 }
 
+.txt-field.lg {
+  height: 60px;
+  font-size: 18px;
+}
+
+.txt-error {
+  color: #e2424a;
+  text-align: left;
+}
+
+.margin-bottom {
+  margin-bottom: 20px;
+}
+
+.save-icon {
+  overflow: hidden;
+}
+
+.save-icon.faved {
+  background-image: url('../images/Rcp Save Active.svg');
+}
+
+.save-icon.card {
+  width: 20px;
+  height: 20px;
+  float: right;
+  background-size: auto 22px;
+}
+
+.save-icon.list {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-image: none;
+}
+
+.save-icon.rcp-main {
+  width: 30px;
+  min-height: 30px;
+  float: right;
+  background-size: auto 34px;
+}
+
 html.w-mod-js *[data-ix="display-none"] {
   display: none;
 }
@@ -3104,6 +3155,14 @@ html.w-mod-js *[data-ix="side-nav-show"] {
   -webkit-transform: translate(0px, 0px);
   -ms-transform: translate(0px, 0px);
   transform: translate(0px, 0px);
+}
+
+html.w-mod-js *[data-ix="side-nav-init-appearance"] {
+  display: none;
+  opacity: 0;
+  -webkit-transform: translate(20px, 0px);
+  -ms-transform: translate(20px, 0px);
+  transform: translate(20px, 0px);
 }
 
 html.w-mod-js *[data-ix="sticky-scl-actions-display-none"] {
@@ -3145,14 +3204,18 @@ html.w-mod-js *[data-ix="fade-in-on-scroll"] {
     padding-right: 5%;
     padding-bottom: 300px;
     padding-left: 5%;
-    background-size: auto 300px;
+    background-size: 1440px;
   }
-  .container._8col.padding-fix-for-for-width {
+  .container._8col.padding-fix-for-full-width-section {
     padding-right: 20px;
     padding-left: 20px;
   }
   .container.global-subscribe {
     background-position: 0px 10px;
+  }
+  .container.blog-header {
+    height: 150px;
+    background-size: 300px;
   }
   .container.blog-header.sm {
     height: 80px;
@@ -3229,7 +3292,6 @@ html.w-mod-js *[data-ix="fade-in-on-scroll"] {
     width: 100%;
   }
   .scl-wrapper {
-    max-width: 170px;
     margin-right: 0px;
   }
   .scl-wrapper.scl-ftr {
@@ -3243,15 +3305,19 @@ html.w-mod-js *[data-ix="fade-in-on-scroll"] {
   }
   .ftr-copyright {
     width: 60%;
+    margin-right: 0px;
+    margin-left: 0px;
+    float: right;
   }
   .ftr-products {
     position: absolute;
     top: 0px;
     right: 0px;
     bottom: auto;
-    margin-top: 0px;
+    max-width: 19%;
+    margin-top: -20px;
   }
-  .ftr-logo {
+  .ftr-logo-wrapper {
     width: 80px;
   }
   .subscribe-wrapper {
@@ -3472,27 +3538,29 @@ html.w-mod-js *[data-ix="fade-in-on-scroll"] {
   }
   .default-section.corporate-section {
     padding-bottom: 200px;
-    background-image: url('../images/baker-woman-sm.jpg');
-    background-size: auto 300px;
+    background-image: url('../images/baker-woman-imperial-sugar-sm.jpg');
+    background-position: 50% 100%;
+    background-repeat: no-repeat;
   }
   .container._10col.vintage-slider-wrapper {
     width: 75%;
   }
-  .container._8col.padding-fix-for-for-width.text-centered.position-absolute {
+  .container._8col.padding-fix-for-full-width-section.text-centered.position-absolute {
     position: absolute;
     top: 20%;
   }
   .container._6col {
     width: 100%;
   }
-  .container.ftr-wrapper.separator-line {
-    min-height: 50px;
-  }
   .container.global-subscribe {
     padding-top: 40px;
     padding-left: 0px;
     background-position: 50% 0px;
     text-align: center;
+  }
+  .container.blog-header {
+    height: 100px;
+    background-size: 200px;
   }
   .container.blog-header.sm {
     height: 60px;
@@ -3565,6 +3633,9 @@ html.w-mod-js *[data-ix="fade-in-on-scroll"] {
   }
   .main-nav-link-bg-highlight:hover {
     background-color: transparent;
+  }
+  .main-nav-link-bg-highlight.side-nav-link {
+    line-height: 40px;
   }
   .main-nav-link-bg-highlight.mobile-nav-menu-link {
     width: 60px;
@@ -3692,7 +3763,7 @@ html.w-mod-js *[data-ix="fade-in-on-scroll"] {
     float: none;
     text-align: center;
   }
-  .ftr-logo {
+  .ftr-logo-wrapper {
     display: block;
     margin-right: auto;
     margin-left: auto;
@@ -3784,7 +3855,7 @@ html.w-mod-js *[data-ix="fade-in-on-scroll"] {
     margin-bottom: 0px;
     margin-left: 0px;
   }
-  .save-icon.hero.video {
+  .like-icon.hero.video {
     float: right;
   }
   .summary {
@@ -3830,9 +3901,6 @@ html.w-mod-js *[data-ix="fade-in-on-scroll"] {
     top: 0px;
     right: 0px;
     z-index: 2000;
-  }
-  .rcp-cllctn-wrapper {
-    height: 200px;
   }
   .modal-wrapper {
     padding-right: 20px;
@@ -3926,11 +3994,17 @@ html.w-mod-js *[data-ix="fade-in-on-scroll"] {
     padding-bottom: 130px;
     background-size: auto 150px;
   }
+  .default-section.corporate-section.dixie {
+    background-size: auto 150px;
+  }
   .container._10col.vintage-slider-wrapper {
     width: 100%;
   }
-  .container._8col.padding-fix-for-for-width.text-centered.position-absolute {
+  .container._8col.padding-fix-for-full-width-section.text-centered.position-absolute {
     top: 10%;
+  }
+  .container.blog-header {
+    height: 100px;
   }
   .secondary {
     margin-top: 20px;
@@ -4176,9 +4250,6 @@ html.w-mod-js *[data-ix="fade-in-on-scroll"] {
   .tab-wrapper.dashboard {
     width: 50%;
   }
-  .rcp-cllctn-wrapper {
-    height: 150px;
-  }
   .modal-wrapper {
     max-width: 300px;
   }
@@ -4209,6 +4280,9 @@ html.w-mod-js *[data-ix="fade-in-on-scroll"] {
   }
   .user-profile {
     font-size: 12px;
+  }
+  .kids-kitchen-title-override {
+    max-width: 90%;
   }
   .title-absolute-center {
     padding-top: 10%;

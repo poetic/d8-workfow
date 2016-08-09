@@ -1,0 +1,25 @@
+langcode: en
+status: true
+dependencies:
+  config:
+  - node.type.rc_overview
+  - field.storage.node.rc_overview_trend
+  - views.view.rc_trend
+id: node.rc_overview.rc_overview_trend
+field_name: rc_overview_trend
+entity_type: node
+bundle: rc_overview
+label: 'Rc Overview Trend'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    target_uuid: 853cb8d5-eb30-44e0-b7ca-062948529c4a
+default_value_callback: ''
+settings:
+  handler: 'default:view'
+  handler_settings:
+    target_bundles: null
+    auto_create: false
+field_type: entity_reference

@@ -1,0 +1,32 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.block_content.dixie_learn.dixie_learn_dixie
+    - field.field.block_content.dixie_learn.dixie_learn_title
+    - field.field.block_content.dixie_learn.dixie_learn_description
+    - block_content.type.dixie_learn
+id: block_content.dixie_learn.default
+targetEntityType: block_content
+bundle: dixie_learn
+mode: default
+content:
+  dixie_learn_dixie:
+    label: hidden
+    type: image
+    weight: 1
+    settings: { }
+    third_party_settings: { }
+  dixie_learn_title:
+    label: hidden
+    type: string
+    weight: 2
+    settings: { }
+    third_party_settings: { }
+  dixie_learn_description:
+    label: hidden
+    type: text_default
+    weight: 3
+    settings: { }
+    third_party_settings: { }
+hidden: {  }

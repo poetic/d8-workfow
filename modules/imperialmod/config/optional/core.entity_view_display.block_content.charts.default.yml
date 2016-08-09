@@ -1,0 +1,74 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.block_content.charts.charts_title
+    - field.field.block_content.charts.charts_subtile
+    - field.field.block_content.charts.charts_product_tips
+    - field.field.block_content.charts.charts_note
+    - field.field.block_content.charts.charts_p_measurement
+    - field.field.block_content.charts.charts_table_p_measurement
+    - field.field.block_content.charts.charts_g_measurement
+    - field.field.block_content.charts.charts_anchor
+    - field.field.block_content.charts.charts_another_way
+    - block_content.type.charts
+id: block_content.charts.default
+targetEntityType: block_content
+bundle: charts
+mode: default
+content:
+  charts_title:
+    label: hidden
+    type: string
+    weight: 1
+    settings: { }
+    third_party_settings: { }
+  charts_subtile:
+    label: hidden
+    type: string
+    weight: 2
+    settings: { }
+    third_party_settings: { }
+  charts_product_tips:
+    label: hidden
+    type: text_default
+    weight: 3
+    settings: { }
+    third_party_settings: { }
+  charts_note:
+    label: hidden
+    type: text_default
+    weight: 4
+    settings: { }
+    third_party_settings: { }
+  charts_p_measurement:
+    label: hidden
+    type: string
+    weight: 5
+    settings: { }
+    third_party_settings: { }
+  charts_table_p_measurement:
+    label: hidden
+    type: text_default
+    weight: 6
+    settings: { }
+    third_party_settings: { }
+  charts_g_measurement:
+    label: hidden
+    type: string
+    weight: 7
+    settings: { }
+    third_party_settings: { }
+  charts_anchor:
+    label: hidden
+    type: text_default
+    weight: 8
+    settings: { }
+    third_party_settings: { }
+  charts_another_way:
+    label: hidden
+    type: text_default
+    weight: 9
+    settings: { }
+    third_party_settings: { }
+hidden: {  }

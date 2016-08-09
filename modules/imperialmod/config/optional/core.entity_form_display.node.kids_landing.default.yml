@@ -34,7 +34,9 @@ content:
   kids_landing_description:
     type: text_textarea
     weight: 4
-    settings: { }
+    settings:
+      rows: 5
+      placeholder: ''
     third_party_settings: { }
   kids_landing_collection_title:
     type: string_textfield

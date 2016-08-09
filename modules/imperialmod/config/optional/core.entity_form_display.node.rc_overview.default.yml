@@ -1,0 +1,19 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.rc_overview.rc_overview_header
+    - field.field.node.rc_overview.rc_overview_hero
+    - field.field.node.rc_overview.rc_overview_trend
+    - node.type.rc_overview
+id: node.rc_overview.default
+targetEntityType: node
+bundle: rc_overview
+mode: default
+content:
+  rc_overview_header:
+    type: image_image
+    weight: 1
+    settings: { }
+    third_party_settings: { }
+hidden: {  }

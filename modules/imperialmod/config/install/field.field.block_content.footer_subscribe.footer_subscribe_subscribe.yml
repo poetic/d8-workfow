@@ -3,6 +3,7 @@ status: true
 dependencies:
   config:
   - block_content.type.footer_subscribe
+  - contact.form.subscribe
   - field.storage.block_content.footer_subscribe_subscribe
 id: block_content.footer_subscribe.footer_subscribe_subscribe
 field_name: footer_subscribe_subscribe
@@ -14,7 +15,7 @@ required: false
 translatable: false
 default_value:
   -
-    target_uuid: 2dd75632-978e-4802-b81e-0811bfa0d02d
+    target_uuid: 51192871-03f5-4141-90b1-23b1ceae0733
 default_value_callback: ''
 settings:
   handler: 'default:contact_form'

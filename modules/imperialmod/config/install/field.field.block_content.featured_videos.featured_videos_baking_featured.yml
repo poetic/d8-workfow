@@ -1,0 +1,25 @@
+langcode: en
+status: true
+dependencies:
+  config:
+  - block_content.type.featured_videos
+  - field.storage.block_content.featured_videos_baking_featured
+  - views.view.baking_featured
+id: block_content.featured_videos.featured_videos_baking_featured
+field_name: featured_videos_baking_featured
+entity_type: block_content
+bundle: featured_videos
+label: 'Featured Videos Baking Featured'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    target_uuid: baed740c-204e-4fc0-b8a2-a63d81c08565
+default_value_callback: ''
+settings:
+  handler: 'default:view'
+  handler_settings:
+    target_bundles: null
+    auto_create: false
+field_type: entity_reference

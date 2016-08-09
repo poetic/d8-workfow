@@ -1,0 +1,14 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.block_content.blog_landing.blog_landing_hero
+    - field.field.block_content.blog_landing.blog_landing_popular
+    - field.field.block_content.blog_landing.blog_landing_latest
+    - block_content.type.blog_landing
+id: block_content.blog_landing.default
+targetEntityType: block_content
+bundle: blog_landing
+mode: default
+content: {  }
+hidden: {  }

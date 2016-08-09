@@ -3,6 +3,7 @@ status: true
 dependencies:
   config:
     - field.field.block_content.main_block.main_block_hero
+    - field.field.block_content.main_block.main_block_hero_slider
     - field.field.block_content.main_block.main_block_trending
     - block_content.type.main_block
 id: block_content.main_block.default

@@ -1,0 +1,25 @@
+langcode: en
+status: true
+dependencies:
+  config:
+  - block_content.type.contest_hero
+  - field.storage.block_content.contest_hero_hero
+  - views.view.contest_hero
+id: block_content.contest_hero.contest_hero_hero
+field_name: contest_hero_hero
+entity_type: block_content
+bundle: contest_hero
+label: 'Contest Hero Hero'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    target_uuid: 47b8ba76-c220-4ff5-98c0-c63adeb71662
+default_value_callback: ''
+settings:
+  handler: 'default:view'
+  handler_settings:
+    target_bundles: null
+    auto_create: false
+field_type: entity_reference

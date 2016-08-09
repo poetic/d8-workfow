@@ -1,0 +1,32 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.block_content.blog_landing.blog_landing_hero
+    - field.field.block_content.blog_landing.blog_landing_popular
+    - field.field.block_content.blog_landing.blog_landing_latest
+    - block_content.type.blog_landing
+id: block_content.blog_landing.default
+targetEntityType: block_content
+bundle: blog_landing
+mode: default
+content:
+  blog_landing_hero:
+    label: hidden
+    type: entity_reference_entity_id
+    weight: 1
+    settings: { }
+    third_party_settings: { }
+  blog_landing_popular:
+    label: hidden
+    type: entity_reference_entity_id
+    weight: 2
+    settings: { }
+    third_party_settings: { }
+  blog_landing_latest:
+    label: hidden
+    type: entity_reference_entity_id
+    weight: 3
+    settings: { }
+    third_party_settings: { }
+hidden: {  }

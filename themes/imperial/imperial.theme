@@ -16,7 +16,7 @@ function imperial_preprocess_node(array &$variables) {
 function imperial_preprocess_block(array &$variables) {
   if(!empty($variables['content']['#block_content'])) {
     $block = $variables['content']['#block_content'];
-    $variables['main_menu'] = imperial_get_menu('main_menu');
+    $variables['main_menu'] = imperial_get_menu('main-menu');
   }
 }
 
