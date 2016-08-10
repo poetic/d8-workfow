@@ -7,14 +7,29 @@
                       <div class="hero stars star-{{content.field_rating_average.0}}"></div>
                     </div>
                     <div class="likes w-clearfix">
-                      <div class="saved-tally">4.9K</div>
-                      <div class="hero save-icon" data-ix="modal-login-show"><a class="action-flag" href="#">+</a>
+                      <div class="saved-tally">{{favorite_count}}</div>
+                      {% if not logged_in %}
+                      <div class="hero save-icon" data-ix="modal-login-show">
+                        <a class="action-flag" href="#">+</a>
                       </div>
+                      {% else %}
+                      <div class="hero save-icon">
+                      {{content.flag_favorite}}
+                      </div>
+                      {% endif %}
                     </div>
+
                     <div class="likes w-clearfix">
-                      <div class="saved-tally">4.9K</div>
-                      <div class="hero like-icon" data-ix="modal-login-show"><a class="action-flag" href="#">+</a>
+                      <div class="saved-tally">{{bookmark_count}}</div>
+                      {% if not logged_in %}
+                      <div class="hero like-icon" data-ix="modal-login-show">
+                        <a class="action-flag" href="#">+</a>
                       </div>
+                      {% else %}
+                      <div class="hero like-icon">
+                        {{content.flag_bookmark}}
+                      </div>
+                      {% endif %}
                     </div>
                   </div><a class="rcp-title w-inline-block" href="recipes/recipe.html"><h3>{{label}}</h3></a>
                   <div class="summary">

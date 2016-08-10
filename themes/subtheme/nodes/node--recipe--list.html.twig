@@ -26,22 +26,40 @@
 
  -->
 
+
+
+
           <div class="rcp-info-wrapper rcp-list">
             <div class="activity list">
               <div class="stars star-{{content.field_rating_average.0}}"> </div>
-              <div class="likes list w-clearfix">
-                <div class="rcp-list saved-tally">31</div>
-                <div class="like-icon list" data-ix="modal-login-show">
-                  <a class="action-flag" href="#">+</a>
-                </div>
-              </div>
-              <div class="likes list w-clearfix">
-                <div class="rcp-list saved-tally">{{favorite_count}}</div>
-                <div class="list save-icon" data-ix="modal-login-show">
-                  <a class="action-flag" href="#">+</a>
-                </div>
-              </div>
-            </div>
+
+                   <div class="likes list w-clearfix">
+                      <div class="rcp-list saved-tally">{{favorite_count}}</div>
+                      {% if not logged_in %}
+                      <div class="list save-icon" data-ix="modal-login-show">
+                        <a class="action-flag" href="#">+</a>
+                      </div>
+                      {% else %}
+                      <div class="list save-icon">
+                      {{content.flag_favorite}}
+                      </div>
+                      {% endif %}
+                    </div>
+
+                    <div class="likes list w-clearfix">
+                      <div class="rcp-list saved-tally">{{bookmark_count}}</div>
+                      {% if not logged_in %}
+                      <div class="list like-icon" data-ix="modal-login-show">
+                        <a class="action-flag" href="#">+</a>
+                      </div>
+                      {% else %}
+                      <div class="list like-icon">
+                        {{content.flag_bookmark}}
+                      </div>
+                      {% endif %}
+                    </div>
+                  </div>
+
             <a class="list rcp-title w-inline-block" href="/recipes/recipe">
               <h4>{{ label }}</h4>
             </a>

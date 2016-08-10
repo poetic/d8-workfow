@@ -5,16 +5,33 @@
                   <div class="rcp-rating">
                     <div class="stars star-{{content.field_rating_average.0}}"></div>
                   </div>
+
                   <div class="likes w-clearfix">
-                    <div class="saved-tally">{{favorite_count}}</div>
-                    <div class="card save-icon" data-ix="modal-login-show"><a class="action-flag" href="#">+</a>
+                      <div class="saved-tally">{{favorite_count}}</div>
+                      {% if not logged_in %}
+                      <div class="card save-icon" data-ix="modal-login-show">
+                        <a class="action-flag" href="#">+</a>
+                      </div>
+                      {% else %}
+                      <div class="card save-icon">
+                      {{content.flag_favorite}}
+                      </div>
+                      {% endif %}
                     </div>
-                  </div>
-                  <div class="likes w-clearfix">
-                    <div class="saved-tally">31</div>
-                    <div class="card like-icon" data-ix="modal-login-show"><a class="action-flag" href="#">+</a>
+
+                    <div class="likes w-clearfix">
+                      <div class="saved-tally">{{bookmark_count}}</div>
+                      {% if not logged_in %}
+                      <div class="card like-icon" data-ix="modal-login-show">
+                        <a class="action-flag" href="#">+</a>
+                      </div>
+                      {% else %}
+                      <div class="card like-icon">
+                        {{content.flag_bookmark}}
+                      </div>
+                      {% endif %}
                     </div>
-                  </div>
+
                 </div>
                 <div class="summary">
                   <div class="dynamic-data rcp-summary-data">Prep: 20 mins</div>
@@ -22,7 +39,11 @@
                 </div><a class="card rcp-title w-inline-block" href="recipes/recipe.html"><h4>{{ label }}</h4></a>
               </div>
               <div class="card video-btn-wrapper">
-                <a class="w-inline-block" href="#"><img src="/themes/imperial/images/icon-video-play-white.svg"></a>
+              {% if vid_id %}
+                <a class="w-inline-block" href="#">
+                  <img src="/themes/imperial/images/icon-video-play-white.svg">
+                </a>
+              {% endif %}
               </div>
               <div class="object-fit rcp-img-card">{{ content.recipe_recipe_image }}</div>
             </div>

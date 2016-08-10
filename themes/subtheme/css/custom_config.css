@@ -57,7 +57,7 @@
     }
     .like-icon.hero a, .save-icon.hero a {
       font-size: 60px;
-  	background-position: 100% 26px;
+  	  background-position: 100% 0px;
       background-size: auto 26px;
     }
      .like-icon.card, .save-icon.card  {
@@ -67,7 +67,7 @@
     }
     .like-icon.card a, .save-icon.card a {
       font-size: 50px;
-  	background-position: 90% 22px;
+  	  background-position: 90% 0px;
       background-size: auto 20px;
     }
      .like-icon.list, save-icon.list {
@@ -77,7 +77,7 @@
     }
     .like-icon.list a, .save-icon.list a {
       font-size: 40px;
-  	background-position: 20% 15px;
+  	  background-position: 20% 0px;
       background-size: auto 18px;
       }
     /* Remove wrap from drop downs in top-nav only */
