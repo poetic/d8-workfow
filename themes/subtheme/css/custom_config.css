@@ -1,3 +1,15 @@
 .node-recipe-form .tabledrag-toggle-weight-wrapper, .tabledrag-handle {
 	display:none;
 }
+/* recipe author follow link. b/c .txt-link-sm gets unset on ajax*/
+.rcp-author.rcp-main a {
+    font-size: 12px;
+    line-height: 20px;
+    letter-spacing: 0.25px;
+}
+/*recipe stars stay small, need to override to make big*/
+.stars.rcp-main {
+    width: 100%;
+    min-height: 30px;
+    background-size: auto 25px !important;
+}
