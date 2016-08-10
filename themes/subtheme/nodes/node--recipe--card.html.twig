@@ -3,10 +3,10 @@
               <div class="card rcp-info-wrapper">
                 <div class="activity rcp-hero w-clearfix">
                   <div class="rcp-rating">
-                    <div class="stars"></div>
+                    <div class="stars star-{{content.field_rating_average.0}}"></div>
                   </div>
                   <div class="likes w-clearfix">
-                    <div class="saved-tally">31</div>
+                    <div class="saved-tally">{{favorite_count}}</div>
                     <div class="card save-icon" data-ix="modal-login-show"><a class="action-flag" href="#">+</a>
                     </div>
                   </div>
@@ -19,11 +19,11 @@
                 <div class="summary">
                   <div class="dynamic-data rcp-summary-data">Prep: 20 mins</div>
                   <div class="dynamic-data rcp-summary-data">Total time: 31&ndash;34 mins</div>
-                </div><a class="card rcp-title w-inline-block" href="recipes/recipe.html"><h4>Easter Egg Cake with Spun Sugar Nest</h4></a>
+                </div><a class="card rcp-title w-inline-block" href="recipes/recipe.html"><h4>{{ label }}</h4></a>
               </div>
               <div class="card video-btn-wrapper">
                 <a class="w-inline-block" href="#"><img src="/themes/imperial/images/icon-video-play-white.svg"></a>
               </div>
-              <div class="object-fit rcp-img-card"><img height="330" src="/themes/imperial/images/Easter-Egg-Cake-Spun-Sugar-Nest.jpg"></div>
+              <div class="object-fit rcp-img-card">{{ content.recipe_recipe_image }}</div>
             </div>
           </div>
