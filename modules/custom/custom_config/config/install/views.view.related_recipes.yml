@@ -1,3 +1,4 @@
+uuid: 4afd492f-a150-4a62-998d-d9d4f3bffaef
 langcode: en
 status: true
 dependencies:
@@ -9,6 +10,8 @@ dependencies:
     - node
     - taxonomy
     - user
+_core:
+  default_config_hash: oXwpMSO3czvuhSoLW9U53Ufob18KluBcHPsPxtgVuak
 id: related_recipes
 label: related_recipes
 module: views
@@ -52,7 +55,7 @@ display:
       pager:
         type: some
         options:
-          items_per_page: 5
+          items_per_page: 10
           offset: 0
       style:
         type: default
