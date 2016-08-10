@@ -1,6 +1,8 @@
 langcode: en
 status: true
 dependencies: {  }
+_core:
+  default_config_hash: hoBM7tIxi0xibaruv400FgwfOI_mI_kp5JewqBodYrY
 name: recipe_image_node_full
 label: recipe_image_node_full
 effects:
@@ -9,5 +11,5 @@ effects:
     id: image_scale_and_crop
     weight: 1
     data:
-      width: 727
-      height: 500
+      width: 796
+      height: 547
