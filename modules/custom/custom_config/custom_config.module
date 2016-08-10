@@ -133,7 +133,7 @@ function recalculate_average($entity) {
   foreach ($rating_result as $record) {
     $comment = Comment::load($record->cid);
     if($comment->isPublished()) {
-      dump($record->field_comment_rating_rating);
+      // dump($record->field_comment_rating_rating);
       $sum += $record->field_comment_rating_rating;
       $length += 1;
     }

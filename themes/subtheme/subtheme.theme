@@ -52,9 +52,9 @@ function subtheme_preprocess_user(array &$variables) {
 
 function subtheme_preprocess_block(array &$variables) {
   // dump($variables);
-  // if(!empty($variables['content']['#block_content'])) {
-  //   $entity = $variables['content']['#block_content'];
-  //   $bundle = $entity->bundle();
+  if(!empty($variables['content']['#block_content'])) {
+    $entity = $variables['content']['#block_content'];
+    $bundle = $entity->bundle();
 
     $fields_definition = $entity->getFieldDefinitions();
     foreach($fields_definition as $field_definition) {
@@ -68,7 +68,7 @@ function subtheme_preprocess_block(array &$variables) {
     }
   //   $variables['main_menu'] = subtheme_get_menu('main_menu');
   //   $variables['top_menu'] = subtheme_get_menu('top-menu');
-  // }
+  }
 }
 
 function subtheme_preprocess_field(&$variables){

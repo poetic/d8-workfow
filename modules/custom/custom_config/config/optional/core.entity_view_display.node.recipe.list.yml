@@ -1,9 +1,9 @@
-uuid: 5658e01c-30ca-4699-95a3-427aed086f46
+uuid: 3a7c597f-2930-48b9-8546-553b9b8658eb
 langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.node.hero
+    - core.entity_view_mode.node.list
     - field.field.node.recipe.field_cook_hour
     - field.field.node.recipe.field_cook_minute
     - field.field.node.recipe.field_decorate_hour
@@ -25,7 +25,7 @@ dependencies:
     - field.field.node.recipe.recipe_handy_tips
     - field.field.node.recipe.recipe_recipe_image
     - field.field.node.recipe.recipe_yield
-    - image.style.recipe_image_node_hero
+    - image.style.recipe_image_node
     - node.type.recipe
   module:
     - comment
@@ -36,11 +36,11 @@ dependencies:
     - user
     - youtube
 _core:
-  default_config_hash: ck2nqLLTYET-XGkUkksRhPzK26U0rHAFrWI1CUyr7uU
-id: node.recipe.hero
+  default_config_hash: p_lgj44h7y0XhzqlbFh5hiutLF1OmxGQtB9GjzDOCD0
+id: node.recipe.list
 targetEntityType: node
 bundle: recipe
-mode: hero
+mode: list
 content:
   field_cook_hour:
     type: number_unformatted
@@ -68,32 +68,32 @@ content:
     third_party_settings: {  }
   field_freeze_hour:
     type: number_unformatted
-    weight: 14
+    weight: 18
     label: above
     settings: {  }
     third_party_settings: {  }
   field_freeze_minute:
     type: number_unformatted
-    weight: 18
+    weight: 19
     label: above
     settings: {  }
     third_party_settings: {  }
   field_prep_hour:
     type: number_unformatted
-    weight: 19
+    weight: 22
     label: above
     settings: {  }
     third_party_settings: {  }
   field_prep_minute:
     type: number_unformatted
-    weight: 22
+    weight: 21
     label: above
     settings: {  }
     third_party_settings: {  }
   field_rating_average:
     type: number_unformatted
-    weight: 21
-    label: above
+    weight: 3
+    label: hidden
     settings: {  }
     third_party_settings: {  }
   field_recipe_comments:
@@ -105,7 +105,7 @@ content:
     third_party_settings: {  }
   field_recipe_ingredients:
     type: entity_reference_revisions_entity_view
-    weight: 13
+    weight: 14
     label: above
     settings:
       view_mode: default
@@ -113,31 +113,31 @@ content:
     third_party_settings: {  }
   field_recipe_seals:
     type: entity_reference_rss_category
-    weight: 12
+    weight: 13
     label: above
     settings: {  }
     third_party_settings: {  }
   field_recipe_tags:
     type: entity_reference_rss_category
-    weight: 6
+    weight: 7
     label: above
     settings: {  }
     third_party_settings: {  }
   field_rest_hour:
     type: number_unformatted
-    weight: 5
+    weight: 6
     label: above
     settings: {  }
     third_party_settings: {  }
   field_rest_minute:
     type: number_unformatted
-    weight: 4
+    weight: 5
     label: above
     settings: {  }
     third_party_settings: {  }
   field_video_url:
     type: youtube_video
-    weight: 3
+    weight: 8
     label: above
     settings:
       youtube_size: 450x315
@@ -164,14 +164,14 @@ content:
     third_party_settings: {  }
   recipe_description:
     type: text_trimmed
-    weight: 7
+    weight: 9
     label: above
     settings:
       trim_length: 600
     third_party_settings: {  }
   recipe_directions:
     type: text_trimmed
-    weight: 8
+    weight: 12
     label: above
     settings:
       trim_length: 600
@@ -185,15 +185,15 @@ content:
     third_party_settings: {  }
   recipe_recipe_image:
     type: image
-    weight: 10
-    label: above
+    weight: 4
+    label: hidden
     settings:
-      image_style: recipe_image_node_hero
+      image_style: recipe_image_node
       image_link: ''
     third_party_settings: {  }
   recipe_yield:
     type: string
-    weight: 9
+    weight: 10
     label: above
     settings:
       link_to_entity: false
