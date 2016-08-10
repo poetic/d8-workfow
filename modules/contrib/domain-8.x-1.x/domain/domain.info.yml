@@ -1,9 +1,0 @@
-name: Domain
-description: 'Creates domain records within a Drupal installation.'
-type: module
-package: Domain
-version: VERSION
-core: 8.x
-dependencies:
-  - options
-configure: domain.admin
