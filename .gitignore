@@ -1,6 +1,7 @@
 /profiles/*
 /sites/*
 /core/*
+/modules/contrib/*
 .csslintrc
 .editorconfig
 .eslintrc
