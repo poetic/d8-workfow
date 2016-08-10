@@ -493,14 +493,14 @@
               {% endif %}
             </div>
             <div class="likes rcp-main w-clearfix">
-              <div class="rcp-main saved-tally">{{favorite_count}}</div>
+              <div class="rcp-main saved-tally">{{bookmark_count}}</div>
               {% if not logged_in %}
               <div class="like-icon rcp-main" data-ix="modal-login-show">
                 <a class="action-flag" href="#">+</a>
               </div>
               {% else %}
               <div class="like-icon rcp-main">
-                {{content.flag_favorite}}
+                {{content.flag_bookmark}}
               </div>
               {% endif %}
               </div>

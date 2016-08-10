@@ -26,6 +26,8 @@ function subtheme_preprocess_node(array &$variables) {
     
     $flag = $flag_service->getFlagById("favorite");
     $variables['favorite_count'] = \Drupal::service('flag.count')->getFlagFlaggingCount($flag);
+    $flag_bookmark = $flag_service->getFlagById("bookmark");
+    $variables['bookmark_count'] = \Drupal::service('flag.count')->getFlagFlaggingCount($flag_bookmark);
     $comment_view = views_embed_view('comment_view');
     $variables['comment_view'] = $comment_view;
     $related_recipes = views_embed_view('related_recipes');
