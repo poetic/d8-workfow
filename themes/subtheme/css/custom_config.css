@@ -2,7 +2,7 @@
 	display:none;
 }
 /* recipe author follow link. b/c .txt-link-sm gets unset on ajax*/
-.rcp-author.rcp-main a {
+.rcp-author.rcp-main .flag-follow {
     font-size: 12px;
     line-height: 20px;
     letter-spacing: 0.25px;
