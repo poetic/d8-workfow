@@ -37,67 +37,67 @@ function custom_config_help($route_name, RouteMatchInterface $route_match) {
 function custom_config_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
   if($form['#id'] == "node-recipe-form") {
     
-    // $form['title']['widget']['0']['value']['#attributes']['placeholder'] = "Recipe name";
-    // $form['title']['widget']['0']['value']['#attributes']['class'][] = 'form-field-66-pc w-input';
-    // $form['title']['widget']['0']['value']['#title_display'] = "none";
+    $form['title']['widget']['0']['value']['#attributes']['placeholder'] = "Recipe name";
+    $form['title']['widget']['0']['value']['#attributes']['class'][] = 'form-field-66-pc w-input';
+    $form['title']['widget']['0']['value']['#title_display'] = "none";
 
-    // $form['recipe_description']['widget']['0']['#title_display'] = "none";
-    // $form['recipe_description']['widget']['0']['value']['#attributes']['placeholder'][] = "What is the story? Did you invent this recipe or has it been handed down through generations?";
-    // $form['recipe_description']['widget']['0']['value']['#attributes']['class'][] = "js-text-full text-full form-multi-line-text-heigh w-input form-textarea required";
+    $form['recipe_description']['widget']['0']['#title_display'] = "none";
+    $form['recipe_description']['widget']['0']['value']['#attributes']['placeholder'][] = "What is the story? Did you invent this recipe or has it been handed down through generations?";
+    $form['recipe_description']['widget']['0']['value']['#attributes']['class'][] = "js-text-full text-full form-multi-line-text-heigh w-input form-textarea required";
     
-    // $form['recipe_recipe_image']['widget']['0']['value']['#title_display'] = "none";
+    $form['recipe_recipe_image']['widget']['0']['value']['#title_display'] = "none";
     
-    // // remove title displays
-    // $form['field_prep_hour']['widget']['0']['value']['#title_display'] = "none";
-    // $form['field_prep_minute']['widget']['0']['value']['#title_display'] = "none";
-    // $form['field_cook_hour']['widget']['0']['value']['#title_display'] = "none";
-    // $form['field_cook_minute']['widget']['0']['value']['#title_display'] = "none";
-    // $form['field_rest_hour']['widget']['0']['value']['#title_display'] = "none";
-    // $form['field_rest_minute']['widget']['0']['value']['#title_display'] = "none";
-    // $form['field_freeze_hour']['widget']['0']['value']['#title_display'] = "none";
-    // $form['field_freeze_minute']['widget']['0']['value']['#title_display'] = "none";
-    // $form['field_decorate_hour']['widget']['0']['value']['#title_display'] = "none";
-    // $form['field_decorate_minute']['widget']['0']['value']['#title_display'] = "none";
+    // remove title displays
+    $form['field_prep_hour']['widget']['0']['value']['#title_display'] = "none";
+    $form['field_prep_minute']['widget']['0']['value']['#title_display'] = "none";
+    $form['field_cook_hour']['widget']['0']['value']['#title_display'] = "none";
+    $form['field_cook_minute']['widget']['0']['value']['#title_display'] = "none";
+    $form['field_rest_hour']['widget']['0']['value']['#title_display'] = "none";
+    $form['field_rest_minute']['widget']['0']['value']['#title_display'] = "none";
+    $form['field_freeze_hour']['widget']['0']['value']['#title_display'] = "none";
+    $form['field_freeze_minute']['widget']['0']['value']['#title_display'] = "none";
+    $form['field_decorate_hour']['widget']['0']['value']['#title_display'] = "none";
+    $form['field_decorate_minute']['widget']['0']['value']['#title_display'] = "none";
 
-    // // input box style
-    // $form['field_prep_hour']['widget']['0']['value']['#attributes']['class'][] = "form-time-entry w-input";
-    // $form['field_prep_minute']['widget']['0']['value']['#attributes']['class'][] = "form-time-entry w-input";
-    // $form['field_cook_hour']['widget']['0']['value']['#attributes']['class'][] = "form-time-entry w-input";
-    // $form['field_cook_minute']['widget']['0']['value']['#attributes']['class'][] = "form-time-entry w-input";
-    // $form['field_rest_hour']['widget']['0']['value']['#attributes']['class'][] = "form-time-entry w-input";
-    // $form['field_rest_minute']['widget']['0']['value']['#attributes']['class'][] = "form-time-entry w-input";
-    // $form['field_freeze_hour']['widget']['0']['value']['#attributes']['class'][] = "form-time-entry w-input";
-    // $form['field_freeze_minute']['widget']['0']['value']['#attributes']['class'][] = "form-time-entry w-input";
-    // $form['field_decorate_hour']['widget']['0']['value']['#attributes']['class'][] = "form-time-entry w-input";
-    // $form['field_decorate_minute']['widget']['0']['value']['#attributes']['class'][] = "form-time-entry w-input";
+    // input box style
+    $form['field_prep_hour']['widget']['0']['value']['#attributes']['class'][] = "form-time-entry w-input";
+    $form['field_prep_minute']['widget']['0']['value']['#attributes']['class'][] = "form-time-entry w-input";
+    $form['field_cook_hour']['widget']['0']['value']['#attributes']['class'][] = "form-time-entry w-input";
+    $form['field_cook_minute']['widget']['0']['value']['#attributes']['class'][] = "form-time-entry w-input";
+    $form['field_rest_hour']['widget']['0']['value']['#attributes']['class'][] = "form-time-entry w-input";
+    $form['field_rest_minute']['widget']['0']['value']['#attributes']['class'][] = "form-time-entry w-input";
+    $form['field_freeze_hour']['widget']['0']['value']['#attributes']['class'][] = "form-time-entry w-input";
+    $form['field_freeze_minute']['widget']['0']['value']['#attributes']['class'][] = "form-time-entry w-input";
+    $form['field_decorate_hour']['widget']['0']['value']['#attributes']['class'][] = "form-time-entry w-input";
+    $form['field_decorate_minute']['widget']['0']['value']['#attributes']['class'][] = "form-time-entry w-input";
 
-    // // make input boxes inline
-    // $form['field_prep_hour']['#attributes']['style'][] = "display: inline-block";
-    // $form['field_prep_minute']['#attributes']['style'][] = "display: inline-block";
-    // $form['field_cook_hour']['#attributes']['style'][] = "display: inline-block";
-    // $form['field_cook_minute']['#attributes']['style'][] = "display: inline-block";
-    // $form['field_rest_hour']['#attributes']['style'][] = "display: inline-block";
-    // $form['field_rest_minute']['#attributes']['style'][] = "display: inline-block";
-    // $form['field_freeze_hour']['#attributes']['style'][] = "display: inline-block";
-    // $form['field_freeze_minute']['#attributes']['style'][] = "display: inline-block";
-    // $form['field_decorate_hour']['#attributes']['style'][] = "display: inline-block";
-    // $form['field_decorate_minute']['#attributes']['style'][] = "display: inline-block";
+    // make input boxes inline
+    $form['field_prep_hour']['#attributes']['style'][] = "display: inline-block";
+    $form['field_prep_minute']['#attributes']['style'][] = "display: inline-block";
+    $form['field_cook_hour']['#attributes']['style'][] = "display: inline-block";
+    $form['field_cook_minute']['#attributes']['style'][] = "display: inline-block";
+    $form['field_rest_hour']['#attributes']['style'][] = "display: inline-block";
+    $form['field_rest_minute']['#attributes']['style'][] = "display: inline-block";
+    $form['field_freeze_hour']['#attributes']['style'][] = "display: inline-block";
+    $form['field_freeze_minute']['#attributes']['style'][] = "display: inline-block";
+    $form['field_decorate_hour']['#attributes']['style'][] = "display: inline-block";
+    $form['field_decorate_minute']['#attributes']['style'][] = "display: inline-block";
 
-    // $form['recipe_yield']['widget']['0']['value']['#title_display'] = "none";
-    // $form['recipe_yield']['widget']['0']['value']['#attributes']['placeholder'][] ="Eg. 24 cookies";
-    // $form['recipe_yield']['widget']['0']['value']['#attributes']['class'][] = "form-field-66-pc w-input";
+    $form['recipe_yield']['widget']['0']['value']['#title_display'] = "none";
+    $form['recipe_yield']['widget']['0']['value']['#attributes']['placeholder'][] ="Eg. 24 cookies";
+    $form['recipe_yield']['widget']['0']['value']['#attributes']['class'][] = "form-field-66-pc w-input";
 
-    // $form['field_recipe_ingredients']['widget']['0']['value']['#title_display'] = "none";
+    $form['field_recipe_ingredients']['widget']['0']['value']['#title_display'] = "none";
 
-    // $form['recipe_directions']['widget']['0']['#title_display'] = "none";
-    // $form['recipe_directions']['widget']['0']['#attributes']['class'][] = "form-multi-line-text-heigh w-input"; 
-    // $form['recipe_directions']['widget']['0']['#attributes']['placeholder'][] = "Add your step-by-step instructions";
-    // $form['recipe_directions']['widget']['0']['#discription'] = 'Pretend we are in your kitchen and you want to walk us through, step by step, how to make your dish. Keep in mind we’ve never made this exact recipe before, so be descriptive and provide lots of details. For example “Remove chicken from oven and drain off excess liquid. Pour on half of prepared sauce and cook in oven for 45-60 minutes at reduced temperature of 350°F."';
+    $form['recipe_directions']['widget']['0']['#title_display'] = "none";
+    $form['recipe_directions']['widget']['0']['#attributes']['class'][] = "form-multi-line-text-heigh w-input"; 
+    $form['recipe_directions']['widget']['0']['#attributes']['placeholder'][] = "Add your step-by-step instructions";
+    $form['recipe_directions']['widget']['0']['#discription'] = 'Pretend we are in your kitchen and you want to walk us through, step by step, how to make your dish. Keep in mind we’ve never made this exact recipe before, so be descriptive and provide lots of details. For example “Remove chicken from oven and drain off excess liquid. Pour on half of prepared sauce and cook in oven for 45-60 minutes at reduced temperature of 350°F."';
 
-    // $form['recipe_handy_tips']['widget']['0']['#title_display'] = "none";
-    // $form['recipe_handy_tips']['widget']['0']['value']['#attributes']['placeholder'][] = "Eg. Don’t forget to let the cake sit for 30 mins before your guests arrive";
+    $form['recipe_handy_tips']['widget']['0']['#title_display'] = "none";
+    $form['recipe_handy_tips']['widget']['0']['value']['#attributes']['placeholder'][] = "Eg. Don’t forget to let the cake sit for 30 mins before your guests arrive";
 
-    // $form['actions']['publish']['#attributes']['class'][] = "btn btn-form btn-submit w-button";
+    $form['actions']['publish']['#attributes']['class'][] = "btn btn-form btn-submit w-button";
 
     // $form['actions']['publish']['#value'] = new TranslatableMarkup('Publish Recipe!');
     // $form['actions']['publish']['#value'] = new TranslatableMarkup('Submit Recipe!');
