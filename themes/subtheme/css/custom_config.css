@@ -32,6 +32,13 @@
   display: none;
 }
 
+/*make recipe-box flag red text, ajax's fault*/
+.basic-header-wrapper .flag-follow {
+    background-color: #fff;
+    color: #ff6169;
+    font-size: 14px;
+    line-height: 20px;
+}
 
 /*custom css from webflow inline*/
 

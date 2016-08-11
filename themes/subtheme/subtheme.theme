@@ -37,15 +37,15 @@ function subtheme_preprocess_node(array &$variables) {
 }
 
 function subtheme_preprocess_user(array &$variables) {
-  // $following = views_embed_view('following');
-  // $variables['following'] = $following;
-  // $easter_slider = views_embed_view('easter_slider');
-  // $variables['easter_slider'] = $easter_slider;
-  
-  // $user = user_load($variables['user']->id());
-  // $variables['user_img'] = $user->field_acct_img->getValue();
-  // $variables['elements']['field_account_image']['#title'] = "U";
-  // dpm($variables);
+    $user_id = $variables['user']->id();
+    $user_node = \Drupal\user\Entity\User::load($user_id);
+    $flag_link_builder = \Drupal::service('flag.link_builder');
+    $follow_flag = $flag_link_builder->build($user_node->getEntityTypeId(), $user_node->id(), 'follow');
+    $variables['follow_flag'] = $follow_flag;
+    $user_image_url = getUserImageUrl($user_id);
+    $variables['user_image_url'] = $user_image_url;
+    $user_since = $variables['user']->get('created')->value;
+    $variables['user_since'] = date("Y", $user_since);
 }
 
 /**

@@ -22,21 +22,22 @@
 </article>
 <div class="default-section">
 	<div class="_6col container">
-		<div class="account-header-wrapper">
+		<div class="basic-header-wrapper">
 			<div class="object-fit user-pic-wrapper">
-					{{content.field_acct_img}}
+					<img height="100" src="{{user_image_url}}">
 			</div>
 			<div>
 				<h2 class="user-name">{{user.name.value}}</h2>
 			</div>
-			<p class="body-light user-status">Community Member since {{user.created.value}}</p>
+			<p class="body-light user-status">Community Member since {{user_since}}</p>
 			
 
 			<div class="w-form">
 				<form data-name="Email Form 3" id="email-form-3" name="email-form-3">
 					<div class="clickable-tag-wrapper w-checkbox w-clearfix">
 						<input class="display-none w-checkbox-input" data-name="Follow" id="Follow" name="Follow" type="checkbox">			
-						<label class="clickable-tag w-form-label" for="Follow">{{content.flag_follow}}</label>
+						<label class="clickable-tag w-form-label" for="Follow">{{follow_flag}}</label>
+						
 					</div>
 					<a class="clickable-tag w-button" href="/user/edit-profile">Edit Profile</a>
 				</form>
@@ -45,9 +46,9 @@
 
 			<div class="expanding-bio" data-ix="expanding-bio-initial-appearance" style="opacity: 0; height: 0px;">
 				<p>
-					{{content.field_acct_bio}}
+					{{content.field_account_bio}}
 				</p>
-				<a href="#">{{content.field_acct_}}</a>
+				<a href="#">{{content.field_account_website}}</a>
 			</div>
 			<a class="show-bio-link" data-ix="show-expanding-bio" href="#">Show Bio</a>
 			<a class="hide-bio-link" data-ix="hide-epxanding-bio" href="#" style="display: none;">Hide Bio</a>
