@@ -20,7 +20,17 @@
   display:none;
 }
 
+#edit-recipe-description-0-format, #edit-recipe-handy-tips-0-format, #edit-recipe-directions-0-format {
+  display: none;
+}
 
+.field--name-field-ingredient-section-body .filter-wrapper {
+  display: none;
+}
+
+.node-recipe-form .field--type-integer label {
+  display: none;
+}
 
 
 /*custom css from webflow inline*/

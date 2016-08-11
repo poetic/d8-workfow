@@ -188,8 +188,11 @@
 					<a class="btn btn-form w-button" href="#">Cancel</a>
 					
 					<!-- <input class="btn btn-form btn-submit w-button" data-wait="Please wait..." type="submit" value="Submit Recipe!"> -->
-					
-				{{ element.actions.publish }}	
+				{% if is_admin %}
+					{{ element.actions.publish }}	
+				{% else %}
+					{{ element.actions.submit }}	
+				{% endif %}
 				{{element.render_children}}
 				{{element.form_token}}
 				{{element.form_build_id}}
