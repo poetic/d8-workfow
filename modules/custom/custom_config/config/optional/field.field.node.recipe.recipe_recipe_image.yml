@@ -1,0 +1,40 @@
+uuid: 5079ca0b-d226-4d37-b847-5ed46f84474c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.recipe_recipe_image
+    - node.type.recipe
+  module:
+    - image
+_core:
+  default_config_hash: nSDaeiYvSfNdmSQacUmeHbrrYe-1vOdHMQ-2qhnxELg
+id: node.recipe.recipe_recipe_image
+field_name: recipe_recipe_image
+entity_type: node
+bundle: recipe
+label: 'Recipe Recipe Image'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: recipe
+  file_extensions: 'png gif jpg jpeg'
+  max_filesize: '2 MB'
+  max_resolution: ''
+  min_resolution: ''
+  alt_field: false
+  alt_field_required: true
+  title_field: false
+  title_field_required: false
+  default_image:
+    uuid: dd42e626-63ed-4650-af8d-c0e30c39bc02
+    alt: 'default cake'
+    title: cake
+    width: 1248
+    height: 832
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: image
