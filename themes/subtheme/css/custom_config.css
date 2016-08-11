@@ -14,6 +14,17 @@
     background-size: auto 25px !important;
 }
 
+.field--name-field-ingredient-section-title label, 
+.field--name-field-ingredient-section-body label,
+.field--name-recipe-recipe-image .form-item-recipe-recipe-image-0 > label {
+  display:none;
+}
+
+
+
+
+/*custom css from webflow inline*/
+
     /* Extend logo wrapper past nav bar on large screens */
     @media only screen and (min-width: 1600px) {
     .top-nav .logo-wrapper { 
