@@ -40,8 +40,27 @@
                     </div>
                   </div>
                 </div>
+                {% if vid_id %}
+                <div class="video-btn-wrapper">
+                  <a class="w-inline-block" href="#">
+                    <img src="/themes/imperial/images/icon-video-play-white.svg">
+                  </a>
+                </div>
+                {% endif %}
                 <div class="object-fit rcp-img-hero">
                   {{ content.recipe_recipe_image }}
                 </div>
+                {% if vid_id %}
+                <script class="w-json" type="application/json">
+                  { "items": [{
+                    "type": "video",
+                    "html": "<iframe class=\"embedly-embed\" src=\"https://www.youtube.com/embed/{{vid_id}}\" width=\"940\" height=\"528\" scrolling=\"no\" frameborder=\"0\" allowfullscreen>",
+                    "thumbnailUrl": "",
+                    "width": 940,
+                    "height": 528,
+                    "url": "https://www.youtube.com/watch?v={{vid_id}}" 
+                  }] }
+                 </script>
+                {% endif %}
               </div>
             </div>
