@@ -70,7 +70,19 @@ function subtheme_preprocess_block(array &$variables) {
     }
   //   $variables['main_menu'] = subtheme_get_menu('main_menu');
   //   $variables['top_menu'] = subtheme_get_menu('top-menu');
+    $user_id = $variables['user']->id();
+    $user_image_url = getUserImageUrl($user_id);
+    $variables['user_image_url'] = $user_image_url;
   }
+}
+
+function getUserImageUrl($user_id) {
+  $user_node = \Drupal\user\Entity\User::load($user_id);
+  if(!is_null($user_node->field_account_image->entity)) {
+     $file_url = $user_node->field_account_image->entity->url();
+    return $file_url;      
+  }
+  return "../images/user-pic-default.svg";
 }
 
 function subtheme_preprocess_field(&$variables){
@@ -87,11 +99,8 @@ function subtheme_preprocess_form(&$variables){
   //below returns 0 if anonymous user
   if($variables['element']['#form_id'] == "comment_recipe_comment_form") {
     $user_id = $variables['user']->id();
-    $user_node = \Drupal\user\Entity\User::load($user_id);
-    if(!is_null($user_node->field_account_image->entity)) {
-      $file_url = $user_node->field_account_image->entity->url();
-      $variables['user_image_url'] = $file_url;
-    }
+    $user_image_url = getUserImageUrl($user_id);
+    $variables['user_image_url'] = $user_image_url;
   }
 }
 
@@ -132,7 +141,7 @@ function subtheme_preprocess_table(&$variables) {
   $variables['rows'][0]['cells'][1]['content']['subform']['field_ingredient_section_body']['widget'][0]['value']['#title_display'] = "none";
   $variables['rows'][0]['cells'][1]['content']['subform']['field_ingredient_section_body']['widget'][0]['value']['#attributes']['class'][] = "form-multi-line-text-heigh w-input";
   $variables['rows'][0]['cells'][1]['content']['subform']['field_ingredient_section_body']['widget'][0]['value']['#attributes']['data-name'][] = "Ingredients";
-  $variables['rows'][0]['cells'][1]['content']['subform']['field_ingredient_section_body']['widget'][0]['value']['#attributes']['data-name']['placeholder'][] = "Add your ingredients here — add as many ingredients as you need!";
+  $variables['rows'][0]['cells'][1]['content']['subform']['field_ingredient_section_body']['widget'][0]['value']['#attributes']['placeholder'][] = "Add your ingredients here — add as many ingredients as you need!";
   // unset($variables['rows'][0]['cells'][2]);
   // dump($variables['rows']['0']);
   // dump($variables);
@@ -207,8 +216,6 @@ function subtheme_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_
     $form['recipe_yield']['widget']['0']['value']['#title_display'] = "none";
     $form['recipe_yield']['widget']['0']['value']['#attributes']['placeholder'][] ="Eg. 24 cookies";
     $form['recipe_yield']['widget']['0']['value']['#attributes']['class'][] = "form-field-66-pc w-input";
-
-    $form['field_recipe_ingredients']['widget']['0']['value']['#title_display'] = "none";
 
     $form['recipe_directions']['widget']['0']['#title_display'] = "none";
     $form['recipe_directions']['widget']['0']['#attributes']['class'][] = "form-multi-line-text-heigh w-input"; 

@@ -1,20 +1,23 @@
 <div {{ attributes }}> {{ title_suffix }}
 
 <div class="top-nav" data-block="header">
+    {% if not logged_in %}
     <div class="logged-out nav-account-wrapper w-clearfix w-hidden-small w-hidden-tiny">
       <a class="logged-out user-pic-small user-pic-wrapper w-hidden-medium w-hidden-small w-hidden-tiny w-inline-block" href="#"></a>
       <a class="nav-account-signup-spacing tertiary" data-ix="modal-login-show" href="#">Join FREE</a>
       <a class="nav-account-signup-spacing tertiary" data-ix="modal-login-show" href="#">Sign In</a>
     </div>
+    {% else %}
     <div class="nav-account-wrapper w-hidden-small w-hidden-tiny">
       <div class="nav-account-arrow w-dropdown" data-delay="0" data-hover="1">
         <div class="dropdown-toggle w-dropdown-toggle">
           <div class="user-pic-nav-account user-pic-small user-pic-wrapper">
-            <img height="100%" src="/themes/imperial/images/user-pic-example.jpg" width="100%"></div>
+            <img height="100%" src="{{user_image_url}}" width="100%"></div>
           <div class="nav-account-text">Account</div>
         </div>
         {{ usernav }}</div>
     </div>
+    {% endif %}
     <a class="logo-wrapper w-inline-block" href="index.html">
       {{ content.header_imperial_logo }}{{ content.header_dixie_logo }}</a>
     <div class="search-bar-position" data-ix="search-bar-hide">
