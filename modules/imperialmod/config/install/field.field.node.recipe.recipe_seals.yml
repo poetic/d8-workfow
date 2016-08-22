@@ -1,0 +1,27 @@
+langcode: en
+status: true
+dependencies:
+  config:
+  - field.storage.node.recipe_seals
+  - node.type.recipe
+  - taxonomy.vocabulary.seals
+id: node.recipe.recipe_seals
+field_name: recipe_seals
+entity_type: node
+bundle: recipe
+label: 'Recipe Seals'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      seals: seals
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''  
+field_type: entity_reference

@@ -1,0 +1,237 @@
+{#
+/**
+ * @file
+ * Default theme implementation for a 'form' element.
+ *
+ * Available variables
+ * - attributes: A list of HTML attributes for the wrapper element.
+ * - children: The child elements of the form.
+ *
+ * @see template_preprocess_form()
+ *
+ * @ingroup themeable
+ */
+#}
+<div class="default-section">
+	<div class="_8col container separator-line">
+		<img class="img-center" height="80" src="http://uploads.webflow.com/578cf5f57b80d9142bae9eaf/578cf5f57b80d9142bae9f80_cupcake-icon-color.svg">
+		<h1 class="secondary text-centered">Thank you for sharing your recipe!</h1>
+		<p>
+			We all love learning new recipes and techniques. You can help the community get the most from recipe by being specific with directions, ingredients, measurements, size of pans, cans and/or packages. Tell us a little back story about your recipe too — Is it a family favorite? Do you serve it on special occasions? What does it taste like? Every detail entices others to make and enjoy your recipe!
+		</p>
+		<p class="body-sm">
+			By submitting your recipe to us, you are granting Imperial Sugar Company, its parent company, subsidiaries and licensees the right to post and use your material, including your name. We reserve the right to modify, reproduce and distribute the material in any medium (such as newsletters, social media and cookbooks) and in any manner or appropriate place.
+		</p>
+		<p class="body-sm">
+			All submitted material must be an original recipe of your own creation and must not infringe upon the copyrights, trademarks, rights of privacy, publicity or other intellectual property or other rights of any person or entity.
+		</p>
+		<p class="body-lg">Let's Begin!</p>
+	</div>
+	<div class="_8col container">
+	<!-- 	<div class="tooltip">
+			This is an example of a tool tip. Wording will be added by admin before website launch.
+		</div> -->
+		<div class="">
+			 <form{{ attributes }}>
+				<h3 class="secondary">1. General recipe info</h3>
+				<div class="form-input-wrapper w-clearfix">
+					<div class="_25-pc">
+						<label class="label-w-tooltip" for="Recipe-name">Recipe name*</label>
+					</div>
+					<div class="_75-pc">
+						{# {{kint(element)}} #}
+						{{element.title}}
+					</div>
+				</div>
+				<div class="form-input-wrapper w-clearfix">
+					<div class="_25-pc">
+						<label class="label-w-tooltip" for="Recipe-name">Tell us about your recipe*</label>
+					</div>
+					<div class="_75-pc">
+						{{element.recipe_description}}
+					</div>
+				</div>
+				<div class="form-input-wrapper w-clearfix">
+					<div class="_25-pc">
+						<label class="label-w-tooltip" for="Recipe-name">Upload a photo</label>
+					</div>
+					<div class="_75-pc">
+						{{element.recipe_image}}
+					</div>
+				</div>
+				<div class="form-input-wrapper w-clearfix">
+					<div class="_25-pc">
+						<label for="Recipe-name">Video link</label>
+					</div>
+					<div class="_75-pc">
+						{{element.recipe_youtube}}
+					</div>
+				</div>
+				<div class="form-input-wrapper w-clearfix">
+					<div class="_25-pc">
+						<label for="Recipe-name">Prep time</label>
+					</div>
+					<div class="_75-pc">
+						{{element.recipe_prep_h}}
+						<div class="form-time-separator">:</div>
+						{{element.recipe_prep_m}}
+					</div>
+				</div>
+				<div class="form-input-wrapper w-clearfix">
+					<div class="_25-pc">
+						<label for="Recipe-name">Bake/cook time</label>
+					</div>
+					<div class="_75-pc">
+						{{element.recipe_cook_h}}
+						<!-- <input class="form-time-entry w-input" data-name="Hours Bake Time" id="Hours-Bake-Time-2" maxlength="256" name="Hours-Bake-Time" placeholder="Hrs" type="text"> -->
+						<div class="form-time-separator">:</div>
+						<!-- <input class="form-time-entry w-input" data-name="Mins Bake Time" id="Mins-Bake-Time" maxlength="256" name="Mins-Bake-Time" placeholder="Mins" type="text"> -->
+						{{element.recipe_cook_m}}
+					</div>
+				</div>
+				<div class="form-input-wrapper w-clearfix">
+					<div class="_25-pc">
+						<label for="Recipe-name">Rest time</label>
+					</div>
+					<div class="_75-pc">
+						{{element.recipe_rest_h}}
+						<!-- <input class="form-time-entry w-input" data-name="Hours Rest Time" id="Hours-Rest-Time" maxlength="256" name="Hours-Rest-Time" placeholder="Hrs" type="text"> -->
+						<div class="form-time-separator">:</div>
+						{{element.recipe_rest_m}}
+						<!-- <input class="form-time-entry w-input" data-name="Mins Rest Time" id="Mins-Rest-Time" maxlength="256" name="Mins-Rest-Time" placeholder="Mins" type="text"></div> -->
+				</div>
+				<div class="form-input-wrapper w-clearfix">
+					<div class="_25-pc">
+						<label for="Recipe-name">Chill/freeze time</label>
+					</div>
+					<div class="_75-pc">
+						{{element.recipe_freeze_h}}
+						<!-- <input class="form-time-entry w-input" data-name="Hours Chill Time" id="Hours-Chill-Time" maxlength="256" name="Hours-Chill-Time" placeholder="Hrs" type="text"> -->
+						<div class="form-time-separator">:</div>
+						{{element.recipe_freeze_m}}
+						<!-- <input class="form-time-entry w-input" data-name="Mins Chill Time" id="Mins-Chill-Time" maxlength="256" name="Mins-Chill-Time" placeholder="Mins" type="text"></div> -->
+				</div>
+				<div class="form-input-wrapper w-clearfix">
+					<div class="_25-pc">
+						<label for="Recipe-name">Decorate Time</label>
+					</div>
+					<div class="_75-pc">
+						{{element.recipe_decorate_h}}
+						<!-- <input class="form-time-entry w-input" data-name="Hours Decorate Time" id="Hours-Decorate-Time" maxlength="256" name="Hours-Decorate-Time" placeholder="Hrs" type="text"> -->
+						<div class="form-time-separator">:</div>
+						{{element.recipe_decorate_m}}
+						<!-- <input class="form-time-entry w-input" data-name="Mins Decorate Time" id="Mins-Decorate-Time" maxlength="256" name="Mins-Decorate-Time" placeholder="Mins" type="text"></div> -->
+				</div>
+				<div class="form-input-wrapper w-clearfix">
+					<div class="_25-pc">
+						<label for="Recipe-name">How many servings does the recipe yield?</label>
+					</div>
+					<div class="_75-pc">
+						<!-- <input class="form-field-66-pc w-input" data-name="Yield" id="Yield" maxlength="256" name="Yield" placeholder="Eg. 24 cookies" type="text">-->
+						{{element.recipe_yield}}
+					</div>
+				</div>
+				<div class="extra-margin separator-line"></div>
+				<h3 class="secondary">2. Ingredients</h3>
+					{{element.field_recipe_ingredient.widget}}
+				<div class="extra-margin separator-line"></div>
+				<h3 class="secondary">3. Instructions</h3>
+				<div class="form-input-wrapper w-clearfix">
+					<div class="_25-pc">
+						<label class="label-w-tooltip" for="Recipe-name">Step-by-Step instructions</label>
+					</div>
+					<div class="_75-pc">
+						{{element.recipe_directions}}
+						<p class="body-sm">
+							
+						</p>
+					</div>
+				</div>
+				<div class="extra-margin separator-line"></div>
+				<h3 class="secondary">4. Handy tips</h3>
+				<div class="form-input-wrapper w-clearfix">
+					<div class="_25-pc">
+						<label for="Recipe-name">Any tips when making or serving this recipe?</label>
+					</div>
+					<div class="_75-pc">
+						<!-- <textarea class="form-multi-line-text-heigh w-input" data-name="Handy Tips" id="Handy-Tips" maxlength="5000" name="Handy-Tips" placeholder="Eg. Don’t forget to let the cake sit for 30 mins before your guests arrive"></textarea> -->
+						{{element.recipe_handy_tips}}
+					</div>
+				</div>
+				<div class="extra-margin separator-line"></div>
+				<h3 class="secondary">5. Categorize your recipe</h3>
+				<p>Select any categories that apply to your recipe</p>
+					
+				<div class="form-input-wrapper">
+				  <h4>Holidays</h4>
+					{% for tax in element.recipe_holidays.widget %}
+						{% if tax['#type'] == "checkbox" %}
+							<div class="clickable-tag-wrapper w-checkbox w-clearfix js-form-item form-item js-form-type-checkbox">
+								<input drupal-data-selector="{{tax['#attribute']['data-drupal-selector']}}" value="{{tax['#attributes']['value']}}" class=" display-none w-checkbox-input form-checkbox" data-name="{{ tax['#name'] }}" id="{{ tax['#id'] }}" name="{{ tax['#name'] }}" type="checkbox">	
+								<label class="clickable-tag w-form-label option" for="{{ tax['#id'] }}">{{ tax['#title'] }}</label>	
+							</div>
+						{% endif %}
+					{% endfor %}
+				  
+				</div>
+				<div class="form-input-wrapper">
+				  <h4>Dessert</h4>
+					{% for tax in element.recipe_dessert.widget %}
+						{% if tax['#type'] == "checkbox" %}
+							<div class="clickable-tag-wrapper w-checkbox w-clearfix js-form-item form-item js-form-type-checkbox">
+								<input drupal-data-selector="{{tax['#attribute']['data-drupal-selector']}}" value="{{tax['#attributes']['value']}}" class=" display-none w-checkbox-input form-checkbox" data-name="{{ tax['#name'] }}" id="{{ tax['#id'] }}" name="{{ tax['#name'] }}" type="checkbox">	
+								<label class="clickable-tag w-form-label option" for="{{ tax['#id'] }}">{{ tax['#title'] }}</label>	
+							</div>
+						{% endif %}
+					{% endfor %}
+				  
+				</div>
+				<div class="form-input-wrapper">
+				  <h4>Course</h4>
+					{% for tax in element.recipe_course.widget %}
+						{% if tax['#type'] == "checkbox" %}
+							<div class="clickable-tag-wrapper w-checkbox w-clearfix js-form-item form-item js-form-type-checkbox">
+								<input drupal-data-selector="{{tax['#attribute']['data-drupal-selector']}}" value="{{tax['#attributes']['value']}}" class=" display-none w-checkbox-input form-checkbox" data-name="{{ tax['#name'] }}" id="{{ tax['#id'] }}" name="{{ tax['#name'] }}" type="checkbox">	
+								<label class="clickable-tag w-form-label option" for="{{ tax['#id'] }}">{{ tax['#title'] }}</label>	
+							</div>
+						{% endif %}
+					{% endfor %}
+				  
+				</div>
+				<div class="form-input-wrapper">
+				  <h4>Other</h4>
+					{% for tax in element.recipe_other.widget %}
+						{% if tax['#type'] == "checkbox" %}
+							<div class="clickable-tag-wrapper w-checkbox w-clearfix js-form-item form-item js-form-type-checkbox">
+								<input drupal-data-selector="{{tax['#attribute']['data-drupal-selector']}}" value="{{tax['#attributes']['value']}}" class=" display-none w-checkbox-input form-checkbox" data-name="{{ tax['#name'] }}" id="{{ tax['#id'] }}" name="{{ tax['#name'] }}" type="checkbox">	
+								<label class="clickable-tag w-form-label option" for="{{ tax['#id'] }}">{{ tax['#title'] }}</label>	
+							</div>
+						{% endif %}
+					{% endfor %}
+				  
+				</div>
+				<div class="extra-margin separator-line"></div>
+				<h3 class="txt-centered">Submit your Recipe</h3>
+				<div class="rcp-original-recipe-checkbox w-checkbox">
+					<input class="w-checkbox-input" data-name="Original Recipe" id="Original-Recipe" name="Original-Recipe" required="required" type="checkbox">
+					<label class="w-form-label" for="Original-Recipe">Yes, I promise this an original recipe</label>
+				</div>
+				<div class="txt-centered">
+					<a class="btn btn-form w-button" href="#">Cancel</a>
+					
+					<!-- <input class="btn btn-form btn-submit w-button" data-wait="Please wait..." type="submit" value="Submit Recipe!"> -->
+				{{element.form_token}}
+				{{element.form_build_id}}
+				{{element.form_id}}
+				{{ element.actions.unpublish }}	
+				{{ element.actions.submit }}	
+				{# {{ element.actions}} #}
+				{{element.render_children}}
+				{{element.children}}
+				
+				</div>
+				
+			</form>
+		</div>
+	</div>
+</div>

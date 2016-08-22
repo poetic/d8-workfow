@@ -1,0 +1,19 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18.62 12">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <title>scl-action-icon-email-white</title>
+  <g id="Recipe">
+    <g id="Desktop---Recipe">
+      <g id="Group-5">
+        <g id="Button">
+          <path id="scl-action-icon-email" class="cls-1" d="M18.22,3.19l-8,4.17a1.77,1.77,0,0,1-.94.21,1.77,1.77,0,0,1-.94-0.21l-8-4.17C0,3,0,3.23,0,3.42V11a1.21,1.21,0,0,0,1,1H17.59a1.21,1.21,0,0,0,1-1V3.42c0-.19,0-0.44-0.4-0.23M0.61,1.12L8.37,5.29a2.22,2.22,0,0,0,1.88,0L18,1.12C18.51,0.85,19,0,18.06,0H0.56C-0.37,0,.11.85,0.61,1.12" transform="translate(0)"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

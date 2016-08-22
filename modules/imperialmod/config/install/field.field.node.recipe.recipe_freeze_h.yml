@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.recipe_freeze_h
+    - node.type.recipe
+id: node.recipe.recipe_freeze_h
+field_name: recipe_freeze_h
+entity_type: node
+bundle: recipe
+label: Recipe Freeze H
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

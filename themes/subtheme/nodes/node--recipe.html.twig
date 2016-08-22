@@ -1,0 +1,199 @@
+<div {{ attributes }}> {{ title_suffix }}
+
+{% set page_url = url('entity.node.canonical', {'node': node.id}) %}
+
+<div data-node="recipe">
+  <div class="default-section">
+    <div class="container w-clearfix">
+      <div class="_33-pc sidebar">
+        <div class="cta-wrapper follow-social separator-line-top-bottom sidebar w-hidden-medium w-hidden-small w-hidden-tiny" data-block="r_social">
+          <div class="scl-wrapper sidebar">
+             <a href="https://www.facebook.com/sharer/sharer.php?u={{ page_url }}" class="share-link w-inline-block" target="_blank">
+            <a class="scl w-inline-block" href="https://www.facebook.com/imperialsugar" target="_blank"></a>
+            <a class="pn scl w-inline-block" href="http://pinterest.com/ImperialSugar/" target="_blank"></a>
+            <a class="scl tw w-inline-block" href="https://twitter.com/imperialsugar" target="_blank"></a>
+            <a class="gl scl w-inline-block" href="https://plus.google.com/u/0/b/113189406007727932134/+imperialsugar/posts" target="_blank"></a>
+            <a class="in scl w-inline-block" href="http://instagram.com/imperial_sugar" target="_blank"></a>
+            <a class="scl w-inline-block yt" href="http://www.youtube.com/user/imperialsugar" target="_blank"></a>
+          </div>
+          <h3>
+            Connect with us to get exclusive recipes, sweet ideas, and more!
+          </h3>
+        </div>
+        <div class="sidebar subscribe-wrapper" data-block="r_subcribe">
+          <h3>Mmmm , like this recipe?</h3>
+          <div class="sidebar subscribe-text">
+            Subscribe to our newsletter for exclusive recipes, coupons, and promotions.
+          </div>
+          <div class="sidebar subscribe-form-position">
+            <form class="form-field-shadow subscribe-form-wrapper w-clearfix" data-name="Email Form" name="email-form">
+              <input class="subscribe-field w-input" data-ix="search-bar-show" data-name="Subscribe 2" id="Subscribe-2" maxlength="256" name="Subscribe-2" placeholder="Email Address" type="text"><input class="btn subscribe-btn w-button" data-wait="Please wait..." type="submit" value="Subscribe" wait="Please wait..."></form>
+          </div>
+        </div>
+        <div class="cta-wrapper scl-actions sidebar w-clearfix" data-ix="fixed-scl-actions" data-block="r_share">
+          <h4>Tell others you&rsquo;re making this recipe!</h4>
+          <a class="btn btn-tertiary pn scl-actions w-button" href="#">Pin it</a>
+          <a class="btn btn-tertiary fb scl-actions w-button" href="#">Share it</a>
+          <a class="btn btn-tertiary scl-actions tw w-button" href="#">Tweet it</a>
+          <a class="btn btn-tertiary scl-actions w-button" href="#">Email it</a>
+          <a class="btn btn-tertiary print scl-actions w-button" href="#">Print it</a>
+          <a class="btn btn-tertiary rate scl-actions w-button" href="#">Rate it</a>
+        </div>
+        <div class="rcp-list-col w-clearfix w-hidden-medium w-hidden-small w-hidden-tiny">
+          <h3 class="secondary">Related Recipes</h3>
+            {{related_recipes}}
+        </div>
+      </div>
+      <div class="_66-pc rcp-main w-clearfix">
+        <div class="main rcp-img">
+          <a class="w-inline-block w-lightbox" href="#">
+            <div class="video-btn-wrapper">
+              <img src="/{{ directory }}/images/icon-video-play-white.svg"></div>
+            <div>
+              {{ content.recipe_image }}</div>
+              <div class="dynamic-data rcp-main rcp-summary-data" data-node-field="youtube">{{ content.recipe_youtube }}</div>
+              <div class="dynamic-data rcp-main rcp-summary-data" data-node-field="video_dixie">{{ content.recipe_video_dixie }}</div>
+            <script class="w-json" type="application/json">
+              { "items": [{
+                "type": "video",
+                "html": "<iframe class=\"embedly-embed\" src=\"https://cdn.embedly.com/widgets/media.html?src=https%3A%2F%2Fwww.youtube.com%2Fembed%2FGZX7C0L3PvQ%3Fautoplay%3D1%26feature%3Doembed&url=http%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DGZX7C0L3PvQ&image=https%3A%2F%2Fi.ytimg.com%2Fvi%2FGZX7C0L3PvQ%2Fhqdefault.jpg&key=c4e54deccf4d4ec997a64902e9a30300&autoplay=1&type=text%2Fhtml&schema=youtube\" width=\"940\" height=\"528\" scrolling=\"no\" frameborder=\"0\" allowfullscreen>",
+                "thumbnailUrl": "https://i.embed.ly/1/image?url=https%3A%2F%2Fi.ytimg.com%2Fvi%2FGZX7C0L3PvQ%2Fhqdefault.jpg&key=866738f8f18b4394a18e371517a66ae0",
+                "width": 940,
+                "height": 528,
+                "url": "http://www.youtube.com/watch?v=GZX7C0L3PvQ"
+              }] }
+            </script></a>
+        </div>
+        <div class="rcp-main rcp-wrapper">
+          <div class="activity rcp-main separator-line w-clearfix">
+            <div class="rcp-main rcp-rating">
+              <div class="rcp-main stars star-{{content.field_rating_average.0}}"></div>
+            </div>
+            <div class="likes rcp-main w-clearfix">
+              <div class="rcp-main saved-tally">{{ count.favorite }}</div>
+              {% if not logged_in %}
+              <div class="rcp-main save-icon" data-ix="modal-login-show">
+                <a class="action-flag" href="#">+</a>
+              </div>
+              {% else %}
+              <div class="rcp-main save-icon">
+                {{content.flag_favorite}}
+              </div>
+              {% endif %}
+            </div>
+            <div class="likes rcp-main w-clearfix">
+              <div class="rcp-main saved-tally">{{ count.bookmark }}</div>
+              {% if not logged_in %}
+              <div class="like-icon rcp-main" data-ix="modal-login-show">
+                <a class="action-flag" href="#">+</a>
+              </div>
+              {% else %}
+              <div class="like-icon rcp-main">
+                {{content.flag_bookmark}}
+              </div>
+              {% endif %}
+              </div>
+          </div>
+          <h1 data-title="title">{{ label }}</h1>
+          <div class="rcp-main user w-clearfix">
+            <a class="rcp-main user-pic-med user-pic-wrapper w-inline-block" href="#">
+               {{author_picture}}</a>
+            <div class="rcp-author rcp-main rcp-summary-data">
+              By
+              <a href="#">{{author_name}}</a>
+            </div>
+            <div class="rcp-author rcp-main rcp-summary-data">
+              <a class="txt-link-sm" href="#">Follow this Chef</a>
+            </div>
+          </div>
+          <div data-node-field="description">{{ content.recipe_description }}</div>
+          <div class="rcp-main summary">
+            <div class="padding-bottom-10px separator-line summary-wrapper">
+              <h6 class="rcp-main secondary">Yield</h6>
+              <div class="dynamic-data rcp-main rcp-summary-data" data-node-field="yield">{{ content.recipe_yield }}</div>
+            </div>
+          </div>
+          <div class="rcp-main summary">
+            <h6 class="rcp-main secondary">Prep</h6>
+            <div class="dynamic-data rcp-main rcp-summary-data" data-node-field="prep_h">{{ content.recipe_prep_h }}</div>
+            <div class="rcp-main rcp-summary-data">hr</div>
+            <div class="dynamic-data rcp-main rcp-summary-data" data-node-field="prep_m">{{ content.recipe_prep_m }}</div>
+            <div class="rcp-main rcp-summary-data">mins</div>
+          </div>
+          <div class="rcp-main summary">
+            <h6 class="rcp-main secondary">Cook</h6>
+            <div class="dynamic-data rcp-main rcp-summary-data" data-node-field="cook_h">{{ content.recipe_cook_h }}</div>
+            <div class="rcp-main rcp-summary-data">hr</div>
+            <div class="dynamic-data rcp-main rcp-summary-data" data-node-field="cook_m">{{ content.recipe_cook_m }}</div>
+            <div class="rcp-main rcp-summary-data">mins</div>
+          </div>
+          <div class="rcp-main summary">
+            <h6 class="rcp-main secondary">Freeze</h6>
+            <div class="dynamic-data rcp-main rcp-summary-data" data-node-field="freeze_h">{{ content.recipe_freeze_h }}</div>
+            <div class="rcp-main rcp-summary-data">hr</div>
+            <div class="dynamic-data rcp-main rcp-summary-data" data-node-field="freeze_m">{{ content.recipe_freeze_m }}</div>
+            <div class="rcp-main rcp-summary-data">mins</div>
+          </div>
+          <div class="rcp-main summary">
+            <h6 class="rcp-main secondary">Rest</h6>
+            <div class="dynamic-data rcp-main rcp-summary-data" data-node-field="rest_h">{{ content.recipe_rest_h }}</div>
+            <div class="rcp-main rcp-summary-data">hr</div>
+            <div class="dynamic-data rcp-main rcp-summary-data" data-node-field="rest_m">{{ content.recipe_rest_m }}</div>
+            <div class="rcp-main rcp-summary-data">mins</div>
+          </div>
+          <div class="rcp-main summary">
+            <h6 class="rcp-main secondary">Decorate</h6>
+            <div class="dynamic-data rcp-main rcp-summary-data" data-node-field="decorate_h">{{ content.recipe_decorate_h }}</div>
+            <div class="rcp-main rcp-summary-data">hr</div>
+            <div class="dynamic-data rcp-main rcp-summary-data" data-node-field="decorate_m">{{ content.recipe_decorate_m }}</div>
+            <div class="rcp-main rcp-summary-data">mins</div>
+          </div>
+          <div class="rcp-seals-wrapper" data-vocabulary="seals">
+            {% set count = content.recipe_seals['#items'].value|length %}
+            {% for i in 0..count-1 %}
+            <div class="rcp-seal-img">
+                  {{ content.recipe_seals[i] }}
+            </div>
+            {% endfor %}
+        </div>
+        </div>
+        <div class="cta-wrapper follow-social separator-line-top-bottom sidebar w-hidden-main">
+          <div class="scl-wrapper sidebar">
+            <a class="scl w-inline-block" href="https://www.facebook.com/imperialsugar" target="_blank"></a>
+            <a class="pn scl w-inline-block" href="http://pinterest.com/ImperialSugar/" target="_blank"></a>
+            <a class="scl tw w-inline-block" href="https://twitter.com/imperialsugar" target="_blank"></a>
+            <a class="gl scl w-inline-block" href="https://plus.google.com/u/0/b/113189406007727932134/+imperialsugar/posts" target="_blank"></a>
+            <a class="in scl w-inline-block" href="http://instagram.com/imperial_sugar" target="_blank"></a>
+            <a class="scl w-inline-block yt" href="http://www.youtube.com/user/imperialsugar" target="_blank"></a>
+          </div>
+          <h3>
+            Connect with us to get exclusive recipes, sweet ideas, and more!
+          </h3>
+        </div>
+        <div class="rcp-text-wrapper">
+          <h2 class="secondary">Ingredients</h2>
+          {% set pcount = content.field_recipe_ingredient['#items'].value|length %}
+          {% for i in 0..pcount-1 %}
+            {{ content.field_recipe_ingredient[i] }}
+          {% endfor %}
+          <h2 class="secondary">Directions</h2>
+            <div class="rcp-directions" data-node-field="directions">{{ content.recipe_directions }}</div>
+          <h2 class="secondary">Handy Tips</h2>
+            <div class="rcp-directions" data-node-field="handy_tips">{{ content.recipe_handy_tips }}</div>
+        </div>
+        <div data-vocabulary="course" data-node-field="course" data-target-type="taxonomy_term" data-target-bundle="course">{{ content.recipe_course }}</div>
+        <div data-vocabulary="dessert" data-node-field="dessert" data-target-type="taxonomy_term" data-target-bundle="dessert">{{ content.recipe_dessert }}</div>
+        <div data-vocabulary="holidays" data-node-field="holidays" data-target-type="taxonomy_term" data-target-bundle="holidays">{{ content.recipe_holidays }}</div>
+        <div data-vocabulary="season" data-node-field="season" data-target-type="taxonomy_term" data-target-bundle="season">{{ content.recipe_season }}</div>
+        <div data-vocabulary="other" data-node-field="other" data-target-type="taxonomy_term" data-target-bundle="other">{{ content.recipe_other }}</div>
+
+        {{ content.field_recipe_comments.0.comment_form }}
+        {{comment_view}}
+
+        <div class="load-more-comments load-more-wrapper">
+          <a class="btn btn-tertiary w-button" href="#">Show more reviews</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

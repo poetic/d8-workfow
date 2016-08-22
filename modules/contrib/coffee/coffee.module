@@ -1,0 +1,71 @@
+<?php
+
+/**
+ * @file
+ * Coffee primary module file.
+ */
+
+use Drupal\Core\Cache\Cache;
+use Drupal\Core\Url;
+
+/**
+ * Implements hook_page_attachments().
+ */
+function coffee_page_attachments(array &$attachments) {
+  if (\Drupal::currentUser()->hasPermission('access coffee')) {
+    $config = \Drupal::config('coffee.configuration');
+    $cache_tags = isset($attachments['#cache']['tags']) ? $attachments['#cache']['tags'] : [];
+    $attachments['#cache']['tags'] = Cache::mergeTags($cache_tags, $config->getCacheTags());
+
+    $attachments['#attached']['library'][] = 'coffee/drupal.coffee';
+    $attachments['#attached']['drupalSettings']['coffee'] = [
+      'maxResults' => $config->get('max_results'),
+    ];
+  }
+}
+
+
+/**
+ * Implements hook_hook_info().
+ */
+function coffee_hook_info() {
+  $hooks = array(
+    'coffee_commands' => array(
+      'group' => 'coffee',
+    ),
+  );
+
+  return $hooks;
+}
+
+/**
+ * Implements hook_toolbar().
+ */
+function coffee_toolbar() {
+  $items['coffee'] = [
+    '#cache' => [
+      'contexts' => ['user.permissions'],
+    ],
+  ];
+
+  if (\Drupal::currentUser()->hasPermission('access coffee')) {
+    $items['coffee'] += [
+      '#weight' => 999,
+      '#type' => 'toolbar_item',
+      'tab' => [
+        '#type' => 'link',
+        '#title' => t('Go to'),
+        '#url' => Url::fromRoute('<none>'),
+        '#attributes' => [
+          'title' => t('Use alt+d to start Coffee and search for a page to go to '),
+          'class' => ['toolbar-icon', 'toolbar-icon-coffee'],
+        ],
+      ],
+      '#attached' => [
+        'library' => ['coffee/drupal.coffee'],
+      ],
+    ];
+  }
+
+  return $items;
+}

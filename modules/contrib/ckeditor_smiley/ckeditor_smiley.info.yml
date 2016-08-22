@@ -1,0 +1,13 @@
+name: CKEditor Smiley
+type: module
+description: 'Adds the "Insert Smiley" plugin to CKEditor.'
+# core: 8.x
+package: CKEditor
+dependencies:
+  - ckeditor
+
+# Information added by Drupal.org packaging script on 2016-03-15
+version: '8.x-1.0'
+core: '8.x'
+project: 'ckeditor_smiley'
+datestamp: 1458031142

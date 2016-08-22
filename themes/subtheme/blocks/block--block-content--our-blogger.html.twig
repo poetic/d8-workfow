@@ -1,0 +1,42 @@
+<div {{ attributes }}> {{ title_suffix }}
+
+<div class="default-section" data-block="our_blogger">
+    <div class="_6col container text-centered">
+      <div class="basic-header-wrapper">
+        {{ content.our_blogger_logo_imperial }}{{ content.our_blogger_logo_dixie }}<h1>Meet our talented tastemakers</h1>
+        <div data-block-field="description">{{ content.our_blogger_description }}</div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="w-tabs" data-duration-in="300" data-duration-out="100">
+        <div class="separator-line tab-menu-wrapper w-tab-menu">
+          <a class="tab-wrapper w-inline-block w-tab-link" data-w-tab="Recipe Developer">
+            <h3 class="tab-counter" data-block-field="developers_tab">{{ content.our_blogger_developers_tab }}</h3>
+          </a>
+          <a class="tab-wrapper w--current w-inline-block w-tab-link" data-w-tab="Recipe Tester">
+            <h3 class="tab-counter" data-block-field="testers_tab">{{ content.our_blogger_testers_tab }}</h3>
+          </a>
+        </div>
+        <div class="w-tab-content">
+          <div class="w-tab-pane" data-w-tab="Recipe Developer">
+            <div class="_6col account-intro-wrapper container">
+              <a class="blogger-seal w-inline-block" href="#">
+                {{ content.our_blogger_seal_dev }}{{ content.our_blogger_seal_dev_dixie }}</a>
+              <div class="blogger-intro" data-block-field="intro_developer">{{ content.our_blogger_intro_developer }}</div>
+            </div>
+            {{ content.our_blogger_dev_team }}
+          </div>
+          <div class="w--tab-active w-tab-pane" data-w-tab="Recipe Tester">
+            <div class="_6col account-intro-wrapper container">
+              <a class="blogger-seal w-inline-block" href="#">
+                {{ content.our_blogger_seal_tester }}{{ content.our_blogger_seal_tester_dixie }}</a>
+              <div class="blogger-intro" data-block-field="intro_tester">{{ content.our_blogger_intro_tester }}</div>
+            </div>
+            {{ content.our_blogger_tester_team }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

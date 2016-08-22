@@ -1,0 +1,12 @@
+name: Leaflet
+type: module
+description: Integration with the Leaflet map scripting library.
+# core: 8.x
+# version: VERSION
+package: Leaflet
+
+# Information added by Drupal.org packaging script on 2016-02-22
+version: '8.x-1.0-alpha1'
+core: '8.x'
+project: 'leaflet'
+datestamp: 1456139028

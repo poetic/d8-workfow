@@ -1,0 +1,52 @@
+<div data-node="rc_overview">
+    <div class="full-width-section object-fit">
+      <div class="header-img-lg object-fit">
+        <img height="500" src="/{{ directory }}/images/red-summer-fruits-pancakes.jpg"></div>
+      {{ content.rc_overview_header }}
+      <div class="_8col container padding-fix-for-for-width position-absolute text-centered">
+        <h1 class="tertiary">Recipe Collection Overview</h1>
+        <div class="body-lg tertiary" data-block-field="description" data-type="text_long" data-form-type="text_textarea" data-format-type="text_default">
+          <p>
+            Description goes here. This page is the Recipe Collection Overview. Examples are: Recipes/Holidays (with each separate holiday recipe collection beneath), or Sugar Spa (with Sugar Scrubs, Bath Products, Sugar Scrub Labels beneath).
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="bg-secondary default-section">
+      <div class="container w-clearfix">
+        <div class="_66-pc">
+          <h2 class="secondary">Popular this month</h2>
+          <div class="base-slider hero w-slider" data-animation="slide" data-autoplay="1" data-delay="6000" data-duration="300" data-infinite="1">
+            <div class="w-slider-mask" data-view="rc_hero" data-filter-type="node" data-filter-bundle="rc_overview" data-node-field="hero" data-target-type="view" data-target-bundle="rc_hero">{{ content.rc_overview_hero }}</div>
+            <div class="left-arrow w-slider-arrow-left">
+              <div class="w-icon-slider-left"></div>
+            </div>
+            <div class="right-arrow w-slider-arrow-right">
+              <div class="w-icon-slider-right"></div>
+            </div>
+            <div class="w-hidden-main w-hidden-medium w-hidden-small w-hidden-tiny w-round w-slider-nav w-slider-nav-invert"></div>
+          </div>
+        </div>
+        <div class="_33-pc rcp-list-col w-clearfix">
+          <h2 class="secondary">Trending now</h2>
+          <div class="list rcp-wrapper" data-view="rc_trend" data-filter-type="node" data-filter-bundle="rc_overview" data-node-field="trend" data-target-type="view" data-target-bundle="rc_trend">{{ content.rc_overview_trend }}</div>
+        </div>
+      </div>
+    </div>
+    <div class="default-section">
+      <div class="container w-clearfix">
+        <h3 class="secondary txt-centered">Explore Recipe Collection Overview</h3>
+        <div class="collection-title-underline"></div>
+        <div class="_33-pc rcp-cllctn-card" data-node="rc_overview" data-view-mode="card">
+          <div class="rcp-cllctn-wrapper">
+            <div class="object-fit rcp-cllctn-img">
+              <img height="330" src="/{{ directory }}/images/Dark-Chocolate-Guinness-Cake-with-Bailey's-Buttercream.jpg"></div>
+            <div class="img-overlay-35"></div>
+            <a class="title-absolute-center w-inline-block" href="recipes/recipe-collection.html">
+              <h2 class="tertiary">Recipe Collection Title</h2>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

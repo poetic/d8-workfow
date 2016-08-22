@@ -1,0 +1,26 @@
+<div data-node="recipe_collection">
+    <div class="full-width-section">
+      <div class="img-overlay-35"></div>
+      <div class="header-img-sm object-fit">
+        {{ content.recipe_collection_image }}</div>
+      <div class="_8col container position-absolute valign-parent">
+        <h1 class="tertiary txt-centered valign">{{ label }}</h1>
+      </div>
+    </div>
+    <div class="bg-secondary default-section">
+      <div class="container w-clearfix">
+      <div class="_66-pc" data-view="recipe_collection" data-filter-type="node" data-filter-bundle="recipe_collection" data-node-field="popular" data-target-type="view" data-target-bundle="recipe_collection">{{ content.recipe_collection_popular }}</div>
+      <div class="_33-pc rcp-list-col w-clearfix" data-view="trending_collection" data-filter-type="node" data-filter-bundle="recipe" data-node-field="trending" data-target-type="view" data-target-bundle="trending_collection">{{ content.recipe_collection_trending }}</div>
+    </div>
+    </div>
+    <div class="default-section">
+      <div class="container">
+        <div class="w-clearfix">
+          {{ content.field_collection }}
+        </div>
+        <div class="load-more-wrapper">
+          <a class="btn w-button" href="#">Show more</a>
+        </div>
+      </div>
+    </div>
+  </div>

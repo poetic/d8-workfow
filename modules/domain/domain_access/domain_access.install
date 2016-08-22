@@ -1,0 +1,52 @@
+<?php
+
+/**
+ * @file
+ * Install, update and uninstall functions for the Domain Access module.
+ */
+
+/**
+ * Implements hook_install().
+ *
+ * Installs the default domain field on nodes. We don't do this via schema.yml
+ * files because we have an unknown number of node types.
+ */
+function domain_access_install() {
+  // Assign domain access to bundles.
+  $list['user'] = 'user';
+
+  $node_types = \Drupal::entityTypeManager()->getStorage('node_type')->loadMultiple();
+  foreach ($node_types as $type => $info) {
+    $list[$type] = 'node';
+  }
+  // Install our fields.
+  foreach ($list as $bundle => $entity_type) {
+    domain_access_confirm_fields($entity_type, $bundle);
+  }
+  // Install our actions.
+  $domains = \Drupal::service('domain.loader')->loadMultiple();
+  foreach ($domains as $domain) {
+    domain_access_domain_insert($domain);
+  }
+}
+
+/**
+ * Implements hook_uninstall().
+ *
+ * Removes access control fields on uninstall.
+ */
+function domain_access_uninstall() {
+  $field_storage_config = \Drupal::entityTypeManager()
+    ->getStorage('field_storage_config');
+
+  foreach (array('node', 'user') as $type) {
+    $id = $type . '.' . DOMAIN_ACCESS_FIELD;
+    if ($field = $field_storage_config->load($id)) {
+      $field->delete();
+    }
+    $id = $type . '.' . DOMAIN_ACCESS_ALL_FIELD;
+    if ($field = $field_storage_config->load($id)) {
+      $field->delete();
+    }
+  }
+}

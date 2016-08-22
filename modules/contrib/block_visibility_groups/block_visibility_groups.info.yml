@@ -1,0 +1,14 @@
+name: Block Visibility Groups
+type: module
+description: My Awesome Module
+# core: 8.x
+package: Other
+dependencies:
+  - block
+
+
+# Information added by Drupal.org packaging script on 2016-01-28
+version: '8.x-1.0'
+core: '8.x'
+project: 'block_visibility_groups'
+datestamp: 1454012058

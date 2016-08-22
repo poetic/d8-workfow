@@ -1,0 +1,14 @@
+uuid: a9dd57ad-0e22-4736-a312-14c4cbef8439
+langcode: en
+status: true
+dependencies: {  }
+name: recipe_image_node_card
+label: recipe_image_node_card
+effects:
+  f3940f03-c80c-46fe-b98e-0e359e944d3e:
+    uuid: f3940f03-c80c-46fe-b98e-0e359e944d3e
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 310
+      height: 330

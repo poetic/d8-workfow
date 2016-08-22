@@ -1,0 +1,21 @@
+<div {{ attributes }}> {{ title_suffix }}
+
+<div class="default-section" data-block="coupon">
+    <div class="container">
+      <div class="basic-header-wrapper coupons separator-line">
+        {{ content.coupon_scissors }}<h1 data-block-field="title">{{ content.coupon_title }}</h1>
+      </div>
+    </div>
+    <div class="container">
+      <div class="margin-top-bottom txt-centered">
+        <div class="display-inline-block">
+          <h3 data-block-field="title">{{ content.coupon_title }}</h3>
+        </div>
+        {{ content.coupon_name }}
+        <div data-block-field="description">{{ content.coupon_description }}</div>
+      </div>
+      {{ content.coupon_coupons }}
+    </div>
+  </div>
+
+</div>

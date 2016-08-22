@@ -1,0 +1,12 @@
+name: MultiBlock
+description: 'Allows the creation of multiple instances of blocks'
+# core: 8.x
+dependencies:
+  - block
+type: module
+
+# Information added by Drupal.org packaging script on 2015-03-23
+version: '8.x-1.x-dev'
+core: '8.x'
+project: 'multiblock'
+datestamp: 1427127793

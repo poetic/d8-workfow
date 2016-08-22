@@ -1,0 +1,15 @@
+name: Domain
+description: 'Creates domain records within a Drupal installation.'
+type: module
+package: Domain
+# version: VERSION
+# core: 8.x
+dependencies:
+  - options
+configure: domain.admin
+
+# Information added by Drupal.org packaging script on 2016-07-31
+version: '8.x-1.0-alpha1'
+core: '8.x'
+project: 'domain'
+datestamp: 1470004159

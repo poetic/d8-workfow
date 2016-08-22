@@ -1,0 +1,21 @@
+leaflet:
+  remote: http://leaflet.cloudmade.com
+  version: 0.7.3
+  license:
+    name: Leaflet-License
+    url: https://github.com/Leaflet/Leaflet/blob/v0.7.3/LICENSE
+    gpl-compatible: true
+  js:
+    //cdn.leafletjs.com/leaflet-0.7.3/leaflet.js: {}
+  css:
+    component:
+      //cdn.leafletjs.com/leaflet-0.7.3/leaflet.css: {}
+
+leaflet-drupal:
+    version: VERSION
+    js:
+      leaflet.drupal.js: {}
+    dependencies:
+      - leaflet/leaflet
+      - core/jquery
+      - core/drupal

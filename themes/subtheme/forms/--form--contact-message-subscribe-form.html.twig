@@ -1,0 +1,15 @@
+{# <form class="form-field-shadow subscribe-form-wrapper" data-name="Email Form" name="email-form" data-block-field="subscribe" data-type="entity_reference" data-form-type="entity_reference_autocomplete" data-format-type="entity_reference_entity_view" data-target-type="contact_form" data-target-bundle="subscribe" data-form="subscribe">
+          {{ content.subscribe_email }}<input class="btn subscribe-btn w-button" data-wait="Please wait..." type="submit" value="Sign up!" wait="Please wait..."></form> #}
+
+
+<form{{ attributes }} class="form-field-shadow subscribe-form-wrapper">
+	  	<div>
+			{{element.render_children}}
+			{{element.form_token}}
+			{{element.form_build_id}}
+			{{element.form_id}}
+			{{element.subscribe_email}}
+			{{element.actions.submit}}
+	  	</div>
+ 	</div>
+ </form>

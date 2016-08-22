@@ -1,0 +1,114 @@
+<div {{ attributes }}> {{ title_suffix }}
+
+<div class="top-nav w-clearfix" data-block="header">
+    <div class="login-modal" data-ix="modal-bg-initial-appearance">
+      <div class="modal-wrapper txt-centered">
+        <a class="modal side-nav-close-wrapper w-clearfix w-inline-block" data-ix="modal-login-hide" href="#">
+          <div class="main-nav-link-bg-highlight side-nav-close">Close</div><img height="14" src="/{{ directory }}/images/side%20nav%20close%20x.svg" width="14"></a>{{ content.header_imperial_logo }}{{ content.header_dixie_logo }}<h3>Sign in or create an account</h3>
+        <p>You need an account to like and rate recipes, comment, and share a recipe with the community.</p><a class="btn-login fb w-button" href="#">Continue with Facebook</a><a class="btn-login tw w-button" href="#">Continue with Twitter</a><a class="btn-login gl w-button" href="#">Continue with Google</a>
+        <div class="login-alt"><a href="#">Sign in</a> or <a href="#">Create an Account</a> with email</div>
+      </div>
+      <div class="modal-wrapper txt-centered">
+        <a class="modal side-nav-close-wrapper w-clearfix w-inline-block" data-ix="modal-login-hide" href="#">
+          <div class="main-nav-link-bg-highlight side-nav-close">Cancel</div><img height="14" src="/{{ directory }}/images/side%20nav%20close%20x.svg" width="14"></a><img class="login logo" src="/{{ directory }}/images/Imperial_Brand_Logo.svg" width="100"><img class="login logo" src="/{{ directory }}/images/DixieCrystals_Color.svg" width="100"><div class="">
+          <form data-name="Email Form 2">
+            <p>Sign in with email and password</p>
+            <label class="hidden" for="email-signin-2" id="email-signin">Email Address:</label>
+            <input class="login-input w-input" data-name="email-signin" id="email-signin-2" maxlength="256" name="email-signin" placeholder="Email address" required="required" type="email"><label class="hidden" for="password-signin-2">Password</label>
+            <input class="login-input w-input" data-name="Password Signin 2" id="password-signin-2" maxlength="256" name="password-signin-2" placeholder="Password" required="required" type="password"><input class="btn-login w-button" data-wait="Please wait..." type="submit" value="Sign in"></form>
+          <div class="w-form-done">
+            <div>Thank you! Your submission has been received!</div>
+          </div>
+          <div class="w-form-fail">
+            <div>Oops! Something went wrong while submitting the form</div>
+          </div>
+        </div>
+        <div class="login-alt"><a href="#">Forgot password?</a> or use <a href="#">Social Login</a>
+        </div>
+      </div>
+      <div class="modal-wrapper txt-centered">
+        <a class="modal side-nav-close-wrapper w-clearfix w-inline-block" data-ix="modal-login-hide" href="#">
+          <div class="main-nav-link-bg-highlight side-nav-close">Cancel</div><img height="14" src="/{{ directory }}/images/side%20nav%20close%20x.svg" width="14"></a><img class="login logo" src="/{{ directory }}/images/Imperial_Brand_Logo.svg" width="100"><img class="login logo" src="/{{ directory }}/images/DixieCrystals_Color.svg" width="100"><div class="">
+          <form data-name="Email Form 2">
+            <p>Enter your email to create an account</p>
+            <label class="hidden" for="email-create-account-3">Email Address:</label>
+            <input class="login-input w-input" data-name="email-create-account" id="email-create-account-3" maxlength="256" name="email-create-account" placeholder="Email address" required="required" type="email"><input class="btn-login em w-button" data-wait="Please wait..." type="submit" value="Send verification email"></form>
+          <div class="w-form-done">
+            <div>Thank you! Your submission has been received!</div>
+          </div>
+          <div class="w-form-fail">
+            <div>Oops! Something went wrong while submitting the form</div>
+          </div>
+        </div>
+        <div class="login-alt"><a href="#">Already have an account?</a> or use <a href="#">Social Sign In</a>
+        </div>
+      </div>
+      <div class="modal-wrapper txt-centered"><img class="login logo" src="/{{ directory }}/images/Imperial_Brand_Logo.svg" width="100"><img class="login logo" src="/{{ directory }}/images/DixieCrystals_Color.svg" width="100"><p>We sent a verification link to your email. Please check your inbox.</p>
+        <a class="btn-login w-inline-block" data-ix="modal-login-hide" href="#">
+          <div>OK</div>
+        </a>
+      </div>
+      <div class="modal-wrapper txt-centered">
+        <a class="modal side-nav-close-wrapper w-clearfix w-inline-block" data-ix="modal-login-hide" href="#">
+          <div class="main-nav-link-bg-highlight side-nav-close">Cancel</div><img height="14" src="/{{ directory }}/images/side%20nav%20close%20x.svg" width="14"></a><img class="login logo" src="/{{ directory }}/images/Imperial_Brand_Logo.svg" width="100"><img class="login logo" src="/{{ directory }}/images/DixieCrystals_Color.svg" width="100"><div class="">
+          <form data-name="Email Form 2">
+            <p>Set your password</p>
+            <label for="password-create-2">Type your password</label>
+            <input class="login-input w-input" data-name="Password Create 2" id="password-create-2" maxlength="256" name="password-create-2" placeholder="Password" required="required" type="password"><label class="hidden" for="password-create-confirm-2">Confirm your password</label>
+            <input class="login-input w-input" data-name="Password Create Confirm 2" id="password-create-confirm-2" maxlength="256" name="password-create-confirm-2" placeholder="Confirm Password" required="required" type="password"><input class="btn-login em w-button" data-wait="Please wait..." type="submit" value="Sign in"></form>
+          <div class="w-form-done">
+            <div>Thank you! Your submission has been received!</div>
+          </div>
+          <div class="w-form-fail">
+            <div>Oops! Something went wrong while submitting the form</div>
+          </div>
+        </div>
+        <div class="login-alt"><a href="#">Already have an account?</a> or use <a href="#">Social Sign In</a>
+        </div>
+      </div>
+    </div>
+     {% if not logged_in %}
+    <div class="logged-out nav-account-wrapper w-clearfix w-hidden-small w-hidden-tiny">
+      <a class="logged-out user-pic-small user-pic-wrapper w-hidden-medium w-hidden-small w-hidden-tiny w-inline-block" href="#"></a>
+      <a class="nav-account-signup-spacing tertiary" data-ix="modal-login-show" href="#">Join FREE</a>
+      <a class="nav-account-signup-spacing tertiary" data-ix="modal-login-show" href="#">Sign In</a>
+    </div>
+    {% else %}
+    <div class="nav-account-wrapper w-hidden-small w-hidden-tiny">
+      <div class="nav-account-arrow w-dropdown" data-delay="0" data-hover="1">
+        <div class="dropdown-toggle w-dropdown-toggle">
+          <div class="user-pic-nav-account user-pic-small user-pic-wrapper">
+            <img height="100%" src="{{user_image_url}}" width="100%"></div>
+          <div class="nav-account-text">Account</div>
+        </div>
+        {{ usernav }}</div>
+    </div>
+    {% endif %}
+    
+      <a class="logo-wrapper w-inline-block" href="/">
+
+          {{ content.header_imperial_logo }}{# {{ content.header_dixie_logo }} #}
+
+      </a>
+  
+    <div class="search-bar-position" data-ix="search-bar-hide">
+      <form class="search-form-wrapper w-clearfix" data-name="Email Form" name="email-form">
+        <input autofocus="autofocus" class="search-field-global w-input" data-ix="search-bar-show" data-name="Search" id="Search" maxlength="256" name="Search" placeholder="Search recipes, ideas, anything&hellip;" type="text"><input class="search-btn-global w-button" data-wait="Please wait..." type="submit" value="Search" wait="Please wait..."><a class="cancel search-btn-global w-button w-hidden-main w-hidden-medium" data-ix="search-bar-hide" href="#">Cancel</a>
+      </form>
+      <div class="w-form-done">
+        <div>Thank you! Your submission has been received!</div>
+      </div>
+      <div class="w-form-fail w-hidden-main w-hidden-medium w-hidden-small w-hidden-tiny">
+        <div>Oops! Something went wrong while submitting the form</div>
+      </div>
+    </div>
+    <div class="nav-links-wrapper w-clearfix">
+      {{ mainnav }}
+    </div>
+    <div class="nav-bg-image-overlay"></div>
+    <div class="object-fit top-nav">
+      <div style="height:150px;">{{ content.header_background_img }}</div>
+    </div>
+  </div>
+
+</div>

@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.recipe_youtube
+    - node.type.recipe
+  module:
+    - youtube
+id: node.recipe.recipe_youtube
+field_name: recipe_youtube
+entity_type: node
+bundle: recipe
+label: 'Recipe Youtube'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: youtube

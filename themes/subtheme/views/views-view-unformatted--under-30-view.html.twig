@@ -1,0 +1,26 @@
+<div class="base-slider card w-slider" data-animation="slide" data-duration="200" data-infinite="1" data-view="under_30_view" data-filter-type="node" data-filter-bundle="recipe" data-block-field="under_30_view" data-type="entity_reference" data-form-type="entity_reference_autocomplete" data-format-type="entity_reference_entity_id" data-target-type="view" data-target-bundle="under_30_view">
+        <div class="w-clearfix w-slider-mask">
+            {% for row in rows%}
+              {% if (loop.index < 5) %}            
+              <div class="_25-pc w-slide" data-node="recipe" data-view-mode="card" style="transform: translateX(0px); opacity: 1; transition: transform 200ms;">
+                <div class="card rcp-wrapper" data-ix="fade-in-on-scroll" data-mh="card" style="height: 330px; opacity: 1; transform: translateX(0px) translateY(0px) translateZ(0px); transition: opacity 300ms, transform 300ms;">
+                  {{row}}
+                </div>
+              </div>
+              {% elseif (loop.index < 9) %}
+              <div class="_25-pc w-slide" data-node="recipe" data-view-mode="card" style="transform: translateX(-1280px); opacity: 1; transition: transform 200ms;">
+                <div class="card rcp-wrapper" data-ix="fade-in-on-scroll" data-mh="card" data-node="recipe" data-view-mode="card" style="height: 330px; opacity: 1; transform: translateX(0px) translateY(0px) translateZ(0px); transition: opacity 300ms, transform 300ms;">
+                  {{row}}
+                </div>
+              </div>
+              {% endif %}
+            {% endfor %}
+        </div>
+        <div class="w-slider-arrow-left">
+          <div class="w-icon-slider-left"></div>
+        </div>
+        <div class="w-slider-arrow-right">
+          <div class="w-icon-slider-right"></div>
+        </div>
+        <div class="w-hidden-main w-hidden-medium w-hidden-small w-hidden-tiny w-round w-slider-nav"></div>
+      </div>
