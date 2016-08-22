@@ -8,6 +8,5 @@ global-css:
 global-js:
   js:
     js/webflow.js: {}
-    js/custom.js: {}
   dependencies:
     - core/jquery

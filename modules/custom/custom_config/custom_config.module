@@ -6,7 +6,18 @@
  */
 
 use Drupal\Core\Routing\RouteMatchInterface;
-
+use Symfony\Component\Yaml\Yaml;
+use Drupal\block_content\Entity\BlockContent;
+use Drupal\block_content\Entity\BlockContentType;
+use Drupal\node\Entity\Node;
+use Drupal\node\Entity\NodeType;
+use Drupal\field\Entity\FieldStorageConfig;
+use Drupal\field\Entity\FieldConfig;
+use Drupal\page_manager\Entity\Page;
+use Drupal\page_manager\Entity\PageVariant;
+use Drupal\file\Entity\File;
+use Drupal\Core\StringTranslation\TranslatableMarkup;
+use Drupal\comment\Entity\Comment;
 /**
  * Implements hook_help().
  */
@@ -21,4 +32,45 @@ function custom_config_help($route_name, RouteMatchInterface $route_match) {
 
     default:
   }
+}
+
+
+
+function recalculate_average($entity) {
+  $comment_rating = $entity->get('field_comment_rating')->getValue()[0]['rating'];
+  $node_id = $entity->getCommentedEntityId();
+  $rating_result = db_query_range(
+    'SELECT s.entity_id, s.field_comment_rating_rating, c.cid, c.entity_id
+    FROM {comment__field_comment_rating} s JOIN {comment_field_data} c 
+    ON s.entity_id = c.cid
+    WHERE :nid=c.entity_id',
+    0, 10, array(':nid' => $node_id));
+  // dump($rating_result);
+  $length = 0;
+  $sum = 0;
+  foreach ($rating_result as $record) {
+    $comment = Comment::load($record->cid);
+    if($comment->isPublished()) {
+      // dump($record->field_comment_rating_rating);
+      $sum += $record->field_comment_rating_rating;
+      $length += 1;
+    }
+  }
+  $rating_result_avg = round(($sum/$length),-1);
+  $node = Node::load($node_id);
+  $node->field_rating_average->value = $rating_result_avg;
+  $node->save();
+  // dump($entity->isPublished());
+}
+
+function custom_config_comment_create($entity) {
+  recalculate_average($entity);
+}
+
+function custom_config_comment_update($entity) {
+ recalculate_average($entity);
+}
+
+function custom_config_comment_delete($entity) {
+ recalculate_average($entity);
 }

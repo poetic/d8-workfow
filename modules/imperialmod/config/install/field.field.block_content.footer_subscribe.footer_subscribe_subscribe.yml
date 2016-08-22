@@ -15,7 +15,7 @@ required: false
 translatable: false
 default_value:
   -
-    target_uuid: 51192871-03f5-4141-90b1-23b1ceae0733
+    target_uuid: daf4c417-11d0-406f-b4a2-ecda05e84bc5
 default_value_callback: ''
 settings:
   handler: 'default:contact_form'

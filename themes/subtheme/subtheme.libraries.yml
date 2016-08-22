@@ -2,3 +2,6 @@ global-css:
   css:
     theme:
       css/custom.css: {}
+global-js:
+  js:
+    js/custom.js: {}

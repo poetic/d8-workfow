@@ -17,7 +17,7 @@ class XMLObject extends \SimpleXMLIterator {
 	protected function sxiToArray($row){
 		$array = json_decode(json_encode($row), true);
 		$flat = $this->array_flat($array);
-
+		print_r($flat);
 	  return $flat;
 	}
 

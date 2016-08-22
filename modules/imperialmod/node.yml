@@ -47,7 +47,7 @@ blog:
         cardinality: null
         target_type: view
         target_bundle: related_news
-        target_uuid: 13792237-374a-4f94-83d9-d62d126bcc47
+        target_uuid: 9fd2d66e-1713-4dba-95a2-bfe46a33afff
 sugar_101:
     sugar_101_image:
         type: image
@@ -163,7 +163,7 @@ kids_landing:
         cardinality: null
         target_type: view
         target_bundle: kids_popular_recipe
-        target_uuid: b07e4a52-7446-4ccd-bf3e-ca4a44351367
+        target_uuid: d6bda2b0-1718-4c9a-9b6b-18ac30918143
     kids_landing_trending_recipe:
         type: entity_reference
         name: kids_landing_trending_recipe
@@ -172,7 +172,7 @@ kids_landing:
         cardinality: null
         target_type: view
         target_bundle: kids_trending_recipe
-        target_uuid: 5fe1add9-5a42-4146-b885-51b1bf5cd8fc
+        target_uuid: c5a419e3-7583-4b04-a88a-a091892ab0ca
     kids_landing_collection_title:
         type: string
         name: kids_landing_collection_title
@@ -187,7 +187,7 @@ kids_landing:
         cardinality: null
         target_type: view
         target_bundle: collection_kids
-        target_uuid: 4af5ccd5-3a8b-4482-965c-781a4a503ab5
+        target_uuid: 90267b3d-4ca1-44a8-8f78-823385690127
 rc_overview:
     rc_overview_header:
         type: image
@@ -203,7 +203,7 @@ rc_overview:
         cardinality: null
         target_type: view
         target_bundle: rc_hero
-        target_uuid: a5f66cc2-d519-4835-bd11-746c48d01507
+        target_uuid: 3b507315-9a5c-4ed6-8bdb-b3ce802ace9f
     rc_overview_trend:
         type: entity_reference
         name: rc_overview_trend
@@ -212,7 +212,7 @@ rc_overview:
         cardinality: null
         target_type: view
         target_bundle: rc_trend
-        target_uuid: 853cb8d5-eb30-44e0-b7ca-062948529c4a
+        target_uuid: 455c6ea0-27fe-46c3-9c0e-a01d6daee132
 recipe_collection:
     recipe_collection_image:
         type: image
@@ -228,7 +228,7 @@ recipe_collection:
         cardinality: null
         target_type: view
         target_bundle: recipe_collection
-        target_uuid: 8de6549d-c550-444b-9dbd-dbba89c9edef
+        target_uuid: cf9690f4-a653-40e7-b415-1d380ec547a9
     recipe_collection_trending:
         type: entity_reference
         name: recipe_collection_trending
@@ -237,13 +237,25 @@ recipe_collection:
         cardinality: null
         target_type: view
         target_bundle: trending_collection
-        target_uuid: cf75576c-55c6-4030-9e85-3fb0a1d1ae9f
+        target_uuid: 47a0babf-0a07-42de-a07e-2e8144097f8f
 recipe:
-    recipe_recipe_image:
+    recipe_image:
         type: image
-        name: recipe_recipe_image
+        name: recipe_image
         form_display: image_image
         formatter: image
+        cardinality: 1
+    recipe_youtube:
+        type: youtube
+        name: recipe_youtube
+        form_display: youtube
+        formatter: youtube_video
+        cardinality: 1
+    recipe_video_dixie:
+        type: youtube
+        name: recipe_video_dixie
+        form_display: youtube
+        formatter: youtube_video
         cardinality: 1
     recipe_description:
         type: text_long
@@ -257,6 +269,75 @@ recipe:
         form_display: string_textfield
         formatter: string
         cardinality: 1
+    recipe_prep_h:
+        type: integer
+        name: recipe_prep_h
+        form_display: number
+        formatter: number_integer
+        cardinality: 1
+    recipe_prep_m:
+        type: integer
+        name: recipe_prep_m
+        form_display: number
+        formatter: number_integer
+        cardinality: 1
+    recipe_cook_h:
+        type: integer
+        name: recipe_cook_h
+        form_display: number
+        formatter: number_integer
+        cardinality: 1
+    recipe_cook_m:
+        type: integer
+        name: recipe_cook_m
+        form_display: number
+        formatter: number_integer
+        cardinality: 1
+    recipe_freeze_h:
+        type: integer
+        name: recipe_freeze_h
+        form_display: number
+        formatter: number_integer
+        cardinality: 1
+    recipe_freeze_m:
+        type: integer
+        name: recipe_freeze_m
+        form_display: number
+        formatter: number_integer
+        cardinality: 1
+    recipe_rest_h:
+        type: integer
+        name: recipe_rest_h
+        form_display: number
+        formatter: number_integer
+        cardinality: 1
+    recipe_rest_m:
+        type: integer
+        name: recipe_rest_m
+        form_display: number
+        formatter: number_integer
+        cardinality: 1
+    recipe_decorate_h:
+        type: integer
+        name: recipe_decorate_h
+        form_display: number
+        formatter: number_integer
+        cardinality: 1
+    recipe_decorate_m:
+        type: integer
+        name: recipe_decorate_m
+        form_display: number
+        formatter: number_integer
+        cardinality: 1
+    recipe_seals:
+        type: entity_reference
+        name: recipe_seals
+        form_display: entity_reference_autocomplete
+        formatter: entity_reference_entity_id
+        cardinality: null
+        target_type: taxonomy_term
+        target_bundle: seals
+        target_uuid: null
     recipe_directions:
         type: text_long
         name: recipe_directions
@@ -269,3 +350,48 @@ recipe:
         form_display: text_textarea
         formatter: text_default
         cardinality: 1
+    recipe_course:
+        type: entity_reference
+        name: recipe_course
+        form_display: entity_reference_autocomplete
+        formatter: entity_reference_entity_id
+        cardinality: null
+        target_type: taxonomy_term
+        target_bundle: course
+        target_uuid: null
+    recipe_dessert:
+        type: entity_reference
+        name: recipe_dessert
+        form_display: entity_reference_autocomplete
+        formatter: entity_reference_entity_id
+        cardinality: null
+        target_type: taxonomy_term
+        target_bundle: dessert
+        target_uuid: null
+    recipe_holidays:
+        type: entity_reference
+        name: recipe_holidays
+        form_display: entity_reference_autocomplete
+        formatter: entity_reference_entity_id
+        cardinality: null
+        target_type: taxonomy_term
+        target_bundle: holidays
+        target_uuid: null
+    recipe_season:
+        type: entity_reference
+        name: recipe_season
+        form_display: entity_reference_autocomplete
+        formatter: entity_reference_entity_id
+        cardinality: null
+        target_type: taxonomy_term
+        target_bundle: season
+        target_uuid: null
+    recipe_other:
+        type: entity_reference
+        name: recipe_other
+        form_display: entity_reference_autocomplete
+        formatter: entity_reference_entity_id
+        cardinality: null
+        target_type: taxonomy_term
+        target_bundle: other
+        target_uuid: null

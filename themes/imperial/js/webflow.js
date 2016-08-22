@@ -1,3 +1,4 @@
+$ = jQuery;
 /*!
  * Webflow: Front-end site library
  * @license MIT
@@ -461,6 +462,31 @@
 	// shim for using process in browser
 
 	var process = module.exports = {};
+
+	// cached from whatever global is present so that test runners that stub it
+	// don't break things.  But we need to wrap it in a try catch in case it is
+	// wrapped in strict mode code which doesn't define any globals.  It's inside a
+	// function because try/catches deoptimize in certain engines.
+
+	var cachedSetTimeout;
+	var cachedClearTimeout;
+
+	(function () {
+	  try {
+	    cachedSetTimeout = setTimeout;
+	  } catch (e) {
+	    cachedSetTimeout = function () {
+	      throw new Error('setTimeout is not defined');
+	    }
+	  }
+	  try {
+	    cachedClearTimeout = clearTimeout;
+	  } catch (e) {
+	    cachedClearTimeout = function () {
+	      throw new Error('clearTimeout is not defined');
+	    }
+	  }
+	} ())
 	var queue = [];
 	var draining = false;
 	var currentQueue;
@@ -485,7 +511,7 @@
 	    if (draining) {
 	        return;
 	    }
-	    var timeout = setTimeout(cleanUpNextTick);
+	    var timeout = cachedSetTimeout(cleanUpNextTick);
 	    draining = true;
 
 	    var len = queue.length;
@@ -502,7 +528,7 @@
 	    }
 	    currentQueue = null;
 	    draining = false;
-	    clearTimeout(timeout);
+	    cachedClearTimeout(timeout);
 	}
 
 	process.nextTick = function (fun) {
@@ -514,7 +540,7 @@
 	    }
 	    queue.push(new Item(fun, args));
 	    if (queue.length === 1 && !draining) {
-	        setTimeout(drainQueue, 0);
+	        cachedSetTimeout(drainQueue, 0);
 	    }
 	};
 
@@ -4577,23 +4603,25 @@
  */
 Webflow.require('ix').init([
   {"slug":"display-none","name":"Display None","value":{"style":{"display":"none"},"triggers":[]}},
-  {"slug":"side-nav-show","name":"Side Nav Show","value":{"style":{"x":"0px","y":"0px","z":"0px"},"triggers":[{"type":"click","stepsA":[{"display":"block"},{"opacity":1,"transition":"transform 250ms ease 0ms, opacity 200ms ease 0ms","x":"0px","y":"0px","z":"0px"}],"stepsB":[]}]}},
-  {"slug":"side-nav-hide","name":"Side Nav Hide","value":{"style":{},"triggers":[{"type":"click","stepsA":[{"opacity":0,"transition":"transform 200ms ease 0ms, opacity 200ms ease 0ms","x":"20px","y":"0px","z":"0px"},{"display":"none"}],"stepsB":[]}]}},
-  {"slug":"search-bar-show","name":"Search Bar Show","value":{"style":{},"triggers":[{"type":"click","stepsA":[{"display":"block"},{"opacity":1,"transition":"opacity 200ms ease 0ms"}],"stepsB":[]}]}},
-  {"slug":"search-bar-hide","name":"Search Bar Hide","value":{"style":{},"triggers":[{"type":"click","stepsA":[{"opacity":0,"transition":"opacity 100ms ease 0ms"},{"display":"none"},{}],"stepsB":[]}]}},
+  {"slug":"side-nav-show","name":"Side Nav Show","value":{"style":{"x":"0px","y":"0px","z":"0px"},"triggers":[{"type":"click","selector":".side-nav","stepsA":[{"display":"block"},{"opacity":1,"transition":"transform 250ms ease 0ms, opacity 200ms ease 0ms","x":"0px","y":"0px","z":"0px"}],"stepsB":[]}]}},
+  {"slug":"side-nav-hide","name":"Side Nav Hide","value":{"style":{},"triggers":[{"type":"click","selector":".side-nav","stepsA":[{"opacity":0,"transition":"transform 200ms ease 0ms, opacity 200ms ease 0ms","x":"20px","y":"0px","z":"0px"},{"display":"none"}],"stepsB":[]}]}},
+  {"slug":"side-nav-init-appearance","name":"Side Nav Init Appearance","value":{"style":{"display":"none","opacity":0,"x":"20px","y":"0px","z":"0px"},"triggers":[]}},
+  {"slug":"search-bar-show","name":"Search Bar Show","value":{"style":{},"triggers":[{"type":"click","selector":".search-bar-position","stepsA":[{"display":"block"},{"opacity":1,"transition":"opacity 200ms ease 0ms"}],"stepsB":[]}]}},
+  {"slug":"search-bar-hide","name":"Search Bar Hide","value":{"style":{},"triggers":[{"type":"click","selector":".search-bar-position","stepsA":[{"opacity":0,"transition":"opacity 100ms ease 0ms"},{"display":"none"},{}],"stepsB":[]}]}},
   {"slug":"sticky-scl-actions-display-none","name":"Sticky Scl Actions Display None","value":{"style":{"display":"none","opacity":0},"triggers":[]}},
   {"slug":"fixed-scl-actions","name":"Fixed Scl Actions","value":{"style":{},"triggers":[{"type":"scroll","loopB":true,"stepsA":[{"opacity":0,"transition":"opacity 500ms ease 0ms"},{"display":"none"}],"stepsB":[{"display":"block"},{"opacity":1,"transition":"opacity 500ms ease 0ms"}]}]}},
   {"slug":"hide-refine-results","name":"Hide Refine Results","value":{"style":{},"triggers":[{"type":"click","selector":".search-results-wrapper","stepsA":[{"display":"none"}],"stepsB":[]},{"type":"click","selector":".search-refine-results-wrapper","stepsA":[{"display":"block"}],"stepsB":[]}]}},
   {"slug":"show-refine-results","name":"Show Refine Results","value":{"style":{},"triggers":[{"type":"click","selector":".search-refine-results-wrapper","stepsA":[{"display":"none"}],"stepsB":[]},{"type":"click","selector":".search-results-wrapper","stepsA":[{"display":"block"}],"stepsB":[]}]}},
-  {"slug":"modal-bg-initial-appearance","name":"Modal BG Initial Appearance","value":{"style":{"display":"none","opacity":0.39},"triggers":[{"type":"click","stepsA":[{"opacity":0,"transition":"transform 200ms ease 0ms, opacity 250ms ease 0ms","scaleX":1.1,"scaleY":1.1,"scaleZ":1},{"display":"none"}],"stepsB":[]}]}},
-  {"slug":"show-read-comment-modal","name":"Show Read Comment Modal","value":{"style":{},"triggers":[{"type":"click","selector":".modal-read-comment","stepsA":[{"display":"block"},{"opacity":1,"transition":"transform 200ms ease 0ms, opacity 200ms ease 0ms","scaleX":1,"scaleY":1,"scaleZ":1}],"stepsB":[]}]}},
+  {"slug":"modal-bg-initial-appearance","name":"Modal BG Initial Appearance","value":{"style":{"display":"none","opacity":0.39},"triggers":[]}},
+  {"slug":"user-comment-expand","name":"User Comment Expand","value":{"style":{},"triggers":[{"type":"click","selector":".user-cmmt-txt-expander","stepsA":[{"height":"auto","transition":"height 200ms ease 0ms"}],"stepsB":[]},{"type":"click","selector":".cmmt-fade","stepsA":[{"opacity":0,"transition":"opacity 300ms ease 0ms"}],"stepsB":[]},{"type":"click","selector":".hide-review-link","stepsA":[{"display":"inline"}],"stepsB":[]},{"type":"click","stepsA":[{"display":"none"}],"stepsB":[]}]}},
+  {"slug":"user-comment-collapse","name":"User Comment Collapse","value":{"style":{"display":"none"},"triggers":[{"type":"click","selector":".user-cmmt-txt-expander","stepsA":[{"height":"75px","transition":"height 200ms ease 0ms"}],"stepsB":[]},{"type":"click","selector":".cmmt-fade","stepsA":[{"opacity":1,"transition":"opacity 300ms ease 0ms"}],"stepsB":[]},{"type":"click","selector":".show-review-link","stepsA":[{"display":"inline"}],"stepsB":[]},{"type":"click","stepsA":[{"display":"none"}],"stepsB":[]}]}},
   {"slug":"modal-general-hide","name":"Modal General Hide","value":{"style":{},"triggers":[{"type":"click","selector":".modal-read-comment","stepsA":[{"opacity":0,"transition":"transform 200ms ease 0ms, opacity 250ms ease 0ms","scaleX":1.1,"scaleY":1.1,"scaleZ":1},{"display":"none"}],"stepsB":[]}]}},
   {"slug":"modal-login-show","name":"Modal Login Show","value":{"style":{},"triggers":[{"type":"click","selector":".login-modal","stepsA":[{"display":"block"},{"opacity":1,"transition":"transform 200ms ease 0ms, opacity 200ms ease 0ms","scaleX":1,"scaleY":1,"scaleZ":1}],"stepsB":[]}]}},
-  {"slug":"modal-login-hide","name":"Modal Login Hide","value":{"style":{},"triggers":[{"type":"click","selector":".modal-bg-overlay","stepsA":[{"opacity":0,"transition":"transform 200ms ease 0ms, opacity 250ms ease 0ms","scaleX":1.1,"scaleY":1.1,"scaleZ":1},{"display":"none"}],"stepsB":[]}]}},
-  {"slug":"modal-full-comment-show","name":"Modal Full Comment Show","value":{"style":{},"triggers":[{"type":"click","selector":".modal-thanks-comment","stepsA":[{"display":"block"},{"opacity":1,"transition":"transform 200ms ease 0ms, opacity 200ms ease 0ms","scaleX":1,"scaleY":1,"scaleZ":1}],"stepsB":[]}]}},
-  {"slug":"modal-full-comment-hide","name":"Modal Full Comment Hide","value":{"style":{},"triggers":[{"type":"click","selector":".modal-thanks-comment","stepsA":[{"opacity":0,"transition":"transform 200ms ease 0ms, opacity 250ms ease 0ms","scaleX":1.1,"scaleY":1.1,"scaleZ":1},{"display":"none"}],"stepsB":[]}]}},
-  {"slug":"modal-form-thanks-show","name":"Modal Form Thanks Show","value":{"style":{},"triggers":[{"type":"click","selector":".modal-thanks-contact-form","stepsA":[{"display":"block"},{"opacity":1,"transition":"transform 200ms ease 0ms, opacity 200ms ease 0ms","scaleX":1,"scaleY":1,"scaleZ":1}],"stepsB":[]}]}},
-  {"slug":"modal-form-thanks-hide","name":"Modal Form Thanks Hide","value":{"style":{},"triggers":[{"type":"click","selector":".modal-thanks-contact-form","stepsA":[{"opacity":0,"transition":"transform 200ms ease 0ms, opacity 250ms ease 0ms","scaleX":1.1,"scaleY":1.1,"scaleZ":1},{"display":"none"}],"stepsB":[]}]}},
+  {"slug":"modal-login-hide","name":"Modal Login Hide","value":{"style":{},"triggers":[{"type":"click","selector":".login-modal","stepsA":[{"opacity":0,"transition":"transform 200ms ease 0ms, opacity 250ms ease 0ms","scaleX":1.1,"scaleY":1.1,"scaleZ":1},{"display":"none"}],"stepsB":[]}]}},
+  {"slug":"modal-reset-pass-show","name":"Modal Reset Pass Show","value":{"style":{},"triggers":[{"type":"click","selector":".modal-reset-pass","stepsA":[{"display":"block"},{"opacity":1,"transition":"transform 200ms ease 0ms, opacity 200ms ease 0ms","scaleX":1,"scaleY":1,"scaleZ":1}],"stepsB":[]}]}},
+  {"slug":"modal-reset-pass-hide","name":"Modal Reset Pass Hide","value":{"style":{},"triggers":[{"type":"click","selector":".modal-reset-pass","stepsA":[{"opacity":0,"transition":"transform 200ms ease 0ms, opacity 250ms ease 0ms","scaleX":1.1,"scaleY":1.1,"scaleZ":1},{"display":"none"}],"stepsB":[]}]}},
+  {"slug":"modal-thanks-show","name":"Modal Thanks Show","value":{"style":{},"triggers":[{"type":"click","selector":".modal-thanks","stepsA":[{"display":"block"},{"opacity":1,"transition":"transform 200ms ease 0ms, opacity 200ms ease 0ms","scaleX":1,"scaleY":1,"scaleZ":1}],"stepsB":[]}]}},
+  {"slug":"modal-thanks-hide","name":"Modal Thanks Hide","value":{"style":{},"triggers":[{"type":"click","selector":".modal-thanks","stepsA":[{"opacity":0,"transition":"transform 200ms ease 0ms, opacity 250ms ease 0ms","scaleX":1.1,"scaleY":1.1,"scaleZ":1},{"display":"none"}],"stepsB":[]}]}},
   {"slug":"expanding-bio-initial-appearance","name":"Expanding Bio Initial Appearance","value":{"style":{"opacity":0,"height":"0px"},"triggers":[]}},
   {"slug":"show-expanding-bio","name":"Show Expanding Bio","value":{"style":{},"triggers":[{"type":"click","selector":".expanding-bio","stepsA":[{"opacity":1,"height":"auto","transition":"transform 250ms ease 0ms, opacity 250ms ease 0ms, height 250ms ease 0ms","x":"0px","y":"0px","z":"0px"}],"stepsB":[]},{"type":"click","stepsA":[{"display":"none"}],"stepsB":[]},{"type":"click","selector":".hide-bio-link","stepsA":[{"display":"inline-block"}],"stepsB":[]}]}},
   {"slug":"hide-epxanding-bio","name":"Hide Epxanding Bio","value":{"style":{"display":"none"},"triggers":[{"type":"click","selector":".expanding-bio","stepsA":[{"opacity":0,"height":"0px","transition":"opacity 250ms ease 0ms, height 250ms ease 0ms"}],"stepsB":[]},{"type":"click","stepsA":[{"display":"none"}],"stepsB":[]},{"type":"click","selector":".show-bio-link","stepsA":[{"display":"inline-block"}],"stepsB":[]}]}},

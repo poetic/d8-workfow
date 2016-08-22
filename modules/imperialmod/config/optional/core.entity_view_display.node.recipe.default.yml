@@ -2,45 +2,171 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.recipe.recipe_recipe_image
+    - field.field.node.recipe.recipe_image
+    - field.field.node.recipe.recipe_youtube
+    - field.field.node.recipe.recipe_video_dixie
     - field.field.node.recipe.recipe_description
     - field.field.node.recipe.recipe_yield
+    - field.field.node.recipe.recipe_prep_h
+    - field.field.node.recipe.recipe_prep_m
+    - field.field.node.recipe.recipe_cook_h
+    - field.field.node.recipe.recipe_cook_m
+    - field.field.node.recipe.recipe_freeze_h
+    - field.field.node.recipe.recipe_freeze_m
+    - field.field.node.recipe.recipe_rest_h
+    - field.field.node.recipe.recipe_rest_m
+    - field.field.node.recipe.recipe_decorate_h
+    - field.field.node.recipe.recipe_decorate_m
+    - field.field.node.recipe.recipe_seals
     - field.field.node.recipe.recipe_directions
     - field.field.node.recipe.recipe_handy_tips
+    - field.field.node.recipe.recipe_course
+    - field.field.node.recipe.recipe_dessert
+    - field.field.node.recipe.recipe_holidays
+    - field.field.node.recipe.recipe_season
+    - field.field.node.recipe.recipe_other
     - node.type.recipe
 id: node.recipe.default
 targetEntityType: node
 bundle: recipe
 mode: default
 content:
-  recipe_recipe_image:
+  recipe_image:
     label: hidden
     type: image
     weight: 1
     settings: { }
     third_party_settings: { }
-  recipe_description:
+  recipe_youtube:
     label: hidden
-    type: text_default
+    type: youtube_video
     weight: 2
     settings: { }
     third_party_settings: { }
-  recipe_yield:
+  recipe_video_dixie:
     label: hidden
-    type: string
+    type: youtube_video
     weight: 3
     settings: { }
     third_party_settings: { }
-  recipe_directions:
+  recipe_description:
     label: hidden
     type: text_default
     weight: 4
     settings: { }
     third_party_settings: { }
+  recipe_yield:
+    label: hidden
+    type: string
+    weight: 5
+    settings: { }
+    third_party_settings: { }
+  recipe_prep_h:
+    label: hidden
+    type: number_integer
+    weight: 6
+    settings: { }
+    third_party_settings: { }
+  recipe_prep_m:
+    label: hidden
+    type: number_integer
+    weight: 7
+    settings: { }
+    third_party_settings: { }
+  recipe_cook_h:
+    label: hidden
+    type: number_integer
+    weight: 8
+    settings: { }
+    third_party_settings: { }
+  recipe_cook_m:
+    label: hidden
+    type: number_integer
+    weight: 9
+    settings: { }
+    third_party_settings: { }
+  recipe_freeze_h:
+    label: hidden
+    type: number_integer
+    weight: 10
+    settings: { }
+    third_party_settings: { }
+  recipe_freeze_m:
+    label: hidden
+    type: number_integer
+    weight: 11
+    settings: { }
+    third_party_settings: { }
+  recipe_rest_h:
+    label: hidden
+    type: number_integer
+    weight: 12
+    settings: { }
+    third_party_settings: { }
+  recipe_rest_m:
+    label: hidden
+    type: number_integer
+    weight: 13
+    settings: { }
+    third_party_settings: { }
+  recipe_decorate_h:
+    label: hidden
+    type: number_integer
+    weight: 14
+    settings: { }
+    third_party_settings: { }
+  recipe_decorate_m:
+    label: hidden
+    type: number_integer
+    weight: 15
+    settings: { }
+    third_party_settings: { }
+  recipe_seals:
+    label: hidden
+    type: entity_reference_entity_id
+    weight: 16
+    settings: { }
+    third_party_settings: { }
+  recipe_directions:
+    label: hidden
+    type: text_default
+    weight: 17
+    settings: { }
+    third_party_settings: { }
   recipe_handy_tips:
     label: hidden
     type: text_default
-    weight: 5
+    weight: 18
+    settings: { }
+    third_party_settings: { }
+  recipe_course:
+    label: hidden
+    type: entity_reference_entity_id
+    weight: 19
+    settings: { }
+    third_party_settings: { }
+  recipe_dessert:
+    label: hidden
+    type: entity_reference_entity_id
+    weight: 20
+    settings: { }
+    third_party_settings: { }
+  recipe_holidays:
+    label: hidden
+    type: entity_reference_entity_id
+    weight: 21
+    settings: { }
+    third_party_settings: { }
+  recipe_season:
+    label: hidden
+    type: entity_reference_entity_id
+    weight: 22
+    settings: { }
+    third_party_settings: { }
+  recipe_other:
+    label: hidden
+    type: entity_reference_entity_id
+    weight: 23
     settings: { }
     third_party_settings: { }
 hidden: {  }

@@ -4,8 +4,8 @@ dependencies:
   config:
     - field.field.block_content.footer.footer_imperial_logo
     - field.field.block_content.footer.footer_dixie_logo
-    - field.field.block_content.footer.footer_coporatemenu
-    - field.field.block_content.footer.footer_footermenu
+    - field.field.block_content.footer.footer_corporate
+    - field.field.block_content.footer.footer_subfooter
     - field.field.block_content.footer.footer_imperial_products
     - field.field.block_content.footer.footer_dixie_products
     - image.style.thumbnail
@@ -25,12 +25,12 @@ content:
     weight: 2
     settings: { }
     third_party_settings: { }
-  footer_coporatemenu:
+  footer_corporate:
     type: entity_reference_autocomplete
     weight: 3
     settings: { }
     third_party_settings: { }
-  footer_footermenu:
+  footer_subfooter:
     type: entity_reference_autocomplete
     weight: 4
     settings: { }

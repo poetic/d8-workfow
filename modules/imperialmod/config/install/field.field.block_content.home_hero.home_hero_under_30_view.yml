@@ -15,7 +15,7 @@ required: false
 translatable: false
 default_value:
   -
-    target_uuid: 0a3eb895-3d38-4607-9d08-376ad89bd9b2
+    target_uuid: ddaff69d-ef28-4941-9cc6-bb9c25b7b087
 default_value_callback: ''
 settings:
   handler: 'default:view'

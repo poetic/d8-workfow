@@ -243,6 +243,7 @@ label {
   display: inline-block;
   margin-right: 10px;
   margin-left: 10px;
+  float: left;
   line-height: 30px;
 }
 
@@ -1593,10 +1594,11 @@ label {
   min-height: 25px;
 }
 
-.activity.list {
+.activity.list-item {
   position: relative;
   left: 0px;
   top: 5px;
+  width: 100%;
   height: 25px;
   clear: none;
 }
@@ -1676,7 +1678,7 @@ label {
 .stars.rcp-main {
   width: 100%;
   min-height: 30px;
-  background-size: auto 25px;
+  background-size: auto 25px !important;
 }
 
 .stars.add-cmmt {
@@ -2128,7 +2130,7 @@ label {
   min-height: 100px;
   margin-top: 20px;
   margin-bottom: 60px;
-  padding: 20px 5%;
+  padding: 20px 5% 0px;
   border-top: 1px dashed #ccc;
   border-bottom: 1px dashed #ccc;
 }
@@ -2155,8 +2157,7 @@ label {
 }
 
 .user-cmmt-wrapper.card {
-  min-height: 250px;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   padding-right: 10px;
   padding-left: 10px;
 }
@@ -2172,8 +2173,8 @@ label {
 }
 
 .user-cmmt-txt {
+  position: relative;
   overflow: hidden;
-  max-height: 125px;
 }
 
 .user-cmmt-txt.user-review {
@@ -3076,7 +3077,7 @@ label {
   background-color: rgba(0, 0, 0, .75);
 }
 
-.modal-thanks-contact-form {
+.modal-thanks {
   position: fixed;
   left: 0px;
   top: 0px;
@@ -3088,6 +3089,10 @@ label {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, .75);
+  opacity: 0;
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 .modal-read-comment {
@@ -3147,6 +3152,50 @@ label {
   background-size: auto 34px;
 }
 
+.modal-reset-pass {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  z-index: 5000;
+  display: none;
+  overflow: auto;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, .5);
+  opacity: 0;
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+.cmmt-fade {
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  width: 100%;
+  height: 50px;
+  background-image: -webkit-linear-gradient(90deg, #fff 7%, hsla(0, 0%, 100%, .69) 38%, hsla(0, 0%, 100%, .53) 79%, transparent);
+  background-image: linear-gradient(0deg, #fff 7%, hsla(0, 0%, 100%, .69) 38%, hsla(0, 0%, 100%, .53) 79%, transparent);
+}
+
+.user-cmmt-txt-expander {
+  position: relative;
+  overflow: hidden;
+  height: 75px;
+  margin-bottom: 10px;
+}
+
+.hide-review-link {
+  color: #ff9d6d;
+}
+
+.hide-review-link:hover {
+  color: #ff9d6d;
+}
+
 html.w-mod-js *[data-ix="display-none"] {
   display: none;
 }
@@ -3173,6 +3222,10 @@ html.w-mod-js *[data-ix="sticky-scl-actions-display-none"] {
 html.w-mod-js *[data-ix="modal-bg-initial-appearance"] {
   display: none;
   opacity: 0.39;
+}
+
+html.w-mod-js *[data-ix="user-comment-collapse"] {
+  display: none;
 }
 
 html.w-mod-js *[data-ix="expanding-bio-initial-appearance"] {
@@ -3227,6 +3280,8 @@ html.w-mod-js *[data-ix="fade-in-on-scroll"] {
   }
   .tertiary.nav-account-signup-spacing {
     display: block;
+    float: none;
+    text-align: center;
   }
   .btn.btn-tertiary.scl-actions {
     width: 30%;

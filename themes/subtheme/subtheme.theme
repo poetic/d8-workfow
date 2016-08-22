@@ -1,1 +1,317 @@
 <?php
+
+use Drupal\field\Entity\FieldConfig;
+use Drupal\block_content\Entity\BlockContent;
+use Drupal\node\Entity\Node;
+use Drupal\Core\StringTranslation\TranslatableMarkup;
+use \Drupal\views\ViewExecutable;
+
+/**
+ * Implements hook_preprocess_HOOK() for node document templates.
+ */
+
+function subtheme_preprocess_node(array &$variables) {
+  if($variables['elements']['field_recipe_comments']) {
+    $variables['node_label'] = $variables['label']['0']['#context']['value'];
+  }
+  if(!empty($variables['elements']['#node'])) {
+    $user_id = $variables['user']->id();
+    $user_node = \Drupal\user\Entity\User::load($user_id);
+    $entity = $variables['elements']['#node'];
+    $flag_service = \Drupal::service('flag');
+    $flag_link_builder = \Drupal::service('flag.link_builder');
+    $follow_flag = $flag_link_builder->build($user_node->getEntityTypeId(), $user_node->id(), 'follow');
+    $variables['follow_flag'] = $follow_flag;
+    $variables['follow_flag']['link']['#attributes']['class'][] = "txt-link-sm";
+
+    $node = $variables['elements']['#node'];
+    $variables['count'] = \Drupal::service('flag.count')->getEntityFlagCounts($node);
+    
+    $flag = $flag_service->getFlagById("favorite");
+    $variables['favorite_count'] = \Drupal::service('flag.count')->getEntityFlagCounts($entity);
+    $flag_bookmark = $flag_service->getFlagById("bookmark");
+    $variables['bookmark_count'] = \Drupal::service('flag.count')->getEntityFlagCounts($entity);
+    $comment_view = views_embed_view('comment_view');
+    $variables['comment_view'] = $comment_view;
+    $related_recipes = views_embed_view('related_recipes');
+    $variables['related_recipes'] = $related_recipes;
+    $variables['vid_id'] = $variables['content']['field_video_url'][0]['#video_id'];
+
+    $fields_definition = $entity->getFieldDefinitions();
+    foreach($fields_definition as $field_definition) {
+     if(!empty($field_definition->getTargetBundle()) && $field_definition->get('field_type') == 'entity_reference') { 
+        $entity_reference_field = collectFieldValues($entity, $field_definition);
+        if($entity_reference_field) {
+          $key = key($entity_reference_field);
+          $variables['content'][$key] = ($entity_reference_field[$key]);
+        }
+      }
+    }
+  }
+}
+
+function subtheme_preprocess_user(array &$variables) {
+   $user_id = $variables['user']->id();
+    $user_node = \Drupal\user\Entity\User::load($user_id);
+    $flag_link_builder = \Drupal::service('flag.link_builder');
+    $follow_flag = $flag_link_builder->build($user_node->getEntityTypeId(), $user_node->id(), 'follow');
+    $variables['follow_flag'] = $follow_flag;
+    $user_image_url = getUserImageUrl($user_id);
+    $variables['user_image_url'] = $user_image_url;
+    $user_since = $variables['user']->get('created')->value;
+    $user_img = $variables['user']->get('field_user_image')->value;
+    $variables['user_since'] = date("Y", $user_since);
+}
+
+function getUserImageUrl($user_id) {
+  $user_node = \Drupal\user\Entity\User::load($user_id);
+  if(!is_null($user_node->field_user_image->entity)) {
+     $file_url = $user_node->field_user_image->entity->url();
+    return $file_url;      
+  }
+  return "{{directory}}/images/user-pic-default.svg";
+}
+
+/**
+ * Implements hook_preprocess_HOOK() for block document templates.
+ */
+
+function subtheme_preprocess_block(array &$variables) {
+  if(!empty($variables['content']['#block_content'])) {
+    $entity = $variables['content']['#block_content'];
+    $bundle = $entity->bundle();
+
+    $fields_definition = $entity->getFieldDefinitions();
+    foreach($fields_definition as $field_definition) {
+     if(!empty($field_definition->getTargetBundle()) && $field_definition->get('field_type') == 'entity_reference') { 
+        $entity_reference_field = collectFieldValues($entity, $field_definition);
+        if($entity_reference_field) {
+          $key = key($entity_reference_field);
+          $variables['content'][$key] = ($entity_reference_field[$key]);
+        }
+      }
+    }
+    $variables['mainnav'] = subtheme_get_menu('mainnav');
+    $variables['footermenu'] = subtheme_get_menu('footermenu');
+    $variables['canesugar'] = subtheme_get_menu('canesugar');
+    $variables['coporatemenu'] = subtheme_get_menu('coporatemenu');
+    $variables['sugarsahkers'] = subtheme_get_menu('sugarsahkers');
+    $variables['vintage'] = subtheme_get_menu('vintage');
+  }
+}
+
+function subtheme_preprocess_form(&$variables){
+  //below returns 0 if anonymous user
+  if($variables['element']['#form_id'] == "comment_recipe_comment_form") {
+    $user_id = $variables['user']->id();
+    $user_node = \Drupal\user\Entity\User::load($user_id);
+    if(!is_null($user_node->field_account_image->entity)) {
+      $file_url = $user_node->field_account_image->entity->url();
+      $variables['user_image_url'] = $file_url;
+    }
+  }
+}
+
+function subtheme_preprocess_input(&$variables) { 
+  if($variables['theme_hook_original'] == "input__submit") {
+     if($variables['element']['#name'] == "field_recipe_ingredients_recipe_ingredients_add_more") {
+        $variables['attributes']['value'] = new TranslatableMarkup("+ Add Ingredient section");
+    }
+  }
+}
+
+function subtheme_preprocess_image(&$variables) {
+  if($variables['style_name'] !== 'height_150px'){
+    unset($variables['attributes']['width']);
+    unset($variables['attributes']['height']);
+  }
+}
+
+function subtheme_preprocess_textarea(&$variables) {
+  if($variable['element']['#title'] == "Comment") {
+    $variable['#attributes']['class'][] = "form-multi-line-text-heigh w-input";
+  }
+}
+// function subtheme_preprocess_table(&$variables) {
+//   unset($variables['header']);
+//   // // // unset($variables['rows'][1]);
+//   // unset($variables['rows'][0]['cells'][0]);
+//   // unset($variables['rows'][0]['cells'][2]);
+  
+//   // dump($variables);
+
+//   $variables['rows'][0]['cells'][1]['content']['subform']['field_ingredient_section_title']['widget'][0]['value']['#title_display'] = "none";
+//   $variables['rows'][0]['cells'][1]['content']['subform']['field_ingredient_section_title']['widget'][0]['value']['#attributes']['class'][] = "form-field-66-pc w-input";
+//   $variables['rows'][0]['cells'][1]['content']['subform']['field_ingredient_section_title']['widget'][0]['value']['#attributes']['data-name'][] = "Ingredient Section Title";
+//   $variables['rows'][0]['cells'][1]['content']['subform']['field_ingredient_section_title']['widget'][0]['value']['#attributes']['placeholder'][] = "Eg. Cake, or Frosting (if recipe has multiple parts)";
+//   $variables['rows'][0]['cells'][1]['content']['subform']['field_ingredient_section_body']['widget'][0]['value']['#title_display'] = "none";
+//   $variables['rows'][0]['cells'][1]['content']['subform']['field_ingredient_section_body']['widget'][0]['value']['#attributes']['class'][] = "form-multi-line-text-heigh w-input";
+//   $variables['rows'][0]['cells'][1]['content']['subform']['field_ingredient_section_body']['widget'][0]['value']['#attributes']['data-name'][] = "Ingredients";
+//   $variables['rows'][0]['cells'][1]['content']['subform']['field_ingredient_section_body']['widget'][0]['value']['#attributes']['data-name']['placeholder'][] = "Add your ingredients here — add as many ingredients as you need!";
+//   // unset($variables['rows'][0]['cells'][2]);
+//   // dump($variables['rows']['0']);
+//   // dump($variables);
+// }
+
+function subtheme_preprocess_comment(&$variables) {
+  $date_formatted = DateTime::createFromFormat('D, m/d/Y - H:i', $variables['created'])->format('M d, Y');
+  $variables['created'] = $date_formatted;
+  $recipe_nid = $variables['commented_entity']->get('nid')[0]->value;
+  $recipe_node = \Drupal\node\Entity\Node::load($recipe_nid);
+  $recipe_title = $recipe_node->get('title')[0]->value;
+  $variables['title'] = $recipe_title;
+  // dump($variables);
+}
+
+function subtheme_preprocess_form_element(&$variable){
+  if ($variable['type']=="checkbox"){
+    // $variable['element']['#attributes']['class'][] = "display-none w-checkbox-input";
+  }
+}
+
+function collectFieldValues($entity, $field_definition) {
+  $bundle = $entity->bundle();
+  $entity_type = $entity->getEntityTypeId();
+  $field_name = $field_definition->getName();
+  $field_value = $entity->get($field_name)->getValue();
+  $field_instance = FieldConfig::loadByName($entity_type, $bundle , $field_name);
+  $settings = $field_instance->getSettings();
+
+  switch($settings['handler']) {
+    case 'default:view':
+      $view_render_array = views_embed_view($field_value[0]['target_id']);
+      return array($field_name => $view_render_array);
+      break;
+    case 'default:node':
+      return;
+      break;
+  }
+}
+
+function subtheme_theme_suggestions_user_alter(array &$suggestions, array $variables) {
+  if(!empty($variables['elements']['#view_mode'])) {
+    $userviewmode = $variables['elements']['#view_mode'];
+    array_unshift($suggestions, 'user__' . $userviewmode);
+  }
+}
+
+// function subtheme_theme_suggestions_input_alter(array &$suggestions, array $variables) {
+//   if($variables['element']['#name'] == "field_recipe_ingredients_recipe_ingredients_add_more") {
+//     $suggestions[] = 'input__recipe_add_form_paragraph_add';
+//   }
+//   if($variables['theme_hook_original'] == "input__textfield") {
+//     if( strpos($variables['element']['#name'], "field_recipe_ingredients[0][subform][field_ingredient_section_title]") !== false) {
+//       $suggestions[] = 'input__recipe_add_paragraph_title';
+//     }
+//   }
+// }
+
+// function subtheme_theme_suggestions_table_alter(array &$suggestions, array $variables) {
+//   if( strpos($variables['attributes']['id'], "field-recipe-ingredients-values") !== false) {
+//     $suggestions[] = 'table__paragraph_recipe_add';
+//   }
+// }
+
+function subtheme_theme_suggestions_node_alter(array &$suggestions, array $variables) {
+  // if(!empty($variables['elements']['#view_mode'])) {
+  //   $userviewmode = $variables['elements']['#view_mode'];
+  //   array_unshift($suggestions, 'user__' . $userviewmode);
+  // }
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter() for form templates.
+ */
+
+function subtheme_theme_suggestions_form_alter(array &$suggestions, array $variables) {
+  $suggestions[] = 'form__' . $variables['element']['#form_id'];
+  // $suggestions[] = 'form_element__' . $variables['element']['field_category_course']['widget']['#title'];
+}
+function subtheme_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+  // dpm($form_id);
+  switch($form_id) {
+    case 'contact_message_subscribe_form':
+      $form['#attributes']['class'][] = 'form-field-shadow subscribe-form-wrapper';
+      $form['subscribe_email']['#attributes']['class'][] = 'subscribe-field w-input';
+      $form['actions']['submit']['#attributes']['class'][] = 'btn subscribe-btn w-button';
+      unset($form['actions']['preview']);
+      break;
+    case 'comment_form':
+      unset($form['actions']['preview']);
+      $form['actions']['submit']['#value'] = new TranslatableMarkup('Post Review');
+      $form['actions']['submit']['#attributes']['class'][] = "btn btn-submit-form w-button";
+      $form['comment_body']['widget']['0']['#attributes']['class'][] = "form-multi-line-text-height w-input";
+      $form['comment_body']['widget']['0']['#attributes']['placeholder'][] = "What did you think of this recipe? Would you make it again? Your review and tips help others get the best out of their baking.";
+      $form['field_comment_rating']['widget']['0']['#attributes']['required'][] = "required";
+      $form['comment_body']['widget']['0']['#title_display'] = "none";
+      break;
+    case 'node_recipe_form':
+      $form['title']['widget']['0']['value']['#attributes']['placeholder'] = "Recipe name";
+      $form['title']['widget']['0']['value']['#attributes']['class'][] = 'form-field-66-pc w-input';
+      $form['title']['widget']['0']['value']['#title_display'] = "none";
+      $form['recipe_description']['widget']['0']['#title_display'] = "none";
+      $form['recipe_description']['widget']['0']['#attributes']['placeholder'][] = "What is the story? Did you invent this recipe or has it been handed down through generations?";
+      $form['recipe_description']['widget']['0']['#attributes']['class'][] = "js-text-full text-full form-multi-line-text-heigh w-input form-textarea required";
+      
+      // remove title displays
+      $form['recipe_image']['widget']['0']['value']['#title_display'] = "none";
+      $form['recipe_prep_h']['widget']['0']['value']['#title_display'] = "none";
+      $form['recipe_prep_m']['widget']['0']['value']['#title_display'] = "none";
+      $form['recipe_cook_h']['widget']['0']['value']['#title_display'] = "none";
+      $form['recipe_cook_m']['widget']['0']['value']['#title_display'] = "none";
+      $form['recipe_rest_h']['widget']['0']['value']['#title_display'] = "none";
+      $form['recipe_rest_m']['widget']['0']['value']['#title_display'] = "none";
+      $form['recipe_freeze_h']['widget']['0']['value']['#title_display'] = "none";
+      $form['recipe_freeze_m']['widget']['0']['value']['#title_display'] = "none";
+      $form['recipe_decorate_h']['widget']['0']['value']['#title_display'] = "none";
+      $form['recipe_decorate_m']['widget']['0']['value']['#title_display'] = "none";
+
+      // input box style
+      $form['recipe_prep_h']['widget']['0']['value']['#attributes']['class'][] = "form-time-entry w-input";
+      $form['recipe_prep_m']['widget']['0']['value']['#attributes']['class'][] = "form-time-entry w-input";
+      $form['recipe_cook_h']['widget']['0']['value']['#attributes']['class'][] = "form-time-entry w-input";
+      $form['recipe_cook_m']['widget']['0']['value']['#attributes']['class'][] = "form-time-entry w-input";
+      $form['recipe_rest_h']['widget']['0']['value']['#attributes']['class'][] = "form-time-entry w-input";
+      $form['recipe_rest_m']['widget']['0']['value']['#attributes']['class'][] = "form-time-entry w-input";
+      $form['recipe_freeze_h']['widget']['0']['value']['#attributes']['class'][] = "form-time-entry w-input";
+      $form['recipe_freeze_m']['widget']['0']['value']['#attributes']['class'][] = "form-time-entry w-input";
+      $form['recipe_decorate_h']['widget']['0']['value']['#attributes']['class'][] = "form-time-entry w-input";
+      $form['recipe_decorate_m']['widget']['0']['value']['#attributes']['class'][] = "form-time-entry w-input";
+
+      // make input boxes inline
+      $form['recipe_prep_h']['#attributes']['style'][] = "display: inline-block";
+      $form['recipe_prep_m']['#attributes']['style'][] = "display: inline-block";
+      $form['recipe_cook_h']['#attributes']['style'][] = "display: inline-block";
+      $form['recipe_cook_m']['#attributes']['style'][] = "display: inline-block";
+      $form['recipe_rest_h']['#attributes']['style'][] = "display: inline-block";
+      $form['recipe_rest_m']['#attributes']['style'][] = "display: inline-block";
+      $form['recipe_freeze_h']['#attributes']['style'][] = "display: inline-block";
+      $form['recipe_freeze_m']['#attributes']['style'][] = "display: inline-block";
+      $form['recipe_decorate_h']['#attributes']['style'][] = "display: inline-block";
+      $form['recipe_decorate_m']['#attributes']['style'][] = "display: inline-block";
+      $form['recipe_yield']['widget']['0']['value']['#title_display'] = "none";
+      $form['recipe_yield']['widget']['0']['value']['#attributes']['placeholder'][] ="Eg. 24 cookies";
+      $form['recipe_yield']['widget']['0']['value']['#attributes']['class'][] = "form-field-66-pc w-input";
+      $form['recipe_directions']['widget']['0']['#title_display'] = "none";
+      $form['recipe_directions']['widget']['0']['#attributes']['class'][] = "form-multi-line-text-heigh w-input"; 
+      $form['recipe_directions']['widget']['0']['#attributes']['placeholder'][] = "Add your step-by-step instructions";
+      $form['recipe_directions']['widget']['0']['#discription'] = 'Pretend we are in your kitchen and you want to walk us through, step by step, how to make your dish. Keep in mind we’ve never made this exact recipe before, so be descriptive and provide lots of details. For example “Remove chicken from oven and drain off excess liquid. Pour on half of prepared sauce and cook in oven for 45-60 minutes at reduced temperature of 350°F."';
+      $form['recipe_handy_tips']['widget']['0']['#title_display'] = "none";
+      $form['recipe_handy_tips']['widget']['0']['#attributes']['class'][] = "form-multi-line-text-heigh w-input";    
+      $form['recipe_handy_tips']['widget']['0']['#attributes']['placeholder'][] = "Eg. Don’t forget to let the cake sit for 30 mins before your guests arrive";
+      $form['actions']['unpublish']['#attributes']['class'][] = "btn btn-form btn-submit w-button";
+      $form['actions']['submit']['#attributes']['class'][] = "btn btn-form btn-submit w-button";
+      // dpm($form['actions']);
+
+      $form['actions']['unpublish']['#value'] = new TranslatableMarkup('Publish Recipe!');
+      // $form['actions']['submit']['#value'] = new TranslatableMarkup('Submit Recipe!');
+      break;
+  }
+}
+
+function subtheme_get_menu($menu_name) {
+  $block_manager = \Drupal::service('plugin.manager.block');
+  $plugin_block = $block_manager->createInstance("system_menu_block:$menu_name");
+  $render = $plugin_block->build();
+  return $render;
+}
